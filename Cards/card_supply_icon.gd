@@ -22,7 +22,7 @@ func lay_out() -> void:
 	var icon_rect: TextureRect = %Icon as TextureRect
 
 	number_label.text = str(count)
-	multiples_indicator.visible = count != 1
+	multiples_indicator.visible = (count != 1 and count != 0)
 	icon_rect.texture = supply.icon
 	icon_rect.modulate = supply.color
 

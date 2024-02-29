@@ -11,17 +11,19 @@ class_name Card
 @onready var effects_UI_section: Control = %Effects
 @onready var background_color_UI: ColorRect = %BackgroundColor
 
-@export_enum("Misc", "Draw", "Damage", "Crafting", "Buff") var card_type: String = "Misc":
+@export_enum("Misc", "Draw", "Fire Damage", "Lightning Damage", "Crafting", "Buff") var card_type: String = "Misc":
 	set(new_val):
 		card_type = new_val
 		if background_color_UI:
 			background_color_UI.color = card_type_color_dict[card_type]
+		queue_redraw()
 
-#TODO fucntionality for mixed type cards would be kinda sick
-var card_type_color_dict: Dictionary = { #currently just used for colors
+#TODO mixed type cards would be kinda sick
+var card_type_color_dict: Dictionary = {
 	"Misc": Color("#3b097c"), 
 	"Draw" : Color("#09117c"), 
-	"Damage": Color("#7c1b09"), 
+	"Fire Damage": Color("#7c1b09"),
+	"Lightning Damage": Color("#96901e"),	
 	"Crafting": Color("#c79650"),
 	"Buff": Color("#3a7c3e"),
 }

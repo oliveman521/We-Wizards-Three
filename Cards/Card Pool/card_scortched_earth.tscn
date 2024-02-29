@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://dspow6wbdypge" path="res://Cards/Card Effects/exhaust.tscn" id="7_bcgrt"]
 
 [node name="Card" instance=ExtResource("1_qye5f")]
+card_type = "Fire Damage"
 card_name = "Scortched Earth"
-card_type = "Damage"
 
 [node name="BackgroundColor" parent="." index="0"]
 color = Color(0.486275, 0.105882, 0.0352941, 1)

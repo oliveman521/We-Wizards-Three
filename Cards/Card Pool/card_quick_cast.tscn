@@ -11,7 +11,7 @@
 
 [node name="Card" instance=ExtResource("1_rnr8d")]
 card_type = "Buff"
-card_name = "Quick Cast"
+card_name = "Aura of Quick Cast"
 
 [node name="BackgroundColor" parent="." index="0"]
 color = Color(0.227451, 0.486275, 0.243137, 1)
@@ -26,7 +26,7 @@ layout_mode = 2
 supply = ExtResource("4_ssy8d")
 
 [node name="CardName" parent="MarginContainer/VBoxContainer/MarginContainer" index="1"]
-text = "Quick Cast"
+text = "Aura of Quick Cast"
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Effects" index="0"]
 layout_mode = 2
