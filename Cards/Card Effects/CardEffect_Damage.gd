@@ -15,13 +15,13 @@ func use_effect() -> void:
 	elif targets == "First":
 		var enemies: Array[Enemy] = enemy_manager.active_enemies.duplicate()
 		enemies.sort_custom(func(a: Node2D,b: Node2D) -> bool: 
-			if a.global_position.x < b.global_position.x: 
+			if a.global_position.x > b.global_position.x: 
 				return true
 			else:
 				return false
 			)
 		for i in range(target_count):
-			if enemies.size() > i: break #if there aren't enough enemies for indexing, break
+			if enemies.size() <= i: break #if there aren't enough enemies for indexing, break
 			enemies[i].take_damage(dmg_type, amnt)
 	elif targets == "Random":
 		for i in range(target_count):
