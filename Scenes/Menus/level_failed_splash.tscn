@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbl6hqacylj7"]
+
+[ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="1_02qxl"]
+
+[node name="You Win Message" type="ColorRect"]
+offset_left = 302.0
+offset_top = 306.0
+offset_right = 1709.0
+offset_bottom = 720.0
+color = Color(0.364706, 0, 0.0117647, 0.65098)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Level lost!
+
+You lose!"
+label_settings = ExtResource("1_02qxl")
+horizontal_alignment = 1
+vertical_alignment = 1

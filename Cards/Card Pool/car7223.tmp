@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://rfnlpy50ihlp"]
+
+[ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_5o5a4"]
+[ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_k6un5"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_m57di"]
+[ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="4_cm3hs"]
+[ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="5_wms0t"]
+[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_OngoingAbility.gd" id="6_40n7q"]
+[ext_resource type="PackedScene" uid="uid://5p2uuetniwn6" path="res://Cards/Ongoing Abilities/ongoing_ability_draw.tscn" id="7_okyau"]
+
+[node name="Card" instance=ExtResource("1_5o5a4")]
+
+[node name="ColorRect" parent="." index="0"]
+color = Color(0.0745098, 0.0588235, 0.286275, 1)
+
+[node name="Card Supply Icon" parent="MarginContainer/VBoxContainer/Costs" index="0" instance=ExtResource("2_k6un5")]
+layout_mode = 2
+supply = ExtResource("3_m57di")
+count = 3
+
+[node name="Card Supply Icon2" parent="MarginContainer/VBoxContainer/Costs" index="1" instance=ExtResource("2_k6un5")]
+layout_mode = 2
+supply = ExtResource("4_cm3hs")
+
+[node name="CardName" parent="MarginContainer/VBoxContainer/MarginContainer" index="1"]
+text = "Printing Press"
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Effects" index="0"]
+layout_mode = 2
+text = "Draw 1 card every 10 seconds"
+label_settings = ExtResource("5_wms0t")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="CardEffect_OngoingAbility" type="Node" parent="MarginContainer/VBoxContainer/Effects" index="1"]
+script = ExtResource("6_40n7q")
+ongoing_ability_prefab = ExtResource("7_okyau")

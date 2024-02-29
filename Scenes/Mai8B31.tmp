@@ -1,0 +1,88 @@
+[gd_scene load_steps=14 format=3 uid="uid://c4qnaj4cqxgny"]
+
+[ext_resource type="PackedScene" uid="uid://boldula5tkmby" path="res://Scenes/warlock_game.tscn" id="1_r0yic"]
+[ext_resource type="PackedScene" uid="uid://drvil74trl6sc" path="res://Scenes/apprentice_game.tscn" id="2_gx1d4"]
+[ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Supplies/Mana_Scroll.tres" id="4_gwhl1"]
+[ext_resource type="Resource" uid="uid://0wqn3ujbcm2j" path="res://Supplies/Lightning_Scroll.tres" id="5_mhcks"]
+[ext_resource type="Resource" uid="uid://bow64ukpfnomj" path="res://Supplies/Fire_Scroll.tres" id="6_almpy"]
+[ext_resource type="Script" path="res://UI/Health_UI.gd" id="8_cvh7f"]
+[ext_resource type="PackedScene" uid="uid://2jby5kudglct" path="res://UI/heart_UI.tscn" id="8_m3b1b"]
+[ext_resource type="PackedScene" uid="uid://cs68tc025u3bi" path="res://Cards/card_manager.tscn" id="9_c1slw"]
+[ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Blank_Scroll.tres" id="10_leahy"]
+[ext_resource type="PackedScene" uid="uid://btsj4ae1ih5n1" path="res://UI/supply_ui.tscn" id="12_hfyto"]
+[ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="12_i116q"]
+[ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="13_k5kcy"]
+[ext_resource type="Resource" uid="uid://bu3ei37lhx6dm" path="res://Supplies/Mana_Gem.tres" id="14_xkw45"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Apprentice Game" parent="." instance=ExtResource("2_gx1d4")]
+position = Vector2(1003, 542)
+
+[node name="Warlock Game" parent="." instance=ExtResource("1_r0yic")]
+
+[node name="Ammo Counters" type="HBoxContainer" parent="."]
+offset_left = 21.0
+offset_top = 972.0
+offset_right = 509.0
+offset_bottom = 1072.0
+
+[node name="Supply UI" parent="Ammo Counters" instance=ExtResource("12_hfyto")]
+layout_mode = 2
+supply = ExtResource("4_gwhl1")
+
+[node name="Supply UI3" parent="Ammo Counters" instance=ExtResource("12_hfyto")]
+layout_mode = 2
+supply = ExtResource("6_almpy")
+
+[node name="Supply UI2" parent="Ammo Counters" instance=ExtResource("12_hfyto")]
+layout_mode = 2
+supply = ExtResource("5_mhcks")
+
+[node name="Lives" type="HBoxContainer" parent="."]
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 155.0
+offset_bottom = 56.0
+script = ExtResource("8_cvh7f")
+
+[node name="TextureRect" parent="Lives" instance=ExtResource("8_m3b1b")]
+layout_mode = 2
+
+[node name="TextureRect2" parent="Lives" instance=ExtResource("8_m3b1b")]
+layout_mode = 2
+
+[node name="TextureRect3" parent="Lives" instance=ExtResource("8_m3b1b")]
+layout_mode = 2
+
+[node name="Enchanter Game" type="Node2D" parent="."]
+position = Vector2(986, 8)
+
+[node name="ColorRect" type="ColorRect" parent="Enchanter Game"]
+offset_right = 920.0
+offset_bottom = 522.0
+color = Color(1, 0, 1, 0.0509804)
+
+[node name="Card Manager" parent="Enchanter Game" instance=ExtResource("9_c1slw")]
+
+[node name="Enchanter Supplies" type="HBoxContainer" parent="Enchanter Game"]
+offset_left = 31.0
+offset_top = 415.0
+offset_right = 419.0
+offset_bottom = 470.0
+
+[node name="Supply UI" parent="Enchanter Game/Enchanter Supplies" instance=ExtResource("12_hfyto")]
+layout_mode = 2
+supply = ExtResource("10_leahy")
+
+[node name="Supply UI2" parent="Enchanter Game/Enchanter Supplies" instance=ExtResource("12_hfyto")]
+layout_mode = 2
+supply = ExtResource("14_xkw45")
+
+[node name="Supply UI3" parent="Enchanter Game/Enchanter Supplies" instance=ExtResource("12_hfyto")]
+layout_mode = 2
+supply = ExtResource("12_i116q")
+
+[node name="Supply UI4" parent="Enchanter Game/Enchanter Supplies" instance=ExtResource("12_hfyto")]
+layout_mode = 2
+supply = ExtResource("13_k5kcy")

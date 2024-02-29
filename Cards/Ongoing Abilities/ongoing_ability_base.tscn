@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://bj3xl0y5gxddn"]
+
+[ext_resource type="Texture2D" uid="uid://cnm40sd26ufh" path="res://Sprites/Question Mark.png" id="1_x3rlj"]
+[ext_resource type="Script" path="res://Cards/Ongoing Abilities/OngoingAbility.gd" id="2_l6pv4"]
+[ext_resource type="LabelSettings" uid="uid://cpmxmv1dxwx7s" path="res://UI/Fonts/medium_text.tres" id="3_6cbxp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_exy5t"]
+
+[node name="Ongoing Ability" type="MarginContainer"]
+offset_right = 70.0
+offset_bottom = 70.0
+script = ExtResource("2_l6pv4")
+
+[node name="Timeout Effects" type="Node" parent="."]
+unique_name_in_owner = true
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 2
+
+[node name="Progress Bar" type="ProgressBar" parent="."]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_styles/background = SubResource("StyleBoxEmpty_exy5t")
+fill_mode = 3
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="Progress Bar"]
+
+[node name="Icon Margin" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Icon" type="TextureRect" parent="Icon Margin"]
+layout_mode = 2
+texture = ExtResource("1_x3rlj")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Count Margin" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 0
+
+[node name="Count" type="Label" parent="Count Margin"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "3"
+label_settings = ExtResource("3_6cbxp")

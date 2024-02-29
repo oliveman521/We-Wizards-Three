@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://bhq4tuy1yifyy"]
+
+[ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_qye5f"]
+[ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_b6ewd"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_8ue2b"]
+[ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="4_o5x1x"]
+[ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="5_3a47r"]
+[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_Damage.gd" id="5_dhvvf"]
+[ext_resource type="PackedScene" uid="uid://dspow6wbdypge" path="res://Cards/Card Effects/exhaust.tscn" id="7_bcgrt"]
+
+[node name="Card" instance=ExtResource("1_qye5f")]
+card_name = "Scortched Earth"
+card_type = "Damage"
+
+[node name="BackgroundColor" parent="." index="0"]
+color = Color(0.486275, 0.105882, 0.0352941, 1)
+
+[node name="Card Supply Icon" parent="MarginContainer/VBoxContainer/Costs" index="0" instance=ExtResource("2_b6ewd")]
+layout_mode = 2
+supply = ExtResource("3_8ue2b")
+count = 2
+
+[node name="Card Supply Icon2" parent="MarginContainer/VBoxContainer/Costs" index="1" instance=ExtResource("2_b6ewd")]
+layout_mode = 2
+supply = ExtResource("4_o5x1x")
+count = 2
+
+[node name="CardName" parent="MarginContainer/VBoxContainer/MarginContainer" index="1"]
+text = "Scortched Earth"
+
+[node name="CardEffect_Damage" type="Node" parent="MarginContainer/VBoxContainer/Effects" index="0"]
+script = ExtResource("5_dhvvf")
+dmg_type = 1
+amnt = 10
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Effects" index="1"]
+layout_mode = 2
+text = "Deal 10 damage to all Enemies."
+label_settings = ExtResource("5_3a47r")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Exhaust" parent="MarginContainer/VBoxContainer/Effects" index="2" instance=ExtResource("7_bcgrt")]
+layout_mode = 2

@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://d335ngol841kr"]
+
+[ext_resource type="Script" path="res://Cards/card_supply_icon.gd" id="1_8pbka"]
+[ext_resource type="Texture2D" uid="uid://cnm40sd26ufh" path="res://Sprites/Question Mark.png" id="1_sylqm"]
+[ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="2_mkbpv"]
+
+[node name="Card Supply Icon" type="MarginContainer"]
+offset_right = 58.0
+offset_bottom = 57.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_8pbka")
+
+[node name="Icon" type="TextureRect" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+texture = ExtResource("1_sylqm")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/margin_bottom = -3
+
+[node name="Multiples Indicator" type="HBoxContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/separation = 3
+
+[node name="X" type="Label" parent="MarginContainer/Multiples Indicator"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "x"
+label_settings = ExtResource("2_mkbpv")
+
+[node name="Number" type="Label" parent="MarginContainer/Multiples Indicator"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "1"
+label_settings = ExtResource("2_mkbpv")

@@ -1,0 +1,96 @@
+[gd_scene load_steps=3 format=3 uid="uid://o0tyftk52s2a"]
+
+[ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card.tscn" id="1_6ef1h"]
+
+[sub_resource type="GDScript" id="GDScript_qip40"]
+script/source = "extends Node2D
+
+@export var starting_cards: int = 3
+@export var card_pool: Array[Resource] = []
+
+@onready var deck_of_cards: Node = $Deck
+@onready var hand_of_cards: Node = $Hand
+@onready var card_spawn_point: Node2D = $\"Card Spawn Point\"
+
+
+@onready var hand_card_anchors: Array[Node] = $\"Hand/Hand Anchors\".get_children()
+
+var max_hand_size: int:
+	get: return hand_card_anchors.size()
+
+var cards_in_hand : Array[Card]:
+	get: return get_children_that_are_cards(hand_of_cards)
+
+var cards_in_deck : Array[Card]:
+	get: return get_children_that_are_cards(deck_of_cards)
+
+func _ready() -> void:
+	arrange_cards_in_playspace()
+	for i in range(starting_cards):
+		add_random_card_to_deck()
+	GameManager.draw_card.connect(add_random_card_to_deck)
+
+func get_children_that_are_cards(node: Node) -> Array[Card]:
+	var cards: Array[Card] = []
+	for c in node.get_children():
+		if c is Card:
+			cards.append(c as Card)
+	return cards
+
+func add_random_card_to_deck() -> void:
+	var new_card: Card = card_pool.pick_random().instantiate() as Card
+	deck_of_cards.add_child(new_card)
+
+
+func add_card_to_hand(card_ui: Card) -> bool:
+	if cards_in_hand.size() >= max_hand_size:
+		return false
+	
+	card_ui.enter_hand_mode()
+	card_ui.reparent(hand_of_cards)
+	arrange_cards_in_playspace()
+	
+	return true
+
+func arrange_cards_in_playspace() -> void:
+	for i in range(cards_in_hand.size()):
+		var card: Card = cards_in_hand[i]
+		var target_pos: Vector2 = hand_card_anchors[i].global_position
+		card.move_center_to(target_pos)
+	
+	var pos: Vector2 = deck_of_cards.global_position
+	const deck_span:= Vector2(100,100)
+	var card_step: Vector2 = deck_span/cards_in_deck.size()
+	for card: Card in cards_in_deck:
+		card.move_center_to(pos)
+		pos += card_step
+
+func _process(delta: float) -> void:
+	
+	if deck_of_cards.get_child_count() > 0: #if we've got cards in our deck, keep trying to draw them
+		add_card_to_hand(deck_of_cards.get_children()[0] as Card)
+		#TODO this is really wasteful
+"
+
+[node name="CardManager" type="Node2D"]
+script = SubResource("GDScript_qip40")
+card_pool = Array[Resource]([ExtResource("1_6ef1h")])
+
+[node name="Hand" type="Node" parent="."]
+
+[node name="Hand Anchors" type="Node" parent="Hand"]
+
+[node name="Hand Anchor 1" type="Marker2D" parent="Hand/Hand Anchors"]
+position = Vector2(64, 55)
+
+[node name="Hand Anchor 2" type="Marker2D" parent="Hand/Hand Anchors"]
+position = Vector2(146, 52)
+
+[node name="Hand Anchor 3" type="Marker2D" parent="Hand/Hand Anchors"]
+position = Vector2(245, 58)
+
+[node name="Deck" type="Marker2D" parent="."]
+position = Vector2(375, 58)
+
+[node name="Card Spawn Point" type="Marker2D" parent="."]
+position = Vector2(530, 174)

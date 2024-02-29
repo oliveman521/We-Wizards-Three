@@ -1,0 +1,149 @@
+@tool
+extends Control
+class_name Card
+
+
+@onready var button: Button = %Button
+@onready var card_back: Control = %"Card Back"
+
+@onready var card_name_UI: Label = %CardName
+@onready var costs_UI_section: Control = %Costs
+@onready var effects_UI_section: Control = %Effects
+@onready var background_color_UI: ColorRect = %BackgroundColor
+
+@export_enum("Misc", "Draw", "Damage", "Crafting", "Buff") var card_type: String = "Misc":
+	set(new_val):
+		card_type = new_val
+		if background_color_UI:
+			background_color_UI.color = card_type_color_dict[card_type]
+
+#TODO fucntionality for mixed type cards would be kinda sick
+var card_type_color_dict: Dictionary = { #currently just used for colors
+	"Misc": Color("#3b097c"), 
+	"Draw" : Color("#09117c"), 
+	"Damage": Color("#7c1b09"), 
+	"Crafting": Color("#c79650"),
+	"Buff": Color("#3a7c3e"),
+}
+
+func _ready() -> void:
+	background_color_UI.color = card_type_color_dict[card_type]
+
+signal card_played()
+signal card_discarded()
+
+@export var card_name: String:
+	get: return card_name
+	set(new_val):
+		card_name = new_val
+		if card_name_UI:
+			card_name_UI.text = new_val
+
+var deck_building_mode: bool = false
+
+var center_position: Vector2:
+	get:
+		return global_position + size/2
+	set(new_value):
+		global_position = new_value - size/2
+
+
+var card_manager: CardManager:
+	get: return GameManager.card_manager as CardManager
+
+var exhausts_on_play: bool:
+	get:
+		for node: Node in effects_UI_section.get_children():
+			if node.is_in_group("Exhaust"):
+				return true
+		return false
+
+func check_costs() -> bool:
+	for node: Node in costs_UI_section.get_children():
+		if node.check_cost() == false:
+			return false
+	return true
+
+func play() -> void:
+	if not check_costs(): #TODO currently this is a double check and shouldn't be necessary
+		print("!!!You can't play that card because it costs too much! This should never fire")
+		return
+	card_played.emit() 
+	
+	#Spend all the costs
+	for node: Node in costs_UI_section.get_children():
+		node.spend_cost()
+	
+	#activate all the effects
+	for node: Node in effects_UI_section.get_children():
+		if node.has_method("use_effect"):
+			await node.use_effect()
+	
+	await slide_card_away(Vector2.UP, Color(0,1,0,0))
+	#animate it flying away
+	
+	if exhausts_on_play: #return card to our deck as long as we aren't supposed to exhaust
+		pass #TODO exhaust visual
+	else:
+		card_manager.cards_in_deck.append(self.duplicate()) #NOTE this duplicate is transparent cuz dumb reasons. This should be be fixed, but I'll add a quick note to make it full visible on arrangeing the playspace
+	queue_free()
+
+func enter_queue_mode() -> void:
+	button.disabled = true
+	card_back.visible = true
+
+func enter_hand_mode() -> void:
+	button.disabled = false
+	card_back.visible = false
+
+func _on_button_gui_input(event: InputEvent) -> void:
+	if !(event is InputEventMouseButton): return
+	if not event.pressed: return
+	
+	card_pressed.emit()
+	
+	if deck_building_mode && event.button_index == MOUSE_BUTTON_LEFT:
+		if in_deck:
+			slide_card_away(Vector2.LEFT, Color(0,0,1,0))
+		else:
+			slide_card_away(Vector2.RIGHT, Color(0,0,1,0))
+		return
+	
+	if event.button_index == MOUSE_BUTTON_LEFT:
+		if check_costs(): #CARD IS BEING PLAYED
+			play()
+		else:
+			GameManager.spawn_popup(center_position,"Not Enough Resources!",Color(1,0.8,.1))
+	elif event.button_index == MOUSE_BUTTON_RIGHT:
+		card_discarded.emit()
+		await slide_card_away(Vector2.DOWN, Color(1,0,0,0))
+		card_manager.cards_in_deck.append(self.duplicate()) #TODO. This should somehow go back to the deck. Right now it's doing some christopher nolan's the prestige type shit
+		queue_free()
+
+@onready var multiples_indicator: Control = %"Multiples Indicator"
+@onready var multiples_number: Label = %"Multiples Number"
+var in_deck: bool = false;
+signal card_pressed
+
+func enter_deck_building_mode(count: int, in_deck: bool) -> void:
+	self.in_deck = in_deck
+	deck_building_mode = true
+	if count > 1:
+		multiples_indicator.visible = true
+		multiples_number.text = str(count)
+
+const SLIDE_DISTANCE: = 100
+const MOVE_TIME: = .25
+
+func move_center_to(target_pos: Vector2) -> void:
+	var tween:= get_tree().create_tween()
+	tween.tween_property(self, "center_position", target_pos, MOVE_TIME).set_trans(Tween.TRANS_SINE)
+	await tween.finished
+
+func slide_card_away(dir: Vector2, color: Color = Color(0,0,0,0)) -> void:
+	button.mouse_filter = Control.MOUSE_FILTER_IGNORE #make sure we can't detect more inputs
+	var target_pos: Vector2 = center_position + dir * SLIDE_DISTANCE
+	var tween:= get_tree().create_tween()
+	tween.tween_property(self, "modulate", color, MOVE_TIME).set_trans(Tween.TRANS_SINE)
+	await move_center_to(target_pos)
+	button.mouse_filter = Control.MOUSE_FILTER_PASS #TODO This should probably be changed. RN this is setting the mouse filter back so that if the card is to be added to the deck it'll still be clickable, but I think the whole deck data management needs to be reworked

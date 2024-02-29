@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://5nkdmnb3uita"]
+
+[ext_resource type="Texture2D" uid="uid://ckyneg55r251x" path="res://Sprites/icon.svg" id="1_ap23r"]
+
+[node name="Labrynth Game" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 200.0
+offset_bottom = 200.0
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(156, 152)
+texture = ExtResource("1_ap23r")

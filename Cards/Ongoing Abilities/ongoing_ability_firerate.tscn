@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7dw3bs2deeos"]
+
+[ext_resource type="PackedScene" uid="uid://bj3xl0y5gxddn" path="res://Cards/Ongoing Abilities/ongoing_ability_base.tscn" id="1_jlquv"]
+[ext_resource type="Texture2D" uid="uid://cqhvrcljhh74a" path="res://Sprites/fire_rate_icon.png" id="2_vp1ef"]
+
+[node name="Ongoing Ability" instance=ExtResource("1_jlquv")]
+passive_ability_tag = 1
+stack_behavior = "Multiply"
+
+[node name="Icon" parent="Icon Margin" index="0"]
+texture = ExtResource("2_vp1ef")

@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfuh7fif3lr3e"]
+
+[ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_d8qi7"]
+[ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_1b6xk"]
+[ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Blank_Scroll.tres" id="3_4ycbo"]
+[ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="4_x1u5e"]
+[ext_resource type="Resource" uid="uid://0wqn3ujbcm2j" path="res://Supplies/Lightning_Scroll.tres" id="5_xtapl"]
+
+[node name="Card" instance=ExtResource("1_d8qi7")]
+card_type = "Crafting"
+
+[node name="BackgroundColor" parent="." index="0"]
+color = Color(0.780392, 0.588235, 0.313726, 1)
+
+[node name="Card Supply Icon" parent="MarginContainer/VBoxContainer/Costs" index="0" instance=ExtResource("2_1b6xk")]
+layout_mode = 2
+supply = ExtResource("3_4ycbo")
+
+[node name="Card Supply Icon2" parent="MarginContainer/VBoxContainer/Costs" index="1" instance=ExtResource("2_1b6xk")]
+layout_mode = 2
+supply = ExtResource("4_x1u5e")
+
+[node name="CardName" parent="MarginContainer/VBoxContainer/MarginContainer" index="1"]
+text = "Lightning Bolt Scroll"
+
+[node name="Card Supply Icon" parent="MarginContainer/VBoxContainer/Effects" index="0" instance=ExtResource("2_1b6xk")]
+layout_mode = 2
+supply = ExtResource("5_xtapl")

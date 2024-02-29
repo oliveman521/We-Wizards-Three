@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://cn7apof2y3wfd"]
+
+[ext_resource type="PackedScene" uid="uid://dxstlyven322l" path="res://Enemies/enemy_base.tscn" id="1_ru7do"]
+[ext_resource type="PackedScene" uid="uid://dkn1p6g0q7pqb" path="res://Projectiles/projectile_arrow.tscn" id="2_a75xx"]
+[ext_resource type="Texture2D" uid="uid://cjb1srtgrk802" path="res://Sprites/archer.png" id="3_hk655"]
+
+[node name="Enemy" instance=ExtResource("1_ru7do")]
+move_speed = 25.0
+vulnerabilities = Array[int]([1])
+projectile_prefab = ExtResource("2_a75xx")
+fire_interval = 5.0
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource("3_hk655")

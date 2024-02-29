@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://14rg16g7dhgq"]
+
+[ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="1_hxws0"]
+[ext_resource type="Script" path="res://Scripts/Popup_Text.gd" id="1_lyxdu"]
+
+[sub_resource type="Curve" id="Curve_gqq20"]
+_data = [Vector2(0.358268, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -5.5284, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_3hofk"]
+_data = [Vector2(0, 0), 0.0, 1.0, 0, 1, Vector2(1, 1), 1.0, 0.0, 1, 0]
+point_count = 2
+
+[node name="Popup Text" type="Label"]
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.0
+offset_top = -14.0
+offset_right = 68.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "+ 1 blah blah"
+label_settings = ExtResource("1_hxws0")
+script = ExtResource("1_lyxdu")
+fade_curve = SubResource("Curve_gqq20")
+rise_curve = SubResource("Curve_3hofk")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

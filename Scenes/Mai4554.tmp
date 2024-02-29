@@ -1,0 +1,145 @@
+[gd_scene load_steps=16 format=3 uid="uid://c4qnaj4cqxgny"]
+
+[ext_resource type="PackedScene" uid="uid://boldula5tkmby" path="res://Scenes/galaga_game.tscn" id="1_r0yic"]
+[ext_resource type="PackedScene" uid="uid://drvil74trl6sc" path="res://Scenes/labrynth_game.tscn" id="2_gx1d4"]
+[ext_resource type="Script" path="res://Scripts/Ammo Types/Ammo_UI.gd" id="4_ekhpo"]
+[ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Scripts/Ammo Types/Red_Ammo.tres" id="5_7owqj"]
+[ext_resource type="Resource" uid="uid://0wqn3ujbcm2j" path="res://Scripts/Ammo Types/Green_Ammo.tres" id="6_clm2h"]
+[ext_resource type="FontFile" uid="uid://c54h26n4ynwhs" path="res://UI/FFFFORWA.TTF" id="6_kbc0w"]
+[ext_resource type="Resource" uid="uid://bow64ukpfnomj" path="res://Scripts/Ammo Types/Blue_Ammo.tres" id="7_473ne"]
+[ext_resource type="Texture2D" uid="uid://bhu5lwjeucanx" path="res://Sprites/Heart.png" id="8_3hiy3"]
+[ext_resource type="Script" path="res://Scenes/Health_UI.gd" id="8_cvh7f"]
+[ext_resource type="Texture2D" uid="uid://xlv4wx7vl63x" path="res://Sprites/ammo.png" id="8_jsbok"]
+[ext_resource type="PackedScene" uid="uid://2jby5kudglct" path="res://UI/heart_UI.tscn" id="8_m3b1b"]
+[ext_resource type="Texture2D" uid="uid://bjcoqsewim8ni" path="res://Sprites/square 9-tile.png" id="11_ikibm"]
+[ext_resource type="Texture2D" uid="uid://dmmx82yti0hqm" path="res://Sprites/square 9-tile boarder.png" id="12_y5doq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nxpbl"]
+font = ExtResource("6_kbc0w")
+
+[sub_resource type="LabelSettings" id="LabelSettings_pneq6"]
+font = ExtResource("6_kbc0w")
+font_size = 8
+font_color = Color(0, 0, 0, 1)
+
+[node name="Game" type="Node2D"]
+
+[node name="Galaga Game" parent="." instance=ExtResource("1_r0yic")]
+
+[node name="Labrynth Game" parent="." instance=ExtResource("2_gx1d4")]
+
+[node name="Ammo Counters" type="GridContainer" parent="."]
+offset_left = 586.0
+offset_top = 8.0
+offset_right = 632.0
+offset_bottom = 85.0
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="Ammo Counters" node_paths=PackedStringArray("label")]
+modulate = Color(0.827451, 0.419608, 0.364706, 1)
+layout_mode = 2
+texture = ExtResource("8_jsbok")
+expand_mode = 2
+stretch_mode = 4
+script = ExtResource("4_ekhpo")
+ammo_type = ExtResource("5_7owqj")
+label = NodePath("../Label")
+
+[node name="Label" type="Label" parent="Ammo Counters"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_nxpbl")
+
+[node name="TextureRect2" type="TextureRect" parent="Ammo Counters" node_paths=PackedStringArray("label")]
+modulate = Color(0.286275, 0.592157, 0.435294, 1)
+layout_mode = 2
+texture = ExtResource("8_jsbok")
+expand_mode = 2
+stretch_mode = 4
+script = ExtResource("4_ekhpo")
+ammo_type = ExtResource("6_clm2h")
+label = NodePath("../Label2")
+
+[node name="Label2" type="Label" parent="Ammo Counters"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_nxpbl")
+
+[node name="TextureRect3" type="TextureRect" parent="Ammo Counters" node_paths=PackedStringArray("label")]
+modulate = Color(0.164706, 0.396078, 1, 1)
+layout_mode = 2
+texture = ExtResource("8_jsbok")
+expand_mode = 2
+stretch_mode = 4
+script = ExtResource("4_ekhpo")
+ammo_type = ExtResource("7_473ne")
+label = NodePath("../Label3")
+
+[node name="Label3" type="Label" parent="Ammo Counters"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_nxpbl")
+
+[node name="Lives" type="VBoxContainer" parent="."]
+offset_left = 323.0
+offset_top = 3.0
+offset_right = 363.0
+offset_bottom = 131.0
+script = ExtResource("8_cvh7f")
+
+[node name="TextureRect" parent="Lives" instance=ExtResource("8_m3b1b")]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Lives"]
+layout_mode = 2
+texture = ExtResource("8_3hiy3")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_left = 402.0
+offset_top = 67.0
+offset_right = 441.0
+offset_bottom = 94.0
+texture = ExtResource("11_ikibm")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Boarder" type="NinePatchRect" parent="NinePatchRect"]
+modulate = Color(0.988235, 0.905882, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_y5doq")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Label" type="Label" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Jeffe"
+label_settings = SubResource("LabelSettings_pneq6")
+
+[node name="CheckButton" type="CheckButton" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 37.0
+offset_right = 42.0
+offset_bottom = 61.0

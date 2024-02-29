@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://w4wis64kyyew"]
+
+[ext_resource type="PackedScene" uid="uid://c5hptnef0j41i" path="res://Projectiles/base_projectile.tscn" id="1_bv8s0"]
+
+[node name="Bullet" instance=ExtResource("1_bv8s0")]
+speed = 1000.0
+
+[node name="Sprite" parent="." index="1"]
+modulate = Color(0.705882, 0.431373, 1, 1)

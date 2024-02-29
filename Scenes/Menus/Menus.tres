@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://btsp3ifn1m5n3"]
+
+[ext_resource type="FontFile" uid="uid://t4iceb2drwa2" path="res://UI/Fonts/Franklin Gothic Medium Regular.ttf" id="1_12rrs"]
+
+[resource]
+default_font = ExtResource("1_12rrs")
+default_font_size = 64

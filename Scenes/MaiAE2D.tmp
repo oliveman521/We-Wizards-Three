@@ -1,0 +1,83 @@
+[gd_scene load_steps=11 format=3 uid="uid://c4qnaj4cqxgny"]
+
+[ext_resource type="Script" path="res://Scripts/ship_movement.gd" id="1_k5ysc"]
+[ext_resource type="Texture2D" uid="uid://dj3333rn0atgv" path="res://Sprites/Ship.png" id="2_5bke2"]
+[ext_resource type="Script" path="res://Scripts/Falling Enemy Spawner.gd" id="3_rgf3s"]
+[ext_resource type="Script" path="res://Scripts/Grid.gd" id="4_3hlhy"]
+[ext_resource type="Texture2D" uid="uid://ckyneg55r251x" path="res://Sprites/icon.svg" id="4_3l6xn"]
+[ext_resource type="Script" path="res://Scenes/Labrynth Character Movement.gd" id="4_uitew"]
+[ext_resource type="Script" path="res://Scenes/Grid Drawer.gd" id="5_nwoab"]
+[ext_resource type="Script" path="res://Scenes/Pickup_Spawner.gd" id="8_gu0d6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ek7uc"]
+radius = 11.0
+height = 36.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2uhtv"]
+size = Vector2(128, 128)
+
+[node name="Game" type="Node2D"]
+
+[node name="Galaga Game" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Galaga Game"]
+offset_left = -32.0
+offset_top = -51.0
+offset_right = 574.0
+offset_bottom = 673.0
+color = Color(0.423529, 0.317647, 0.25098, 1)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Galaga Game"]
+position = Vector2(47, 595)
+script = ExtResource("1_k5ysc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Galaga Game/CharacterBody2D"]
+position = Vector2(0, -3)
+scale = Vector2(2, 2)
+texture = ExtResource("2_5bke2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Galaga Game/CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_ek7uc")
+
+[node name="Falling Enemy Spawner" type="Node2D" parent="Galaga Game"]
+position = Vector2(139, -31)
+script = ExtResource("3_rgf3s")
+
+[node name="Bullet Container" type="Node2D" parent="Galaga Game"]
+
+[node name="Labrynth Game" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Labrynth Game"]
+visible = false
+offset_left = 568.0
+offset_top = 310.0
+offset_right = 1151.0
+offset_bottom = 647.0
+color = Color(0.176471, 0.25098, 0.345098, 1)
+
+[node name="Grid" type="Node2D" parent="Labrynth Game"]
+position = Vector2(575, 293)
+script = ExtResource("4_3hlhy")
+cell_size = Vector2(32, 32)
+size = Vector2(18, 11)
+grid_color = Color(1, 1, 1, 0.490196)
+wall_width = 5.0
+
+[node name="Grid Drawer" type="Node2D" parent="Labrynth Game/Grid"]
+script = ExtResource("5_nwoab")
+
+[node name="Labrynth Character" type="Area2D" parent="Labrynth Game/Grid"]
+position = Vector2(252, 156)
+scale = Vector2(0.25, 0.25)
+script = ExtResource("4_uitew")
+
+[node name="Icon" type="Sprite2D" parent="Labrynth Game/Grid/Labrynth Character"]
+texture = ExtResource("4_3l6xn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Labrynth Game/Grid/Labrynth Character"]
+shape = SubResource("RectangleShape2D_2uhtv")
+
+[node name="Pickups" type="Node2D" parent="Labrynth Game/Grid"]
+script = ExtResource("8_gu0d6")
+
+[connection signal="area_entered" from="Labrynth Game/Grid/Labrynth Character" to="Labrynth Game/Grid/Labrynth Character" method="_on_area_entered"]

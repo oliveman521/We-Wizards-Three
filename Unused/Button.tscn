@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6500rh130f8n"]
+
+[ext_resource type="Texture2D" uid="uid://bjcoqsewim8ni" path="res://Sprites/square 9-tile.png" id="1_mri46"]
+[ext_resource type="Texture2D" uid="uid://dmmx82yti0hqm" path="res://Sprites/square 9-tile boarder.png" id="2_60hth"]
+[ext_resource type="FontFile" uid="uid://c54h26n4ynwhs" path="res://UI/FFFFORWA.TTF" id="3_egl5y"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pneq6"]
+font = ExtResource("3_egl5y")
+font_size = 8
+font_color = Color(0, 0, 0, 1)
+
+[node name="NinePatchRect" type="NinePatchRect"]
+offset_left = 402.0
+offset_top = 67.0
+offset_right = 441.0
+offset_bottom = 94.0
+texture = ExtResource("1_mri46")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Boarder" type="NinePatchRect" parent="."]
+modulate = Color(0.988235, 0.905882, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_60hth")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Jeffe"
+label_settings = SubResource("LabelSettings_pneq6")

@@ -1,0 +1,180 @@
+[gd_scene load_steps=19 format=3 uid="uid://c4qnaj4cqxgny"]
+
+[ext_resource type="PackedScene" uid="uid://boldula5tkmby" path="res://Scenes/warlock_game.tscn" id="1_r0yic"]
+[ext_resource type="PackedScene" uid="uid://drvil74trl6sc" path="res://Scenes/apprentice_game.tscn" id="2_gx1d4"]
+[ext_resource type="Texture2D" uid="uid://cgp2ycf40jjlk" path="res://Sprites/scroll.png" id="3_motfu"]
+[ext_resource type="Script" path="res://UI/Ammo_UI.gd" id="4_ekhpo"]
+[ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Prefabs/Supplies/Mana_Ammo.tres" id="5_7owqj"]
+[ext_resource type="Resource" uid="uid://0wqn3ujbcm2j" path="res://Prefabs/Supplies/Lightning_Ammo.tres" id="6_clm2h"]
+[ext_resource type="FontFile" uid="uid://c54h26n4ynwhs" path="res://UI/FFFFORWA.TTF" id="6_kbc0w"]
+[ext_resource type="Resource" uid="uid://bow64ukpfnomj" path="res://Prefabs/Supplies/Fire_Ammo.tres" id="7_473ne"]
+[ext_resource type="Texture2D" uid="uid://bhu5lwjeucanx" path="res://Sprites/Heart.png" id="8_3hiy3"]
+[ext_resource type="Script" path="res://UI/Health_UI.gd" id="8_cvh7f"]
+[ext_resource type="PackedScene" uid="uid://2jby5kudglct" path="res://UI/heart_UI.tscn" id="8_m3b1b"]
+[ext_resource type="Script" path="res://Scenes/Card.gd" id="12_sue0i"]
+[ext_resource type="Script" path="res://Scenes/Popup_Text.gd" id="13_y2xmq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nxpbl"]
+font = ExtResource("6_kbc0w")
+
+[sub_resource type="LabelSettings" id="LabelSettings_vc4m4"]
+line_spacing = 0.0
+font_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_p0st7"]
+
+[sub_resource type="Curve" id="Curve_gqq20"]
+_data = [Vector2(0.448819, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -3.76936, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_3hofk"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Game" type="Node2D"]
+
+[node name="Apprentice Game" parent="." instance=ExtResource("2_gx1d4")]
+
+[node name="Warlock Game" parent="." instance=ExtResource("1_r0yic")]
+
+[node name="Ammo Counters" type="HBoxContainer" parent="."]
+offset_left = 10.0
+offset_top = 326.0
+offset_right = 170.0
+offset_bottom = 358.0
+
+[node name="TextureRect" type="TextureRect" parent="Ammo Counters" node_paths=PackedStringArray("label")]
+modulate = Color(0.529412, 0.101961, 0.615686, 1)
+layout_mode = 2
+texture = ExtResource("3_motfu")
+stretch_mode = 4
+script = ExtResource("4_ekhpo")
+ammo_type = ExtResource("5_7owqj")
+label = NodePath("../Label")
+
+[node name="Label" type="Label" parent="Ammo Counters"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_nxpbl")
+
+[node name="TextureRect3" type="TextureRect" parent="Ammo Counters" node_paths=PackedStringArray("label")]
+modulate = Color(1, 0.313726, 0.172549, 1)
+layout_mode = 2
+texture = ExtResource("3_motfu")
+stretch_mode = 4
+script = ExtResource("4_ekhpo")
+ammo_type = ExtResource("7_473ne")
+label = NodePath("../Label3")
+
+[node name="Label3" type="Label" parent="Ammo Counters"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_nxpbl")
+
+[node name="TextureRect2" type="TextureRect" parent="Ammo Counters" node_paths=PackedStringArray("label")]
+modulate = Color(1, 0.941176, 0, 1)
+layout_mode = 2
+texture = ExtResource("3_motfu")
+stretch_mode = 4
+script = ExtResource("4_ekhpo")
+ammo_type = ExtResource("6_clm2h")
+label = NodePath("../Label2")
+
+[node name="Label2" type="Label" parent="Ammo Counters"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_nxpbl")
+
+[node name="Lives" type="VBoxContainer" parent="."]
+offset_left = 323.0
+offset_top = 3.0
+offset_right = 363.0
+offset_bottom = 131.0
+script = ExtResource("8_cvh7f")
+
+[node name="TextureRect" parent="Lives" instance=ExtResource("8_m3b1b")]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Lives"]
+layout_mode = 2
+texture = ExtResource("8_3hiy3")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="Enchanter Game" type="Node2D" parent="."]
+position = Vector2(389, 75)
+
+[node name="Card" type="Control" parent="Enchanter Game"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 40.0
+offset_top = -46.0
+offset_right = 100.0
+offset_bottom = 34.0
+script = ExtResource("12_sue0i")
+
+[node name="Panel" type="Panel" parent="Enchanter Game/Card"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Enchanter Game/Card"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Enchanter Game/Card/VBoxContainer"]
+layout_mode = 2
+text = "Craft"
+label_settings = SubResource("LabelSettings_vc4m4")
+horizontal_alignment = 1
+
+[node name="Costs" type="HBoxContainer" parent="Enchanter Game/Card/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Enchanter Game/Card/VBoxContainer/Costs"]
+layout_mode = 2
+texture = ExtResource("3_motfu")
+expand_mode = 2
+
+[node name="Label2" type="Label" parent="Enchanter Game/Card/VBoxContainer"]
+layout_mode = 2
+text = "Into"
+label_settings = SubResource("LabelSettings_vc4m4")
+horizontal_alignment = 1
+
+[node name="Outputs" type="HBoxContainer" parent="Enchanter Game/Card/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Enchanter Game/Card/VBoxContainer/Outputs"]
+layout_mode = 2
+texture = ExtResource("3_motfu")
+expand_mode = 2
+
+[node name="Popup Text" type="Label" parent="."]
+offset_left = 119.0
+offset_top = 141.0
+offset_right = 218.0
+offset_bottom = 164.0
+scale = Vector2(0.5, 0.5)
+text = "+ 1 blah blah"
+label_settings = SubResource("LabelSettings_p0st7")
+script = ExtResource("13_y2xmq")
+fade_curve = SubResource("Curve_gqq20")
+rise_curve = SubResource("Curve_3hofk")
+
+[node name="Timer" type="Timer" parent="Popup Text"]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Popup Text/Timer" to="Popup Text" method="_on_timer_timeout"]

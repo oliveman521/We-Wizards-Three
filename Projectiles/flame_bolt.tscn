@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cxjug8dnpnau1"]
+
+[ext_resource type="PackedScene" uid="uid://c5hptnef0j41i" path="res://Projectiles/base_projectile.tscn" id="1_7jfot"]
+[ext_resource type="Script" path="res://Projectiles/explosive_projectile.gd" id="2_1brvs"]
+[ext_resource type="Texture2D" uid="uid://byryijvvf5qgd" path="res://Sprites/white ring.png" id="3_c8vdy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rd6hs"]
+radius = 1080.12
+
+[node name="Bullet" instance=ExtResource("1_7jfot")]
+script = ExtResource("2_1brvs")
+explosive_damage = 2.0
+speed = 500.0
+damage = 2.0
+
+[node name="Sprite" parent="." index="1"]
+modulate = Color(0.882353, 0.333333, 0, 1)
+scale = Vector2(2, 2)
+
+[node name="Explosion Hitbox" type="Area2D" parent="." index="2"]
+scale = Vector2(0.25, 0.25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Explosion Hitbox" index="0"]
+shape = SubResource("CircleShape2D_rd6hs")
+
+[node name="Explosion Visual" type="Sprite2D" parent="." index="3"]
+modulate = Color(0.878431, 0.392157, 0.00784314, 1)
+position = Vector2(2, 9.49998)
+scale = Vector2(0.487692, 0.47)
+texture = ExtResource("3_c8vdy")

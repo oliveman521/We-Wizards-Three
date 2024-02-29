@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5hptnef0j41i"]
+
+[ext_resource type="Script" path="res://Projectiles/Projectile.gd" id="1_crw26"]
+[ext_resource type="Texture2D" uid="uid://0foiqbcwyum0" path="res://Sprites/Bullet.png" id="2_56jjv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b78vr"]
+radius = 9.6
+
+[node name="Projectile" type="Area2D" groups=["Damage_Enemies"]]
+script = ExtResource("1_crw26")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.25, 1.25)
+shape = SubResource("CircleShape2D_b78vr")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(1.48651, 1.5)
+texture = ExtResource("2_56jjv")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Supply" load_steps=3 format=3 uid="uid://dun667tokfc1l"]
+
+[ext_resource type="Script" path="res://Supplies/Supply.gd" id="1_amhtf"]
+[ext_resource type="Texture2D" uid="uid://bj6e14qigcant" path="res://Sprites/Essence.png" id="1_t8f1g"]
+
+[resource]
+script = ExtResource("1_amhtf")
+icon = ExtResource("1_t8f1g")
+supply_count = 10
+color = Color(1, 1, 1, 1)
+pickup_spawn_rate = 1.0
+pickup_count_min = 1
+pickup_count_max = 1

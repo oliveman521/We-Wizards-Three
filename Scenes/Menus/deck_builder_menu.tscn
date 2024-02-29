@@ -1,0 +1,143 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhm5xireormeb"]
+
+[ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="1_66omf"]
+[ext_resource type="PackedScene" uid="uid://6685qupifd8s" path="res://Cards/Card Pool/card_fire_scroll_recipe.tscn" id="1_j3icq"]
+[ext_resource type="Script" path="res://Scenes/Menus/deck_builder_menu.gd" id="1_t8ixf"]
+[ext_resource type="Theme" uid="uid://btsp3ifn1m5n3" path="res://Scenes/Menus/Menus.tres" id="3_vpowb"]
+
+[node name="DeckBuilderMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t8ixf")
+
+[node name="Screen Margin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Screen Margin"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Screen Margin/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Screen Margin/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Owned Cards"
+label_settings = ExtResource("1_66omf")
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Screen Margin/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Container" type="MarginContainer" parent="Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.145098, 0.141176, 0.152941, 0.427451)
+
+[node name="MarginContainer" type="MarginContainer" parent="Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Card Pool Container" type="HFlowContainer" parent="Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+
+[node name="Card" parent="Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("1_j3icq")]
+layout_mode = 2
+
+[node name="Card2" parent="Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("1_j3icq")]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Screen Margin/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Screen Margin/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Deck"
+label_settings = ExtResource("1_66omf")
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Screen Margin/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Container" type="MarginContainer" parent="Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.145098, 0.141176, 0.152941, 0.427451)
+
+[node name="MarginContainer" type="MarginContainer" parent="Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Deck Contents Container" type="HFlowContainer" parent="Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+
+[node name="Card2" parent="Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("1_j3icq")]
+layout_mode = 2
+
+[node name="Card3" parent="Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("1_j3icq")]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Screen Margin/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Screen Margin/HBoxContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_vpowb")
+text = "Confirm Deck & Start"
+
+[connection signal="button_down" from="Screen Margin/HBoxContainer/VBoxContainer2/HBoxContainer/Button" to="." method="confirm_deck"]

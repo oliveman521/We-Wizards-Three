@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhjjh87vcnevb"]
+
+[ext_resource type="PackedScene" uid="uid://bj3xl0y5gxddn" path="res://Cards/Ongoing Abilities/ongoing_ability_base.tscn" id="1_ai4sk"]
+[ext_resource type="Texture2D" uid="uid://dvwcfb2twq8st" path="res://Sprites/mana bolt damage icon.png" id="2_5bwg1"]
+
+[node name="Ongoing Ability" instance=ExtResource("1_ai4sk")]
+passive_ability_tag = 2
+stack_behavior = "Add"
+
+[node name="Icon" parent="Icon Margin" index="0"]
+texture = ExtResource("2_5bwg1")

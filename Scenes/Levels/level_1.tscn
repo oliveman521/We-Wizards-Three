@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://nr4hlan2e2hj"]
+
+[ext_resource type="PackedScene" uid="uid://ddavd71iwja5g" path="res://Scenes/Levels/template_level.tscn" id="1_dn76g"]
+[ext_resource type="PackedScene" uid="uid://b5t5chbh5x6vr" path="res://Enemies/enemy_peasent.tscn" id="2_5t40v"]
+[ext_resource type="PackedScene" uid="uid://c6afi4js5waro" path="res://Enemies/enemy_jester.tscn" id="3_tkqom"]
+[ext_resource type="PackedScene" uid="uid://dbc3v7h72rrl8" path="res://Enemies/enemy_knight.tscn" id="4_kjbe5"]
+[ext_resource type="PackedScene" uid="uid://c67dhecvk3b28" path="res://Enemies/enemy_seigeEngine.tscn" id="5_dmnh2"]
+[ext_resource type="PackedScene" uid="uid://cn7apof2y3wfd" path="res://Enemies/enemy_archer.tscn" id="6_bhbyr"]
+
+[node name="Level Data" instance=ExtResource("1_dn76g")]
+level_name = "Level 1"
+
+[node name="Enemy6" parent="Enemy Feed Tape" index="0" instance=ExtResource("2_5t40v")]
+position = Vector2(-201, 331)
+
+[node name="Enemy7" parent="Enemy Feed Tape" index="1" instance=ExtResource("3_tkqom")]
+position = Vector2(-413, 566)
+
+[node name="Enemy8" parent="Enemy Feed Tape" index="2" instance=ExtResource("4_kjbe5")]
+position = Vector2(-269, 747)
+
+[node name="Enemy9" parent="Enemy Feed Tape" index="3" instance=ExtResource("5_dmnh2")]
+position = Vector2(-502, 291)
+
+[node name="Enemy10" parent="Enemy Feed Tape" index="4" instance=ExtResource("6_bhbyr")]
+position = Vector2(-630, 680)
+
+[node name="Storeroom Reference Shape" parent="." index="1"]
+offset_right = 896.0
+offset_bottom = 702.0

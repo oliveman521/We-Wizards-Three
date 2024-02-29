@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxstlyven322l"]
+
+[ext_resource type="Script" path="res://Scripts/Falling Enemy.gd" id="1_rakik"]
+[ext_resource type="Texture2D" uid="uid://dayw62taqldwq" path="res://Sprites/Evil Ship.png" id="2_kxfo5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bmwqc"]
+size = Vector2(99, 60)
+
+[node name="Node2D" type="Area2D" groups=["Enemies"]]
+script = ExtResource("1_rakik")
+
+[node name="EvilShip" type="Sprite2D" parent="."]
+position = Vector2(0, -6)
+scale = Vector2(2, 2)
+texture = ExtResource("2_kxfo5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_bmwqc")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

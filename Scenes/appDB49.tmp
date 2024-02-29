@@ -1,0 +1,95 @@
+[gd_scene load_steps=16 format=3 uid="uid://drvil74trl6sc"]
+
+[ext_resource type="Texture2D" uid="uid://ckyneg55r251x" path="res://Sprites/icon.svg" id="1_ap23r"]
+[ext_resource type="Script" path="res://UI/Combo Num UI.gd" id="1_bldrb"]
+[ext_resource type="Script" path="res://Scripts/Grid.gd" id="1_cn11s"]
+[ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="1_f3jh3"]
+[ext_resource type="Script" path="res://Scripts/Grid Drawer.gd" id="2_n4wnp"]
+[ext_resource type="Script" path="res://Scripts/Apprentice_Character_Controller.gd" id="3_wuydh"]
+[ext_resource type="Script" path="res://Scripts/Pickup_Spawner.gd" id="5_qbctc"]
+[ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Blank_Scroll.tres" id="8_vflk1"]
+[ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="9_je3hp"]
+[ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="10_0bld8"]
+[ext_resource type="Resource" uid="uid://bu3ei37lhx6dm" path="res://Supplies/Mana_Gem.tres" id="11_mfks7"]
+[ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Tablet.tres" id="12_4hp0s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ohmts"]
+radius = 77.666
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2uhtv"]
+size = Vector2(144, 144)
+
+[sub_resource type="Curve" id="Curve_o25to"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.146939, 0.157212), 0.0, 0.0, 0, 0, Vector2(0.991837, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="Apprentice Game" type="Node2D"]
+
+[node name="Combo Display" type="HBoxContainer" parent="."]
+offset_left = 662.0
+offset_top = -48.0
+offset_right = 864.0
+offset_bottom = 7.0
+
+[node name="Combo Label" type="Label" parent="Combo Display"]
+layout_mode = 2
+text = "Combo: "
+label_settings = ExtResource("1_f3jh3")
+
+[node name="Combo Num" type="Label" parent="Combo Display"]
+layout_mode = 2
+text = "0"
+label_settings = ExtResource("1_f3jh3")
+script = ExtResource("1_bldrb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = 568.0
+offset_top = 310.0
+offset_right = 1151.0
+offset_bottom = 647.0
+color = Color(0.176471, 0.25098, 0.345098, 1)
+
+[node name="Grid" type="Node2D" parent="." node_paths=PackedStringArray("bottom_right_marker")]
+unique_name_in_owner = true
+position = Vector2(0, 1)
+script = ExtResource("1_cn11s")
+cell_size = null
+bottom_right_marker = NodePath("Grid Bottom Righ Corner")
+grid_color = Color(1, 1, 1, 0.490196)
+grid_width = null
+wall_width = null
+wall_color = null
+
+[node name="Grid Drawer" type="Node2D" parent="Grid"]
+script = ExtResource("2_n4wnp")
+
+[node name="Grid Bottom Righ Corner" type="Marker2D" parent="Grid"]
+position = Vector2(864, 528)
+
+[node name="Apprentice Character" type="CharacterBody2D" parent="Grid"]
+unique_name_in_owner = true
+position = Vector2(151, 89)
+scale = Vector2(0.25, 0.25)
+script = ExtResource("3_wuydh")
+
+[node name="Icon" type="Sprite2D" parent="Grid/Apprentice Character"]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_ap23r")
+
+[node name="Hit Box" type="CollisionShape2D" parent="Grid/Apprentice Character"]
+shape = SubResource("CircleShape2D_ohmts")
+
+[node name="Collection Hitbox" type="Area2D" parent="Grid/Apprentice Character"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grid/Apprentice Character/Collection Hitbox"]
+shape = SubResource("RectangleShape2D_2uhtv")
+debug_color = Color(0.768627, 0.411765, 0.462745, 0.419608)
+
+[node name="Pickup Spawner" type="Node2D" parent="Grid"]
+unique_name_in_owner = true
+script = ExtResource("5_qbctc")
+kinds_of_pickup = Array[Resource("res://Supplies/Supply.gd")]([ExtResource("8_vflk1"), ExtResource("9_je3hp"), ExtResource("10_0bld8"), ExtResource("11_mfks7"), ExtResource("12_4hp0s")])
+repeat_spawn_curve = SubResource("Curve_o25to")
+
+[connection signal="area_entered" from="Grid/Apprentice Character/Collection Hitbox" to="Grid/Apprentice Character" method="_on_collection_hitbox_area_entered"]

@@ -1,0 +1,278 @@
+[gd_scene load_steps=16 format=3 uid="uid://c4qnaj4cqxgny"]
+
+[ext_resource type="PackedScene" uid="uid://boldula5tkmby" path="res://Scenes/warlock_game.tscn" id="1_r0yic"]
+[ext_resource type="PackedScene" uid="uid://drvil74trl6sc" path="res://Scenes/apprentice_game.tscn" id="2_gx1d4"]
+[ext_resource type="Texture2D" uid="uid://cgp2ycf40jjlk" path="res://Sprites/scroll.png" id="3_motfu"]
+[ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Supplies/Mana_Scroll.tres" id="4_gwhl1"]
+[ext_resource type="Resource" uid="uid://0wqn3ujbcm2j" path="res://Supplies/Lightning_Scroll.tres" id="5_mhcks"]
+[ext_resource type="Resource" uid="uid://bow64ukpfnomj" path="res://Supplies/Fire_Scroll.tres" id="6_almpy"]
+[ext_resource type="Script" path="res://UI/Health_UI.gd" id="8_cvh7f"]
+[ext_resource type="PackedScene" uid="uid://2jby5kudglct" path="res://UI/heart_UI.tscn" id="8_m3b1b"]
+[ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Blank_Scroll.tres" id="10_leahy"]
+[ext_resource type="PackedScene" uid="uid://btsj4ae1ih5n1" path="res://UI/supply_ui.tscn" id="12_hfyto"]
+[ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="12_i116q"]
+[ext_resource type="Script" path="res://Cards/Card.gd" id="12_sue0i"]
+[ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="13_k5kcy"]
+[ext_resource type="Resource" uid="uid://bu3ei37lhx6dm" path="res://Supplies/Mana_Gem.tres" id="14_xkw45"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vc4m4"]
+line_spacing = 0.0
+font_size = 10
+
+[node name="Game" type="Node2D"]
+
+[node name="Apprentice Game" parent="." instance=ExtResource("2_gx1d4")]
+
+[node name="Warlock Game" parent="." instance=ExtResource("1_r0yic")]
+
+[node name="Ammo Counters" type="HBoxContainer" parent="."]
+offset_left = 10.0
+offset_top = 326.0
+offset_right = 170.0
+offset_bottom = 358.0
+
+[node name="Supply UI" parent="Ammo Counters" instance=ExtResource("12_hfyto")]
+layout_mode = 2
+supply = ExtResource("4_gwhl1")
+
+[node name="Supply UI2" parent="Ammo Counters" instance=ExtResource("12_hfyto")]
+layout_mode = 2
+supply = ExtResource("5_mhcks")
+
+[node name="Supply UI3" parent="Ammo Counters" instance=ExtResource("12_hfyto")]
+layout_mode = 2
+supply = ExtResource("6_almpy")
+
+[node name="Lives" type="HBoxContainer" parent="."]
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 155.0
+offset_bottom = 56.0
+script = ExtResource("8_cvh7f")
+
+[node name="TextureRect" parent="Lives" instance=ExtResource("8_m3b1b")]
+layout_mode = 2
+
+[node name="TextureRect2" parent="Lives" instance=ExtResource("8_m3b1b")]
+layout_mode = 2
+
+[node name="TextureRect3" parent="Lives" instance=ExtResource("8_m3b1b")]
+layout_mode = 2
+
+[node name="Enchanter Game" type="Node2D" parent="."]
+position = Vector2(326, 2)
+
+[node name="ColorRect" type="ColorRect" parent="Enchanter Game"]
+offset_right = 310.0
+offset_bottom = 182.0
+color = Color(1, 0, 1, 0.0509804)
+
+[node name="Card Row" type="Control" parent="Enchanter Game"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 51.0
+offset_top = 45.0
+offset_right = 279.0
+offset_bottom = 142.0
+
+[node name="ColorRect" type="ColorRect" parent="Enchanter Game/Card Row"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.14902)
+
+[node name="Card" type="Control" parent="Enchanter Game/Card Row"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 12.0
+offset_top = 6.0
+offset_right = 72.0
+offset_bottom = 86.0
+script = ExtResource("12_sue0i")
+
+[node name="Panel" type="Panel" parent="Enchanter Game/Card Row/Card"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Enchanter Game/Card Row/Card"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Enchanter Game/Card Row/Card/VBoxContainer"]
+layout_mode = 2
+text = "Craft"
+label_settings = SubResource("LabelSettings_vc4m4")
+horizontal_alignment = 1
+
+[node name="Costs" type="HBoxContainer" parent="Enchanter Game/Card Row/Card/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Enchanter Game/Card Row/Card/VBoxContainer/Costs"]
+layout_mode = 2
+texture = ExtResource("3_motfu")
+expand_mode = 2
+
+[node name="Label2" type="Label" parent="Enchanter Game/Card Row/Card/VBoxContainer"]
+layout_mode = 2
+text = "Into"
+label_settings = SubResource("LabelSettings_vc4m4")
+horizontal_alignment = 1
+
+[node name="Outputs" type="HBoxContainer" parent="Enchanter Game/Card Row/Card/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Enchanter Game/Card Row/Card/VBoxContainer/Outputs"]
+layout_mode = 2
+texture = ExtResource("3_motfu")
+expand_mode = 2
+
+[node name="Card3" type="Control" parent="Enchanter Game/Card Row"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 152.0
+offset_top = 8.0
+offset_right = 212.0
+offset_bottom = 88.0
+script = ExtResource("12_sue0i")
+
+[node name="Panel" type="Panel" parent="Enchanter Game/Card Row/Card3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Enchanter Game/Card Row/Card3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Enchanter Game/Card Row/Card3/VBoxContainer"]
+layout_mode = 2
+text = "Craft"
+label_settings = SubResource("LabelSettings_vc4m4")
+horizontal_alignment = 1
+
+[node name="Costs" type="HBoxContainer" parent="Enchanter Game/Card Row/Card3/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Enchanter Game/Card Row/Card3/VBoxContainer/Costs"]
+layout_mode = 2
+texture = ExtResource("3_motfu")
+expand_mode = 2
+
+[node name="Label2" type="Label" parent="Enchanter Game/Card Row/Card3/VBoxContainer"]
+layout_mode = 2
+text = "Into"
+label_settings = SubResource("LabelSettings_vc4m4")
+horizontal_alignment = 1
+
+[node name="Outputs" type="HBoxContainer" parent="Enchanter Game/Card Row/Card3/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Enchanter Game/Card Row/Card3/VBoxContainer/Outputs"]
+layout_mode = 2
+texture = ExtResource("3_motfu")
+expand_mode = 2
+
+[node name="Card2" type="Control" parent="Enchanter Game/Card Row"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 80.0
+offset_top = 6.0
+offset_right = 140.0
+offset_bottom = 86.0
+script = ExtResource("12_sue0i")
+
+[node name="Panel" type="Panel" parent="Enchanter Game/Card Row/Card2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Enchanter Game/Card Row/Card2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Enchanter Game/Card Row/Card2/VBoxContainer"]
+layout_mode = 2
+text = "Craft"
+label_settings = SubResource("LabelSettings_vc4m4")
+horizontal_alignment = 1
+
+[node name="Costs" type="HBoxContainer" parent="Enchanter Game/Card Row/Card2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Enchanter Game/Card Row/Card2/VBoxContainer/Costs"]
+layout_mode = 2
+texture = ExtResource("3_motfu")
+expand_mode = 2
+
+[node name="Label2" type="Label" parent="Enchanter Game/Card Row/Card2/VBoxContainer"]
+layout_mode = 2
+text = "Into"
+label_settings = SubResource("LabelSettings_vc4m4")
+horizontal_alignment = 1
+
+[node name="Outputs" type="HBoxContainer" parent="Enchanter Game/Card Row/Card2/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Enchanter Game/Card Row/Card2/VBoxContainer/Outputs"]
+layout_mode = 2
+texture = ExtResource("3_motfu")
+expand_mode = 2
+
+[node name="Enchanter Supplies" type="HBoxContainer" parent="Enchanter Game"]
+offset_left = 19.0
+offset_top = 4.0
+offset_right = 192.0
+offset_bottom = 36.0
+
+[node name="Supply UI" parent="Enchanter Game/Enchanter Supplies" instance=ExtResource("12_hfyto")]
+layout_mode = 2
+supply = ExtResource("10_leahy")
+
+[node name="Supply UI4" parent="Enchanter Game/Enchanter Supplies" instance=ExtResource("12_hfyto")]
+layout_mode = 2
+supply = ExtResource("12_i116q")
+
+[node name="Supply UI2" parent="Enchanter Game/Enchanter Supplies" instance=ExtResource("12_hfyto")]
+layout_mode = 2
+supply = ExtResource("13_k5kcy")
+
+[node name="Supply UI3" parent="Enchanter Game/Enchanter Supplies" instance=ExtResource("12_hfyto")]
+layout_mode = 2
+supply = ExtResource("14_xkw45")

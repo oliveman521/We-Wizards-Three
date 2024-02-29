@@ -1,0 +1,89 @@
+[gd_scene load_steps=13 format=3 uid="uid://c4qnaj4cqxgny"]
+
+[ext_resource type="PackedScene" uid="uid://boldula5tkmby" path="res://Scenes/warlock_game.tscn" id="1_r0yic"]
+[ext_resource type="PackedScene" uid="uid://drvil74trl6sc" path="res://Scenes/apprentice_game.tscn" id="2_gx1d4"]
+[ext_resource type="Texture2D" uid="uid://cgp2ycf40jjlk" path="res://Sprites/scroll.png" id="3_motfu"]
+[ext_resource type="Script" path="res://UI/Ammo_UI.gd" id="4_ekhpo"]
+[ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Prefabs/Ammo Types/Mana_Ammo.tres" id="5_7owqj"]
+[ext_resource type="Resource" uid="uid://0wqn3ujbcm2j" path="res://Prefabs/Ammo Types/Lightning_Ammo.tres" id="6_clm2h"]
+[ext_resource type="FontFile" uid="uid://c54h26n4ynwhs" path="res://UI/FFFFORWA.TTF" id="6_kbc0w"]
+[ext_resource type="Resource" uid="uid://bow64ukpfnomj" path="res://Prefabs/Ammo Types/Fire_Ammo.tres" id="7_473ne"]
+[ext_resource type="Texture2D" uid="uid://bhu5lwjeucanx" path="res://Sprites/Heart.png" id="8_3hiy3"]
+[ext_resource type="Script" path="res://UI/Health_UI.gd" id="8_cvh7f"]
+[ext_resource type="PackedScene" uid="uid://2jby5kudglct" path="res://UI/heart_UI.tscn" id="8_m3b1b"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nxpbl"]
+font = ExtResource("6_kbc0w")
+
+[node name="Game" type="Node2D"]
+
+[node name="Apprentice Game" parent="." instance=ExtResource("2_gx1d4")]
+
+[node name="Warlock Game" parent="." instance=ExtResource("1_r0yic")]
+
+[node name="Ammo Counters" type="HBoxContainer" parent="."]
+offset_left = 10.0
+offset_top = 326.0
+offset_right = 170.0
+offset_bottom = 358.0
+
+[node name="TextureRect" type="TextureRect" parent="Ammo Counters" node_paths=PackedStringArray("label")]
+modulate = Color(0.529412, 0.101961, 0.615686, 1)
+layout_mode = 2
+texture = ExtResource("3_motfu")
+stretch_mode = 4
+script = ExtResource("4_ekhpo")
+ammo_type = ExtResource("5_7owqj")
+label = NodePath("../Label")
+
+[node name="Label" type="Label" parent="Ammo Counters"]
+layout_mode = 2
+text = "10"
+label_settings = SubResource("LabelSettings_nxpbl")
+
+[node name="TextureRect2" type="TextureRect" parent="Ammo Counters" node_paths=PackedStringArray("label")]
+modulate = Color(1, 0.941176, 0, 1)
+layout_mode = 2
+texture = ExtResource("3_motfu")
+stretch_mode = 4
+script = ExtResource("4_ekhpo")
+ammo_type = ExtResource("6_clm2h")
+label = NodePath("../Label2")
+
+[node name="Label2" type="Label" parent="Ammo Counters"]
+layout_mode = 2
+text = "2"
+label_settings = SubResource("LabelSettings_nxpbl")
+
+[node name="TextureRect3" type="TextureRect" parent="Ammo Counters" node_paths=PackedStringArray("label")]
+modulate = Color(1, 0.313726, 0.172549, 1)
+layout_mode = 2
+texture = ExtResource("3_motfu")
+stretch_mode = 4
+script = ExtResource("4_ekhpo")
+ammo_type = ExtResource("7_473ne")
+label = NodePath("../Label3")
+
+[node name="Label3" type="Label" parent="Ammo Counters"]
+layout_mode = 2
+text = "2"
+label_settings = SubResource("LabelSettings_nxpbl")
+
+[node name="Lives" type="VBoxContainer" parent="."]
+offset_left = 323.0
+offset_top = 3.0
+offset_right = 363.0
+offset_bottom = 131.0
+script = ExtResource("8_cvh7f")
+
+[node name="TextureRect" parent="Lives" instance=ExtResource("8_m3b1b")]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Lives"]
+layout_mode = 2
+texture = ExtResource("8_3hiy3")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="Enchanter Game" type="Node2D" parent="."]
+position = Vector2(389, 75)

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://5g7xihe0lyk3"]
+
+[ext_resource type="Script" path="res://Prefabs/Pickup.gd" id="1_wjg0y"]
+[ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_ofryc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ku8ms"]
+radius = 11.0
+
+[node name="Pickup" type="Area2D"]
+position = Vector2(144, 143)
+script = ExtResource("1_wjg0y")
+
+[node name="Card Supply Icon" parent="." instance=ExtResource("2_ofryc")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.0
+offset_top = -28.5
+offset_right = 29.0
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ku8ms")
