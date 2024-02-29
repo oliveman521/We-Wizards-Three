@@ -61,9 +61,9 @@ func shoot(ammo_type: Ammo_Type) -> void:
 		new_projectile.ammo_type = ammo_type
 		
 		var cool_down:float = ammo_type.fire_cooldown
-		var count: int = GameManager.get_passive_ability_count(GameManager.Passive_Ability_Tag.WARLOCK_FIRE_RATE)
-		for i:int in range(count):
-			cool_down /= 1.5
+		var fire_rate_multiplier: float = GameManager.get_passive_ability_count(GameManager.Passive_Ability_Tag.WARLOCK_FIRE_RATE)
+		fire_rate_multiplier = clamp(fire_rate_multiplier, 1, 10) #TODO I don't love this solution
+		cool_down /= fire_rate_multiplier
 		
 		fire_cooldown_timer.wait_time = cool_down
 		fire_cooldown_timer.start()

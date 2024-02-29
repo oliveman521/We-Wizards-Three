@@ -18,7 +18,7 @@ const MANA: Ammo_Type = preload("uid://dfoqxs41hjlrc")
 const FIRE: Ammo_Type = preload("uid://bow64ukpfnomj")
 const LIGHTNING: Ammo_Type = preload("uid://0wqn3ujbcm2j")
 
-var storeroomManager: StoreroomManager
+var storeroom_Manager: StoreroomManager
 var apprentice_character: ApprenticeCharacter
 var warlock_character: WarlockCharacter
 var enemy_manager: EnemyManager
@@ -98,7 +98,7 @@ func start_level(level: LevelData) -> void: #TODO make the main menu set up as t
 	await get_tree().node_added #Singleton references should all connect by the end of ready
 	await get_tree().current_scene.ready
 	enemy_manager.load_feed_tape(level.enemy_feed_tape) #Load in the feed tape
-	storeroomManager.load_new_layout(level.storeroom_tile_map)
+	storeroom_Manager.load_new_layout(level.storeroom_tile_map)
 	#TODO whatever else needs to be initialized. Probably starting resources and such
 
 

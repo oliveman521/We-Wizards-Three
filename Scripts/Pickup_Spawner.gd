@@ -70,7 +70,7 @@ func spawn_pickup() -> void:
 	for i in range(1000): #TODO this is bad
 		cell = grid.get_random_cell()
 		var cell_pos: Vector2 = grid.cell_to_world_pos(cell)
-		var dist: float = cell_pos.distance_to(grid.apprentice_character.global_position)
+		var dist: float = cell_pos.distance_to(GameManager.apprentice_character.global_position)
 		var player_too_close: bool = dist < min_dist_from_player
 		
 		if not player_too_close and not does_cell_have_pickup(cell):

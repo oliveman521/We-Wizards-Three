@@ -10,9 +10,6 @@ const size_cells: Vector2i = dimensions_pixels / cell_size
 var grid_color := Color(255,255,255, 0.14) 
 var grid_line_width: float = 3
 
-@onready var apprentice_character: CollisionObject2D = %"Apprentice Character"
-@onready var pickup_spawner: PickupSpawner = %"Pickup Spawner"
-
 var _half_cell_size: Vector2:
 	get: return cell_size/2
 

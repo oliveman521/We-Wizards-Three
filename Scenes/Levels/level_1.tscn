@@ -24,7 +24,3 @@ position = Vector2(-502, 291)
 
 [node name="Enemy10" parent="Enemy Feed Tape" index="4" instance=ExtResource("6_bhbyr")]
 position = Vector2(-630, 680)
-
-[node name="Storeroom Reference Shape" parent="." index="1"]
-offset_right = 896.0
-offset_bottom = 702.0

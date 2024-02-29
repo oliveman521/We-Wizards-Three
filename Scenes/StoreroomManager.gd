@@ -4,7 +4,7 @@ class_name StoreroomManager
 @onready var storeroom_tile_map: TileMap = %"Storeroom Tile Map"
 
 func _ready() -> void:
-	GameManager.storeroomManager = self
+	GameManager.storeroom_Manager = self
 
 func load_new_layout(new_layout: Node2D) -> void:
 	if storeroom_tile_map:

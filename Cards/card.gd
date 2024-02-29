@@ -125,8 +125,8 @@ func _on_button_gui_input(event: InputEvent) -> void:
 var in_deck: bool = false;
 signal card_pressed
 
-func enter_deck_building_mode(count: int, in_deck: bool) -> void:
-	self.in_deck = in_deck
+func enter_deck_building_mode(count: int, card_in_deck: bool) -> void:
+	self.in_deck = card_in_deck
 	deck_building_mode = true
 	if count > 1:
 		multiples_indicator.visible = true
