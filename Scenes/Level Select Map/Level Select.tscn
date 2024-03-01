@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=3 uid="uid://dwfp27xq4jnk1"]
+
+[ext_resource type="Script" path="res://Scenes/Level Select Map/MapManager.gd" id="1_b5ch6"]
+[ext_resource type="PackedScene" uid="uid://de756ivob0cql" path="res://Scenes/Level Select Map/MapNode.tscn" id="2_4r0pt"]
+[ext_resource type="PackedScene" uid="uid://nr4hlan2e2hj" path="res://Scenes/Levels/level_1.tscn" id="3_shmks"]
+[ext_resource type="PackedScene" uid="uid://dmdss2aqbb1lg" path="res://Scenes/Levels/level_2.tscn" id="4_mo0ci"]
+[ext_resource type="PackedScene" uid="uid://ddmofotpnip81" path="res://Scenes/Levels/level_3.tscn" id="5_hr653"]
+[ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="6_lyyil"]
+
+[node name="Level Select" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Map Manager" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b5ch6")
+
+[node name="Level 1" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_4r0pt")]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 513.0
+offset_right = 178.0
+offset_bottom = 561.0
+start_unlocked = true
+connected_map_nodes = [NodePath("../Level 2")]
+level = ExtResource("3_shmks")
+
+[node name="Level 2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_4r0pt")]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 667.0
+offset_right = 398.0
+offset_bottom = 715.0
+connected_map_nodes = [NodePath("../Level 1"), NodePath("../Level 3"), NodePath("../Level 4")]
+level = ExtResource("4_mo0ci")
+
+[node name="Level 3" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_4r0pt")]
+layout_mode = 0
+offset_left = 493.0
+offset_top = 506.0
+offset_right = 626.0
+offset_bottom = 554.0
+connected_map_nodes = [NodePath("../Level 2")]
+level = ExtResource("5_hr653")
+
+[node name="Level 4" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_4r0pt")]
+layout_mode = 0
+offset_left = 656.0
+offset_top = 758.0
+offset_right = 789.0
+offset_bottom = 806.0
+connected_map_nodes = [NodePath("../Level 2")]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 1236.0
+offset_top = 57.0
+offset_right = 1885.0
+offset_bottom = 1030.0
+color = Color(0.364706, 0.0196078, 0.109804, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Level info goes here"
+label_settings = ExtResource("6_lyyil")
+horizontal_alignment = 1
+vertical_alignment = 1
