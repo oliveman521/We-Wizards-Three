@@ -10,6 +10,7 @@ anchors_preset = 0
 offset_right = 133.0
 offset_bottom = 48.0
 script = ExtResource("1_yufi2")
+always_unlocked = null
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
@@ -20,7 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Text"
 
-[node name="Complete Icon" type="TextureRect" parent="."]
+[node name="Explored Icon" type="TextureRect" parent="."]
 unique_name_in_owner = true
 modulate = Color(0, 0.509804, 0.101961, 1)
 layout_mode = 1

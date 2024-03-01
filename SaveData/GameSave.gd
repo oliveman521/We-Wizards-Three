@@ -6,4 +6,4 @@ class_name GameSave
 var cards_in_deck: Array[PackedScene] = []
 
 var completed_levels: Array[PackedScene]
-var completed_map_nodes: Array[Node]
+var explored_map_nodes: Array[String]

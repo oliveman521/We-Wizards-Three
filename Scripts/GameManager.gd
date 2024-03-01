@@ -131,7 +131,6 @@ func game_over() -> void:
 	await tween.finished
 	await get_tree().create_timer(1).timeout
 	get_tree().change_scene_to_packed(main_menu)
-	
 	in_progress_level = null
 	
 	end_sequence = false

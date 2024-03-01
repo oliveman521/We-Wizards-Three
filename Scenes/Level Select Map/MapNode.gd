@@ -2,8 +2,6 @@
 extends Control
 class_name MapNode
 
-@export var start_unlocked: bool = false
-
 @export var connected_map_nodes: Array[MapNode]:
 	set(new_connections):
 		var old_connections := connected_map_nodes.duplicate()
@@ -19,11 +17,11 @@ class_name MapNode
 			if neighbor == null: continue
 			if not neighbor.connected_map_nodes.has(self):
 				neighbor.connected_map_nodes.append(self)
+		
+		if map_manager:
+			map_manager.redraw_all_map_nodes()
 
-		map_manager.redraw_all_map_nodes()
-
-@export var level: PackedScene
-@export var card: PackedScene
+@export var always_unlocked: bool = false
 
 var map_manager: MapManager:
 	get: return $".."
@@ -31,33 +29,38 @@ var map_manager: MapManager:
 var button: Button:
 	get: return $Button
 
+var id: String:
+	get: return get_path()
 
-var is_completed: bool:
+var is_explored: bool:
 	get:
 		if not Engine.is_editor_hint():
-			return GameManager.current_save.completed_map_nodes.has(self)
+			return GameManager.current_save.explored_map_nodes.has(id)
 		return true
 	set(new_val):
 		if new_val == true:
-			if not GameManager.current_save.completed_map_nodes.has(self):
-				GameManager.current_save.completed_map_nodes.append(self)
+			if not GameManager.current_save.explored_map_nodes.has(id):
+				GameManager.current_save.explored_map_nodes.append(id)
 		else:
-			GameManager.current_save.completed_map_nodes.erase(self)
-		
+			GameManager.current_save.explored_map_nodes.erase(id)
+		if map_manager:
+			map_manager.redraw_all_map_nodes()
 
 var locked: bool:
 	get:
-		if start_unlocked:
+		if always_unlocked:
 			return false
-		if is_completed:
+		if is_explored:
 			return false
 		for neighbor: MapNode in connected_map_nodes: 
-			if neighbor.is_completed:
-				return false
+			if neighbor:
+				if neighbor.is_explored:
+					return false
 		return true
 
 
 func _ready() -> void:
+	item_rect_changed.connect(map_manager.redraw_all_map_nodes)
 	queue_redraw()
 
 func _process(delta: float) -> void:
@@ -66,24 +69,18 @@ func _process(delta: float) -> void:
 		pass
 
 func _draw() -> void:
-	if level:
-		var level_data: LevelData = level.instantiate() as LevelData
-		button.text = level_data.level_name
-		self.name = level_data.level_name
-		level_data.queue_free()
 	
-	
-	var complete_icon: TextureRect = %"Complete Icon"
+	var explored_icon: TextureRect = %"Explored Icon"
 	var locked_icon: TextureRect = %"Locked Icon"
 	#Icon switching for completion and locked
-	if is_completed:
-		complete_icon.visible = true
+	if is_explored:
+		explored_icon.visible = true
 		locked_icon.visible = false
 	elif locked:
-		complete_icon.visible = false
+		explored_icon.visible = false
 		locked_icon.visible = true
 	else: #if we're neither complete
-		complete_icon.visible = false
+		explored_icon.visible = false
 		locked_icon.visible = false
 	
 	#TODO get these to render behind
@@ -100,12 +97,3 @@ func _draw() -> void:
 		destination = (destination - center)/2 + center #half the length
 		draw_line(center,destination,line_color,line_width)
 
-
-func _on_button_down() -> void:
-	if level:
-		if locked:
-			GameManager.spawn_popup(global_position,"Level is locked",Color.RED,)
-			return
-		
-		is_completed = true
-		GameManager.start_level(level) #TODO this should instead pull up the level info menu and then let the user hit play on that

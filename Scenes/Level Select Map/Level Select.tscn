@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dwfp27xq4jnk1"]
+[gd_scene load_steps=8 format=3 uid="uid://dwfp27xq4jnk1"]
 
 [ext_resource type="Script" path="res://Scenes/Level Select Map/MapManager.gd" id="1_b5ch6"]
-[ext_resource type="PackedScene" uid="uid://de756ivob0cql" path="res://Scenes/Level Select Map/MapNode.tscn" id="2_4r0pt"]
+[ext_resource type="PackedScene" uid="uid://bhr4pv0d0tl4m" path="res://Scenes/Level Select Map/MapNode_Level.tscn" id="2_8emr8"]
 [ext_resource type="PackedScene" uid="uid://nr4hlan2e2hj" path="res://Scenes/Levels/level_1.tscn" id="3_shmks"]
 [ext_resource type="PackedScene" uid="uid://dmdss2aqbb1lg" path="res://Scenes/Levels/level_2.tscn" id="4_mo0ci"]
 [ext_resource type="PackedScene" uid="uid://ddmofotpnip81" path="res://Scenes/Levels/level_3.tscn" id="5_hr653"]
+[ext_resource type="PackedScene" uid="uid://cklv7m4x0ijqb" path="res://Scenes/Level Select Map/MapNode_New_Card.tscn" id="6_dwreg"]
 [ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="6_lyyil"]
 
 [node name="Level Select" type="Control"]
@@ -24,58 +25,160 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_b5ch6")
 
-[node name="Level 1" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_4r0pt")]
-layout_mode = 0
-offset_left = 45.0
-offset_top = 513.0
-offset_right = 178.0
-offset_bottom = 561.0
-start_unlocked = true
-connected_map_nodes = [NodePath("../Level 2")]
+[node name="Level 1" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_8emr8")]
+offset_left = 43.0
+offset_top = 81.0
+offset_right = 176.0
+offset_bottom = 129.0
 level = ExtResource("3_shmks")
+connected_map_nodes = [NodePath("../Map Node - Card")]
+always_unlocked = true
 
-[node name="Level 2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_4r0pt")]
-layout_mode = 0
-offset_left = 265.0
-offset_top = 667.0
-offset_right = 398.0
-offset_bottom = 715.0
-connected_map_nodes = [NodePath("../Level 1"), NodePath("../Level 3"), NodePath("../Level 4")]
+[node name="Map Node - Card" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("6_dwreg")]
+offset_left = 254.0
+offset_top = 70.0
+offset_right = 306.0
+offset_bottom = 118.0
+connected_map_nodes = [NodePath("../Level 1"), NodePath("../Map Node - Card2")]
+
+[node name="Map Node - Card2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("6_dwreg")]
+offset_left = 365.0
+offset_top = 80.0
+offset_right = 417.0
+offset_bottom = 128.0
+connected_map_nodes = [NodePath("../Map Node - Card"), NodePath("../Level 2")]
+
+[node name="Level 2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_8emr8")]
+offset_left = 473.0
+offset_top = 77.0
+offset_right = 606.0
+offset_bottom = 125.0
 level = ExtResource("4_mo0ci")
+connected_map_nodes = [NodePath("../Map Node - Card2"), NodePath("../Map Node - Card3")]
+always_unlocked = false
 
-[node name="Level 3" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_4r0pt")]
-layout_mode = 0
-offset_left = 493.0
-offset_top = 506.0
-offset_right = 626.0
-offset_bottom = 554.0
-connected_map_nodes = [NodePath("../Level 2")]
+[node name="Map Node - Card3" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("6_dwreg")]
+offset_left = 509.0
+offset_top = 193.0
+offset_right = 561.0
+offset_bottom = 241.0
+connected_map_nodes = [NodePath("../Level 2"), NodePath("../Level 3"), NodePath("../Level 4")]
+
+[node name="Map Node - Card7" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("6_dwreg")]
+offset_left = 503.0
+offset_top = 430.0
+offset_right = 555.0
+offset_bottom = 478.0
+connected_map_nodes = [NodePath("../Level 3"), NodePath("../Level 4"), NodePath("../Level 5")]
+
+[node name="Map Node - Card4" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("6_dwreg")]
+offset_left = 104.0
+offset_top = 339.0
+offset_right = 156.0
+offset_bottom = 387.0
+connected_map_nodes = [NodePath("../Level 3")]
+
+[node name="Map Node - Card5" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("6_dwreg")]
+offset_left = 849.0
+offset_top = 259.0
+offset_right = 901.0
+offset_bottom = 307.0
+connected_map_nodes = [NodePath("../Level 4")]
+
+[node name="Map Node - Card6" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("6_dwreg")]
+offset_left = 862.0
+offset_top = 379.0
+offset_right = 914.0
+offset_bottom = 427.0
+connected_map_nodes = [NodePath("../Level 4")]
+
+[node name="Level 3" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_8emr8")]
+offset_left = 296.0
+offset_top = 328.0
+offset_right = 429.0
+offset_bottom = 376.0
 level = ExtResource("5_hr653")
+connected_map_nodes = [NodePath("../Map Node - Card3"), NodePath("../Map Node - Card4"), NodePath("../Map Node - Card7")]
+always_unlocked = false
 
-[node name="Level 4" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_4r0pt")]
-layout_mode = 0
-offset_left = 656.0
-offset_top = 758.0
-offset_right = 789.0
-offset_bottom = 806.0
-connected_map_nodes = [NodePath("../Level 2")]
+[node name="Level 4" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_8emr8")]
+offset_left = 603.0
+offset_top = 317.0
+offset_right = 736.0
+offset_bottom = 365.0
+connected_map_nodes = [NodePath("../Map Node - Card3"), NodePath("../Map Node - Card5"), NodePath("../Map Node - Card6"), NodePath("../Map Node - Card7")]
+always_unlocked = false
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_left = 1236.0
-offset_top = 57.0
-offset_right = 1885.0
-offset_bottom = 1030.0
-color = Color(0.364706, 0.0196078, 0.109804, 1)
+[node name="Level 5" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_8emr8")]
+offset_left = 463.0
+offset_top = 539.0
+offset_right = 596.0
+offset_bottom = 587.0
+connected_map_nodes = [NodePath("../Map Node - Card7"), NodePath("../Level 6")]
+always_unlocked = false
 
-[node name="Label" type="Label" parent="ColorRect"]
+[node name="Level 6" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_8emr8")]
+offset_left = 464.0
+offset_top = 660.0
+offset_right = 597.0
+offset_bottom = 708.0
+connected_map_nodes = [NodePath("../Level 5")]
+always_unlocked = false
+
+[node name="Level Info Panel" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 1345.0
+offset_top = 20.0
+offset_right = 1882.0
+offset_bottom = 702.0
+
+[node name="Background" type="ColorRect" parent="Level Info Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Level info goes here"
+color = Color(0.439216, 0.0745098, 0.00784314, 0.705882)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Level Info Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Level Name" type="Label" parent="Level Info Panel/VBoxContainer"]
+layout_mode = 2
+text = "%Name of level%"
 label_settings = ExtResource("6_lyyil")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Gap Filler" type="Control" parent="Level Info Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Supplies Label" type="Label" parent="Level Info Panel/VBoxContainer"]
+layout_mode = 2
+text = "Available Supplies:"
+label_settings = ExtResource("6_lyyil")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Enemies Label" type="Label" parent="Level Info Panel/VBoxContainer"]
+layout_mode = 2
+text = "Incoming Enemies:"
+label_settings = ExtResource("6_lyyil")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Gap Filler2" type="Control" parent="Level Info Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="Level Info Panel/VBoxContainer"]
+layout_mode = 2
+text = "Pepare for Seige!"
