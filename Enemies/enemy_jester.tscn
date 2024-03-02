@@ -4,11 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://6dh3axxlxnej" path="res://Sprites/jester.png" id="2_5l61o"]
 [ext_resource type="Script" path="res://Enemies/Enemy_Jester.gd" id="2_yreuh"]
 
-[node name="Enemy" instance=ExtResource("1_6ene5")]
+[node name="Jester" instance=ExtResource("1_6ene5")]
 position = Vector2(-1, 0)
 script = ExtResource("2_yreuh")
 amplitude = 150.0
 period = 500.0
+enemy_name = "Jester"
 health = 3.0
 
 [node name="Sprite" parent="." index="0"]

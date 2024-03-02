@@ -36,9 +36,7 @@ var lives: int = 3:
 		if lives <= 0:
 			game_over()
 
-var levels: Array[LevelData] = []
 var all_supplies: Array[Supply] = []
-
 
 const DECK_MAX_SIZE: int = 15
 var curr_save: Resource = preload("res://Cards/card_base.tscn")
@@ -48,10 +46,11 @@ var current_save: Resource = load("res://SaveData/MainSave.tres") #FOR SOME REAS
 var card_pool: Array[PackedScene] = []
 
 
-var main_menu: PackedScene = preload("uid://dpdlppetxwu3m")
-var game_scene: PackedScene = preload("uid://c4qnaj4cqxgny")
-var deck_builder_scene: PackedScene = preload("res://Scenes/Menus/deck_builder_menu.tscn")
-signal deck_confirmed
+const main_menu: PackedScene = preload("uid://dpdlppetxwu3m")
+const game_scene: PackedScene = preload("uid://c4qnaj4cqxgny")
+const deck_builder_scene: PackedScene = preload("res://Scenes/Menus/deck_builder_menu.tscn")
+
+var in_progress_level: PackedScene
 
 func _ready() -> void:
 	#on game boot, fill out our deck if its missing any cards
@@ -60,22 +59,11 @@ func _ready() -> void:
 			break
 		current_save.cards_in_deck.append(card_prefab)
 	
-	#we'll also load all levels in the level folder. In the future this will be less dumb
-	var levels_path: String = "res://Scenes/Levels/"
-	var dir := DirAccess.open(levels_path)
-	if dir:
-		dir.list_dir_begin()
-		var file_name: String = dir.get_next()
-		while file_name != "":
-			if file_name.ends_with(".tscn"):
-				var level_prefab: PackedScene = load(levels_path.path_join(file_name)) as PackedScene
-				levels.append(level_prefab.instantiate())
-			file_name = dir.get_next()
 	
 	#also load all of the potential supplies:
 	#we'll also load all levels in the level folder. In the future this will be less dumb
 	var supplies_path: String = "res://Supplies/"
-	dir = DirAccess.open(supplies_path)
+	var dir:= DirAccess.open(supplies_path)
 	if dir:
 		dir.list_dir_begin()
 		var file_name: String = dir.get_next()
@@ -84,21 +72,26 @@ func _ready() -> void:
 				all_supplies.append(load(supplies_path.path_join(file_name)) as Supply)
 			file_name = dir.get_next()
 
-func start_level(level: LevelData) -> void: #TODO make the main menu set up as the current scene
+func start_level(level_prefab: PackedScene) -> void:
+	if in_progress_level != null:
+		print("error. tried to start a level when one was already in progress")
+		return
+	
+	in_progress_level = level_prefab
+	
+	var level: LevelData = level_prefab.instantiate() as LevelData
+	
 	#reset all supplies to their starting value
 	for supply: Supply in all_supplies:
 		supply.supply_count = supply.starting_count
-	
-	#Make sure they're deck is the way they want it
-	get_tree().change_scene_to_packed(deck_builder_scene)
-	await deck_confirmed
-	
-	
+
+
 	get_tree().change_scene_to_packed(game_scene)
 	await get_tree().node_added #Singleton references should all connect by the end of ready
 	await get_tree().current_scene.ready
 	enemy_manager.load_feed_tape(level.enemy_feed_tape) #Load in the feed tape
 	storeroom_Manager.load_new_layout(level.storeroom_tile_map)
+	
 	#TODO whatever else needs to be initialized. Probably starting resources and such
 
 
@@ -134,6 +127,8 @@ func game_over() -> void:
 	await tween.finished
 	await get_tree().create_timer(1).timeout
 	get_tree().change_scene_to_packed(main_menu)
+	in_progress_level = null
+	
 	end_sequence = false
 
 
@@ -153,6 +148,10 @@ func level_won() -> void:
 	await tween.finished
 	await get_tree().create_timer(1).timeout
 	get_tree().change_scene_to_packed(main_menu)
+	
+	current_save.completed_levels.append(in_progress_level)
+	in_progress_level = null
+	
 	end_sequence = false
 
 func get_passive_ability_count(ability_tag: Passive_Ability_Tag ) -> float:

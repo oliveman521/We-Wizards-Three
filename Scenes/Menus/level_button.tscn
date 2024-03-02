@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckiehv40levdx"]
-
-[ext_resource type="Theme" uid="uid://btsp3ifn1m5n3" path="res://Scenes/Menus/Menus.tres" id="1_wfpqy"]
-
-[node name="Level Button" type="Button"]
-theme = ExtResource("1_wfpqy")
-text = "Level Button
-"

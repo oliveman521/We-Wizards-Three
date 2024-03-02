@@ -1,14 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddavd71iwja5g"]
+[gd_scene load_steps=11 format=3 uid="uid://ddavd71iwja5g"]
 
 [ext_resource type="Script" path="res://Scenes/Levels/LevelData.gd" id="1_85615"]
 [ext_resource type="Script" path="res://Scenes/Levels/feed_tape_debug_graphic.gd" id="2_dexwh"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="2_yhil6"]
+[ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="3_65252"]
 [ext_resource type="Script" path="res://Scenes/Levels/storeroom_size_constrainer.gd" id="3_fgxky"]
 [ext_resource type="Script" path="res://Scripts/Grid.gd" id="3_jg26i"]
+[ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="4_hrod8"]
 [ext_resource type="TileSet" uid="uid://cynof41cb1hco" path="res://Scenes/Levels/StoreroomTiles.tres" id="5_5j6hp"]
+[ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Blank_Scroll.tres" id="5_m6hne"]
+[ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Tablet.tres" id="6_ay8j8"]
 
 [node name="Level Data" type="Node2D"]
 script = ExtResource("1_85615")
 level_name = "Template Level"
+supplies_present = Array[Resource("res://Supplies/Supply.gd")]([ExtResource("2_yhil6"), ExtResource("3_65252"), ExtResource("4_hrod8"), ExtResource("5_m6hne"), ExtResource("6_ay8j8")])
 
 [node name="Storeroom Layout" type="Node2D" parent="."]
 

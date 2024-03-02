@@ -1,5 +1,15 @@
+@tool
 extends Node2D
 class_name Enemy
+
+@export var enemy_name: String= "unnamed_enemy":
+	set(new_val):
+		enemy_name = new_val
+		self.name = enemy_name
+	get:
+		if enemy_name == "unnamed_enemy":
+			print("Warning: tried to get the name of enemy who's name has not yet been set up")
+		return enemy_name
 
 @export var move_speed: float= 50
 @export var health: float = 5
@@ -18,7 +28,19 @@ var active: bool = false
 
 const DAMAGE_COLOR = Color(1,0,0)
 
+var icon: Texture:
+	get:
+		for child: Node in get_children():
+			if child is AnimatedSprite2D:
+				child = child as AnimatedSprite2D
+				return child.sprite_frames.get_frame_texture("default",0)
+			if child is Sprite2D:
+				return child.texture
+		return null
+
 func _process(delta: float) -> void:
+	if Engine.is_editor_hint(): return
+	
 	if active:
 		move(delta)
 

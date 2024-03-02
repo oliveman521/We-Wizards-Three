@@ -1,0 +1,128 @@
+[gd_scene load_steps=8 format=3 uid="uid://dwfp27xq4jnk1"]
+
+[ext_resource type="Script" path="res://Scenes/Level Select Map/MapManager.gd" id="1_b5ch6"]
+[ext_resource type="PackedScene" uid="uid://bhr4pv0d0tl4m" path="res://Scenes/Level Select Map/MapNode_Level.tscn" id="2_8emr8"]
+[ext_resource type="PackedScene" uid="uid://nr4hlan2e2hj" path="res://Scenes/Levels/level_1.tscn" id="3_shmks"]
+[ext_resource type="PackedScene" uid="uid://dmdss2aqbb1lg" path="res://Scenes/Levels/level_2.tscn" id="4_mo0ci"]
+[ext_resource type="PackedScene" uid="uid://ddmofotpnip81" path="res://Scenes/Levels/level_3.tscn" id="5_hr653"]
+[ext_resource type="PackedScene" uid="uid://cklv7m4x0ijqb" path="res://Scenes/Level Select Map/MapNode_New_Card.tscn" id="6_dwreg"]
+[ext_resource type="PackedScene" uid="uid://x6b2h8oygbu0" path="res://Scenes/Level Select Map/level_info_panel.tscn" id="7_8338r"]
+
+[node name="Level Select" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Map Manager" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b5ch6")
+
+[node name="Level 1" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_8emr8")]
+offset_left = 50.0
+offset_top = 117.0
+offset_right = 183.0
+offset_bottom = 165.0
+level = ExtResource("3_shmks")
+connected_map_nodes = [NodePath("../Map Node - Card")]
+always_unlocked = true
+
+[node name="Map Node - Card" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("6_dwreg")]
+offset_left = 254.0
+offset_top = 70.0
+offset_right = 306.0
+offset_bottom = 118.0
+connected_map_nodes = [NodePath("../Level 1"), NodePath("../Map Node - Card2")]
+
+[node name="Map Node - Card2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("6_dwreg")]
+offset_left = 365.0
+offset_top = 80.0
+offset_right = 417.0
+offset_bottom = 128.0
+connected_map_nodes = [NodePath("../Map Node - Card"), NodePath("../Level 2")]
+
+[node name="Level 2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_8emr8")]
+offset_left = 473.0
+offset_top = 77.0
+offset_right = 606.0
+offset_bottom = 125.0
+level = ExtResource("4_mo0ci")
+connected_map_nodes = [NodePath("../Map Node - Card2"), NodePath("../Map Node - Card3")]
+
+[node name="Map Node - Card3" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("6_dwreg")]
+offset_left = 509.0
+offset_top = 193.0
+offset_right = 561.0
+offset_bottom = 241.0
+connected_map_nodes = [NodePath("../Level 2"), NodePath("../Level 3"), NodePath("../Level 4")]
+
+[node name="Map Node - Card7" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("6_dwreg")]
+offset_left = 503.0
+offset_top = 430.0
+offset_right = 555.0
+offset_bottom = 478.0
+connected_map_nodes = [NodePath("../Level 3"), NodePath("../Level 4"), NodePath("../Level 5")]
+
+[node name="Map Node - Card4" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("6_dwreg")]
+offset_left = 104.0
+offset_top = 339.0
+offset_right = 156.0
+offset_bottom = 387.0
+connected_map_nodes = [NodePath("../Level 3")]
+
+[node name="Map Node - Card5" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("6_dwreg")]
+offset_left = 849.0
+offset_top = 259.0
+offset_right = 901.0
+offset_bottom = 307.0
+connected_map_nodes = [NodePath("../Level 4")]
+
+[node name="Map Node - Card6" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("6_dwreg")]
+offset_left = 862.0
+offset_top = 379.0
+offset_right = 914.0
+offset_bottom = 427.0
+connected_map_nodes = [NodePath("../Level 4")]
+
+[node name="Level 3" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_8emr8")]
+offset_left = 296.0
+offset_top = 328.0
+offset_right = 429.0
+offset_bottom = 376.0
+level = ExtResource("5_hr653")
+connected_map_nodes = [NodePath("../Map Node - Card3"), NodePath("../Map Node - Card4"), NodePath("../Map Node - Card7")]
+
+[node name="Level 4" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_8emr8")]
+offset_left = 603.0
+offset_top = 317.0
+offset_right = 736.0
+offset_bottom = 365.0
+connected_map_nodes = [NodePath("../Map Node - Card3"), NodePath("../Map Node - Card5"), NodePath("../Map Node - Card6"), NodePath("../Map Node - Card7")]
+
+[node name="Level 5" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_8emr8")]
+offset_left = 463.0
+offset_top = 539.0
+offset_right = 596.0
+offset_bottom = 587.0
+connected_map_nodes = [NodePath("../Map Node - Card7"), NodePath("../Level 6")]
+
+[node name="Level 6" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_8emr8")]
+offset_left = 464.0
+offset_top = 660.0
+offset_right = 597.0
+offset_bottom = 708.0
+connected_map_nodes = [NodePath("../Level 5")]
+
+[node name="Level Info Panel" parent="." instance=ExtResource("7_8338r")]
+layout_mode = 0
+offset_left = 1278.0
+offset_top = 65.0
+offset_right = 1837.0
+offset_bottom = 717.0

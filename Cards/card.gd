@@ -98,6 +98,9 @@ func enter_hand_mode() -> void:
 	button.disabled = false
 	card_back.visible = false
 
+func enter_preview_mode() -> void:
+	button.disabled = true
+
 func _on_button_gui_input(event: InputEvent) -> void:
 	if !(event is InputEventMouseButton): return
 	if not event.pressed: return

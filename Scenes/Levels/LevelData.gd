@@ -2,15 +2,23 @@ extends Node2D
 class_name LevelData
 
 @export var level_name: String = "filler_name"
+@export var supplies_present: Array[Supply] #unused. This will represent the supplies that will spawn in this level
 
-var supplies_present: Array[Supply] #unused. This will represent the supplies that will spawn in this level
 var enemy_feed_tape: Node2D: 
 	get: return %"Enemy Feed Tape"
 var storeroom_tile_map: Node2D:
 	get: return %"Storeroom Tile Map"
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
+var enemies_present: Array[Enemy]:
+	get:
+		var ep: Array[Enemy] = []
+		for node: Node in enemy_feed_tape.get_children():
+			if node is Enemy:
+				var novel_enemy : bool = true
+				for en: Enemy in ep:
+					if en.enemy_name == node.enemy_name:
+						novel_enemy = false
+						break
+				if novel_enemy:
+					ep.append(node as Enemy)
+		return ep
