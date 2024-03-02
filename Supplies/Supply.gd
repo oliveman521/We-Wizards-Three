@@ -1,6 +1,7 @@
 extends Resource
 class_name Supply
 
+@export var supply_name: String = "Default"
 @export var icon: Texture2D
 
 @export var starting_count: int = 10

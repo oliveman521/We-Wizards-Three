@@ -44,6 +44,7 @@ func _process(_delta: float) -> void:
 		spawn_pickup()
 
 func choose_random_pickup_type() -> Supply:
+	#TODO Make this stip spawning cards if your deck is full
 	var spawn_rate_dict: Dictionary = {}
 	
 	for supply: Supply in available_supplies:
@@ -71,6 +72,7 @@ func choose_random_pickup_type() -> Supply:
 	return null
 
 func spawn_pickup() -> void:
+	#TODO Check for collisions
 	const min_cells_from_player = 2
 	var min_dist_from_player: float = min_cells_from_player * grid.cell_size.x
 	

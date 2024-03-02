@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("1_34t65")
+supply_name = "Fire Gem"
 icon = ExtResource("1_nlrok")
 starting_count = 0
 color = Color(1, 0.313726, 0.172549, 1)
 pickup_spawn_rate = 1.0
 pickup_count_min = 1
 pickup_count_max = 1
+supply_count = 0

@@ -11,23 +11,23 @@ scale = Vector2(1, 0.990783)
 card_type = "Lightning Damage"
 card_name = "Shock"
 
-[node name="BackgroundColor" parent="." index="0"]
+[node name="Background Color" parent="Card Face" index="0"]
 color = Color(0.588235, 0.564706, 0.117647, 1)
 
-[node name="Card Supply Icon" parent="MarginContainer/VBoxContainer/Costs" index="0" instance=ExtResource("2_0kypi")]
+[node name="Lightning Gem x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_0kypi")]
 layout_mode = 2
 supply = ExtResource("3_ne2w8")
 
-[node name="CardName" parent="MarginContainer/VBoxContainer/MarginContainer" index="1"]
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
 text = "Shock"
 
-[node name="CardEffect_Damage" type="Node" parent="MarginContainer/VBoxContainer/Effects" index="0"]
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#CardEffect_Damage" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0"]
 script = ExtResource("4_fr6mv")
 dmg_type = 1
 amnt = 4
 targets = "First"
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Effects" index="1"]
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1"]
 layout_mode = 2
 text = "Deal 4 damage to the closest enemy"
 label_settings = ExtResource("5_ij75g")

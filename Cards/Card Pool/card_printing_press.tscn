@@ -12,36 +12,36 @@
 card_type = "Crafting"
 card_name = "Printing Press"
 
-[node name="BackgroundColor" parent="." index="0"]
+[node name="Background Color" parent="Card Face" index="0"]
 color = Color(0.780392, 0.588235, 0.313726, 1)
 
-[node name="Card Supply Icon" parent="MarginContainer/VBoxContainer/Costs" index="0" instance=ExtResource("2_k6un5")]
+[node name="Essence x2" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_k6un5")]
 layout_mode = 2
 supply = ExtResource("3_m57di")
 count = 2
 
-[node name="CardName" parent="MarginContainer/VBoxContainer/MarginContainer" index="1"]
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
 text = "Printing Press"
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Effects" index="0"]
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0"]
 layout_mode = 2
 text = "Gain 1 "
 label_settings = ExtResource("5_wms0t")
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Card Supply Icon3" parent="MarginContainer/VBoxContainer/Effects" index="1" instance=ExtResource("2_k6un5")]
+[node name="Mana Scroll x1" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1" instance=ExtResource("2_k6un5")]
 layout_mode = 2
 supply = ExtResource("6_haloc")
 visual_only = true
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Effects" index="2"]
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label2" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2"]
 layout_mode = 2
 text = "every 5 seconds."
 label_settings = ExtResource("5_wms0t")
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="CardEffect_OngoingAbility" type="Node" parent="MarginContainer/VBoxContainer/Effects" index="3"]
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#CardEffect_OngoingAbility" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="3"]
 script = ExtResource("6_40n7q")
 ongoing_ability_prefab = ExtResource("7_6ef6k")

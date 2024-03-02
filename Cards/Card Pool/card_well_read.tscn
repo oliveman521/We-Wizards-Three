@@ -10,23 +10,23 @@
 card_type = "Draw"
 card_name = "Well Read"
 
-[node name="BackgroundColor" parent="." index="0"]
+[node name="Background Color" parent="Card Face" index="0"]
 color = Color(0.0352941, 0.0666667, 0.486275, 1)
 
-[node name="Card Supply Icon" parent="MarginContainer/VBoxContainer/Costs" index="0" instance=ExtResource("2_uwsje")]
+[node name="Essence x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_uwsje")]
 layout_mode = 2
 supply = ExtResource("3_m7qd8")
 
-[node name="CardName" parent="MarginContainer/VBoxContainer/MarginContainer" index="1"]
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
 text = "Well Read"
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Effects" index="0"]
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0"]
 layout_mode = 2
 text = "Draw 2 Cards"
 label_settings = ExtResource("5_0taev")
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="CardEffect_Draw" type="Node" parent="MarginContainer/VBoxContainer/Effects" index="1"]
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#CardEffect_Draw" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1"]
 script = ExtResource("5_knf5d")
 count = 2

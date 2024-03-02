@@ -9,20 +9,17 @@
 [node name="Card" instance=ExtResource("1_d8qi7")]
 card_type = "Crafting"
 
-[node name="BackgroundColor" parent="." index="0"]
+[node name="Background Color" parent="Card Face" index="0"]
 color = Color(0.780392, 0.588235, 0.313726, 1)
 
-[node name="Card Supply Icon" parent="MarginContainer/VBoxContainer/Costs" index="0" instance=ExtResource("2_1b6xk")]
+[node name="Blank Scroll x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_1b6xk")]
 layout_mode = 2
 supply = ExtResource("3_4ycbo")
 
-[node name="Card Supply Icon2" parent="MarginContainer/VBoxContainer/Costs" index="1" instance=ExtResource("2_1b6xk")]
+[node name="Fire Gem x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="1" instance=ExtResource("2_1b6xk")]
 layout_mode = 2
 supply = ExtResource("4_x1u5e")
 
-[node name="CardName" parent="MarginContainer/VBoxContainer/MarginContainer" index="1"]
-text = "Lightning Bolt Scroll"
-
-[node name="Card Supply Icon" parent="MarginContainer/VBoxContainer/Effects" index="0" instance=ExtResource("2_1b6xk")]
+[node name="Lightning Scroll x1" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("2_1b6xk")]
 layout_mode = 2
 supply = ExtResource("5_xtapl")

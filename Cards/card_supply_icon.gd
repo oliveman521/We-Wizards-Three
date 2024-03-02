@@ -25,6 +25,8 @@ func lay_out() -> void:
 	multiples_indicator.visible = (count != 1 and count != 0)
 	icon_rect.texture = supply.icon
 	icon_rect.modulate = supply.color
+	
+	name = supply.supply_name + " x" + str(count)
 
 func check_cost() -> bool:
 	if visual_only: return true

@@ -9,7 +9,7 @@ class_name Card
 @onready var card_name_UI: Label = %CardName
 @onready var costs_UI_section: Control = %Costs
 @onready var effects_UI_section: Control = %Effects
-@onready var background_color_UI: ColorRect = %BackgroundColor
+@onready var background_color_UI: ColorRect =  %"Background Color"
 
 @export_enum("Misc", "Draw", "Fire Damage", "Lightning Damage", "Crafting", "Buff") var card_type: String = "Misc":
 	set(new_val):
@@ -30,6 +30,7 @@ var card_type_color_dict: Dictionary = {
 
 func _ready() -> void:
 	background_color_UI.color = card_type_color_dict[card_type]
+	card_name_UI.text = card_name
 
 signal card_played()
 signal card_discarded()
