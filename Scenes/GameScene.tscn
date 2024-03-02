@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://c4qnaj4cqxgny"]
+[gd_scene load_steps=41 format=3 uid="uid://c4qnaj4cqxgny"]
 
 [ext_resource type="Script" path="res://Scripts/warlock_controller.gd" id="1_6dk5y"]
 [ext_resource type="Texture2D" uid="uid://b8boy6md2mbll" path="res://Sprites/warlock.png" id="2_bsyth"]
@@ -22,7 +22,6 @@
 [ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="13_k5kcy"]
 [ext_resource type="LabelSettings" uid="uid://cpmxmv1dxwx7s" path="res://UI/Fonts/medium_text.tres" id="14_03ooj"]
 [ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="14_ap4t0"]
-[ext_resource type="Script" path="res://Scripts/Pickup_Spawner.gd" id="14_upnrk"]
 [ext_resource type="Script" path="res://UI/Combo Num UI.gd" id="15_amw6x"]
 [ext_resource type="Script" path="res://Scenes/Levels/storeroom_size_constrainer.gd" id="15_e7bj7"]
 [ext_resource type="TileSet" uid="uid://cynof41cb1hco" path="res://Scenes/Levels/StoreroomTiles.tres" id="16_355m6"]
@@ -180,6 +179,8 @@ debug_color = Color(0, 0.6, 0.701961, 0)
 unique_name_in_owner = true
 position = Vector2(995, 548)
 script = ExtResource("7_jcmi4")
+available_supplies = Array[Resource("res://Supplies/Supply.gd")]([ExtResource("10_leahy"), ExtResource("10_uhmuu"), ExtResource("12_i116q"), ExtResource("13_k5kcy"), ExtResource("4_gwhl1"), ExtResource("17_pouyb")])
+repeat_spawn_curve = SubResource("Curve_o25to")
 
 [node name="Background" type="ColorRect" parent="Storeroom Manager"]
 offset_right = 896.0
@@ -212,9 +213,6 @@ layer_0/tile_data = PackedInt32Array(-1, 1, 0, 65535, 1, 0, 131071, 1, 0, -65536
 [node name="Pickup Spawner" type="Node2D" parent="Storeroom Manager"]
 unique_name_in_owner = true
 position = Vector2(0, 3)
-script = ExtResource("14_upnrk")
-kinds_of_pickup = Array[Resource("res://Supplies/Supply.gd")]([ExtResource("10_leahy"), ExtResource("10_uhmuu"), ExtResource("12_i116q"), ExtResource("13_k5kcy"), ExtResource("4_gwhl1"), ExtResource("17_pouyb")])
-repeat_spawn_curve = SubResource("Curve_o25to")
 
 [node name="Apprentice Character" type="CharacterBody2D" parent="Storeroom Manager"]
 unique_name_in_owner = true

@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://6685qupifd8s" path="res://Cards/Card Pool/card_fire_scroll_recipe.tscn" id="4_oup2b"]
 
 [node name="Card Unlock Panel" type="MarginContainer"]
-offset_left = 1284.0
+offset_left = 1373.0
 offset_top = 84.0
 offset_right = 1843.0
 offset_bottom = 736.0

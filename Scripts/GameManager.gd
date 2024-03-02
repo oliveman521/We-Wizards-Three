@@ -91,6 +91,7 @@ func start_level(level_prefab: PackedScene) -> void:
 	await get_tree().current_scene.ready
 	enemy_manager.load_feed_tape(level.enemy_feed_tape) #Load in the feed tape
 	storeroom_Manager.load_new_layout(level.storeroom_tile_map)
+	
 	#TODO whatever else needs to be initialized. Probably starting resources and such
 
 
