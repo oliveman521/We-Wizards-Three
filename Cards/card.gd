@@ -30,7 +30,7 @@ var card_type_color_dict: Dictionary = {
 
 func _ready() -> void:
 	background_color_UI.color = card_type_color_dict[card_type]
-	card_name_UI.text = card_name
+	card_name = card_name
 
 signal card_played()
 signal card_discarded()
@@ -41,6 +41,8 @@ signal card_discarded()
 		card_name = new_val
 		if card_name_UI:
 			card_name_UI.text = new_val
+		name = "Card - " + card_name
+		print(scene_file_path)
 
 var deck_building_mode: bool = false
 

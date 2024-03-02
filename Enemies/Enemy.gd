@@ -44,6 +44,9 @@ func _process(delta: float) -> void:
 	if active:
 		move(delta)
 
+func _ready() -> void:
+	name = "Enemy - " + enemy_name
+
 func move(delta: float) -> void:
 	position.x += move_speed * delta
 
