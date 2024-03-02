@@ -49,7 +49,6 @@ var card_pool: Array[PackedScene] = []
 const main_menu: PackedScene = preload("uid://dpdlppetxwu3m")
 const game_scene: PackedScene = preload("uid://c4qnaj4cqxgny")
 const deck_builder_scene: PackedScene = preload("res://Scenes/Menus/deck_builder_menu.tscn")
-signal deck_confirmed
 
 var in_progress_level: PackedScene
 
@@ -64,7 +63,7 @@ func _ready() -> void:
 	#also load all of the potential supplies:
 	#we'll also load all levels in the level folder. In the future this will be less dumb
 	var supplies_path: String = "res://Supplies/"
-	var dir = DirAccess.open(supplies_path)
+	var dir:= DirAccess.open(supplies_path)
 	if dir:
 		dir.list_dir_begin()
 		var file_name: String = dir.get_next()
@@ -85,12 +84,8 @@ func start_level(level_prefab: PackedScene) -> void:
 	#reset all supplies to their starting value
 	for supply: Supply in all_supplies:
 		supply.supply_count = supply.starting_count
-	
-	#Make sure they're deck is the way they want it
-	get_tree().change_scene_to_packed(deck_builder_scene)
-	await deck_confirmed
-	
-	
+
+
 	get_tree().change_scene_to_packed(game_scene)
 	await get_tree().node_added #Singleton references should all connect by the end of ready
 	await get_tree().current_scene.ready

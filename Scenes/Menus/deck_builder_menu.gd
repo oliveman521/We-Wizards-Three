@@ -1,15 +1,20 @@
 extends Control
+class_name DeckBuildingMenu
 
 @onready var unlocked_cards_container: Control = %"Card Pool Container"
 @onready var cards_in_deck_container: HFlowContainer = %"Deck Contents Container"
 
+@onready var deck_label: Label = %"Deck Label"
+
+const PANEL_MOVE_TIME: float = 0.2
+
+#TODO should grow and shrink depending on if the info panel is in use
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	arrange_UI()
 
 func arrange_UI() -> void:
-	
 	#wipe out cards already there
 	for node: Node in unlocked_cards_container.get_children():
 		if node is Card:
@@ -54,6 +59,10 @@ func arrange_UI() -> void:
 			GameManager.current_save.cards_in_deck.erase(card_prefab)
 			arrange_UI()
 			)
+	
+	#Update header to include deck size
+	deck_label.text = "Deck (" + str(GameManager.current_save.cards_in_deck.size()) + "/" + str(GameManager.DECK_MAX_SIZE) + ")"
+
 func card_prefabs_to_duplicate_dict(card_prefabs: Array[PackedScene]) -> Dictionary:
 	var card_dict: Dictionary = {}
 	for card_prefab: PackedScene in card_prefabs:
@@ -63,9 +72,24 @@ func card_prefabs_to_duplicate_dict(card_prefabs: Array[PackedScene]) -> Diction
 			card_dict[card_prefab] += 1
 	return card_dict
 
-func confirm_deck() -> void:
-	var x: int =  GameManager.DECK_MAX_SIZE - GameManager.current_save.cards_in_deck.size()
-	if x > 0:
-		GameManager.spawn_popup(get_global_mouse_position(), "Deck needs " + str(x) + " more cards!", Color.FIREBRICK)
+var is_open: bool = false
+
+func open_deck_builder_menu() -> void:
+	if is_open:
 		return
-	GameManager.deck_confirmed.emit()
+	
+	is_open = true
+	var destination: Vector2 = Vector2(0,self.global_position.y)
+	var tween: Tween = get_tree().create_tween()
+	tween.tween_property(self, "global_position", destination, PANEL_MOVE_TIME)
+	await tween.finished
+
+func close_deck_builder_menu() -> void:
+	if not is_open:
+		return
+		
+	is_open = false
+	var destination: Vector2 = Vector2(-self.get_global_rect().size.x,self.global_position.y)
+	var tween: Tween = get_tree().create_tween()
+	tween.tween_property(self, "global_position", destination, PANEL_MOVE_TIME)
+	await tween.finished

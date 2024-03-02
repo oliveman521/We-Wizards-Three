@@ -6,8 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ox81m"]
 size = Vector2(54, 93)
 
-[node name="Enemy" type="Area2D" groups=["Enemies"]]
+[node name="BaseEnemy" type="Area2D" groups=["Enemies"]]
 script = ExtResource("1_kdqp5")
+enemy_name = "BaseEnemy"
 
 [node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(0, -6)
@@ -28,7 +29,8 @@ target_position = Vector2(54, 0)
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 modulate = Color(1, 1, 1, 0.0392157)
-scale = Vector2(10, 10)
+position = Vector2(-8, -8)
+scale = Vector2(3.7, 5.1)
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_enter"]

@@ -23,8 +23,9 @@ class_name MapNode
 
 @export var always_unlocked: bool = false
 
-var map_manager: MapManager:
-	get: return $".."
+@onready var map_manager: MapManager = $".."
+@onready var level_select: LevelSelectMenu = get_tree().get_first_node_in_group("Level Select Menu")
+
 
 var button: Button:
 	get: return $Button
@@ -60,10 +61,9 @@ var locked: bool:
 
 
 func _ready() -> void:
-	item_rect_changed.connect(map_manager.redraw_all_map_nodes)
 	queue_redraw()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Engine.is_editor_hint():
 		#queue_redraw() #TODO probably wasteful. Too bad!
 		pass
@@ -93,7 +93,7 @@ func _draw() -> void:
 		if neighbor == null: continue
 		
 		var center: Vector2 = get_rect().get_center() - global_position
-		var destination = neighbor.get_global_rect().get_center() - global_position
+		var destination: Vector2 = neighbor.get_global_rect().get_center() - global_position
 		destination = (destination - center)/2 + center #half the length
 		draw_line(center,destination,line_color,line_width)
 

@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dmdss2aqbb1lg" path="res://Scenes/Levels/level_2.tscn" id="4_mo0ci"]
 [ext_resource type="PackedScene" uid="uid://ddmofotpnip81" path="res://Scenes/Levels/level_3.tscn" id="5_hr653"]
 [ext_resource type="PackedScene" uid="uid://cklv7m4x0ijqb" path="res://Scenes/Level Select Map/MapNode_New_Card.tscn" id="6_dwreg"]
-[ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="6_lyyil"]
+[ext_resource type="PackedScene" uid="uid://x6b2h8oygbu0" path="res://Scenes/Level Select Map/level_info_panel.tscn" id="7_8338r"]
 
 [node name="Level Select" type="Control"]
 layout_mode = 3
@@ -26,10 +26,10 @@ grow_vertical = 2
 script = ExtResource("1_b5ch6")
 
 [node name="Level 1" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_8emr8")]
-offset_left = 43.0
-offset_top = 81.0
-offset_right = 176.0
-offset_bottom = 129.0
+offset_left = 50.0
+offset_top = 117.0
+offset_right = 183.0
+offset_bottom = 165.0
 level = ExtResource("3_shmks")
 connected_map_nodes = [NodePath("../Map Node - Card")]
 always_unlocked = true
@@ -55,7 +55,6 @@ offset_right = 606.0
 offset_bottom = 125.0
 level = ExtResource("4_mo0ci")
 connected_map_nodes = [NodePath("../Map Node - Card2"), NodePath("../Map Node - Card3")]
-always_unlocked = false
 
 [node name="Map Node - Card3" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("6_dwreg")]
 offset_left = 509.0
@@ -99,7 +98,6 @@ offset_right = 429.0
 offset_bottom = 376.0
 level = ExtResource("5_hr653")
 connected_map_nodes = [NodePath("../Map Node - Card3"), NodePath("../Map Node - Card4"), NodePath("../Map Node - Card7")]
-always_unlocked = false
 
 [node name="Level 4" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_8emr8")]
 offset_left = 603.0
@@ -107,7 +105,6 @@ offset_top = 317.0
 offset_right = 736.0
 offset_bottom = 365.0
 connected_map_nodes = [NodePath("../Map Node - Card3"), NodePath("../Map Node - Card5"), NodePath("../Map Node - Card6"), NodePath("../Map Node - Card7")]
-always_unlocked = false
 
 [node name="Level 5" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_8emr8")]
 offset_left = 463.0
@@ -115,7 +112,6 @@ offset_top = 539.0
 offset_right = 596.0
 offset_bottom = 587.0
 connected_map_nodes = [NodePath("../Map Node - Card7"), NodePath("../Level 6")]
-always_unlocked = false
 
 [node name="Level 6" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("2_8emr8")]
 offset_left = 464.0
@@ -123,62 +119,10 @@ offset_top = 660.0
 offset_right = 597.0
 offset_bottom = 708.0
 connected_map_nodes = [NodePath("../Level 5")]
-always_unlocked = false
 
-[node name="Level Info Panel" type="Control" parent="."]
-anchors_preset = 0
-offset_left = 1345.0
-offset_top = 20.0
-offset_right = 1882.0
-offset_bottom = 702.0
-
-[node name="Background" type="ColorRect" parent="Level Info Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.439216, 0.0745098, 0.00784314, 0.705882)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Level Info Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-alignment = 1
-
-[node name="Level Name" type="Label" parent="Level Info Panel/VBoxContainer"]
-layout_mode = 2
-text = "%Name of level%"
-label_settings = ExtResource("6_lyyil")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Gap Filler" type="Control" parent="Level Info Panel/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="Supplies Label" type="Label" parent="Level Info Panel/VBoxContainer"]
-layout_mode = 2
-text = "Available Supplies:"
-label_settings = ExtResource("6_lyyil")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Enemies Label" type="Label" parent="Level Info Panel/VBoxContainer"]
-layout_mode = 2
-text = "Incoming Enemies:"
-label_settings = ExtResource("6_lyyil")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Gap Filler2" type="Control" parent="Level Info Panel/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="Button" type="Button" parent="Level Info Panel/VBoxContainer"]
-layout_mode = 2
-text = "Pepare for Seige!"
+[node name="Level Info Panel" parent="." instance=ExtResource("7_8338r")]
+layout_mode = 0
+offset_left = 1278.0
+offset_top = 65.0
+offset_right = 1837.0
+offset_bottom = 717.0

@@ -1,3 +1,4 @@
+@tool
 extends Enemy
 
 @export var amplitude: float = 200

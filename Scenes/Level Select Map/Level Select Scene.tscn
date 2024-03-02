@@ -1,0 +1,303 @@
+[gd_scene load_steps=13 format=3 uid="uid://dwfp27xq4jnk1"]
+
+[ext_resource type="Script" path="res://Scenes/Level Select Map/LevelSelectMenu.gd" id="1_xcx1n"]
+[ext_resource type="Script" path="res://Scenes/Level Select Map/MapManager.gd" id="2_6iwrn"]
+[ext_resource type="PackedScene" uid="uid://bhr4pv0d0tl4m" path="res://Scenes/Level Select Map/Map Nodes/MapNode_Level.tscn" id="3_qvwta"]
+[ext_resource type="PackedScene" uid="uid://nr4hlan2e2hj" path="res://Scenes/Levels/level_1.tscn" id="4_6wqna"]
+[ext_resource type="PackedScene" uid="uid://cklv7m4x0ijqb" path="res://Scenes/Level Select Map/Map Nodes/MapNode_New_Card.tscn" id="5_64jv8"]
+[ext_resource type="PackedScene" uid="uid://dmdss2aqbb1lg" path="res://Scenes/Levels/level_2.tscn" id="6_rqthm"]
+[ext_resource type="PackedScene" uid="uid://bt6cb8kc2x7u4" path="res://Cards/Card Pool/card_quick_cast.tscn" id="7_red4p"]
+[ext_resource type="PackedScene" uid="uid://ddmofotpnip81" path="res://Scenes/Levels/level_3.tscn" id="7_rlaet"]
+[ext_resource type="Theme" uid="uid://btsp3ifn1m5n3" path="res://Scenes/Menus/Menus.tres" id="10_2ecuw"]
+[ext_resource type="PackedScene" uid="uid://6685qupifd8s" path="res://Cards/Card Pool/card_fire_scroll_recipe.tscn" id="10_f7yid"]
+[ext_resource type="Script" path="res://Scenes/Menus/deck_builder_menu.gd" id="11_t8gd0"]
+[ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="12_fdwhl"]
+
+[node name="Level Select Menu" type="Control" groups=["Level Select Menu"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xcx1n")
+
+[node name="Panel Onscreen Marker" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(1417, 29)
+
+[node name="Panel Offscreen Marker" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(1982, 23)
+
+[node name="Map Manager" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_6iwrn")
+
+[node name="Level 1" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
+offset_left = 50.0
+offset_top = 117.0
+offset_right = 183.0
+offset_bottom = 165.0
+level = ExtResource("4_6wqna")
+connected_map_nodes = [NodePath("../Map Node - Card")]
+always_unlocked = true
+
+[node name="Map Node - Card" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+offset_left = 254.0
+offset_top = 70.0
+offset_right = 306.0
+offset_bottom = 118.0
+cards = Array[PackedScene]([ExtResource("10_f7yid"), ExtResource("7_red4p")])
+connected_map_nodes = [NodePath("../Level 1"), NodePath("../Map Node - Card2")]
+
+[node name="Map Node - Card2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+offset_left = 365.0
+offset_top = 80.0
+offset_right = 417.0
+offset_bottom = 128.0
+cards = Array[PackedScene]([])
+connected_map_nodes = [NodePath("../Map Node - Card"), NodePath("../Level 2")]
+
+[node name="Level 2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
+offset_left = 473.0
+offset_top = 77.0
+offset_right = 606.0
+offset_bottom = 125.0
+level = ExtResource("6_rqthm")
+connected_map_nodes = [NodePath("../Map Node - Card2"), NodePath("../Map Node - Card3")]
+
+[node name="Map Node - Card3" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+offset_left = 509.0
+offset_top = 193.0
+offset_right = 561.0
+offset_bottom = 241.0
+cards = Array[PackedScene]([])
+connected_map_nodes = [NodePath("../Level 2"), NodePath("../Level 3"), NodePath("../Level 4")]
+
+[node name="Map Node - Card7" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+offset_left = 503.0
+offset_top = 430.0
+offset_right = 555.0
+offset_bottom = 478.0
+cards = Array[PackedScene]([])
+connected_map_nodes = [NodePath("../Level 3"), NodePath("../Level 4"), NodePath("../Level 5")]
+
+[node name="Map Node - Card4" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+offset_left = 104.0
+offset_top = 339.0
+offset_right = 156.0
+offset_bottom = 387.0
+cards = Array[PackedScene]([])
+connected_map_nodes = [NodePath("../Level 3")]
+
+[node name="Map Node - Card5" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+offset_left = 849.0
+offset_top = 259.0
+offset_right = 901.0
+offset_bottom = 307.0
+cards = Array[PackedScene]([])
+connected_map_nodes = [NodePath("../Level 4")]
+
+[node name="Map Node - Card6" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+offset_left = 862.0
+offset_top = 379.0
+offset_right = 914.0
+offset_bottom = 427.0
+cards = Array[PackedScene]([])
+connected_map_nodes = [NodePath("../Level 4")]
+
+[node name="Level 3" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
+offset_left = 296.0
+offset_top = 328.0
+offset_right = 429.0
+offset_bottom = 376.0
+level = ExtResource("7_rlaet")
+connected_map_nodes = [NodePath("../Map Node - Card3"), NodePath("../Map Node - Card4"), NodePath("../Map Node - Card7")]
+
+[node name="Level 4" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
+offset_left = 603.0
+offset_top = 317.0
+offset_right = 736.0
+offset_bottom = 365.0
+connected_map_nodes = [NodePath("../Map Node - Card3"), NodePath("../Map Node - Card5"), NodePath("../Map Node - Card6"), NodePath("../Map Node - Card7")]
+
+[node name="Level 5" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
+offset_left = 463.0
+offset_top = 539.0
+offset_right = 596.0
+offset_bottom = 587.0
+connected_map_nodes = [NodePath("../Map Node - Card7"), NodePath("../Level 6")]
+
+[node name="Level 6" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
+offset_left = 464.0
+offset_top = 660.0
+offset_right = 597.0
+offset_bottom = 708.0
+connected_map_nodes = [NodePath("../Level 5")]
+
+[node name="Edit Deck Button" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 79.0
+offset_top = -166.0
+offset_right = 411.0
+offset_bottom = -85.0
+grow_vertical = 2
+rotation = 1.5708
+theme = ExtResource("10_2ecuw")
+text = "Edit Deck"
+
+[node name="Deck Building Menu" type="MarginContainer" parent="." groups=["Deck Building Menu"]]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = -1403.0
+offset_top = 23.0
+offset_right = -1.0
+offset_bottom = -25.0
+grow_vertical = 2
+script = ExtResource("11_t8gd0")
+
+[node name="ColorRect" type="ColorRect" parent="Deck Building Menu"]
+layout_mode = 2
+color = Color(0, 0, 0, 0.137255)
+
+[node name="Screen Margin" type="MarginContainer" parent="Deck Building Menu"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Deck Building Menu/Screen Margin"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Deck Building Menu/Screen Margin/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Owned Cards Label" type="Label" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Owned Cards"
+label_settings = ExtResource("12_fdwhl")
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Container" type="MarginContainer" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.145098, 0.141176, 0.152941, 0.427451)
+
+[node name="MarginContainer" type="MarginContainer" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Card Pool Container" type="HFlowContainer" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
+
+[node name="Card" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("10_f7yid")]
+layout_mode = 2
+
+[node name="Card3" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("10_f7yid")]
+layout_mode = 2
+
+[node name="Card2" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("10_f7yid")]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Deck Building Menu/Screen Margin/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="Deck Label" type="Label" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Deck"
+label_settings = ExtResource("12_fdwhl")
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Container" type="MarginContainer" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.145098, 0.141176, 0.152941, 0.427451)
+
+[node name="MarginContainer" type="MarginContainer" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Deck Contents Container" type="HFlowContainer" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
+
+[node name="Card2" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("10_f7yid")]
+layout_mode = 2
+
+[node name="Card3" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("10_f7yid")]
+layout_mode = 2
+
+[node name="Back Button" type="Button" parent="Deck Building Menu/Screen Margin"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme = ExtResource("10_2ecuw")
+theme_override_font_sizes/font_size = 28
+text = " X "
+
+[connection signal="button_down" from="Edit Deck Button" to="Deck Building Menu" method="open_deck_builder_menu"]
+[connection signal="button_down" from="Deck Building Menu/Screen Margin/Back Button" to="Deck Building Menu" method="close_deck_builder_menu"]

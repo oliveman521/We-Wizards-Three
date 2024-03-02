@@ -5,35 +5,45 @@
 [ext_resource type="Script" path="res://Scenes/Menus/deck_builder_menu.gd" id="1_t8ixf"]
 [ext_resource type="Theme" uid="uid://btsp3ifn1m5n3" path="res://Scenes/Menus/Menus.tres" id="3_vpowb"]
 
-[node name="DeckBuilderMenu" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
+[node name="DeckBuilderMenu" type="MarginContainer"]
+anchors_preset = 9
 anchor_bottom = 1.0
-grow_horizontal = 2
+offset_top = 24.0
+offset_right = 1402.0
+offset_bottom = -24.0
 grow_vertical = 2
 script = ExtResource("1_t8ixf")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+color = Color(0, 0, 0, 0.137255)
+
 [node name="Screen Margin" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="Back Button" type="Button" parent="Screen Margin"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme = ExtResource("3_vpowb")
+theme_override_font_sizes/font_size = 28
+text = " X "
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Screen Margin"]
 layout_mode = 2
-theme_override_constants/separation = 50
+mouse_filter = 2
+theme_override_constants/separation = 15
 alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Screen Margin/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 
 [node name="Label" type="Label" parent="Screen Margin/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -72,10 +82,13 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/h_separation = 20
-theme_override_constants/v_separation = 20
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
 
 [node name="Card" parent="Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("1_j3icq")]
+layout_mode = 2
+
+[node name="Card3" parent="Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("1_j3icq")]
 layout_mode = 2
 
 [node name="Card2" parent="Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("1_j3icq")]
@@ -84,6 +97,7 @@ layout_mode = 2
 [node name="VBoxContainer2" type="VBoxContainer" parent="Screen Margin/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_filter = 2
 
 [node name="Label" type="Label" parent="Screen Margin/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
@@ -122,8 +136,8 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/h_separation = 20
-theme_override_constants/v_separation = 20
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
 
 [node name="Card2" parent="Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("1_j3icq")]
 layout_mode = 2
@@ -131,13 +145,4 @@ layout_mode = 2
 [node name="Card3" parent="Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("1_j3icq")]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Screen Margin/HBoxContainer/VBoxContainer2"]
-layout_mode = 2
-
-[node name="Button" type="Button" parent="Screen Margin/HBoxContainer/VBoxContainer2/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("3_vpowb")
-text = "Confirm Deck & Start"
-
-[connection signal="button_down" from="Screen Margin/HBoxContainer/VBoxContainer2/HBoxContainer/Button" to="." method="confirm_deck"]
+[connection signal="button_down" from="Screen Margin/Back Button" to="." method="confirm_deck"]

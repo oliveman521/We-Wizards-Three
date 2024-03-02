@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6l8omowp6g0m"]
+
+[ext_resource type="Texture2D" uid="uid://cnm40sd26ufh" path="res://Sprites/Question Mark.png" id="1_o2llm"]
+
+[node name="Icon" type="TextureRect"]
+size_flags_horizontal = 3
+texture = ExtResource("1_o2llm")
+expand_mode = 1
+stretch_mode = 5
