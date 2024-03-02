@@ -3,7 +3,23 @@ class_name ApprenticeCharacter
 
 var move_speed: float = 300
 
-var combo: int = 0
+var combo: int = 0:
+	set(new_val):
+		new_val = clamp(new_val, 0, max_combo)
+		combo = new_val
+		#update UI
+		var combo_num_label: Label = %"Combo Num Label" as Label
+		var combo_display: Control = %"Combo Display" as Control
+
+		if GameManager.current_save.max_combo == 0:
+			combo_display.visible = false
+		
+		combo_num_label.text = str(combo)
+
+var max_combo_bonus: int = 0
+var max_combo: int:
+	get:
+		return GameManager.current_save.max_combo + max_combo_bonus
 
 var last_pickup_type: Supply
 
@@ -24,6 +40,7 @@ var input_dir : Vector2
 
 func _ready() -> void:
 	GameManager.apprentice_character = self as ApprenticeCharacter
+	combo = 0
 
 func _process(_delta: float) -> void:
 	if not boosting: #we can only update our movement direction if we aren;'t boosting
