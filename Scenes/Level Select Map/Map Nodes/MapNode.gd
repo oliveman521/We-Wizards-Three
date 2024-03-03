@@ -26,6 +26,8 @@ class_name MapNode
 @onready var map_manager: MapManager = $".."
 @onready var level_select: LevelSelectMenu = get_tree().get_first_node_in_group("Level Select Menu")
 
+var label: Label:
+	get: return %Label
 
 var button: Button:
 	get: return $Button

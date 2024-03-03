@@ -12,7 +12,9 @@ pages = Array[Resource("res://Scenes/Level Select Map/Info Panels/TutorialInfoPa
 
 [node name="Button" parent="." index="0"]
 theme_override_font_sizes/font_size = 36
-text = ""
 icon = ExtResource("3_aflvy")
 icon_alignment = 1
 expand_icon = true
+
+[node name="Label" parent="." index="3"]
+visible = false

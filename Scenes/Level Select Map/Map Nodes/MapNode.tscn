@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://de756ivob0cql"]
+[gd_scene load_steps=5 format=3 uid="uid://de756ivob0cql"]
 
 [ext_resource type="Script" path="res://Scenes/Level Select Map/Map Nodes/MapNode.gd" id="1_yufi2"]
 [ext_resource type="Texture2D" uid="uid://d1k283focdx4o" path="res://Sprites/UI Icons/Check.svg" id="2_wh5h6"]
 [ext_resource type="Texture2D" uid="uid://dlvc3iksf0q21" path="res://Sprites/UI Icons/padlock.svg" id="3_lc30j"]
+[ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="4_7sryh"]
 
 [node name="Map Node" type="Control"]
 layout_mode = 3
@@ -18,7 +19,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Text"
 
 [node name="Explored Icon" type="TextureRect" parent="."]
 unique_name_in_owner = true
@@ -50,5 +50,18 @@ offset_bottom = 21.0
 grow_horizontal = 0
 texture = ExtResource("3_lc30j")
 expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = ExtResource("4_7sryh")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [connection signal="button_down" from="Button" to="." method="_on_button_down"]

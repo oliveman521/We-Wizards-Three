@@ -145,16 +145,16 @@ shape = SubResource("RectangleShape2D_odmoc")
 [node name="Test Feed Tape" type="Node2D" parent="Warlock Game/Enemy Manager"]
 script = ExtResource("4_dbx0g")
 
-[node name="Enemy - Peasent" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_2n0xo")]
+[node name="Peasent" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_2n0xo")]
 position = Vector2(-377, 494)
 
-[node name="Enemy - Peasent2" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_2n0xo")]
+[node name="Peasent2" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_2n0xo")]
 position = Vector2(-637, 604)
 
-[node name="Enemy - Peasent3" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_2n0xo")]
+[node name="Peasent3" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_2n0xo")]
 position = Vector2(-751, 305)
 
-[node name="Enemy - Knight" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("6_7a1d2")]
+[node name="Knight" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("6_7a1d2")]
 position = Vector2(-453, 292)
 
 [node name="Projectile Container" type="Node2D" parent="Warlock Game"]
