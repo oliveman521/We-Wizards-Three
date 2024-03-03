@@ -19,11 +19,11 @@ func populate(card_prefabs: Array[PackedScene]) -> void:
 		card.enter_preview_mode()
 	
 	confirm_button.button_down.connect(func()-> void:
-		level_select_menu.close_current_panel()
+		level_select_menu.close_current_info_panel()
 	)
 	
 	back_button.button_down.connect(func()-> void:
-		level_select_menu.close_current_panel()
+		level_select_menu.close_current_info_panel()
 	)
 
 

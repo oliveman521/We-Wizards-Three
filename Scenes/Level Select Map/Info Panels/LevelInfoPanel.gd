@@ -4,10 +4,10 @@ class_name LevelInfoPanel
 
 const ICON_UI_PREFAB = preload("uid://b6l8omowp6g0m")
 
-@onready var level_name_label: Label = %"Level Name Label"
+@onready var title_label: Label = %"Title Label"
 @onready var supply_icons_container: HBoxContainer = %"Supply Icons Container"
 @onready var enemy_icons_container: HBoxContainer = %"Enemy Icons Container"
-@onready var start_button: Button = %"Start Button"
+@onready var start_button: Button = %"Confirm Button"
 @onready var back_button: Button = %"Back Button"
 
 @onready var level_select_menu: LevelSelectMenu = get_tree().get_first_node_in_group("Level Select Menu")
@@ -16,7 +16,7 @@ const ICON_UI_PREFAB = preload("uid://b6l8omowp6g0m")
 func populate(level_prefab: PackedScene) -> void:
 	var level_data: LevelData = level_prefab.instantiate() as LevelData
 	
-	level_name_label.text = level_data.level_name
+	title_label.text = level_data.level_name
 	
 	for c: Node in supply_icons_container.get_children():
 		c.queue_free()

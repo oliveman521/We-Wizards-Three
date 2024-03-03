@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cde83i8rqdtlj"]
+
+[ext_resource type="PackedScene" uid="uid://de756ivob0cql" path="res://Scenes/Level Select Map/Map Nodes/MapNode.tscn" id="1_ibd1y"]
+[ext_resource type="Script" path="res://Scenes/Level Select Map/Map Nodes/MapNode_NewAbility.gd" id="2_txubq"]
+[ext_resource type="Texture2D" uid="uid://cnm40sd26ufh" path="res://Sprites/Question Mark.png" id="3_4k1lj"]
+
+[node name="Insert Name" instance=ExtResource("1_ibd1y")]
+offset_right = 45.0
+offset_bottom = 45.0
+script = ExtResource("2_txubq")
+ability_name = "Insert Name"
+ability_image = null
+ability_description = "Insert Description"
+
+[node name="Button" parent="." index="0"]
+text = ""
+icon = ExtResource("3_4k1lj")
+icon_alignment = 1
+expand_icon = true

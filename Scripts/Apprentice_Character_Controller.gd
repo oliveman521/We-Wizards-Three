@@ -3,7 +3,7 @@ class_name ApprenticeCharacter
 
 var move_speed: float = 300
 
-var combo: int = 0:
+var combo: int = 1:
 	set(new_val):
 		new_val = clamp(new_val, 0, max_combo)
 		combo = new_val
@@ -11,7 +11,7 @@ var combo: int = 0:
 		var combo_num_label: Label = %"Combo Num Label" as Label
 		var combo_display: Control = %"Combo Display" as Control
 
-		if GameManager.current_save.max_combo == 0:
+		if max_combo <= 1:
 			combo_display.visible = false
 		
 		combo_num_label.text = str(combo)
@@ -19,7 +19,7 @@ var combo: int = 0:
 var max_combo_bonus: int = 0
 var max_combo: int:
 	get:
-		return GameManager.current_save.max_combo + max_combo_bonus
+		return 1 + GameManager.current_save.check_unlock("Max Combo") + max_combo_bonus
 
 var last_pickup_type: Supply
 
@@ -45,12 +45,14 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if not boosting: #we can only update our movement direction if we aren;'t boosting
 		input_dir = Input.get_vector("labyrinth_left","labyrinth_right","labyrinth_up","labyrinth_down")
+	
 	input_dir = input_dir.normalized()
 	velocity = input_dir * move_speed
 	
-	if Input.is_action_just_pressed("labyrinth_boost") and not boosting:
-		#trying to boost
-		print("w")
+	var boost_unlocked: bool = GameManager.current_save.check_unlock("Apprentice Boost") > 0
+	var can_boost: bool = (not boosting) and boost_unlocked
+	
+	if Input.is_action_just_pressed("labyrinth_boost") and can_boost:
 		boost_timer.wait_time = boost_durration
 		boost_timer.start()
 	

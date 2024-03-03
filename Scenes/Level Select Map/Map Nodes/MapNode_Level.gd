@@ -5,8 +5,9 @@ extends MapNode
 
 func _ready() -> void:
 	super._ready()
-	if GameManager.current_save.completed_levels.has(level):
-		is_explored = true
+	if not Engine.is_editor_hint():
+		if GameManager.current_save.completed_levels.has(level):
+			is_explored = true
 
 func _draw() -> void:
 	if level:

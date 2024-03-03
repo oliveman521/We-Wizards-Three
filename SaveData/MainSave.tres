@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://SaveData/GameSave.gd" id="1_eigaw"]
 [ext_resource type="PackedScene" uid="uid://6685qupifd8s" path="res://Cards/Card Pool/card_fire_scroll_recipe.tscn" id="2_m37ox"]
-[ext_resource type="PackedScene" uid="uid://dfuh7fif3lr3e" path="res://Cards/Card Pool/card_lightning_scroll_recipe.tscn" id="3_wt87p"]
+[ext_resource type="PackedScene" uid="uid://dfuh7fif3lr3e" path="res://Cards/Card Pool/card_lightning_scroll.tscn" id="3_wt87p"]
 [ext_resource type="PackedScene" uid="uid://rfnlpy50ihlp" path="res://Cards/Card Pool/card_printing_press.tscn" id="4_3knku"]
 [ext_resource type="PackedScene" uid="uid://bt6cb8kc2x7u4" path="res://Cards/Card Pool/card_quick_cast.tscn" id="5_6f645"]
 [ext_resource type="PackedScene" uid="uid://bhq4tuy1yifyy" path="res://Cards/Card Pool/card_scortched_earth.tscn" id="6_vkxmq"]
@@ -16,4 +16,5 @@
 
 [resource]
 script = ExtResource("1_eigaw")
+misc_unlocks = []
 unlocked_cards = Array[PackedScene]([ExtResource("2_m37ox"), ExtResource("3_wt87p"), ExtResource("4_3knku"), ExtResource("5_6f645"), ExtResource("6_vkxmq"), ExtResource("7_8n8og"), ExtResource("8_64m5n"), ExtResource("2_m37ox"), ExtResource("3_wt87p"), ExtResource("4_3knku"), ExtResource("5_6f645"), ExtResource("7_8n8og"), ExtResource("8_64m5n"), ExtResource("2_m37ox"), ExtResource("3_wt87p"), ExtResource("7_8n8og"), ExtResource("4_3knku"), ExtResource("9_po7ym"), ExtResource("9_po7ym"), ExtResource("9_po7ym"), ExtResource("10_l2haq"), ExtResource("11_g0ukq"), ExtResource("12_r60ko"), ExtResource("13_627nf")])
