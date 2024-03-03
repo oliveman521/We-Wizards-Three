@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://bpfb1n271ove4"]
+[gd_scene load_steps=49 format=3 uid="uid://bpfb1n271ove4"]
 
 [ext_resource type="Script" path="res://Scenes/Level Select Map/LevelSelectMenu.gd" id="1_xcx1n"]
 [ext_resource type="Script" path="res://Scenes/Level Select Map/MapManager.gd" id="2_6iwrn"]
@@ -37,6 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://cthet27f7cioc" path="res://Scenes/Levels/level 6.tscn" id="32_gsedw"]
 [ext_resource type="PackedScene" uid="uid://dfuh7fif3lr3e" path="res://Cards/Card Pool/card_lightning_scroll.tscn" id="33_xng6a"]
 [ext_resource type="PackedScene" uid="uid://o3tq5x43hvo7" path="res://Scenes/Levels/level 7 - Knightfall.tscn" id="34_pvgma"]
+[ext_resource type="PackedScene" uid="uid://djyq018lrnfov" path="res://Scenes/Levels/level 99.tscn" id="35_ng2po"]
 
 [sub_resource type="Resource" id="Resource_fwqn5"]
 script = ExtResource("5_2m5ee")
@@ -334,7 +335,15 @@ offset_top = 908.0
 offset_right = 1167.0
 offset_bottom = 956.0
 level = ExtResource("34_pvgma")
-connected_map_nodes = [NodePath("../Cards - Lightning Scroll (+3 others)")]
+connected_map_nodes = [NodePath("../Cards - Lightning Scroll (+3 others)"), NodePath("../Level - level 99")]
+
+[node name="Level - level 99" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
+offset_left = 1483.0
+offset_top = 911.0
+offset_right = 1616.0
+offset_bottom = 959.0
+level = ExtResource("35_ng2po")
+connected_map_nodes = [NodePath("../Level - level 7 - Knightfall")]
 
 [node name="Edit Deck Button" type="Button" parent="."]
 unique_name_in_owner = true
@@ -493,6 +502,15 @@ size_flags_vertical = 0
 theme = ExtResource("10_2ecuw")
 theme_override_font_sizes/font_size = 28
 text = " X "
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1671.0
+offset_top = 1024.0
+offset_right = 1907.0
+offset_bottom = 1074.0
+text = "Press K to toggle Debug mode.
+Press O to auto-complete level"
 
 [connection signal="button_down" from="Edit Deck Button" to="Deck Building Menu" method="open_deck_builder_menu"]
 [connection signal="button_down" from="Deck Building Menu/Screen Margin/Back Button" to="Deck Building Menu" method="close_deck_builder_menu"]

@@ -2,14 +2,13 @@
 extends Node2D
 class_name Enemy
 
-@export var enemy_name: String= "unnamed_enemy":
-	set(new_val):
-		enemy_name = new_val
-		self.name = enemy_name
+@export var enemy_name: String:
 	get:
-		if enemy_name == "unnamed_enemy":
-			print("Warning: tried to get the name of enemy who's name has not yet been set up")
-		return enemy_name
+		var file_name: String = scene_file_path.get_basename().split("/")[-1]
+		file_name = file_name.replace("enemy_","")
+		file_name = file_name.capitalize()
+		name = file_name
+		return file_name
 
 @export var move_speed: float= 50
 @export var health: float = 5

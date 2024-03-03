@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b5t5chbh5x6vr" path="res://Enemies/enemy_peasent.tscn" id="2_2wrfo"]
 [ext_resource type="PackedScene" uid="uid://cn7apof2y3wfd" path="res://Enemies/enemy_archer.tscn" id="3_xpj05"]
 [ext_resource type="PackedScene" uid="uid://dbc3v7h72rrl8" path="res://Enemies/enemy_knight.tscn" id="4_nk55h"]
-[ext_resource type="PackedScene" uid="uid://c67dhecvk3b28" path="res://Enemies/enemy_seigeEngine.tscn" id="5_c4epq"]
+[ext_resource type="PackedScene" uid="uid://c67dhecvk3b28" path="res://Enemies/enemy_seige_engine.tscn" id="5_c4epq"]
 [ext_resource type="PackedScene" uid="uid://c6afi4js5waro" path="res://Enemies/enemy_jester.tscn" id="6_1aruh"]
 
 [node name="Level Data" instance=ExtResource("1_bn240")]

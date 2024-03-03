@@ -63,12 +63,9 @@ var locked: bool:
 
 
 func _ready() -> void:
+	GameManager.debug_mode_changed.connect(queue_redraw)
 	queue_redraw()
 
-func _process(_delta: float) -> void:
-	if Engine.is_editor_hint():
-		#queue_redraw() #TODO probably wasteful. Too bad!
-		pass
 
 func _draw() -> void:
 	
