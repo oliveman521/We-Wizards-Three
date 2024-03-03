@@ -63,7 +63,8 @@ var locked: bool:
 
 
 func _ready() -> void:
-	GameManager.debug_mode_changed.connect(queue_redraw)
+	if not Engine.is_editor_hint():
+		GameManager.debug_mode_changed.connect(queue_redraw)
 	queue_redraw()
 
 

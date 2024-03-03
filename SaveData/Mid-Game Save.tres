@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="GameSave" load_steps=14 format=3 uid="uid://3c1rtf66d6u6"]
 
 [ext_resource type="Script" path="res://SaveData/GameSave.gd" id="1_qn4hp"]
-[ext_resource type="PackedScene" uid="uid://6685qupifd8s" path="res://Cards/Card Pool/card_fire_scroll_recipe.tscn" id="2_vattb"]
-[ext_resource type="PackedScene" uid="uid://dfuh7fif3lr3e" path="res://Cards/Card Pool/card_lightning_scroll.tscn" id="3_8gds4"]
+[ext_resource type="PackedScene" uid="uid://6685qupifd8s" path="res://Cards/Card Pool/card_fire_ball_recipe.tscn" id="2_vattb"]
+[ext_resource type="PackedScene" uid="uid://dfuh7fif3lr3e" path="res://Cards/Card Pool/card_lightning_scroll_recipe.tscn" id="3_8gds4"]
 [ext_resource type="PackedScene" uid="uid://rfnlpy50ihlp" path="res://Cards/Card Pool/card_printing_press.tscn" id="4_u8d5v"]
 [ext_resource type="PackedScene" uid="uid://bt6cb8kc2x7u4" path="res://Cards/Card Pool/card_quick_cast.tscn" id="5_hed7e"]
 [ext_resource type="PackedScene" uid="uid://bhq4tuy1yifyy" path="res://Cards/Card Pool/card_scortched_earth.tscn" id="6_51gt1"]

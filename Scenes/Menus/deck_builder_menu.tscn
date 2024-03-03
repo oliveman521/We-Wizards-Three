@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bhm5xireormeb"]
 
 [ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="1_66omf"]
-[ext_resource type="PackedScene" uid="uid://6685qupifd8s" path="res://Cards/Card Pool/card_fire_scroll_recipe.tscn" id="1_j3icq"]
+[ext_resource type="PackedScene" uid="uid://6685qupifd8s" path="res://Cards/Card Pool/card_fire_ball_recipe.tscn" id="1_j3icq"]
 [ext_resource type="Script" path="res://Scenes/Menus/deck_builder_menu.gd" id="1_t8ixf"]
 [ext_resource type="Theme" uid="uid://btsp3ifn1m5n3" path="res://Scenes/Menus/Menus.tres" id="3_vpowb"]
 

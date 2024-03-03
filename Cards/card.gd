@@ -35,13 +35,16 @@ func _ready() -> void:
 signal card_played()
 signal card_discarded()
 
-@export var card_name: String: #TODO Making this drive the file name proved to cause problems where it'd create duplicate files, but it could be driven BY the file name? Seems smart
-	get: return card_name
-	set(new_val):
-		card_name = new_val
+
+@export var card_name: String:
+	get:
+		var file_name: String = scene_file_path.get_basename().split("/")[-1]
+		file_name = file_name.replace("card_","")
+		file_name = file_name.capitalize()
+		name = file_name
 		if card_name_UI:
-			card_name_UI.text = new_val
-		name = "Card - " + card_name
+			card_name_UI.text = file_name
+		return file_name
 
 var deck_building_mode: bool = false
 

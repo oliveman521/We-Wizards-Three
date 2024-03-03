@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://830fliunjvdu" path="res://Sprites/Comic Panels/door slam.png" id="8_7wuin"]
 [ext_resource type="Texture2D" uid="uid://cxme5dqwjo81m" path="res://Sprites/Comic Panels/Telling the gang.png" id="9_dk514"]
 [ext_resource type="Theme" uid="uid://btsp3ifn1m5n3" path="res://Scenes/Menus/Menus.tres" id="10_2ecuw"]
-[ext_resource type="PackedScene" uid="uid://6685qupifd8s" path="res://Cards/Card Pool/card_fire_scroll_recipe.tscn" id="10_f7yid"]
 [ext_resource type="Script" path="res://Scenes/Menus/deck_builder_menu.gd" id="11_t8gd0"]
 [ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="12_fdwhl"]
 [ext_resource type="PackedScene" uid="uid://nr4hlan2e2hj" path="res://Scenes/Levels/Level 1.tscn" id="12_iop6h"]
@@ -29,13 +28,14 @@
 [ext_resource type="PackedScene" uid="uid://tth5yw0eirm6" path="res://Cards/Card Pool/card_librarian_golem.tscn" id="22_dsx6i"]
 [ext_resource type="PackedScene" uid="uid://50477ao4osxc" path="res://Scenes/Levels/Level 3b.tscn" id="22_mev8k"]
 [ext_resource type="PackedScene" uid="uid://dio6uti0xbamv" path="res://Scenes/Levels/Level 4.tscn" id="24_ihj3m"]
+[ext_resource type="PackedScene" uid="uid://6685qupifd8s" path="res://Cards/Card Pool/card_fire_ball_recipe.tscn" id="24_rjnis"]
 [ext_resource type="PackedScene" uid="uid://cgklhf7q88enf" path="res://Cards/Card Pool/card_shock.tscn" id="26_cxv1b"]
 [ext_resource type="PackedScene" uid="uid://qiwvts513giv" path="res://Scenes/Levels/Level 5b.tscn" id="27_3xcp6"]
 [ext_resource type="PackedScene" uid="uid://bt6cb8kc2x7u4" path="res://Cards/Card Pool/card_quick_cast.tscn" id="27_48o8d"]
 [ext_resource type="PackedScene" uid="uid://don0td5sje72h" path="res://Scenes/Levels/Level 5a.tscn" id="28_0tjtk"]
 [ext_resource type="PackedScene" uid="uid://ddysngdfm7vje" path="res://Scenes/Levels/level Bonus 1.tscn" id="29_mq7ma"]
 [ext_resource type="PackedScene" uid="uid://cthet27f7cioc" path="res://Scenes/Levels/level 6.tscn" id="32_gsedw"]
-[ext_resource type="PackedScene" uid="uid://dfuh7fif3lr3e" path="res://Cards/Card Pool/card_lightning_scroll.tscn" id="33_xng6a"]
+[ext_resource type="PackedScene" uid="uid://dfuh7fif3lr3e" path="res://Cards/Card Pool/card_lightning_scroll_recipe.tscn" id="33_xng6a"]
 [ext_resource type="PackedScene" uid="uid://o3tq5x43hvo7" path="res://Scenes/Levels/level 7 - Knightfall.tscn" id="34_pvgma"]
 [ext_resource type="PackedScene" uid="uid://djyq018lrnfov" path="res://Scenes/Levels/level 99.tscn" id="35_ng2po"]
 
@@ -194,9 +194,9 @@ offset_top = 56.0
 offset_right = 973.0
 offset_bottom = 104.0
 level = ExtResource("16_okn0a")
-connected_map_nodes = [NodePath("../Cards - Super Charge (+2 others)"), NodePath("../Ability - Max Combo")]
+connected_map_nodes = [NodePath("../Cards - Supercharge (+2 others)"), NodePath("../Ability - Max Combo")]
 
-[node name="Cards - Super Charge (+2 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+[node name="Cards - Supercharge (+2 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 875.0
 offset_top = 172.0
 offset_right = 927.0
@@ -226,7 +226,7 @@ offset_top = 267.0
 offset_right = 849.0
 offset_bottom = 315.0
 level = ExtResource("21_ditay")
-connected_map_nodes = [NodePath("../Cards - Super Charge (+2 others)"), NodePath("../Cards - Scortched Earth (+1 others)"), NodePath("../Cards - Fire Ball Scroll (+3 others)")]
+connected_map_nodes = [NodePath("../Cards - Supercharge (+2 others)"), NodePath("../Cards - Scortched Earth (+1 others)"), NodePath("../Cards - Fire Ball Recipe (+3 others)")]
 
 [node name="Level - Level 3b" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 941.0
@@ -234,14 +234,14 @@ offset_top = 263.0
 offset_right = 1074.0
 offset_bottom = 311.0
 level = ExtResource("22_mev8k")
-connected_map_nodes = [NodePath("../Cards - Super Charge (+2 others)"), NodePath("../Cards - Magma Spray (+3 others)"), NodePath("../Cards - Fire Ball Scroll (+3 others)")]
+connected_map_nodes = [NodePath("../Cards - Supercharge (+2 others)"), NodePath("../Cards - Magma Spray (+3 others)"), NodePath("../Cards - Fire Ball Recipe (+3 others)")]
 
-[node name="Cards - Fire Ball Scroll (+3 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+[node name="Cards - Fire Ball Recipe (+3 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 862.0
 offset_top = 387.0
 offset_right = 914.0
 offset_bottom = 435.0
-cards = Array[PackedScene]([ExtResource("10_f7yid"), ExtResource("10_f7yid"), ExtResource("10_f7yid"), ExtResource("21_bj66l")])
+cards = Array[PackedScene]([ExtResource("24_rjnis"), ExtResource("24_rjnis"), ExtResource("24_rjnis"), ExtResource("21_bj66l")])
 connected_map_nodes = [NodePath("../Level - Level 3a"), NodePath("../Level - Level 3b"), NodePath("../Level - Level 4")]
 
 [node name="Level - Level 4" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
@@ -250,7 +250,7 @@ offset_top = 482.0
 offset_right = 953.0
 offset_bottom = 530.0
 level = ExtResource("24_ihj3m")
-connected_map_nodes = [NodePath("../Cards - Fire Ball Scroll (+3 others)"), NodePath("../Level - Level 5b"), NodePath("../Level - Level 5a")]
+connected_map_nodes = [NodePath("../Cards - Fire Ball Recipe (+3 others)"), NodePath("../Level - Level 5b"), NodePath("../Level - Level 5a")]
 
 [node name="Level - Level 5a" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 690.0
@@ -294,7 +294,7 @@ offset_left = 1258.0
 offset_top = 316.0
 offset_right = 1310.0
 offset_bottom = 364.0
-cards = Array[PackedScene]([ExtResource("22_dsx6i"), ExtResource("21_bj66l"), ExtResource("10_f7yid")])
+cards = Array[PackedScene]([ExtResource("22_dsx6i"), ExtResource("21_bj66l"), ExtResource("24_rjnis")])
 connected_map_nodes = [NodePath("../Level - level Bonus 1")]
 
 [node name="Level - level Bonus 1" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
@@ -338,10 +338,10 @@ level = ExtResource("34_pvgma")
 connected_map_nodes = [NodePath("../Cards - Lightning Scroll (+3 others)"), NodePath("../Level - level 99")]
 
 [node name="Level - level 99" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
-offset_left = 1483.0
-offset_top = 911.0
-offset_right = 1616.0
-offset_bottom = 959.0
+offset_left = 1748.0
+offset_top = 106.0
+offset_right = 1881.0
+offset_bottom = 154.0
 level = ExtResource("35_ng2po")
 connected_map_nodes = [NodePath("../Level - level 7 - Knightfall")]
 
@@ -434,14 +434,17 @@ size_flags_vertical = 3
 theme_override_constants/h_separation = 15
 theme_override_constants/v_separation = 15
 
-[node name="Card - Fire Ball Scroll" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("10_f7yid")]
+[node name="Fire Ball Recipe" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("24_rjnis")]
 layout_mode = 2
+card_name = "Fire Ball Recipe"
 
-[node name="Card - Fire Ball Scroll2" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("10_f7yid")]
+[node name="Fire Ball Recipe2" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("24_rjnis")]
 layout_mode = 2
+card_name = "Fire Ball Recipe"
 
-[node name="Card - Fire Ball Scroll3" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("10_f7yid")]
+[node name="Fire Ball Recipe3" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("24_rjnis")]
 layout_mode = 2
+card_name = "Fire Ball Recipe"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Deck Building Menu/Screen Margin/HBoxContainer"]
 layout_mode = 2
@@ -489,11 +492,13 @@ size_flags_vertical = 3
 theme_override_constants/h_separation = 15
 theme_override_constants/v_separation = 15
 
-[node name="Card - Fire Ball Scroll" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("10_f7yid")]
+[node name="Fire Ball Recipe" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("24_rjnis")]
 layout_mode = 2
+card_name = "Fire Ball Recipe"
 
-[node name="Card - Fire Ball Scroll2" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("10_f7yid")]
+[node name="Fire Ball Recipe2" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("24_rjnis")]
 layout_mode = 2
+card_name = "Fire Ball Recipe"
 
 [node name="Back Button" type="Button" parent="Deck Building Menu/Screen Margin"]
 layout_mode = 2
@@ -505,12 +510,14 @@ text = " X "
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1671.0
-offset_top = 1024.0
-offset_right = 1907.0
-offset_bottom = 1074.0
-text = "Press K to toggle Debug mode.
-Press O to auto-complete level"
+offset_left = 1678.0
+offset_top = 969.0
+offset_right = 1914.0
+offset_bottom = 1070.0
+text = "Cheats:
+Press K to toggle Debug mode.
+Press O after level starts
+to auto-complete level"
 
 [connection signal="button_down" from="Edit Deck Button" to="Deck Building Menu" method="open_deck_builder_menu"]
 [connection signal="button_down" from="Deck Building Menu/Screen Margin/Back Button" to="Deck Building Menu" method="close_deck_builder_menu"]

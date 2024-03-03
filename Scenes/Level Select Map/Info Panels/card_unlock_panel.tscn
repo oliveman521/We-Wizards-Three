@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://be7dua4d4fqh3" path="res://Scenes/Level Select Map/Info Panels/base_info_panel.tscn" id="1_pbe3n"]
 [ext_resource type="Script" path="res://Scenes/Level Select Map/Info Panels/CardUnlockPanel.gd" id="2_3qf2u"]
-[ext_resource type="PackedScene" uid="uid://6685qupifd8s" path="res://Cards/Card Pool/card_fire_scroll_recipe.tscn" id="3_uqla0"]
+[ext_resource type="PackedScene" uid="uid://6685qupifd8s" path="res://Cards/Card Pool/card_fire_ball_recipe.tscn" id="3_uqla0"]
 
 [node name="Card Unlock Panel" instance=ExtResource("1_pbe3n")]
 offset_left = 1339.0
