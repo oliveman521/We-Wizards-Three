@@ -6,6 +6,9 @@ const FEED_RATE: float = 50
 
 @onready var enemy_feed_tape: Node2D = $"Test Feed Tape" #gets replaced when level is loaded propporly
 
+@onready var enemy_spawn_area: CollisionShape2D = %"Enemy Spawn Area"
+
+
 var rng := RandomNumberGenerator.new()
 
 
@@ -25,6 +28,17 @@ func load_feed_tape(feed_tape: Node2D) -> void:
 	enemy_feed_tape = feed_tape.duplicate()
 	add_child(enemy_feed_tape)
 
+func spawn_enemy(enemy_prefab: PackedScene) -> void:
+	var new_enemy: Enemy = enemy_prefab.instantiate() as Enemy
+	
+	var rect_pos := enemy_spawn_area.get_global_position()
+	var rect_size := enemy_spawn_area.shape.get_rect().size
+	
+	var x_spawn := rect_pos.x - rect_size.x/2
+	var y_spawn_min := rect_pos.y + rect_size.y/2
+	var y_spawn_max := rect_pos.y - rect_size.y/2
+	new_enemy.global_position = Vector2(x_spawn, randf_range(y_spawn_min,y_spawn_max))
+	add_child(new_enemy)
 
 var inactive_enemies: Array[Enemy]:
 	get:
@@ -37,6 +51,7 @@ var inactive_enemies: Array[Enemy]:
 
 func _ready() -> void:
 	GameManager.enemy_manager = self as EnemyManager
+	
 
 func _process(delta: float) -> void:
 	var feed_mult: float = 1

@@ -4,12 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_6aw5q"]
 [ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_crww2"]
 [ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="4_i6c6m"]
-[ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="5_1myr3"]
+[ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Effects/card_text.tscn" id="5_lrmod"]
 [ext_resource type="PackedScene" uid="uid://dspow6wbdypge" path="res://Cards/Card Effects/exhaust.tscn" id="6_t3y3o"]
 [ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_OngoingAbility.gd" id="7_hvlsp"]
 [ext_resource type="PackedScene" uid="uid://5p2uuetniwn6" path="res://Cards/Ongoing Abilities/ongoing_ability_draw.tscn" id="8_c7ti2"]
 
-[node name="Card" instance=ExtResource("1_joby5")]
+[node name="Librarian Golem" instance=ExtResource("1_joby5")]
 card_type = "Draw"
 card_name = "Librarian Golem"
 
@@ -21,19 +21,15 @@ layout_mode = 2
 supply = ExtResource("3_crww2")
 count = 4
 
-[node name="Fire Gem x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="1" instance=ExtResource("2_6aw5q")]
+[node name="Lightning Gem x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="1" instance=ExtResource("2_6aw5q")]
 layout_mode = 2
 supply = ExtResource("4_i6c6m")
 
 [node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
 text = "Librarian Golem"
 
-[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0"]
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("5_lrmod")]
 layout_mode = 2
-text = "Draw 1 card every 5 seconds."
-label_settings = ExtResource("5_1myr3")
-horizontal_alignment = 1
-autowrap_mode = 2
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Exhaust" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1" instance=ExtResource("6_t3y3o")]
 layout_mode = 2

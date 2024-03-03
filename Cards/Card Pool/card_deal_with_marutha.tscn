@@ -1,0 +1,50 @@
+[gd_scene load_steps=10 format=3 uid="uid://dbv60sy2epipf"]
+
+[ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_m4j7l"]
+[ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_oa6sd"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_4o2dq"]
+[ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Effects/card_text.tscn" id="4_0tx7l"]
+[ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Supplies/Mana_Scroll.tres" id="4_ylby3"]
+[ext_resource type="FontFile" uid="uid://t4iceb2drwa2" path="res://UI/Fonts/Franklin Gothic Medium Regular.ttf" id="5_5jxjr"]
+[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_SpawnEnemies.gd" id="6_ec50i"]
+[ext_resource type="PackedScene" uid="uid://c6afi4js5waro" path="res://Enemies/enemy_jester.tscn" id="7_iwkvn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n4mn2"]
+font = ExtResource("5_5jxjr")
+font_size = 21
+font_color = Color(0.996078, 0.321569, 0.309804, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Deal With Marutha" instance=ExtResource("1_m4j7l")]
+card_type = "Crafting"
+card_name = "Deal With Marutha"
+
+[node name="Background Color" parent="Card Face" index="0"]
+color = Color(0.780392, 0.588235, 0.313726, 1)
+
+[node name="Essence x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_oa6sd")]
+layout_mode = 2
+supply = ExtResource("3_4o2dq")
+
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
+text = "Deal With Marutha"
+
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("4_0tx7l")]
+layout_mode = 2
+text = "Spawn 4 Jesters."
+label_settings = SubResource("LabelSettings_n4mn2")
+
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label2" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1" instance=ExtResource("4_0tx7l")]
+layout_mode = 2
+text = "Then, gain"
+
+[node name="Mana Scroll x20" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2" instance=ExtResource("2_oa6sd")]
+layout_mode = 2
+supply = ExtResource("4_ylby3")
+count = 20
+
+[node name="CardEffect_SpawnEnemies" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="3"]
+script = ExtResource("6_ec50i")
+enemy_prefab = ExtResource("7_iwkvn")
+count = 4

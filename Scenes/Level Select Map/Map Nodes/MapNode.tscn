@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scenes/Level Select Map/Map Nodes/MapNode.gd" id="1_yufi2"]
 [ext_resource type="Texture2D" uid="uid://d1k283focdx4o" path="res://Sprites/UI Icons/Check.svg" id="2_wh5h6"]
 [ext_resource type="Texture2D" uid="uid://dlvc3iksf0q21" path="res://Sprites/UI Icons/padlock.svg" id="3_lc30j"]
-[ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="4_7sryh"]
+[ext_resource type="LabelSettings" uid="uid://qxlhypxjoo85" path="res://UI/Fonts/tiny_text.tres" id="4_meekf"]
 
 [node name="Map Node" type="Control"]
 layout_mode = 3
@@ -59,7 +59,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-label_settings = ExtResource("4_7sryh")
+label_settings = ExtResource("4_meekf")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

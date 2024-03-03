@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://qxlhypxjoo85"]
+
+[ext_resource type="FontFile" uid="uid://t4iceb2drwa2" path="res://UI/Fonts/Franklin Gothic Medium Regular.ttf" id="1_olaug"]
+
+[resource]
+font = ExtResource("1_olaug")
+font_size = 17
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)

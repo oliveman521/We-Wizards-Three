@@ -32,7 +32,7 @@ radius = 13.0
 height = 68.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_odmoc"]
-size = Vector2(20, 958)
+size = Vector2(26, 880)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c5j76"]
 size = Vector2(19.5, 1101)
@@ -135,11 +135,9 @@ one_shot = true
 [node name="Enemy Manager" type="Node2D" parent="Warlock Game" groups=["EnemyManager"]]
 script = ExtResource("3_yxut5")
 
-[node name="Enemy Spawn Zone" type="Area2D" parent="Warlock Game/Enemy Manager"]
-position = Vector2(-17, 543)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Warlock Game/Enemy Manager/Enemy Spawn Zone"]
-position = Vector2(1, 2)
+[node name="Enemy Spawn Area" type="CollisionShape2D" parent="Warlock Game/Enemy Manager"]
+unique_name_in_owner = true
+position = Vector2(-19, 537)
 shape = SubResource("RectangleShape2D_odmoc")
 
 [node name="Test Feed Tape" type="Node2D" parent="Warlock Game/Enemy Manager"]
