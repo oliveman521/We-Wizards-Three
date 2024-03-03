@@ -109,8 +109,10 @@ func enter_preview_mode() -> void:
 func _on_button_gui_input(event: InputEvent) -> void:
 	if !(event is InputEventMouseButton): return
 	if not event.pressed: return
-	if event.is_action_pressed("ui_text_scroll_up"): return
-	if event.is_action_pressed("ui_text_scroll_down"): return
+	
+	#Don't do shit if we scrolling
+	if event.button_index == MOUSE_BUTTON_WHEEL_DOWN or event.button_index == MOUSE_BUTTON_WHEEL_UP:
+		return
 	
 	
 	card_pressed.emit()

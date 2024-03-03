@@ -30,12 +30,12 @@
 [ext_resource type="PackedScene" uid="uid://dio6uti0xbamv" path="res://Scenes/Levels/Level 4.tscn" id="24_ihj3m"]
 [ext_resource type="PackedScene" uid="uid://6685qupifd8s" path="res://Cards/Card Pool/card_fire_ball_recipe.tscn" id="24_rjnis"]
 [ext_resource type="PackedScene" uid="uid://cgklhf7q88enf" path="res://Cards/Card Pool/card_shock.tscn" id="26_cxv1b"]
-[ext_resource type="PackedScene" uid="uid://qiwvts513giv" path="res://Scenes/Levels/Level 5b.tscn" id="27_3xcp6"]
 [ext_resource type="PackedScene" uid="uid://bt6cb8kc2x7u4" path="res://Cards/Card Pool/card_quick_cast.tscn" id="27_48o8d"]
+[ext_resource type="PackedScene" uid="uid://qiwvts513giv" path="res://Scenes/Levels/Level 5b - Big Boys.tscn" id="27_ggwvo"]
 [ext_resource type="PackedScene" uid="uid://don0td5sje72h" path="res://Scenes/Levels/Level 5a.tscn" id="28_0tjtk"]
 [ext_resource type="PackedScene" uid="uid://ddysngdfm7vje" path="res://Scenes/Levels/level Bonus 1.tscn" id="29_mq7ma"]
 [ext_resource type="PackedScene" uid="uid://cthet27f7cioc" path="res://Scenes/Levels/level 6.tscn" id="32_gsedw"]
-[ext_resource type="PackedScene" uid="uid://dfuh7fif3lr3e" path="res://Cards/Card Pool/card_lightning_scroll_recipe.tscn" id="33_xng6a"]
+[ext_resource type="PackedScene" uid="uid://dfuh7fif3lr3e" path="res://Cards/Card Pool/card_lightning_scroll_recipe.tscn" id="33_kctbv"]
 [ext_resource type="PackedScene" uid="uid://o3tq5x43hvo7" path="res://Scenes/Levels/level 7 - Knightfall.tscn" id="34_pvgma"]
 [ext_resource type="PackedScene" uid="uid://djyq018lrnfov" path="res://Scenes/Levels/level 99.tscn" id="35_ng2po"]
 
@@ -250,7 +250,7 @@ offset_top = 482.0
 offset_right = 953.0
 offset_bottom = 530.0
 level = ExtResource("24_ihj3m")
-connected_map_nodes = [NodePath("../Cards - Fire Ball Recipe (+3 others)"), NodePath("../Level - Level 5b"), NodePath("../Level - Level 5a")]
+connected_map_nodes = [NodePath("../Cards - Fire Ball Recipe (+3 others)"), NodePath("../Level - Level 5b - Big Boys"), NodePath("../Level - Level 5a")]
 
 [node name="Level - Level 5a" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 690.0
@@ -271,12 +271,12 @@ ability_description = "The Librarian can now boost!
 Hit Ctrl to get a short boost of speed!"
 connected_map_nodes = [NodePath("../Level - Level 5a")]
 
-[node name="Level - Level 5b" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
+[node name="Level - Level 5b - Big Boys" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 946.0
 offset_top = 584.0
 offset_right = 1079.0
 offset_bottom = 632.0
-level = ExtResource("27_3xcp6")
+level = ExtResource("27_ggwvo")
 connected_map_nodes = [NodePath("../Level - Level 4"), NodePath("../Ability - Max Combo2"), NodePath("../Cards - Shock (+4 others)")]
 
 [node name="Ability - Max Combo2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("15_oso2k")]
@@ -287,14 +287,14 @@ offset_bottom = 535.0
 ability_name = "Max Combo"
 override_name = "+ 1 Max Combo"
 ability_description = "The Librarian's combo can now go bigger! Collect even more resources by collecting the same resources consecutively"
-connected_map_nodes = [NodePath("../Level - Level 5b"), NodePath("../Level - level Bonus 1")]
+connected_map_nodes = [NodePath("../Level - Level 5b - Big Boys"), NodePath("../Level - level Bonus 1")]
 
 [node name="Cards - Librarian Golem (+2 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 1258.0
 offset_top = 316.0
 offset_right = 1310.0
 offset_bottom = 364.0
-cards = Array[PackedScene]([ExtResource("22_dsx6i"), ExtResource("21_bj66l"), ExtResource("24_rjnis")])
+cards = Array[PackedScene]([ExtResource("22_dsx6i"), ExtResource("24_rjnis")])
 connected_map_nodes = [NodePath("../Level - level Bonus 1")]
 
 [node name="Level - level Bonus 1" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
@@ -311,7 +311,7 @@ offset_top = 688.0
 offset_right = 907.0
 offset_bottom = 736.0
 cards = Array[PackedScene]([ExtResource("26_cxv1b"), ExtResource("26_cxv1b"), ExtResource("27_48o8d"), ExtResource("27_48o8d"), ExtResource("22_dsx6i")])
-connected_map_nodes = [NodePath("../Level - Level 5a"), NodePath("../Level - Level 5b"), NodePath("../Level - level 6")]
+connected_map_nodes = [NodePath("../Level - Level 5a"), NodePath("../Level - Level 5b - Big Boys"), NodePath("../Level - level 6")]
 
 [node name="Level - level 6" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 817.0
@@ -319,14 +319,14 @@ offset_top = 796.0
 offset_right = 950.0
 offset_bottom = 844.0
 level = ExtResource("32_gsedw")
-connected_map_nodes = [NodePath("../Cards - Shock (+4 others)"), NodePath("../Cards - Lightning Scroll (+3 others)")]
+connected_map_nodes = [NodePath("../Cards - Shock (+4 others)"), NodePath("../Cards - Lightning Scroll Recipe (+3 others)")]
 
-[node name="Cards - Lightning Scroll (+3 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+[node name="Cards - Lightning Scroll Recipe (+3 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 901.0
 offset_top = 898.0
 offset_right = 953.0
 offset_bottom = 946.0
-cards = Array[PackedScene]([ExtResource("33_xng6a"), ExtResource("33_xng6a"), ExtResource("33_xng6a"), ExtResource("33_xng6a")])
+cards = Array[PackedScene]([ExtResource("33_kctbv"), ExtResource("33_kctbv"), ExtResource("33_kctbv"), ExtResource("33_kctbv")])
 connected_map_nodes = [NodePath("../Level - level 6"), NodePath("../Level - level 7 - Knightfall")]
 
 [node name="Level - level 7 - Knightfall" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
@@ -335,7 +335,7 @@ offset_top = 908.0
 offset_right = 1167.0
 offset_bottom = 956.0
 level = ExtResource("34_pvgma")
-connected_map_nodes = [NodePath("../Cards - Lightning Scroll (+3 others)"), NodePath("../Level - level 99")]
+connected_map_nodes = [NodePath("../Cards - Lightning Scroll Recipe (+3 others)"), NodePath("../Level - level 99")]
 
 [node name="Level - level 99" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 1748.0
