@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("1_amhtf")
+supply_name = "Essence"
 icon = ExtResource("1_t8f1g")
-supply_count = 10
+starting_count = 10
 color = Color(1, 1, 1, 1)
 pickup_spawn_rate = 1.0
 pickup_count_min = 1
 pickup_count_max = 1
+supply_count = 10

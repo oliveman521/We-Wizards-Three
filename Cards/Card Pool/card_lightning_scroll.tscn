@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfuh7fif3lr3e"]
+
+[ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_kf2lo"]
+[ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_xlur8"]
+[ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Blank_Scroll.tres" id="3_yspcd"]
+[ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="4_i3b8k"]
+[ext_resource type="Resource" uid="uid://0wqn3ujbcm2j" path="res://Supplies/Lightning_Scroll.tres" id="5_6n3gn"]
+
+[node name="Card - Lightning Scroll" instance=ExtResource("1_kf2lo")]
+card_type = "Crafting"
+card_name = "Lightning Scroll"
+
+[node name="Background Color" parent="Card Face" index="0"]
+color = Color(0.780392, 0.588235, 0.313726, 1)
+
+[node name="Blank Scroll x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_xlur8")]
+layout_mode = 2
+supply = ExtResource("3_yspcd")
+
+[node name="Lightning Gem x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="1" instance=ExtResource("2_xlur8")]
+layout_mode = 2
+supply = ExtResource("4_i3b8k")
+
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
+text = "Lightning Scroll"
+
+[node name="Lightning Scroll x1" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("2_xlur8")]
+layout_mode = 2
+supply = ExtResource("5_6n3gn")

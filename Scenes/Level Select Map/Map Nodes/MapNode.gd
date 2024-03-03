@@ -97,3 +97,5 @@ func _draw() -> void:
 		destination = (destination - center)/2 + center #half the length
 		draw_line(center,destination,line_color,line_width)
 
+func _on_button_down() -> void:
+	pass

@@ -7,8 +7,7 @@
 [node name="Map Node - Card" instance=ExtResource("1_wmlpy")]
 offset_right = 52.0
 script = ExtResource("2_11pcl")
-card = null
-always_unlocked = false
+cards = Array[PackedScene]([])
 
 [node name="Button" parent="." index="0"]
 text = ""

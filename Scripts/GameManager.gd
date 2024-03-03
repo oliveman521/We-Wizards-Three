@@ -42,11 +42,12 @@ const DECK_MAX_SIZE: int = 15
 var curr_save: Resource = preload("res://Cards/card_base.tscn")
 
 
-var current_save: Resource = load("res://SaveData/MainSave.tres") #FOR SOME REASON THIS HAS TO BE LOAD AND NOT PRELOAD AND I DON"T NO WHY SO LONG 4 HOURS OF MY LIFE IT WAS NICE KNOWING YA
+var current_save: Resource = load("uid://ds1jr58cmcm3j") #FOR SOME REASON THIS HAS TO BE LOAD AND NOT PRELOAD AND I DON"T NO WHY SO LONG 4 HOURS OF MY LIFE IT WAS NICE KNOWING YA
 var card_pool: Array[PackedScene] = []
 
 
 const main_menu: PackedScene = preload("uid://dpdlppetxwu3m")
+const level_select_scene: PackedScene = preload("uid://bpfb1n271ove4")
 const game_scene: PackedScene = preload("uid://c4qnaj4cqxgny")
 const deck_builder_scene: PackedScene = preload("res://Scenes/Menus/deck_builder_menu.tscn")
 
@@ -109,6 +110,7 @@ func spawn_popup(location: Vector2, message: String, color: Color = Color(1,1,1)
 
 
 var end_sequence: bool = false
+var transition_time: float = 1
 func game_over() -> void:
 	var level_failed_splash: PackedScene = preload("uid://dbl6hqacylj7")
 	
@@ -122,10 +124,10 @@ func game_over() -> void:
 	get_tree().current_scene.add_child(msg)
 	msg.modulate = Color(1,1,1,0)
 	var tween := get_tree().create_tween()
-	tween.tween_property(msg, "modulate", Color(1,1,1,1), 4).set_trans(Tween.TRANS_SINE)
+	tween.tween_property(msg, "modulate", Color(1,1,1,1), transition_time).set_trans(Tween.TRANS_SINE)
 	await tween.finished
-	await get_tree().create_timer(1).timeout
-	get_tree().change_scene_to_packed(main_menu)
+	await get_tree().create_timer(0.5).timeout
+	get_tree().change_scene_to_packed(level_select_scene)
 	in_progress_level = null
 	
 	end_sequence = false
@@ -143,10 +145,10 @@ func level_won() -> void:
 	get_tree().current_scene.add_child(msg)
 	msg.modulate = Color(1,1,1,0)
 	var tween := get_tree().create_tween()
-	tween.tween_property(msg, "modulate", Color(1,1,1,1), 4).set_trans(Tween.TRANS_SINE)
+	tween.tween_property(msg, "modulate", Color(1,1,1,1), transition_time).set_trans(Tween.TRANS_SINE)
 	await tween.finished
-	await get_tree().create_timer(1).timeout
-	get_tree().change_scene_to_packed(main_menu)
+	await get_tree().create_timer(0.5).timeout
+	get_tree().change_scene_to_packed(level_select_scene)
 	
 	current_save.completed_levels.append(in_progress_level)
 	in_progress_level = null

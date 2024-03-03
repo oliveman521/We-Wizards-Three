@@ -9,7 +9,7 @@ class_name Card
 @onready var card_name_UI: Label = %CardName
 @onready var costs_UI_section: Control = %Costs
 @onready var effects_UI_section: Control = %Effects
-@onready var background_color_UI: ColorRect = %BackgroundColor
+@onready var background_color_UI: ColorRect =  %"Background Color"
 
 @export_enum("Misc", "Draw", "Fire Damage", "Lightning Damage", "Crafting", "Buff") var card_type: String = "Misc":
 	set(new_val):
@@ -30,16 +30,18 @@ var card_type_color_dict: Dictionary = {
 
 func _ready() -> void:
 	background_color_UI.color = card_type_color_dict[card_type]
+	card_name = card_name
 
 signal card_played()
 signal card_discarded()
 
-@export var card_name: String:
+@export var card_name: String: #TODO Making this drive the file name proved to cause problems where it'd create duplicate files, but it could be driven BY the file name? Seems smart
 	get: return card_name
 	set(new_val):
 		card_name = new_val
 		if card_name_UI:
 			card_name_UI.text = new_val
+		name = "Card - " + card_name
 
 var deck_building_mode: bool = false
 
@@ -104,6 +106,9 @@ func enter_preview_mode() -> void:
 func _on_button_gui_input(event: InputEvent) -> void:
 	if !(event is InputEventMouseButton): return
 	if not event.pressed: return
+	if event.is_action_pressed("ui_text_scroll_up"): return
+	if event.is_action_pressed("ui_text_scroll_down"): return
+	
 	
 	card_pressed.emit()
 	

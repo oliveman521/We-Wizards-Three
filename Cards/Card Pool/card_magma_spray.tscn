@@ -12,35 +12,35 @@
 card_type = "Fire Damage"
 card_name = "Magma Spray"
 
-[node name="BackgroundColor" parent="." index="0"]
+[node name="Background Color" parent="Card Face" index="0"]
 color = Color(0.486275, 0.105882, 0.0352941, 1)
 
-[node name="Card Supply Icon2" parent="MarginContainer/VBoxContainer/Costs" index="0" instance=ExtResource("2_557sh")]
+[node name="Essence x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_557sh")]
 layout_mode = 2
 supply = ExtResource("3_4qsnt")
 
-[node name="Card Supply Icon" parent="MarginContainer/VBoxContainer/Costs" index="1" instance=ExtResource("2_557sh")]
+[node name="Fire Gem x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="1" instance=ExtResource("2_557sh")]
 layout_mode = 2
 supply = ExtResource("3_x8h0f")
 
-[node name="CardName" parent="MarginContainer/VBoxContainer/MarginContainer" index="1"]
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
 text = "Magma Spray"
 
-[node name="CardEffect_Damage" type="Node" parent="MarginContainer/VBoxContainer/Effects" index="0"]
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#CardEffect_Damage" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0"]
 script = ExtResource("4_fqa6u")
 dmg_type = 2
 amnt = 3
 targets = "Random"
 target_count = 3
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Effects" index="1"]
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1"]
 layout_mode = 2
 text = "Deal 3 damage to 3 random Enemies."
 label_settings = ExtResource("5_br3fs")
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/Effects" index="2"]
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label2" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2"]
 modulate = Color(0.282353, 0.611765, 1, 1)
 layout_mode = 2
 text = "Draw a card."
@@ -48,5 +48,5 @@ label_settings = ExtResource("5_br3fs")
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="CardEffect_Draw" type="Node" parent="MarginContainer/VBoxContainer/Effects" index="3"]
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#CardEffect_Draw" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="3"]
 script = ExtResource("6_mn1lc")

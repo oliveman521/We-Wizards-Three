@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("1_1vkuh")
+supply_name = "Tablet"
 icon = ExtResource("1_nmmrk")
 starting_count = 0
 color = Color(1, 1, 1, 1)
 pickup_spawn_rate = 1.0
 pickup_count_min = 1
 pickup_count_max = 1
+supply_count = 0

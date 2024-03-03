@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("1_emwwp")
+supply_name = "Blank Scroll"
 icon = ExtResource("1_b07jl")
 starting_count = 5
 color = Color(1, 1, 1, 1)
 pickup_spawn_rate = 1.0
 pickup_count_min = 1
 pickup_count_max = 1
+supply_count = 0

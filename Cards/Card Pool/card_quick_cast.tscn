@@ -13,32 +13,32 @@
 card_type = "Buff"
 card_name = "Aura of Quick Cast"
 
-[node name="BackgroundColor" parent="." index="0"]
+[node name="Background Color" parent="Card Face" index="0"]
 color = Color(0.227451, 0.486275, 0.243137, 1)
 
-[node name="Card Supply Icon" parent="MarginContainer/VBoxContainer/Costs" index="0" instance=ExtResource("2_4m1m2")]
+[node name="Essence x3" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_4m1m2")]
 layout_mode = 2
 supply = ExtResource("3_t2fp0")
 count = 3
 
-[node name="Card Supply Icon2" parent="MarginContainer/VBoxContainer/Costs" index="1" instance=ExtResource("2_4m1m2")]
+[node name="Lightning Gem x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="1" instance=ExtResource("2_4m1m2")]
 layout_mode = 2
 supply = ExtResource("4_ssy8d")
 
-[node name="CardName" parent="MarginContainer/VBoxContainer/MarginContainer" index="1"]
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
 text = "Aura of Quick Cast"
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Effects" index="0"]
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0"]
 layout_mode = 2
 text = "Increase Warlock Rate of Fire by 50%."
 label_settings = ExtResource("5_5ed16")
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="CardEffect_OngoingAbility" type="Node" parent="MarginContainer/VBoxContainer/Effects" index="1"]
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#CardEffect_OngoingAbility" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1"]
 script = ExtResource("6_u18rv")
 ongoing_ability_prefab = ExtResource("7_34dfu")
 amnt = 1.5
 
-[node name="Exhaust" parent="MarginContainer/VBoxContainer/Effects" index="2" instance=ExtResource("8_af6hp")]
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Exhaust" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2" instance=ExtResource("8_af6hp")]
 layout_mode = 2

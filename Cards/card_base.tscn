@@ -18,46 +18,57 @@ offset_bottom = 280.0
 script = ExtResource("1_k85f2")
 card_name = "Card Name"
 
-[node name="BackgroundColor" type="ColorRect" parent="."]
+[node name="Margin Color" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0431373, 0.0313726, 0.0627451, 1)
+
+[node name="Card Face" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Background Color" type="ColorRect" parent="Card Face"]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.152941, 0.0901961, 0.196078, 1)
+layout_mode = 2
+color = Color(0.231373, 0.0352941, 0.486275, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
+[node name="Internal Margin" type="MarginContainer" parent="Card Face"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Card Face/Internal Margin"]
 layout_mode = 2
 
-[node name="Costs" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Costs" type="HBoxContainer" parent="Card Face/Internal Margin/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Card Face/Internal Margin/VBoxContainer"]
 layout_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/MarginContainer"]
+[node name="ColorRect" type="ColorRect" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer"]
 custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 color = Color(0, 0, 0, 1)
 
-[node name="CardName" type="Label" parent="MarginContainer/VBoxContainer/MarginContainer"]
+[node name="CardName" type="Label" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Card Name"
@@ -65,7 +76,7 @@ label_settings = ExtResource("3_408xq")
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Effects" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Effects" type="VBoxContainer" parent="Card Face/Internal Margin/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3

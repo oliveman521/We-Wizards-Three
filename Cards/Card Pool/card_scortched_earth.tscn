@@ -12,33 +12,33 @@
 card_type = "Fire Damage"
 card_name = "Scortched Earth"
 
-[node name="BackgroundColor" parent="." index="0"]
+[node name="Background Color" parent="Card Face" index="0"]
 color = Color(0.486275, 0.105882, 0.0352941, 1)
 
-[node name="Card Supply Icon" parent="MarginContainer/VBoxContainer/Costs" index="0" instance=ExtResource("2_b6ewd")]
+[node name="Essence" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_b6ewd")]
 layout_mode = 2
 supply = ExtResource("3_8ue2b")
 count = 2
 
-[node name="Card Supply Icon2" parent="MarginContainer/VBoxContainer/Costs" index="1" instance=ExtResource("2_b6ewd")]
+[node name="Fire Gem" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="1" instance=ExtResource("2_b6ewd")]
 layout_mode = 2
 supply = ExtResource("4_o5x1x")
 count = 2
 
-[node name="CardName" parent="MarginContainer/VBoxContainer/MarginContainer" index="1"]
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
 text = "Scortched Earth"
 
-[node name="CardEffect_Damage" type="Node" parent="MarginContainer/VBoxContainer/Effects" index="0"]
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#CardEffect_Damage" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0"]
 script = ExtResource("5_dhvvf")
 dmg_type = 1
 amnt = 10
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Effects" index="1"]
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1"]
 layout_mode = 2
 text = "Deal 10 damage to all Enemies."
 label_settings = ExtResource("5_3a47r")
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Exhaust" parent="MarginContainer/VBoxContainer/Effects" index="2" instance=ExtResource("7_bcgrt")]
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Exhaust" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2" instance=ExtResource("7_bcgrt")]
 layout_mode = 2
