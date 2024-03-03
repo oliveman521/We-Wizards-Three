@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2hhnfr53jfug"
-path="res://.godot/imported/Peasent.png-1ed5113a2c8d2ece18b2001783dd1f6a.ctex"
+uid="uid://cm7a3qxas4otc"
+path="res://.godot/imported/Start Here.png-3d2f4b32f307766e090caeab8aed7da1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Peasent.png"
-dest_files=["res://.godot/imported/Peasent.png-1ed5113a2c8d2ece18b2001783dd1f6a.ctex"]
+source_file="res://Sprites/Map Doodles/Start Here.png"
+dest_files=["res://.godot/imported/Start Here.png-3d2f4b32f307766e090caeab8aed7da1.ctex"]
 
 [params]
 

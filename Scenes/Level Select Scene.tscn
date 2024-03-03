@@ -1,8 +1,9 @@
-[gd_scene load_steps=50 format=3 uid="uid://bpfb1n271ove4"]
+[gd_scene load_steps=51 format=3 uid="uid://bpfb1n271ove4"]
 
 [ext_resource type="Script" path="res://Scenes/Level Select Map/LevelSelectMenu.gd" id="1_xcx1n"]
 [ext_resource type="Script" path="res://Scenes/Level Select Map/MapManager.gd" id="2_6iwrn"]
 [ext_resource type="PackedScene" uid="uid://bhr4pv0d0tl4m" path="res://Scenes/Level Select Map/Map Nodes/MapNode_Level.tscn" id="3_qvwta"]
+[ext_resource type="Texture2D" uid="uid://cm7a3qxas4otc" path="res://Sprites/Map Doodles/Start Here.png" id="3_s64fk"]
 [ext_resource type="Texture2D" uid="uid://4b7li4hxaxkh" path="res://Sprites/Comic Panels/Knock at the door.png" id="4_ayamc"]
 [ext_resource type="Script" path="res://Scenes/Level Select Map/Info Panels/TutorialInfoPage.gd" id="5_2m5ee"]
 [ext_resource type="PackedScene" uid="uid://cklv7m4x0ijqb" path="res://Scenes/Level Select Map/Map Nodes/MapNode_New_Card.tscn" id="5_64jv8"]
@@ -21,7 +22,6 @@
 [ext_resource type="PackedScene" uid="uid://dmdss2aqbb1lg" path="res://Scenes/Levels/Level 2.tscn" id="16_okn0a"]
 [ext_resource type="PackedScene" uid="uid://ccqqvfnjhvb3t" path="res://Cards/Card Pool/card_supercharge.tscn" id="19_0o358"]
 [ext_resource type="PackedScene" uid="uid://bhq4tuy1yifyy" path="res://Cards/Card Pool/card_scortched_earth.tscn" id="20_tkhon"]
-[ext_resource type="Texture2D" uid="uid://cm7a3qxas4otc" path="res://Sprites/UI Icons/Start Here.png" id="21_1hvxb"]
 [ext_resource type="PackedScene" uid="uid://c3nxruvppvko5" path="res://Cards/Card Pool/card_well_read.tscn" id="21_bj66l"]
 [ext_resource type="PackedScene" uid="uid://ddmofotpnip81" path="res://Scenes/Levels/Level 3a.tscn" id="21_ditay"]
 [ext_resource type="PackedScene" uid="uid://deoygvkkffvpu" path="res://Cards/Card Pool/card_magma_spray.tscn" id="21_lwsqc"]
@@ -38,7 +38,8 @@
 [ext_resource type="PackedScene" uid="uid://cthet27f7cioc" path="res://Scenes/Levels/Level 6.tscn" id="33_fxcku"]
 [ext_resource type="PackedScene" uid="uid://dfuh7fif3lr3e" path="res://Cards/Card Pool/card_lightning_scroll_recipe.tscn" id="33_kctbv"]
 [ext_resource type="PackedScene" uid="uid://o3tq5x43hvo7" path="res://Scenes/Levels/Level 7 - Knightfall.tscn" id="35_f7wne"]
-[ext_resource type="PackedScene" uid="uid://djyq018lrnfov" path="res://Scenes/Levels/Level 666.tscn" id="35_l4csk"]
+[ext_resource type="PackedScene" uid="uid://djyq018lrnfov" path="res://Scenes/Levels/Level 666.tscn" id="36_gc4ss"]
+[ext_resource type="Texture2D" uid="uid://c5da5jr0p5j5o" path="res://Sprites/Map Doodles/devil horns.png" id="37_xackh"]
 
 [sub_resource type="Resource" id="Resource_fwqn5"]
 script = ExtResource("5_2m5ee")
@@ -143,7 +144,7 @@ script = ExtResource("2_6iwrn")
 [node name="StartHere" type="Sprite2D" parent="Map Manager"]
 position = Vector2(162, 187)
 scale = Vector2(0.553061, 0.553061)
-texture = ExtResource("21_1hvxb")
+texture = ExtResource("3_s64fk")
 
 [node name="info - Intro (5 pages)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("13_7kiee")]
 offset_left = 196.0
@@ -335,15 +336,20 @@ offset_top = 908.0
 offset_right = 1167.0
 offset_bottom = 956.0
 level = ExtResource("35_f7wne")
-connected_map_nodes = [NodePath("../Cards - Lightning Scroll Recipe (+3 others)"), NodePath("../Level - level 666")]
+connected_map_nodes = [NodePath("../Cards - Lightning Scroll Recipe (+3 others)"), NodePath("../Level - Level 666")]
 
-[node name="Level - level 666" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
+[node name="Level - Level 666" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 1765.0
 offset_top = 898.0
 offset_right = 1898.0
 offset_bottom = 946.0
-level = ExtResource("35_l4csk")
+level = ExtResource("36_gc4ss")
 connected_map_nodes = [NodePath("../Level - Level 7 - Knightfall")]
+
+[node name="DevilHorns" type="Sprite2D" parent="Map Manager"]
+position = Vector2(1826, 894)
+scale = Vector2(0.410593, 0.391358)
+texture = ExtResource("37_xackh")
 
 [node name="Edit Deck Button" type="Button" parent="."]
 unique_name_in_owner = true

@@ -73,30 +73,40 @@ func choose_random_pickup_type() -> Supply:
 	return null
 
 func spawn_pickup() -> void:
-	#TODO Check for collisions
-	const min_cells_from_player = 2
-	var min_dist_from_player: float = min_cells_from_player * grid.cell_size.x
-	
 	var pickup_type: Supply = choose_random_pickup_type() as Supply
 	var new_pickup: Pickup = pickup_prefab.instantiate() as Pickup
 	
 	pickup_spawner.add_child(new_pickup)
+	var cell = pick_vacant_cell()
 	
-	var cell: Vector2
+	new_pickup.global_position = grid.cell_to_world_pos(cell)
+	new_pickup.set_type_of_pickup(pickup_type, randi_range(pickup_type.pickup_count_min, pickup_type.pickup_count_max))
+
+func spawn_snare() -> void:
+	pass
+
+func pick_vacant_cell() -> Vector2i:
+	const min_cells_from_player = 2
+	var min_dist_from_player: float = min_cells_from_player * grid.cell_size.x
+	
+	var cell: Vector2i
 	for i in range(1000): #TODO this is bad
 		cell = grid.get_random_cell()
 		var cell_pos: Vector2 = grid.cell_to_world_pos(cell)
 		var dist: float = cell_pos.distance_to(GameManager.apprentice_character.global_position)
 		var player_too_close: bool = dist < min_dist_from_player
 		
-		if not player_too_close and not does_cell_have_pickup(cell):
-			break
-	
-	if not cell:
-		print("failed to find empty cell far enough from player")
+		var point: PhysicsPointQueryParameters2D = PhysicsPointQueryParameters2D.new()
+		point.position = cell_pos
+		point.collide_with_areas = true
+		var hits := get_world_2d().direct_space_state.intersect_point(point)
 		
-	new_pickup.global_position = grid.cell_to_world_pos(cell)
-	new_pickup.set_type_of_pickup(pickup_type, randi_range(pickup_type.pickup_count_min, pickup_type.pickup_count_max))
+		var cell_has_collider = hits.size() > 0
+		
+		if not player_too_close and not does_cell_have_pickup(cell) and not cell_has_collider:
+			return cell
+	
+	return Vector2i(2,2)
 
 func does_cell_have_pickup(cell_pos: Vector2) -> bool:
 	for pickup: Pickup in spawned_pickups:

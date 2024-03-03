@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2va2o6ut61eg"
-path="res://.godot/imported/HulkingPeasent.png-73f0e3eabb1d5032b84aff923e78d471.ctex"
+uid="uid://6dh3axxlxnej"
+path="res://.godot/imported/jester.png-3fbc15c4c4ea7e42f899fe089b47be26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/HulkingPeasent.png"
-dest_files=["res://.godot/imported/HulkingPeasent.png-73f0e3eabb1d5032b84aff923e78d471.ctex"]
+source_file="res://Sprites/Enemies/jester.png"
+dest_files=["res://.godot/imported/jester.png-3fbc15c4c4ea7e42f899fe089b47be26.ctex"]
 
 [params]
 

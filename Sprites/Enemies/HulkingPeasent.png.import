@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjb1srtgrk802"
-path="res://.godot/imported/archer.png-af5121ec6166e77ae4dd592e90576594.ctex"
+uid="uid://d2va2o6ut61eg"
+path="res://.godot/imported/HulkingPeasent.png-1b88c747ba914f0c74f7af02cd33c85b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/archer.png"
-dest_files=["res://.godot/imported/archer.png-af5121ec6166e77ae4dd592e90576594.ctex"]
+source_file="res://Sprites/Enemies/HulkingPeasent.png"
+dest_files=["res://.godot/imported/HulkingPeasent.png-1b88c747ba914f0c74f7af02cd33c85b.ctex"]
 
 [params]
 

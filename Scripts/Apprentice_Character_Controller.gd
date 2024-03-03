@@ -72,6 +72,7 @@ func _process(_delta: float) -> void:
 		gfx.play()
 
 func _on_collection_hitbox_area_entered(area: Area2D) -> void:
+	
 	if area is Pickup:
 		var pickup: Pickup= area as Pickup
 		if pickup.supply_to_be_gained == last_pickup_type:
@@ -81,4 +82,4 @@ func _on_collection_hitbox_area_entered(area: Area2D) -> void:
 		last_pickup_type = pickup.supply_to_be_gained
 		
 		pickup.supply_to_be_gained.on_pickup(combo * pickup.count_to_be_gained)
-		pickup.queue_free()	
+		pickup.queue_free()

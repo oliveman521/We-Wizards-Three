@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6dh3axxlxnej"
-path="res://.godot/imported/jester.png-9f6114f39d8d3d0e963c4691e3788df6.ctex"
+uid="uid://cjb1srtgrk802"
+path="res://.godot/imported/archer.png-49629a9289264d4c33397f711e28483e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/jester.png"
-dest_files=["res://.godot/imported/jester.png-9f6114f39d8d3d0e963c4691e3788df6.ctex"]
+source_file="res://Sprites/Enemies/archer.png"
+dest_files=["res://.godot/imported/archer.png-49629a9289264d4c33397f711e28483e.ctex"]
 
 [params]
 

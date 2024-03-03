@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cm7a3qxas4otc"
-path="res://.godot/imported/Start Here.png-c05d1fe330cb5733893a85834a55686d.ctex"
+uid="uid://c5da5jr0p5j5o"
+path="res://.godot/imported/devil horns.png-fdf1f7310d33e81acb76ad34061b59e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI Icons/Start Here.png"
-dest_files=["res://.godot/imported/Start Here.png-c05d1fe330cb5733893a85834a55686d.ctex"]
+source_file="res://Sprites/Map Doodles/devil horns.png"
+dest_files=["res://.godot/imported/devil horns.png-fdf1f7310d33e81acb76ad34061b59e1.ctex"]
 
 [params]
 

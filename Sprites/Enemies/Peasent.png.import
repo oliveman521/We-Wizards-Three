@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1o4747o6apvp"
-path="res://.godot/imported/Seige Engine.png-90a850574339f0d52399b95caaa38c58.ctex"
+uid="uid://d2hhnfr53jfug"
+path="res://.godot/imported/Peasent.png-0dbf0e3d596cf43f01aa4a9f7f011cf1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Seige Engine.png"
-dest_files=["res://.godot/imported/Seige Engine.png-90a850574339f0d52399b95caaa38c58.ctex"]
+source_file="res://Sprites/Enemies/Peasent.png"
+dest_files=["res://.godot/imported/Peasent.png-0dbf0e3d596cf43f01aa4a9f7f011cf1.ctex"]
 
 [params]
 

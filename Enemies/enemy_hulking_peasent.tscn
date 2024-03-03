@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d02ehopagg68u"]
 
 [ext_resource type="PackedScene" uid="uid://dxstlyven322l" path="res://Enemies/enemy_base.tscn" id="1_01gl7"]
-[ext_resource type="Texture2D" uid="uid://d2va2o6ut61eg" path="res://Sprites/HulkingPeasent.png" id="2_pfqre"]
+[ext_resource type="Texture2D" uid="uid://d2va2o6ut61eg" path="res://Sprites/Enemies/HulkingPeasent.png" id="2_pfqre"]
 
 [node name="Hulking Peasent" instance=ExtResource("1_01gl7")]
 enemy_name = "Hulking Peasent"

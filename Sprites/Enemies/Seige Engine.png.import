@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmfnvhpd45csc"
-path="res://.godot/imported/Knight.png-b65ab9a2ebf73946f6942d2d46cabe88.ctex"
+uid="uid://1o4747o6apvp"
+path="res://.godot/imported/Seige Engine.png-195ab2b53ed1b5ca897fac6958d5764c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Knight.png"
-dest_files=["res://.godot/imported/Knight.png-b65ab9a2ebf73946f6942d2d46cabe88.ctex"]
+source_file="res://Sprites/Enemies/Seige Engine.png"
+dest_files=["res://.godot/imported/Seige Engine.png-195ab2b53ed1b5ca897fac6958d5764c.ctex"]
 
 [params]
 
