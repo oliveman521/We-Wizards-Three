@@ -1,8 +1,8 @@
 @tool
 extends Enemy
 
-@export var amplitude: float = 200
-@export var period: float = 200
+@export var amplitude: float = 150
+@export var period: float = 500
 var starting_pos: Vector2
 
 func activate() -> void:

@@ -14,8 +14,10 @@ func _draw() -> void:
 		var level_data: LevelData = level.instantiate() as LevelData
 		self.name = "Level - " + level_data.level_name
 		level_data.queue_free()
+		button.text = level_data.level_name
+	else:
+		button.text = self.name
 	
-	button.text = self.name
 	super._draw()
 
 

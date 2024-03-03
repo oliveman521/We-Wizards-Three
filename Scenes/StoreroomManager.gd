@@ -9,6 +9,7 @@ var pickup_prefab: PackedScene = preload("uid://5g7xihe0lyk3")
 @export var repeat_spawn_curve : Curve
 
 var minimum_pickups: int = 12
+
 var grid: Grid:
 	get: return %Grid
 

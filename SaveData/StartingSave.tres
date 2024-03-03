@@ -9,4 +9,4 @@
 [resource]
 script = ExtResource("1_eigaw")
 misc_unlocks = Array[String]([])
-unlocked_cards = Array[PackedScene]([ExtResource("4_3knku"), ExtResource("4_3knku"), ExtResource("4_3knku"), ExtResource("7_8n8og"), ExtResource("7_8n8og"), ExtResource("7_8n8og"), ExtResource("7_8n8og"), ExtResource("11_g0ukq"), ExtResource("11_g0ukq"), ExtResource("11_g0ukq"), ExtResource("11_g0ukq"), ExtResource("11_g0ukq"), ExtResource("10_l2haq"), ExtResource("10_l2haq"), ExtResource("10_l2haq")])
+unlocked_cards = Array[PackedScene]([ExtResource("4_3knku"), ExtResource("4_3knku"), ExtResource("4_3knku"), ExtResource("7_8n8og"), ExtResource("7_8n8og"), ExtResource("7_8n8og"), ExtResource("11_g0ukq"), ExtResource("11_g0ukq"), ExtResource("11_g0ukq"), ExtResource("11_g0ukq"), ExtResource("11_g0ukq"), ExtResource("11_g0ukq"), ExtResource("10_l2haq"), ExtResource("10_l2haq"), ExtResource("10_l2haq")])

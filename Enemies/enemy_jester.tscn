@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://dxstlyven322l" path="res://Enemies/enemy_base.tscn" id="1_6ene5"]
 [ext_resource type="Texture2D" uid="uid://6dh3axxlxnej" path="res://Sprites/jester.png" id="2_5l61o"]
-[ext_resource type="Script" path="res://Enemies/Enemy_Jester.gd" id="2_yreuh"]
+[ext_resource type="Script" path="res://Enemies/Enemy_SineMovement.gd" id="2_45bwe"]
 
-[node name="Jester" instance=ExtResource("1_6ene5")]
+[node name="Enemy - Jester" instance=ExtResource("1_6ene5")]
 position = Vector2(-1, 0)
-script = ExtResource("2_yreuh")
+script = ExtResource("2_45bwe")
 amplitude = 150.0
 period = 500.0
 enemy_name = "Jester"

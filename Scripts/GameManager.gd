@@ -93,6 +93,7 @@ func start_level(level_prefab: PackedScene) -> void:
 	enemy_manager.load_feed_tape(level.enemy_feed_tape) #Load in the feed tape
 	storeroom_Manager.load_new_layout(level.storeroom_tile_map)
 	storeroom_Manager.available_supplies = level.supplies_present
+	storeroom_Manager.minimum_pickups = level.supplies_spawned_at_once
 
 
 func _process(_delta: float) -> void:
