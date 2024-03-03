@@ -77,7 +77,7 @@ func spawn_pickup() -> void:
 	var new_pickup: Pickup = pickup_prefab.instantiate() as Pickup
 	
 	pickup_spawner.add_child(new_pickup)
-	var cell = pick_vacant_cell()
+	var cell: Vector2i= pick_vacant_cell()
 	
 	new_pickup.global_position = grid.cell_to_world_pos(cell)
 	new_pickup.set_type_of_pickup(pickup_type, randi_range(pickup_type.pickup_count_min, pickup_type.pickup_count_max))
@@ -101,7 +101,7 @@ func pick_vacant_cell() -> Vector2i:
 		point.collide_with_areas = true
 		var hits := get_world_2d().direct_space_state.intersect_point(point)
 		
-		var cell_has_collider = hits.size() > 0
+		var cell_has_collider: bool = hits.size() > 0
 		
 		if not player_too_close and not does_cell_have_pickup(cell) and not cell_has_collider:
 			return cell

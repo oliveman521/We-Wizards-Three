@@ -47,7 +47,7 @@ func open_misc_info_panel(title: String, text1: String, image: Texture, text2: S
 	misc_info_panel.global_position = panel_offscreen_marker.global_position
 	open_panel(misc_info_panel)
 
-func open_tutorial_panel(pages: Array[TutorialInfoPage] ):
+func open_tutorial_panel(pages: Array[TutorialInfoPage]) -> void:
 	for page in pages:
 		await open_misc_info_panel(page.title, page.text1, page.image, page.text2, page.button_text, page.color)
 		await current_info_panel.tree_exited
