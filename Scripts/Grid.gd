@@ -14,7 +14,6 @@ var _half_cell_size: Vector2:
 	get: return cell_size/2
 
 func _draw() -> void:
-	print("drawing grid")
 	draw_grid()
 
 func get_random_dir() -> Vector2:
