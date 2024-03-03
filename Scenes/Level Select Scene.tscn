@@ -1,17 +1,103 @@
-[gd_scene load_steps=13 format=3 uid="uid://bpfb1n271ove4"]
+[gd_scene load_steps=30 format=3 uid="uid://bpfb1n271ove4"]
 
 [ext_resource type="Script" path="res://Scenes/Level Select Map/LevelSelectMenu.gd" id="1_xcx1n"]
 [ext_resource type="Script" path="res://Scenes/Level Select Map/MapManager.gd" id="2_6iwrn"]
 [ext_resource type="PackedScene" uid="uid://bhr4pv0d0tl4m" path="res://Scenes/Level Select Map/Map Nodes/MapNode_Level.tscn" id="3_qvwta"]
 [ext_resource type="PackedScene" uid="uid://nr4hlan2e2hj" path="res://Scenes/Levels/level_1.tscn" id="4_6wqna"]
+[ext_resource type="Texture2D" uid="uid://4b7li4hxaxkh" path="res://Sprites/Comic Panels/Knock at the door.png" id="4_ayamc"]
+[ext_resource type="Script" path="res://Scenes/Level Select Map/Info Panels/TutorialInfoPage.gd" id="5_2m5ee"]
 [ext_resource type="PackedScene" uid="uid://cklv7m4x0ijqb" path="res://Scenes/Level Select Map/Map Nodes/MapNode_New_Card.tscn" id="5_64jv8"]
+[ext_resource type="Texture2D" uid="uid://8qsug5qhwpbr" path="res://Sprites/Comic Panels/Door open.png" id="6_flkku"]
 [ext_resource type="PackedScene" uid="uid://dmdss2aqbb1lg" path="res://Scenes/Levels/level_2.tscn" id="6_rqthm"]
+[ext_resource type="Texture2D" uid="uid://rr1b2njt6joa" path="res://Sprites/Comic Panels/KRS.png" id="7_nypcm"]
 [ext_resource type="PackedScene" uid="uid://bt6cb8kc2x7u4" path="res://Cards/Card Pool/card_quick_cast.tscn" id="7_red4p"]
 [ext_resource type="PackedScene" uid="uid://ddmofotpnip81" path="res://Scenes/Levels/level_3.tscn" id="7_rlaet"]
+[ext_resource type="Texture2D" uid="uid://830fliunjvdu" path="res://Sprites/Comic Panels/door slam.png" id="8_7wuin"]
+[ext_resource type="Texture2D" uid="uid://cxme5dqwjo81m" path="res://Sprites/Comic Panels/Telling the gang.png" id="9_dk514"]
 [ext_resource type="Theme" uid="uid://btsp3ifn1m5n3" path="res://Scenes/Menus/Menus.tres" id="10_2ecuw"]
 [ext_resource type="PackedScene" uid="uid://6685qupifd8s" path="res://Cards/Card Pool/card_fire_scroll_recipe.tscn" id="10_f7yid"]
 [ext_resource type="Script" path="res://Scenes/Menus/deck_builder_menu.gd" id="11_t8gd0"]
 [ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="12_fdwhl"]
+[ext_resource type="PackedScene" uid="uid://b585ymf1lip61" path="res://Scenes/Level Select Map/Map Nodes/MapNode_Tutorial.tscn" id="13_7kiee"]
+
+[sub_resource type="Resource" id="Resource_fwqn5"]
+script = ExtResource("5_2m5ee")
+title = "Intro"
+text1 = ""
+image = ExtResource("4_ayamc")
+text2 = ""
+button_text = "Hmm...."
+
+[sub_resource type="Resource" id="Resource_qkkho"]
+script = ExtResource("5_2m5ee")
+title = "..."
+text1 = ""
+image = ExtResource("6_flkku")
+text2 = ""
+button_text = "What's all this?"
+
+[sub_resource type="Resource" id="Resource_7wurx"]
+script = ExtResource("5_2m5ee")
+title = "..."
+text1 = ""
+image = ExtResource("7_nypcm")
+text2 = ""
+button_text = "uhh...."
+
+[sub_resource type="Resource" id="Resource_shqrv"]
+script = ExtResource("5_2m5ee")
+title = "..."
+text1 = ""
+image = ExtResource("8_7wuin")
+text2 = ""
+button_text = "Drat!"
+
+[sub_resource type="Resource" id="Resource_h6qmr"]
+script = ExtResource("5_2m5ee")
+title = "..."
+text1 = ""
+image = ExtResource("9_dk514")
+text2 = ""
+button_text = "We will do what we must..."
+
+[sub_resource type="Resource" id="Resource_ptob5"]
+script = ExtResource("5_2m5ee")
+title = "How To Play"
+text1 = "We Wizard's Three is an ansymetric co-op game for 3 player where you defend your keep from the infernal KRS (King's Revenue Service)"
+text2 = ""
+button_text = "Cool!"
+
+[sub_resource type="Resource" id="Resource_yrjke"]
+script = ExtResource("5_2m5ee")
+title = "The Warlock"
+text1 = "The First player is the Warlock.
+They will fight off waves of incoming KRS agents."
+text2 = "The Warlock uses WASD to move and
+F, G, and H to fire"
+button_text = ""
+
+[sub_resource type="Resource" id="Resource_7ukff"]
+script = ExtResource("5_2m5ee")
+title = "The Librarian"
+text1 = "The Second player is The Librarian.
+They run around the storeroom to collect resources to supply the other players."
+text2 = "The Librarian uses the arrow keys to move"
+button_text = ""
+
+[sub_resource type="Resource" id="Resource_i7ote"]
+script = ExtResource("5_2m5ee")
+title = "The Enchanter"
+text1 = "The Third player is the Enchanter.
+You cast spell cards from a deck to help aid your teammates."
+text2 = "The Enchanter uses the mouse to play spell cards. Left click to cast the spell, Right click to discard it"
+button_text = ""
+
+[sub_resource type="Resource" id="Resource_7a5o2"]
+script = ExtResource("5_2m5ee")
+title = "Your Deck"
+text1 = "Before each battle you'll choose 15 spell cards from your card pool that'll compose your deck."
+text2 = "Between battles you'll unlock more cards and can add/remove cards from your deck."
+button_text = ""
 
 [node name="Level Select Menu" type="Control" groups=["Level Select Menu"]]
 layout_mode = 3
@@ -39,16 +125,32 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_6iwrn")
 
+[node name="Intro +5" parent="Map Manager" instance=ExtResource("13_7kiee")]
+offset_left = 74.0
+offset_top = 52.0
+offset_right = 122.0
+offset_bottom = 101.0
+pages = Array[ExtResource("5_2m5ee")]([SubResource("Resource_fwqn5"), SubResource("Resource_qkkho"), SubResource("Resource_7wurx"), SubResource("Resource_shqrv"), SubResource("Resource_h6qmr")])
+always_unlocked = true
+
+[node name="Intro +6" parent="Map Manager" instance=ExtResource("13_7kiee")]
+offset_left = 168.0
+offset_top = 53.0
+offset_right = 216.0
+offset_bottom = 102.0
+pages = Array[ExtResource("5_2m5ee")]([SubResource("Resource_ptob5"), SubResource("Resource_yrjke"), SubResource("Resource_7ukff"), SubResource("Resource_i7ote"), SubResource("Resource_7a5o2")])
+always_unlocked = true
+
 [node name="Level 1" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 113.0
 offset_top = 141.0
 offset_right = 246.0
 offset_bottom = 189.0
 level = ExtResource("4_6wqna")
-connected_map_nodes = [NodePath("../Aura of Quick Cast +2")]
+connected_map_nodes = [NodePath("../Fire Bolt Scroll +1")]
 always_unlocked = true
 
-[node name="Aura of Quick Cast +2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+[node name="Fire Bolt Scroll +1" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 254.0
 offset_top = 70.0
 offset_right = 306.0
@@ -61,7 +163,7 @@ offset_left = 365.0
 offset_top = 80.0
 offset_right = 417.0
 offset_bottom = 128.0
-connected_map_nodes = [NodePath("../Aura of Quick Cast +2"), NodePath("../Level 2")]
+connected_map_nodes = [NodePath("../Fire Bolt Scroll +1"), NodePath("../Level 2")]
 
 [node name="Level 2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 473.0

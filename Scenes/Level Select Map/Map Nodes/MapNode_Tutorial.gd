@@ -6,7 +6,7 @@ extends MapNode
 
 func _draw() -> void:
 	if pages.size() > 0:
-		self.name = pages[1].title
+		self.name = pages[0].title
 		if pages.size() > 1:
 			self.name += " +" + str(pages.size())
 	super._draw()

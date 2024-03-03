@@ -8,7 +8,7 @@
 offset_right = 48.0
 offset_bottom = 49.0
 script = ExtResource("2_gsb8x")
-pages = Array[Resource("res://Scenes/Level Select Map/Map Nodes/TutorialInfoPage.gd")]([])
+pages = Array[Resource("res://Scenes/Level Select Map/Info Panels/TutorialInfoPage.gd")]([])
 
 [node name="Button" parent="." index="0"]
 theme_override_font_sizes/font_size = 36
