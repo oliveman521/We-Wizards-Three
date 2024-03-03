@@ -30,7 +30,7 @@ var debug_mode: bool = false:
 		debug_mode = new_val
 		debug_mode_changed.emit()
 
-var lives: int = 3:
+var lives: int = 0:
 	set(new_value):
 		lives = new_value
 		if lives <= 0:
@@ -94,6 +94,7 @@ func start_level(level_prefab: PackedScene) -> void:
 	storeroom_Manager.load_new_layout(level.storeroom_tile_map)
 	storeroom_Manager.available_supplies = level.supplies_present
 	storeroom_Manager.minimum_pickups = level.supplies_spawned_at_once
+	lives = 3
 
 
 func _process(_delta: float) -> void:

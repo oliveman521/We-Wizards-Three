@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://bpfb1n271ove4"]
+[gd_scene load_steps=48 format=3 uid="uid://bpfb1n271ove4"]
 
 [ext_resource type="Script" path="res://Scenes/Level Select Map/LevelSelectMenu.gd" id="1_xcx1n"]
 [ext_resource type="Script" path="res://Scenes/Level Select Map/MapManager.gd" id="2_6iwrn"]
@@ -29,9 +29,14 @@
 [ext_resource type="PackedScene" uid="uid://tth5yw0eirm6" path="res://Cards/Card Pool/card_librarian_golem.tscn" id="22_dsx6i"]
 [ext_resource type="PackedScene" uid="uid://50477ao4osxc" path="res://Scenes/Levels/Level 3b.tscn" id="22_mev8k"]
 [ext_resource type="PackedScene" uid="uid://dio6uti0xbamv" path="res://Scenes/Levels/Level 4.tscn" id="24_ihj3m"]
+[ext_resource type="PackedScene" uid="uid://cgklhf7q88enf" path="res://Cards/Card Pool/card_shock.tscn" id="26_cxv1b"]
 [ext_resource type="PackedScene" uid="uid://qiwvts513giv" path="res://Scenes/Levels/Level 5b.tscn" id="27_3xcp6"]
+[ext_resource type="PackedScene" uid="uid://bt6cb8kc2x7u4" path="res://Cards/Card Pool/card_quick_cast.tscn" id="27_48o8d"]
 [ext_resource type="PackedScene" uid="uid://don0td5sje72h" path="res://Scenes/Levels/Level 5a.tscn" id="28_0tjtk"]
 [ext_resource type="PackedScene" uid="uid://ddysngdfm7vje" path="res://Scenes/Levels/level Bonus 1.tscn" id="29_mq7ma"]
+[ext_resource type="PackedScene" uid="uid://cthet27f7cioc" path="res://Scenes/Levels/level 6.tscn" id="32_gsedw"]
+[ext_resource type="PackedScene" uid="uid://dfuh7fif3lr3e" path="res://Cards/Card Pool/card_lightning_scroll.tscn" id="33_xng6a"]
+[ext_resource type="PackedScene" uid="uid://o3tq5x43hvo7" path="res://Scenes/Levels/level 7 - Knightfall.tscn" id="34_pvgma"]
 
 [sub_resource type="Resource" id="Resource_fwqn5"]
 script = ExtResource("5_2m5ee")
@@ -76,7 +81,7 @@ button_text = "We will do what we must..."
 [sub_resource type="Resource" id="Resource_ptob5"]
 script = ExtResource("5_2m5ee")
 title = "How To Play"
-text1 = "We Wizard's Three is an ansymetric co-op game for 3 player where you defend your keep from the infernal KRS (King's Revenue Service)"
+text1 = "We Wizard's Three is an ansymetric co-op game for 3 players where you defend your tower from the infernal KRS (King's Revenue Service)"
 text2 = ""
 button_text = "Cool!"
 
@@ -161,14 +166,14 @@ offset_top = 103.0
 offset_right = 537.0
 offset_bottom = 151.0
 level = ExtResource("12_iop6h")
-connected_map_nodes = [NodePath("../Cards - Singe (+1 others)"), NodePath("../info - How To Play (5 pages)")]
+connected_map_nodes = [NodePath("../Cards - Singe (+2 others)"), NodePath("../info - How To Play (5 pages)")]
 
-[node name="Cards - Singe (+1 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+[node name="Cards - Singe (+2 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 612.0
 offset_top = 51.0
 offset_right = 664.0
 offset_bottom = 99.0
-cards = Array[PackedScene]([ExtResource("15_wpld2"), ExtResource("15_wpld2")])
+cards = Array[PackedScene]([ExtResource("15_wpld2"), ExtResource("15_wpld2"), ExtResource("21_bj66l")])
 connected_map_nodes = [NodePath("../Level - Level 1"), NodePath("../Ability - Max Combo")]
 
 [node name="Ability - Max Combo" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("15_oso2k")]
@@ -180,7 +185,7 @@ ability_name = "Max Combo"
 override_name = "Librarian Combo"
 ability_description = "The Librarian can now rack up a combo!
 Collect double resources by collecting the same resources consecutively"
-connected_map_nodes = [NodePath("../Cards - Singe (+1 others)"), NodePath("../Level - Level 2")]
+connected_map_nodes = [NodePath("../Cards - Singe (+2 others)"), NodePath("../Level - Level 2")]
 
 [node name="Level - Level 2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 840.0
@@ -214,21 +219,13 @@ offset_bottom = 313.0
 cards = Array[PackedScene]([ExtResource("21_lwsqc"), ExtResource("21_lwsqc"), ExtResource("15_wpld2"), ExtResource("21_bj66l")])
 connected_map_nodes = [NodePath("../Level - Level 3b")]
 
-[node name="Cards - Librarian Golem (+1 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
-offset_left = 1226.0
-offset_top = 353.0
-offset_right = 1278.0
-offset_bottom = 401.0
-cards = Array[PackedScene]([ExtResource("22_dsx6i"), ExtResource("21_bj66l")])
-connected_map_nodes = [NodePath("../Level - level Bonus 1")]
-
 [node name="Level - Level 3a" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 716.0
 offset_top = 267.0
 offset_right = 849.0
 offset_bottom = 315.0
 level = ExtResource("21_ditay")
-connected_map_nodes = [NodePath("../Cards - Super Charge (+2 others)"), NodePath("../Cards - Scortched Earth (+1 others)"), NodePath("../Cards - Fire Bolt Scroll (+2 others)")]
+connected_map_nodes = [NodePath("../Cards - Super Charge (+2 others)"), NodePath("../Cards - Scortched Earth (+1 others)"), NodePath("../Cards - Fire Ball Scroll (+3 others)")]
 
 [node name="Level - Level 3b" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 941.0
@@ -236,14 +233,14 @@ offset_top = 263.0
 offset_right = 1074.0
 offset_bottom = 311.0
 level = ExtResource("22_mev8k")
-connected_map_nodes = [NodePath("../Cards - Super Charge (+2 others)"), NodePath("../Cards - Magma Spray (+3 others)"), NodePath("../Cards - Fire Bolt Scroll (+2 others)")]
+connected_map_nodes = [NodePath("../Cards - Super Charge (+2 others)"), NodePath("../Cards - Magma Spray (+3 others)"), NodePath("../Cards - Fire Ball Scroll (+3 others)")]
 
-[node name="Cards - Fire Bolt Scroll (+2 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+[node name="Cards - Fire Ball Scroll (+3 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 862.0
 offset_top = 387.0
 offset_right = 914.0
 offset_bottom = 435.0
-cards = Array[PackedScene]([ExtResource("10_f7yid"), ExtResource("10_f7yid"), ExtResource("10_f7yid")])
+cards = Array[PackedScene]([ExtResource("10_f7yid"), ExtResource("10_f7yid"), ExtResource("10_f7yid"), ExtResource("21_bj66l")])
 connected_map_nodes = [NodePath("../Level - Level 3a"), NodePath("../Level - Level 3b"), NodePath("../Level - Level 4")]
 
 [node name="Level - Level 4" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
@@ -252,15 +249,7 @@ offset_top = 482.0
 offset_right = 953.0
 offset_bottom = 530.0
 level = ExtResource("24_ihj3m")
-connected_map_nodes = [NodePath("../Cards - Fire Bolt Scroll (+2 others)"), NodePath("../Level - Level 5b"), NodePath("../Level - Level 5a")]
-
-[node name="Level - Level 5b" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
-offset_left = 946.0
-offset_top = 584.0
-offset_right = 1079.0
-offset_bottom = 632.0
-level = ExtResource("27_3xcp6")
-connected_map_nodes = [NodePath("../Level - Level 4"), NodePath("../Ability - Max Combo2")]
+connected_map_nodes = [NodePath("../Cards - Fire Ball Scroll (+3 others)"), NodePath("../Level - Level 5b"), NodePath("../Level - Level 5a")]
 
 [node name="Level - Level 5a" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 690.0
@@ -268,25 +257,7 @@ offset_top = 579.0
 offset_right = 823.0
 offset_bottom = 627.0
 level = ExtResource("28_0tjtk")
-connected_map_nodes = [NodePath("../Level - Level 4"), NodePath("../Ability - Librarian Boost")]
-
-[node name="Level - level Bonus 1" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
-offset_left = 1131.0
-offset_top = 455.0
-offset_right = 1264.0
-offset_bottom = 503.0
-level = ExtResource("29_mq7ma")
-connected_map_nodes = [NodePath("../Ability - Max Combo2"), NodePath("../Cards - Librarian Golem (+1 others)")]
-
-[node name="Ability - Max Combo2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("15_oso2k")]
-offset_left = 1158.0
-offset_top = 581.0
-offset_right = 1203.0
-offset_bottom = 626.0
-ability_name = "Max Combo"
-override_name = "+ 1 Max Combo"
-ability_description = "The Librarian's combo can now go bigger! Collect even more resources by collecting the same resources consecutively"
-connected_map_nodes = [NodePath("../Level - Level 5b"), NodePath("../Level - level Bonus 1")]
+connected_map_nodes = [NodePath("../Level - Level 4"), NodePath("../Ability - Librarian Boost"), NodePath("../Cards - Shock (+4 others)")]
 
 [node name="Ability - Librarian Boost" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("15_oso2k")]
 offset_left = 571.0
@@ -299,22 +270,71 @@ ability_description = "The Librarian can now boost!
 Hit Ctrl to get a short boost of speed!"
 connected_map_nodes = [NodePath("../Level - Level 5a")]
 
-[node name="Label5" type="Label" parent="Map Manager"]
-layout_mode = 0
-offset_left = 702.0
-offset_top = 980.0
-offset_right = 856.0
-offset_bottom = 1029.0
-text = "Level 1-6
-Lightning (no fire?)"
+[node name="Level - Level 5b" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
+offset_left = 946.0
+offset_top = 584.0
+offset_right = 1079.0
+offset_bottom = 632.0
+level = ExtResource("27_3xcp6")
+connected_map_nodes = [NodePath("../Level - Level 4"), NodePath("../Ability - Max Combo2"), NodePath("../Cards - Shock (+4 others)")]
 
-[node name="Label6" type="Label" parent="Map Manager"]
-layout_mode = 0
-offset_left = 835.0
-offset_top = 742.0
-offset_right = 989.0
-offset_bottom = 791.0
-text = "Lightning Cards"
+[node name="Ability - Max Combo2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("15_oso2k")]
+offset_left = 1060.0
+offset_top = 490.0
+offset_right = 1105.0
+offset_bottom = 535.0
+ability_name = "Max Combo"
+override_name = "+ 1 Max Combo"
+ability_description = "The Librarian's combo can now go bigger! Collect even more resources by collecting the same resources consecutively"
+connected_map_nodes = [NodePath("../Level - Level 5b"), NodePath("../Level - level Bonus 1")]
+
+[node name="Cards - Librarian Golem (+2 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+offset_left = 1258.0
+offset_top = 316.0
+offset_right = 1310.0
+offset_bottom = 364.0
+cards = Array[PackedScene]([ExtResource("22_dsx6i"), ExtResource("21_bj66l"), ExtResource("10_f7yid")])
+connected_map_nodes = [NodePath("../Level - level Bonus 1")]
+
+[node name="Level - level Bonus 1" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
+offset_left = 1152.0
+offset_top = 426.0
+offset_right = 1285.0
+offset_bottom = 474.0
+level = ExtResource("29_mq7ma")
+connected_map_nodes = [NodePath("../Ability - Max Combo2"), NodePath("../Cards - Librarian Golem (+2 others)")]
+
+[node name="Cards - Shock (+4 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+offset_left = 855.0
+offset_top = 688.0
+offset_right = 907.0
+offset_bottom = 736.0
+cards = Array[PackedScene]([ExtResource("26_cxv1b"), ExtResource("26_cxv1b"), ExtResource("27_48o8d"), ExtResource("27_48o8d"), ExtResource("22_dsx6i")])
+connected_map_nodes = [NodePath("../Level - Level 5a"), NodePath("../Level - Level 5b"), NodePath("../Level - level 6")]
+
+[node name="Level - level 6" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
+offset_left = 817.0
+offset_top = 796.0
+offset_right = 950.0
+offset_bottom = 844.0
+level = ExtResource("32_gsedw")
+connected_map_nodes = [NodePath("../Cards - Shock (+4 others)"), NodePath("../Cards - Lightning Scroll (+3 others)")]
+
+[node name="Cards - Lightning Scroll (+3 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+offset_left = 901.0
+offset_top = 898.0
+offset_right = 953.0
+offset_bottom = 946.0
+cards = Array[PackedScene]([ExtResource("33_xng6a"), ExtResource("33_xng6a"), ExtResource("33_xng6a"), ExtResource("33_xng6a")])
+connected_map_nodes = [NodePath("../Level - level 6"), NodePath("../Level - level 7 - Knightfall")]
+
+[node name="Level - level 7 - Knightfall" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
+offset_left = 1034.0
+offset_top = 908.0
+offset_right = 1167.0
+offset_bottom = 956.0
+level = ExtResource("34_pvgma")
+connected_map_nodes = [NodePath("../Cards - Lightning Scroll (+3 others)")]
 
 [node name="Edit Deck Button" type="Button" parent="."]
 unique_name_in_owner = true
@@ -405,13 +425,13 @@ size_flags_vertical = 3
 theme_override_constants/h_separation = 15
 theme_override_constants/v_separation = 15
 
-[node name="Card - Fire Bolt Scroll" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("10_f7yid")]
+[node name="Card - Fire Ball Scroll" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("10_f7yid")]
 layout_mode = 2
 
-[node name="Card - Fire Bolt Scroll2" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("10_f7yid")]
+[node name="Card - Fire Ball Scroll2" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("10_f7yid")]
 layout_mode = 2
 
-[node name="Card - Fire Bolt Scroll3" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("10_f7yid")]
+[node name="Card - Fire Ball Scroll3" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("10_f7yid")]
 layout_mode = 2
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Deck Building Menu/Screen Margin/HBoxContainer"]
@@ -460,10 +480,10 @@ size_flags_vertical = 3
 theme_override_constants/h_separation = 15
 theme_override_constants/v_separation = 15
 
-[node name="Card - Fire Bolt Scroll" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("10_f7yid")]
+[node name="Card - Fire Ball Scroll" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("10_f7yid")]
 layout_mode = 2
 
-[node name="Card - Fire Bolt Scroll2" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("10_f7yid")]
+[node name="Card - Fire Ball Scroll2" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("10_f7yid")]
 layout_mode = 2
 
 [node name="Back Button" type="Button" parent="Deck Building Menu/Screen Margin"]

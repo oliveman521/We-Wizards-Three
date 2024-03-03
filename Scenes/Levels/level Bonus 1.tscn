@@ -1,16 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://ddysngdfm7vje"]
+[gd_scene load_steps=9 format=3 uid="uid://ddysngdfm7vje"]
 
 [ext_resource type="PackedScene" uid="uid://ddavd71iwja5g" path="res://Scenes/Levels/template_level.tscn" id="1_krl6u"]
 [ext_resource type="PackedScene" uid="uid://b5t5chbh5x6vr" path="res://Enemies/enemy_peasent.tscn" id="2_mjl4r"]
 [ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="2_v8ukj"]
 [ext_resource type="PackedScene" uid="uid://d02ehopagg68u" path="res://Enemies/enemy_hulking_peasent.tscn" id="3_e5bso"]
+[ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="3_rp4hm"]
 [ext_resource type="PackedScene" uid="uid://cn7apof2y3wfd" path="res://Enemies/enemy_archer.tscn" id="4_5dj55"]
 [ext_resource type="PackedScene" uid="uid://c6afi4js5waro" path="res://Enemies/enemy_jester.tscn" id="6_em23s"]
 [ext_resource type="PackedScene" uid="uid://dbc3v7h72rrl8" path="res://Enemies/enemy_knight.tscn" id="7_g1gqj"]
 
 [node name="level Bonus 1" instance=ExtResource("1_krl6u")]
 level_name = "level Bonus 1"
-supplies_present = Array[Resource("res://Supplies/Supply.gd")]([ExtResource("2_v8ukj")])
+supplies_present = Array[Resource("res://Supplies/Supply.gd")]([ExtResource("2_v8ukj"), ExtResource("3_rp4hm")])
 supplies_spawned_at_once = 10
 
 [node name="Enemy - Peasent" parent="Enemy Feed Tape" index="0" instance=ExtResource("2_mjl4r")]

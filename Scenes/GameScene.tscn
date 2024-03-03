@@ -261,37 +261,6 @@ debug_color = Color(0.768627, 0.411765, 0.462745, 0.419608)
 [node name="Boost Timer" type="Timer" parent="Storeroom Manager/Apprentice Character"]
 one_shot = true
 
-[node name="Combo Display" type="MarginContainer" parent="Storeroom Manager"]
-unique_name_in_owner = true
-offset_left = 709.0
-offset_top = 452.0
-offset_right = 891.0
-offset_bottom = 507.0
-
-[node name="Combo Background" type="ColorRect" parent="Storeroom Manager/Combo Display"]
-layout_mode = 2
-color = Color(0.52549, 0.403922, 0.25098, 1)
-
-[node name="Control" type="MarginContainer" parent="Storeroom Manager/Combo Display"]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_right = 10
-
-[node name="H Box Container" type="HBoxContainer" parent="Storeroom Manager/Combo Display/Control"]
-layout_mode = 2
-alignment = 1
-
-[node name="Combo Label" type="Label" parent="Storeroom Manager/Combo Display/Control/H Box Container"]
-layout_mode = 2
-text = "Combo: "
-label_settings = ExtResource("14_03ooj")
-
-[node name="Combo Num Label" type="Label" parent="Storeroom Manager/Combo Display/Control/H Box Container"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "0"
-label_settings = ExtResource("14_ap4t0")
-
 [node name="Card Manager" type="Node2D" parent="." groups=["CardManager"]]
 position = Vector2(986, 8)
 script = ExtResource("21_k4wdt")
@@ -369,6 +338,37 @@ supply = ExtResource("12_i116q")
 [node name="Supply UI4" parent="Card Manager/Enchanter Supplies" instance=ExtResource("12_hfyto")]
 layout_mode = 2
 supply = ExtResource("13_k5kcy")
+
+[node name="Combo Display" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+offset_left = 1704.0
+offset_top = 1000.0
+offset_right = 1886.0
+offset_bottom = 1055.0
+
+[node name="Combo Background" type="ColorRect" parent="Combo Display"]
+layout_mode = 2
+color = Color(0.52549, 0.403922, 0.25098, 1)
+
+[node name="Control" type="MarginContainer" parent="Combo Display"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="H Box Container" type="HBoxContainer" parent="Combo Display/Control"]
+layout_mode = 2
+alignment = 1
+
+[node name="Combo Label" type="Label" parent="Combo Display/Control/H Box Container"]
+layout_mode = 2
+text = "Combo: "
+label_settings = ExtResource("14_03ooj")
+
+[node name="Combo Num Label" type="Label" parent="Combo Display/Control/H Box Container"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+label_settings = ExtResource("14_ap4t0")
 
 [node name="Ammo Counters" type="HBoxContainer" parent="."]
 offset_left = 21.0

@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://dxstlyven322l" path="res://Enemies/enemy_base.tscn" id="1_01gl7"]
 [ext_resource type="Texture2D" uid="uid://d2va2o6ut61eg" path="res://Sprites/HulkingPeasent.png" id="2_pfqre"]
 
-[node name="Enemy - Peasent" instance=ExtResource("1_01gl7")]
-enemy_name = "Peasent"
+[node name="Hulking Peasent" instance=ExtResource("1_01gl7")]
+enemy_name = "Hulking Peasent"
 move_speed = 30.0
 health = 20.0
 

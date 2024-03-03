@@ -24,7 +24,6 @@ var cards_in_deck: Array[Card]
 func _ready() -> void:
 	GameManager.card_manager = self as CardManager
 	
-	print(GameManager.curr_save)
 	for scene: PackedScene in GameManager.current_save.cards_in_deck:
 		cards_in_deck.append(scene.instantiate() as Card)
 	
@@ -46,7 +45,6 @@ func add_ongoing_ability(ongoing_ability_prefab: PackedScene, amnt: float) -> vo
 	if not existing_ability: #If the ability doesn't yet exist
 		ongoing_abilities_region.add_child(new_ability)
 		new_ability.count = amnt
-		print(amnt)
 		return
 	
 	if new_ability.stack_behavior == "Independent":

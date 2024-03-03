@@ -68,8 +68,8 @@ func choose_random_pickup_type() -> Supply:
 		if roll <= sum:
 			return supply
 	
-	print(roll, " Sum: ", sum, " Max Roll: ", highest_roll)
-	print("failed to select a pickup to spawn")
+	#print(roll, " Sum: ", sum, " Max Roll: ", highest_roll)
+	#print("failed to select a pickup to spawn")
 	return null
 
 func spawn_pickup() -> void:

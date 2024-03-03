@@ -67,7 +67,6 @@ func take_damage(damage_type: GameManager.Damage_Type, amnt: float) -> void:
 		amnt *= 2
 	
 	if immunities.has(damage_type):
-		print("enemy is immune to that damage type!")
 		GameManager.spawn_popup(global_position, "IMMUNE!", Color.ORANGE)
 		return
 	

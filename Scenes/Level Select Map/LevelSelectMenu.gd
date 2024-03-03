@@ -51,8 +51,7 @@ func open_tutorial_panel(pages: Array[TutorialInfoPage] ):
 	for page in pages:
 		await open_misc_info_panel(page.title, page.text1, page.image, page.text2, page.button_text, page.color)
 		await current_info_panel.tree_exited
-		print("next Page")
-		#TODO this gets quirrelly if you don't finish it
+		#TODO this gets squirrelly if you don't finish it
 
 func close_current_info_panel() -> void:
 	if current_info_panel:

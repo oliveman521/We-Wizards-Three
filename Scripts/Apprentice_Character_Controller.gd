@@ -49,7 +49,7 @@ func _process(_delta: float) -> void:
 	input_dir = input_dir.normalized()
 	velocity = input_dir * move_speed
 	
-	var boost_unlocked: bool = GameManager.current_save.check_unlock("Apprentice Boost") > 0
+	var boost_unlocked: bool = GameManager.current_save.check_unlock("Librarian Boost") > 0
 	var can_boost: bool = (not boosting) and boost_unlocked
 	
 	if Input.is_action_just_pressed("labyrinth_boost") and can_boost:
