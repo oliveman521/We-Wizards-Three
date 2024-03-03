@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://6685qupifd8s" path="res://Cards/Card Pool/card_fire_scroll_recipe.tscn" id="3_uqla0"]
 
 [node name="Card Unlock Panel" instance=ExtResource("1_pbe3n")]
+offset_left = 1339.0
 script = ExtResource("2_3qf2u")
 
 [node name="Background" parent="." index="0"]
@@ -24,7 +25,10 @@ alignment = 1
 [node name="Card - Fire Bolt Scroll" parent="Info Margin/Vertical Layout/ScrollContainer/Card Container" index="0" instance=ExtResource("3_uqla0")]
 layout_mode = 2
 
-[node name="Card - Fire Bolt Scroll2" parent="Info Margin/Vertical Layout/ScrollContainer/Card Container" index="1" instance=ExtResource("3_uqla0")]
+[node name="Card - Fire Bolt Scroll3" parent="Info Margin/Vertical Layout/ScrollContainer/Card Container" index="1" instance=ExtResource("3_uqla0")]
+layout_mode = 2
+
+[node name="Card - Fire Bolt Scroll2" parent="Info Margin/Vertical Layout/ScrollContainer/Card Container" index="2" instance=ExtResource("3_uqla0")]
 layout_mode = 2
 
 [node name="Gap Filler3" type="Control" parent="Info Margin/Vertical Layout" index="3"]

@@ -42,7 +42,7 @@ const DECK_MAX_SIZE: int = 15
 var curr_save: Resource = preload("res://Cards/card_base.tscn")
 
 
-var current_save: Resource = load("res://SaveData/MainSave.tres") #FOR SOME REASON THIS HAS TO BE LOAD AND NOT PRELOAD AND I DON"T NO WHY SO LONG 4 HOURS OF MY LIFE IT WAS NICE KNOWING YA
+var current_save: Resource = load("uid://ds1jr58cmcm3j") #FOR SOME REASON THIS HAS TO BE LOAD AND NOT PRELOAD AND I DON"T NO WHY SO LONG 4 HOURS OF MY LIFE IT WAS NICE KNOWING YA
 var card_pool: Array[PackedScene] = []
 
 

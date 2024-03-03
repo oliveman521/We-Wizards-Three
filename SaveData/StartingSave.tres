@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="GameSave" load_steps=6 format=3 uid="uid://ds1jr58cmcm3j"]
+
+[ext_resource type="Script" path="res://SaveData/GameSave.gd" id="1_eigaw"]
+[ext_resource type="PackedScene" uid="uid://rfnlpy50ihlp" path="res://Cards/Card Pool/card_printing_press.tscn" id="4_3knku"]
+[ext_resource type="PackedScene" uid="uid://cjep3dbwag4tw" path="res://Cards/Card Pool/card_stockpile.tscn" id="7_8n8og"]
+[ext_resource type="PackedScene" uid="uid://c3nxruvppvko5" path="res://Cards/Card Pool/card_well_read.tscn" id="10_l2haq"]
+[ext_resource type="PackedScene" uid="uid://shwywe7qw2jx" path="res://Cards/Card Pool/card_scroll_reserves.tscn" id="11_g0ukq"]
+
+[resource]
+script = ExtResource("1_eigaw")
+misc_unlocks = Array[String]([])
+unlocked_cards = Array[PackedScene]([ExtResource("4_3knku"), ExtResource("4_3knku"), ExtResource("4_3knku"), ExtResource("7_8n8og"), ExtResource("7_8n8og"), ExtResource("7_8n8og"), ExtResource("7_8n8og"), ExtResource("11_g0ukq"), ExtResource("11_g0ukq"), ExtResource("11_g0ukq"), ExtResource("11_g0ukq"), ExtResource("11_g0ukq"), ExtResource("10_l2haq"), ExtResource("10_l2haq"), ExtResource("10_l2haq")])

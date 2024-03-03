@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_Damage.gd" id="4_cxp6i"]
 [ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="5_dsue4"]
 
-[node name="Card" instance=ExtResource("1_ym4ts")]
+[node name="Card - Singe" instance=ExtResource("1_ym4ts")]
 scale = Vector2(1, 0.990783)
 card_type = "Fire Damage"
 card_name = "Singe"
