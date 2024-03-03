@@ -49,6 +49,8 @@ var is_explored: bool:
 
 var locked: bool:
 	get:
+		if GameManager.debug_mode:
+			return false
 		if always_unlocked:
 			return false
 		if is_explored:

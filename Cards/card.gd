@@ -101,7 +101,7 @@ func enter_hand_mode() -> void:
 	card_back.visible = false
 
 func enter_preview_mode() -> void:
-	button.disabled = true
+	button.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 func _on_button_gui_input(event: InputEvent) -> void:
 	if !(event is InputEventMouseButton): return

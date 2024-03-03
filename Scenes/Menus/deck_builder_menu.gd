@@ -14,6 +14,9 @@ const PANEL_MOVE_TIME: float = 0.2
 func _ready() -> void:
 	arrange_UI()
 
+func _draw() -> void:
+	arrange_UI()
+
 func arrange_UI() -> void:
 	#wipe out cards already there
 	for node: Node in unlocked_cards_container.get_children():
@@ -79,6 +82,7 @@ func open_deck_builder_menu() -> void:
 		return
 	
 	is_open = true
+	arrange_UI()
 	var destination: Vector2 = Vector2(0,self.global_position.y)
 	var tween: Tween = get_tree().create_tween()
 	tween.tween_property(self, "global_position", destination, PANEL_MOVE_TIME)
@@ -89,6 +93,7 @@ func close_deck_builder_menu() -> void:
 		return
 		
 	is_open = false
+	arrange_UI()
 	var destination: Vector2 = Vector2(-self.get_global_rect().size.x,self.global_position.y)
 	var tween: Tween = get_tree().create_tween()
 	tween.tween_property(self, "global_position", destination, PANEL_MOVE_TIME)
