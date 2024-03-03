@@ -133,40 +133,40 @@ position = Vector2(162, 187)
 scale = Vector2(0.553061, 0.553061)
 texture = ExtResource("21_1hvxb")
 
-[node name="Intro +5" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("13_7kiee")]
+[node name="info - Intro (5 pages)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("13_7kiee")]
 offset_left = 196.0
 offset_top = 270.0
 offset_right = 244.0
 offset_bottom = 319.0
 pages = Array[ExtResource("5_2m5ee")]([SubResource("Resource_fwqn5"), SubResource("Resource_qkkho"), SubResource("Resource_7wurx"), SubResource("Resource_shqrv"), SubResource("Resource_h6qmr")])
-connected_map_nodes = [NodePath("../How To Play +5")]
+connected_map_nodes = [NodePath("../info - How To Play (5 pages)")]
 always_unlocked = true
 
-[node name="How To Play +5" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("13_7kiee")]
+[node name="info - How To Play (5 pages)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("13_7kiee")]
 offset_left = 311.0
 offset_top = 188.0
 offset_right = 359.0
 offset_bottom = 237.0
 pages = Array[ExtResource("5_2m5ee")]([SubResource("Resource_ptob5"), SubResource("Resource_yrjke"), SubResource("Resource_7ukff"), SubResource("Resource_i7ote"), SubResource("Resource_7a5o2")])
-connected_map_nodes = [NodePath("../Intro +5"), NodePath("../Level 1")]
+connected_map_nodes = [NodePath("../info - Intro (5 pages)"), NodePath("../Level - Level 1")]
 
-[node name="Level 1" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
+[node name="Level - Level 1" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 404.0
 offset_top = 103.0
 offset_right = 537.0
 offset_bottom = 151.0
 level = ExtResource("4_6wqna")
-connected_map_nodes = [NodePath("../Printing Press +2"), NodePath("../How To Play +5")]
+connected_map_nodes = [NodePath("../Cards - Printing Press (+2 others)"), NodePath("../info - How To Play (5 pages)")]
 
-[node name="Printing Press +2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+[node name="Cards - Printing Press (+2 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 612.0
 offset_top = 51.0
 offset_right = 664.0
 offset_bottom = 99.0
 cards = Array[PackedScene]([ExtResource("14_3vtqq"), ExtResource("15_wpld2"), ExtResource("15_wpld2")])
-connected_map_nodes = [NodePath("../Level 1"), NodePath("../Max Combo")]
+connected_map_nodes = [NodePath("../Level - Level 1"), NodePath("../Ability - Max Combo")]
 
-[node name="Max Combo" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("15_oso2k")]
+[node name="Ability - Max Combo" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("15_oso2k")]
 offset_left = 733.0
 offset_top = 55.0
 offset_right = 778.0
@@ -175,36 +175,36 @@ ability_name = "Max Combo"
 override_name = "Librarian Combo"
 ability_description = "The Librarian can now rack up a combo!
 Collect double resources by collecting the same resources consecutively"
-connected_map_nodes = [NodePath("../Printing Press +2"), NodePath("../Level 2")]
+connected_map_nodes = [NodePath("../Cards - Printing Press (+2 others)"), NodePath("../Level - Level 2")]
 
-[node name="Level 2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
+[node name="Level - Level 2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 840.0
 offset_top = 56.0
 offset_right = 973.0
 offset_bottom = 104.0
 level = ExtResource("6_rqthm")
-connected_map_nodes = [NodePath("../Map Node - Card3"), NodePath("../Max Combo")]
+connected_map_nodes = [NodePath("../Map Node - Card3"), NodePath("../Ability - Max Combo")]
 
 [node name="Map Node - Card3" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 748.0
 offset_top = 229.0
 offset_right = 800.0
 offset_bottom = 277.0
-connected_map_nodes = [NodePath("../Level 2"), NodePath("../Level 3"), NodePath("../Level 4")]
+connected_map_nodes = [NodePath("../Level - Level 2"), NodePath("../Level - Level 3"), NodePath("../Level 4")]
 
 [node name="Map Node - Card7" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 689.0
 offset_top = 618.0
 offset_right = 741.0
 offset_bottom = 666.0
-connected_map_nodes = [NodePath("../Level 3"), NodePath("../Level 4"), NodePath("../Level 5")]
+connected_map_nodes = [NodePath("../Level - Level 3"), NodePath("../Level 4"), NodePath("../Level 5")]
 
 [node name="Map Node - Card4" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 290.0
 offset_top = 527.0
 offset_right = 342.0
 offset_bottom = 575.0
-connected_map_nodes = [NodePath("../Level 3")]
+connected_map_nodes = [NodePath("../Level - Level 3")]
 
 [node name="Map Node - Card5" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 1035.0
@@ -220,7 +220,7 @@ offset_right = 1100.0
 offset_bottom = 615.0
 connected_map_nodes = [NodePath("../Level 4")]
 
-[node name="Level 3" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
+[node name="Level - Level 3" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 482.0
 offset_top = 516.0
 offset_right = 615.0

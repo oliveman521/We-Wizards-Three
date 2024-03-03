@@ -6,9 +6,9 @@ extends MapNode
 func _draw() -> void:
 	if cards.size() > 0:
 		var card: Card = cards[0].instantiate() as Card
-		self.name = card.card_name
+		self.name = "Cards - " + card.card_name
 		if cards.size() > 1:
-			self.name += " +" + str(cards.size() - 1)
+			self.name += " (+" + str(cards.size() - 1) + " others)"
 		card.queue_free()
 		#TODO make the grapic reflect the card(s) on offer. Perhaps this should come with a toggle? maybe just show the card type? Rarity?
 		

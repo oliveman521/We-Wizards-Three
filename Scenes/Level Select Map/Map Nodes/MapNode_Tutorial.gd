@@ -6,9 +6,9 @@ extends MapNode
 
 func _draw() -> void:
 	if pages.size() > 0:
-		self.name = pages[0].title
+		self.name = "info - " + pages[0].title
 		if pages.size() > 1:
-			self.name += " +" + str(pages.size())
+			self.name += " (" + str(pages.size()) +" pages)"
 	super._draw()
 
 func _on_button_down() -> void:
