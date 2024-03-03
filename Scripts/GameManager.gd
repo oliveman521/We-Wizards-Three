@@ -47,7 +47,7 @@ var card_pool: Array[PackedScene] = []
 
 
 const main_menu: PackedScene = preload("uid://dpdlppetxwu3m")
-const level_select_scene: PackedScene = preload("uid://dwfp27xq4jnk1")
+const level_select_scene: PackedScene = preload("uid://bpfb1n271ove4")
 const game_scene: PackedScene = preload("uid://c4qnaj4cqxgny")
 const deck_builder_scene: PackedScene = preload("res://Scenes/Menus/deck_builder_menu.tscn")
 
