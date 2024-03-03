@@ -8,24 +8,24 @@
 [ext_resource type="PackedScene" uid="uid://cklv7m4x0ijqb" path="res://Scenes/Level Select Map/Map Nodes/MapNode_New_Card.tscn" id="5_64jv8"]
 [ext_resource type="Texture2D" uid="uid://8qsug5qhwpbr" path="res://Sprites/Comic Panels/Door open.png" id="6_flkku"]
 [ext_resource type="Texture2D" uid="uid://rr1b2njt6joa" path="res://Sprites/Comic Panels/KRS.png" id="7_nypcm"]
-[ext_resource type="PackedScene" uid="uid://ddmofotpnip81" path="res://Scenes/Levels/level_1-3.tscn" id="7_rlaet"]
 [ext_resource type="Texture2D" uid="uid://830fliunjvdu" path="res://Sprites/Comic Panels/door slam.png" id="8_7wuin"]
 [ext_resource type="Texture2D" uid="uid://cxme5dqwjo81m" path="res://Sprites/Comic Panels/Telling the gang.png" id="9_dk514"]
 [ext_resource type="Theme" uid="uid://btsp3ifn1m5n3" path="res://Scenes/Menus/Menus.tres" id="10_2ecuw"]
 [ext_resource type="PackedScene" uid="uid://6685qupifd8s" path="res://Cards/Card Pool/card_fire_scroll_recipe.tscn" id="10_f7yid"]
 [ext_resource type="Script" path="res://Scenes/Menus/deck_builder_menu.gd" id="11_t8gd0"]
-[ext_resource type="PackedScene" uid="uid://nr4hlan2e2hj" path="res://Scenes/Levels/level_1-1.tscn" id="12_0l8t7"]
+[ext_resource type="PackedScene" uid="uid://nr4hlan2e2hj" path="res://Scenes/Levels/level 1-1.tscn" id="12_0so1m"]
 [ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="12_fdwhl"]
 [ext_resource type="PackedScene" uid="uid://b585ymf1lip61" path="res://Scenes/Level Select Map/Map Nodes/MapNode_Tutorial.tscn" id="13_7kiee"]
 [ext_resource type="PackedScene" uid="uid://rfnlpy50ihlp" path="res://Cards/Card Pool/card_printing_press.tscn" id="14_3vtqq"]
 [ext_resource type="PackedScene" uid="uid://cde83i8rqdtlj" path="res://Scenes/Level Select Map/Map Nodes/MapNode_New_Ability.tscn" id="15_oso2k"]
 [ext_resource type="PackedScene" uid="uid://dt27624gh16cs" path="res://Cards/Card Pool/card_singe.tscn" id="15_wpld2"]
 [ext_resource type="PackedScene" uid="uid://c3nxruvppvko5" path="res://Cards/Card Pool/card_well_read.tscn" id="16_bsjmt"]
-[ext_resource type="PackedScene" uid="uid://dmdss2aqbb1lg" path="res://Scenes/Levels/level_1-2.tscn" id="17_swh7t"]
+[ext_resource type="PackedScene" uid="uid://dmdss2aqbb1lg" path="res://Scenes/Levels/level 1-2.tscn" id="17_swh7t"]
 [ext_resource type="PackedScene" uid="uid://ccqqvfnjhvb3t" path="res://Cards/Card Pool/card_supercharge.tscn" id="19_0o358"]
 [ext_resource type="PackedScene" uid="uid://bhq4tuy1yifyy" path="res://Cards/Card Pool/card_scortched_earth.tscn" id="20_tkhon"]
 [ext_resource type="Texture2D" uid="uid://cm7a3qxas4otc" path="res://Sprites/UI Icons/Start Here.png" id="21_1hvxb"]
 [ext_resource type="PackedScene" uid="uid://deoygvkkffvpu" path="res://Cards/Card Pool/card_magma_spray.tscn" id="21_lwsqc"]
+[ext_resource type="PackedScene" uid="uid://ddmofotpnip81" path="res://Scenes/Levels/level 1-3a.tscn" id="22_3v6e3"]
 
 [sub_resource type="Resource" id="Resource_fwqn5"]
 script = ExtResource("5_2m5ee")
@@ -159,7 +159,7 @@ offset_left = 404.0
 offset_top = 103.0
 offset_right = 537.0
 offset_bottom = 151.0
-level = ExtResource("12_0l8t7")
+level = ExtResource("12_0so1m")
 connected_map_nodes = [NodePath("../Cards - Singe (+3 others)"), NodePath("../info - How To Play (5 pages)")]
 
 [node name="Cards - Singe (+3 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
@@ -187,29 +187,29 @@ offset_top = 56.0
 offset_right = 973.0
 offset_bottom = 104.0
 level = ExtResource("17_swh7t")
-connected_map_nodes = [NodePath("../Cards - Super Charge (+2 others)"), NodePath("../Ability - Max Combo")]
+connected_map_nodes = [NodePath("../Cards - Super Charge (+4 others)"), NodePath("../Ability - Max Combo")]
 
-[node name="Cards - Super Charge (+2 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+[node name="Cards - Super Charge (+4 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 748.0
 offset_top = 229.0
 offset_right = 800.0
 offset_bottom = 277.0
 cards = Array[PackedScene]([ExtResource("19_0o358"), ExtResource("20_tkhon"), ExtResource("21_lwsqc"), ExtResource("15_wpld2"), ExtResource("14_3vtqq")])
-connected_map_nodes = [NodePath("../Level - Level 1 - 2"), NodePath("../Level - Level 3"), NodePath("../Level 4")]
+connected_map_nodes = [NodePath("../Level - Level 1 - 2"), NodePath("../Level - Level 1-3"), NodePath("../Level 4")]
 
 [node name="Map Node - Card7" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 689.0
 offset_top = 618.0
 offset_right = 741.0
 offset_bottom = 666.0
-connected_map_nodes = [NodePath("../Level - Level 3"), NodePath("../Level 4"), NodePath("../Level 5")]
+connected_map_nodes = [NodePath("../Level - Level 1-3"), NodePath("../Level 4"), NodePath("../Level 5")]
 
 [node name="Map Node - Card4" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 290.0
 offset_top = 527.0
 offset_right = 342.0
 offset_bottom = 575.0
-connected_map_nodes = [NodePath("../Level - Level 3")]
+connected_map_nodes = [NodePath("../Level - Level 1-3")]
 
 [node name="Map Node - Card5" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 1035.0
@@ -225,20 +225,20 @@ offset_right = 1100.0
 offset_bottom = 615.0
 connected_map_nodes = [NodePath("../Level 4")]
 
-[node name="Level - Level 3" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
-offset_left = 482.0
-offset_top = 516.0
-offset_right = 615.0
-offset_bottom = 564.0
-level = ExtResource("7_rlaet")
-connected_map_nodes = [NodePath("../Cards - Super Charge (+2 others)"), NodePath("../Map Node - Card4"), NodePath("../Map Node - Card7")]
+[node name="Level - Level 1-3" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
+offset_left = 526.0
+offset_top = 458.0
+offset_right = 659.0
+offset_bottom = 506.0
+level = ExtResource("22_3v6e3")
+connected_map_nodes = [NodePath("../Cards - Super Charge (+4 others)"), NodePath("../Map Node - Card4"), NodePath("../Map Node - Card7")]
 
 [node name="Level 4" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
-offset_left = 789.0
-offset_top = 505.0
-offset_right = 922.0
-offset_bottom = 553.0
-connected_map_nodes = [NodePath("../Cards - Super Charge (+2 others)"), NodePath("../Map Node - Card5"), NodePath("../Map Node - Card6"), NodePath("../Map Node - Card7")]
+offset_left = 802.0
+offset_top = 460.0
+offset_right = 935.0
+offset_bottom = 508.0
+connected_map_nodes = [NodePath("../Cards - Super Charge (+4 others)"), NodePath("../Map Node - Card5"), NodePath("../Map Node - Card6"), NodePath("../Map Node - Card7")]
 
 [node name="Level 5" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 649.0

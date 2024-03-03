@@ -3,10 +3,11 @@ extends Node2D
 class_name LevelData
 
 
-@export var level_name: String = "filler_name":
-	set(new_val):
-		level_name = new_val
-		name = level_name
+@export var level_name: String:
+	get:
+		var file_name: String = scene_file_path.get_basename().split("/")[-1]
+		name = file_name
+		return file_name
 @export var supplies_present: Array[Supply] #unused. This will represent the supplies that will spawn in this level
 @export var supplies_spawned_at_once: int = 12
 
