@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bpfb1n271ove4"]
+[gd_scene load_steps=43 format=3 uid="uid://bpfb1n271ove4"]
 
 [ext_resource type="Script" path="res://Scenes/Level Select Map/LevelSelectMenu.gd" id="1_xcx1n"]
 [ext_resource type="Script" path="res://Scenes/Level Select Map/MapManager.gd" id="2_6iwrn"]
@@ -23,10 +23,15 @@
 [ext_resource type="PackedScene" uid="uid://ccqqvfnjhvb3t" path="res://Cards/Card Pool/card_supercharge.tscn" id="19_0o358"]
 [ext_resource type="PackedScene" uid="uid://bhq4tuy1yifyy" path="res://Cards/Card Pool/card_scortched_earth.tscn" id="20_tkhon"]
 [ext_resource type="Texture2D" uid="uid://cm7a3qxas4otc" path="res://Sprites/UI Icons/Start Here.png" id="21_1hvxb"]
+[ext_resource type="PackedScene" uid="uid://c3nxruvppvko5" path="res://Cards/Card Pool/card_well_read.tscn" id="21_bj66l"]
 [ext_resource type="PackedScene" uid="uid://ddmofotpnip81" path="res://Scenes/Levels/Level 3a.tscn" id="21_ditay"]
 [ext_resource type="PackedScene" uid="uid://deoygvkkffvpu" path="res://Cards/Card Pool/card_magma_spray.tscn" id="21_lwsqc"]
+[ext_resource type="PackedScene" uid="uid://tth5yw0eirm6" path="res://Cards/Card Pool/card_librarian_golem.tscn" id="22_dsx6i"]
 [ext_resource type="PackedScene" uid="uid://50477ao4osxc" path="res://Scenes/Levels/Level 3b.tscn" id="22_mev8k"]
 [ext_resource type="PackedScene" uid="uid://dio6uti0xbamv" path="res://Scenes/Levels/Level 4.tscn" id="24_ihj3m"]
+[ext_resource type="PackedScene" uid="uid://qiwvts513giv" path="res://Scenes/Levels/Level 5b.tscn" id="27_3xcp6"]
+[ext_resource type="PackedScene" uid="uid://don0td5sje72h" path="res://Scenes/Levels/Level 5a.tscn" id="28_0tjtk"]
+[ext_resource type="PackedScene" uid="uid://ddysngdfm7vje" path="res://Scenes/Levels/level Bonus 1.tscn" id="29_mq7ma"]
 
 [sub_resource type="Resource" id="Resource_fwqn5"]
 script = ExtResource("5_2m5ee")
@@ -110,10 +115,8 @@ button_text = "Let's kick some ass"
 
 [node name="Level Select Menu" type="Control" groups=["Level Select Menu"]]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = 9
 anchor_bottom = 1.0
-grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xcx1n")
 
@@ -127,11 +130,7 @@ position = Vector2(1982, 23)
 
 [node name="Map Manager" type="Control" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
 script = ExtResource("2_6iwrn")
 
 [node name="StartHere" type="Sprite2D" parent="Map Manager"]
@@ -207,13 +206,21 @@ offset_bottom = 311.0
 cards = Array[PackedScene]([ExtResource("20_tkhon"), ExtResource("14_3vtqq")])
 connected_map_nodes = [NodePath("../Level - Level 3a")]
 
-[node name="Cards - Magma Spray (+2 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+[node name="Cards - Magma Spray (+3 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 1126.0
 offset_top = 265.0
 offset_right = 1178.0
 offset_bottom = 313.0
-cards = Array[PackedScene]([ExtResource("21_lwsqc"), ExtResource("21_lwsqc"), ExtResource("15_wpld2")])
+cards = Array[PackedScene]([ExtResource("21_lwsqc"), ExtResource("21_lwsqc"), ExtResource("15_wpld2"), ExtResource("21_bj66l")])
 connected_map_nodes = [NodePath("../Level - Level 3b")]
+
+[node name="Cards - Librarian Golem (+1 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+offset_left = 1226.0
+offset_top = 353.0
+offset_right = 1278.0
+offset_bottom = 401.0
+cards = Array[PackedScene]([ExtResource("22_dsx6i"), ExtResource("21_bj66l")])
+connected_map_nodes = [NodePath("../Level - level Bonus 1")]
 
 [node name="Level - Level 3a" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 716.0
@@ -229,7 +236,7 @@ offset_top = 263.0
 offset_right = 1074.0
 offset_bottom = 311.0
 level = ExtResource("22_mev8k")
-connected_map_nodes = [NodePath("../Cards - Super Charge (+2 others)"), NodePath("../Cards - Magma Spray (+2 others)"), NodePath("../Cards - Fire Bolt Scroll (+2 others)")]
+connected_map_nodes = [NodePath("../Cards - Super Charge (+2 others)"), NodePath("../Cards - Magma Spray (+3 others)"), NodePath("../Cards - Fire Bolt Scroll (+2 others)")]
 
 [node name="Cards - Fire Bolt Scroll (+2 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 862.0
@@ -245,23 +252,52 @@ offset_top = 482.0
 offset_right = 953.0
 offset_bottom = 530.0
 level = ExtResource("24_ihj3m")
-connected_map_nodes = [NodePath("../Cards - Fire Bolt Scroll (+2 others)"), NodePath("../Level 6")]
+connected_map_nodes = [NodePath("../Cards - Fire Bolt Scroll (+2 others)"), NodePath("../Level - Level 5b"), NodePath("../Level - Level 5a")]
 
-[node name="Level 6" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
-offset_left = 638.0
-offset_top = 557.0
-offset_right = 771.0
-offset_bottom = 605.0
-connected_map_nodes = [NodePath("../Level - Level 4")]
+[node name="Level - Level 5b" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
+offset_left = 946.0
+offset_top = 584.0
+offset_right = 1079.0
+offset_bottom = 632.0
+level = ExtResource("27_3xcp6")
+connected_map_nodes = [NodePath("../Level - Level 4"), NodePath("../Ability - Max Combo2")]
 
-[node name="Label" type="Label" parent="Map Manager"]
-layout_mode = 0
-offset_left = 488.0
-offset_top = 700.0
-offset_right = 642.0
-offset_bottom = 723.0
-text = "Level 1-5a
-Jesters + archers"
+[node name="Level - Level 5a" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
+offset_left = 690.0
+offset_top = 579.0
+offset_right = 823.0
+offset_bottom = 627.0
+level = ExtResource("28_0tjtk")
+connected_map_nodes = [NodePath("../Level - Level 4"), NodePath("../Ability - Librarian Boost")]
+
+[node name="Level - level Bonus 1" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
+offset_left = 1131.0
+offset_top = 455.0
+offset_right = 1264.0
+offset_bottom = 503.0
+level = ExtResource("29_mq7ma")
+connected_map_nodes = [NodePath("../Ability - Max Combo2"), NodePath("../Cards - Librarian Golem (+1 others)")]
+
+[node name="Ability - Max Combo2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("15_oso2k")]
+offset_left = 1158.0
+offset_top = 581.0
+offset_right = 1203.0
+offset_bottom = 626.0
+ability_name = "Max Combo"
+override_name = "+ 1 Max Combo"
+ability_description = "The Librarian's combo can now go bigger! Collect even more resources by collecting the same resources consecutively"
+connected_map_nodes = [NodePath("../Level - Level 5b"), NodePath("../Level - level Bonus 1")]
+
+[node name="Ability - Librarian Boost" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("15_oso2k")]
+offset_left = 571.0
+offset_top = 571.0
+offset_right = 616.0
+offset_bottom = 616.0
+ability_name = "Librarian Boost"
+override_name = ""
+ability_description = "The Librarian can now boost! 
+Hit Ctrl to get a short boost of speed!"
+connected_map_nodes = [NodePath("../Level - Level 5a")]
 
 [node name="Label5" type="Label" parent="Map Manager"]
 layout_mode = 0
@@ -274,36 +310,11 @@ Lightning (no fire?)"
 
 [node name="Label6" type="Label" parent="Map Manager"]
 layout_mode = 0
-offset_left = 697.0
-offset_top = 878.0
-offset_right = 851.0
-offset_bottom = 927.0
+offset_left = 835.0
+offset_top = 742.0
+offset_right = 989.0
+offset_bottom = 791.0
 text = "Lightning Cards"
-
-[node name="Label2" type="Label" parent="Map Manager"]
-layout_mode = 0
-offset_left = 924.0
-offset_top = 707.0
-offset_right = 1196.0
-offset_bottom = 756.0
-text = "Level 1-5b
-Tons of peasents + hulking peasent"
-
-[node name="Label3" type="Label" parent="Map Manager"]
-layout_mode = 0
-offset_left = 1247.0
-offset_top = 710.0
-offset_right = 1519.0
-offset_bottom = 759.0
-text = "Unlock combo 3"
-
-[node name="Label4" type="Label" parent="Map Manager"]
-layout_mode = 0
-offset_left = 265.0
-offset_top = 705.0
-offset_right = 537.0
-offset_bottom = 754.0
-text = "Unlock Boost"
 
 [node name="Edit Deck Button" type="Button" parent="."]
 unique_name_in_owner = true

@@ -1,0 +1,501 @@
+[gd_scene load_steps=9 format=3 uid="uid://don0td5sje72h"]
+
+[ext_resource type="PackedScene" uid="uid://ddavd71iwja5g" path="res://Scenes/Levels/template_level.tscn" id="1_wmrxe"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="2_yk86e"]
+[ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="3_hhepp"]
+[ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Blank_Scroll.tres" id="4_fuf48"]
+[ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Tablet.tres" id="5_pjq3h"]
+[ext_resource type="PackedScene" uid="uid://c6afi4js5waro" path="res://Enemies/enemy_jester.tscn" id="6_ob4eo"]
+[ext_resource type="PackedScene" uid="uid://cn7apof2y3wfd" path="res://Enemies/enemy_archer.tscn" id="7_gexg0"]
+[ext_resource type="PackedScene" uid="uid://dbc3v7h72rrl8" path="res://Enemies/enemy_knight.tscn" id="8_dwoln"]
+
+[node name="Level 5a" instance=ExtResource("1_wmrxe")]
+level_name = "Level 5a"
+supplies_present = Array[Resource("res://Supplies/Supply.gd")]([ExtResource("2_yk86e"), ExtResource("3_hhepp"), ExtResource("4_fuf48"), ExtResource("5_pjq3h")])
+supplies_spawned_at_once = 10
+
+[node name="Enemy - Jester" parent="Enemy Feed Tape" index="0" instance=ExtResource("6_ob4eo")]
+position = Vector2(-450, 319)
+randomize_phase = true
+
+[node name="Enemy - Jester2" parent="Enemy Feed Tape" index="1" instance=ExtResource("6_ob4eo")]
+position = Vector2(-228, 456)
+randomize_phase = true
+
+[node name="Enemy - Jester3" parent="Enemy Feed Tape" index="2" instance=ExtResource("6_ob4eo")]
+position = Vector2(-215, 224)
+randomize_phase = true
+
+[node name="Enemy - Jester4" parent="Enemy Feed Tape" index="3" instance=ExtResource("6_ob4eo")]
+position = Vector2(-142, 837)
+randomize_phase = true
+
+[node name="Enemy - Jester5" parent="Enemy Feed Tape" index="4" instance=ExtResource("6_ob4eo")]
+position = Vector2(-482, 862)
+randomize_phase = true
+
+[node name="Enemy - Jester6" parent="Enemy Feed Tape" index="5" instance=ExtResource("6_ob4eo")]
+position = Vector2(-698, 821)
+randomize_phase = true
+
+[node name="Enemy - Jester7" parent="Enemy Feed Tape" index="6" instance=ExtResource("6_ob4eo")]
+position = Vector2(-729, 291)
+randomize_phase = true
+
+[node name="Enemy - Jester14" parent="Enemy Feed Tape" index="7" instance=ExtResource("6_ob4eo")]
+position = Vector2(-1069, 682)
+randomize_phase = true
+
+[node name="Enemy - Jester15" parent="Enemy Feed Tape" index="8" instance=ExtResource("6_ob4eo")]
+position = Vector2(-1196, 863)
+randomize_phase = true
+
+[node name="Enemy - Jester16" parent="Enemy Feed Tape" index="9" instance=ExtResource("6_ob4eo")]
+position = Vector2(-1380, 638)
+randomize_phase = true
+
+[node name="Enemy - Jester17" parent="Enemy Feed Tape" index="10" instance=ExtResource("6_ob4eo")]
+position = Vector2(-1536, 355)
+randomize_phase = true
+
+[node name="Enemy - Jester18" parent="Enemy Feed Tape" index="11" instance=ExtResource("6_ob4eo")]
+position = Vector2(-1688, 526)
+randomize_phase = true
+
+[node name="Enemy - Jester19" parent="Enemy Feed Tape" index="12" instance=ExtResource("6_ob4eo")]
+position = Vector2(-1688, 526)
+randomize_phase = true
+
+[node name="Enemy - Jester20" parent="Enemy Feed Tape" index="13" instance=ExtResource("6_ob4eo")]
+position = Vector2(-1659, 828)
+randomize_phase = true
+
+[node name="Enemy - Jester21" parent="Enemy Feed Tape" index="14" instance=ExtResource("6_ob4eo")]
+position = Vector2(-1903, 866)
+randomize_phase = true
+
+[node name="Enemy - Jester24" parent="Enemy Feed Tape" index="15" instance=ExtResource("6_ob4eo")]
+position = Vector2(-2099, 866)
+randomize_phase = true
+
+[node name="Enemy - Jester25" parent="Enemy Feed Tape" index="16" instance=ExtResource("6_ob4eo")]
+position = Vector2(-2192, 435)
+randomize_phase = true
+
+[node name="Enemy - Jester96" parent="Enemy Feed Tape" index="17" instance=ExtResource("6_ob4eo")]
+position = Vector2(-2650, 876)
+randomize_phase = true
+
+[node name="Enemy - Jester26" parent="Enemy Feed Tape" index="18" instance=ExtResource("6_ob4eo")]
+position = Vector2(-2466, 246)
+randomize_phase = true
+
+[node name="Enemy - Jester27" parent="Enemy Feed Tape" index="19" instance=ExtResource("6_ob4eo")]
+position = Vector2(-2887, 342)
+randomize_phase = true
+
+[node name="Enemy - Jester28" parent="Enemy Feed Tape" index="20" instance=ExtResource("6_ob4eo")]
+position = Vector2(-2823, 424)
+randomize_phase = true
+
+[node name="Enemy - Jester29" parent="Enemy Feed Tape" index="21" instance=ExtResource("6_ob4eo")]
+position = Vector2(-2794, 549)
+randomize_phase = true
+
+[node name="Enemy - Jester30" parent="Enemy Feed Tape" index="22" instance=ExtResource("6_ob4eo")]
+position = Vector2(-2951, 674)
+randomize_phase = true
+
+[node name="Enemy - Jester31" parent="Enemy Feed Tape" index="23" instance=ExtResource("6_ob4eo")]
+position = Vector2(-2951, 674)
+randomize_phase = true
+
+[node name="Enemy - Jester32" parent="Enemy Feed Tape" index="24" instance=ExtResource("6_ob4eo")]
+position = Vector2(-3118, 667)
+randomize_phase = true
+
+[node name="Enemy - Jester33" parent="Enemy Feed Tape" index="25" instance=ExtResource("6_ob4eo")]
+position = Vector2(-2998, 809)
+randomize_phase = true
+
+[node name="Enemy - Jester34" parent="Enemy Feed Tape" index="26" instance=ExtResource("6_ob4eo")]
+position = Vector2(-3097, 418)
+randomize_phase = true
+
+[node name="Enemy - Jester35" parent="Enemy Feed Tape" index="27" instance=ExtResource("6_ob4eo")]
+position = Vector2(-2990, 241)
+randomize_phase = true
+
+[node name="Enemy - Jester36" parent="Enemy Feed Tape" index="28" instance=ExtResource("6_ob4eo")]
+position = Vector2(-3079, 311)
+randomize_phase = true
+
+[node name="Enemy - Jester37" parent="Enemy Feed Tape" index="29" instance=ExtResource("6_ob4eo")]
+position = Vector2(-3418, 810)
+randomize_phase = true
+
+[node name="Enemy - Jester38" parent="Enemy Feed Tape" index="30" instance=ExtResource("6_ob4eo")]
+position = Vector2(-3411, 300)
+randomize_phase = true
+
+[node name="Enemy - Jester22" parent="Enemy Feed Tape" index="31" instance=ExtResource("6_ob4eo")]
+position = Vector2(-1833, 622)
+randomize_phase = true
+
+[node name="Enemy - Jester23" parent="Enemy Feed Tape" index="32" instance=ExtResource("6_ob4eo")]
+position = Vector2(-1735, 241)
+randomize_phase = true
+
+[node name="Enemy - Jester8" parent="Enemy Feed Tape" index="33" instance=ExtResource("6_ob4eo")]
+position = Vector2(-1011, 351)
+randomize_phase = true
+
+[node name="Enemy - Jester9" parent="Enemy Feed Tape" index="34" instance=ExtResource("6_ob4eo")]
+position = Vector2(-1078, 291)
+randomize_phase = true
+
+[node name="Enemy - Jester10" parent="Enemy Feed Tape" index="35" instance=ExtResource("6_ob4eo")]
+position = Vector2(-1088, 399)
+randomize_phase = true
+
+[node name="Enemy - Jester11" parent="Enemy Feed Tape" index="36" instance=ExtResource("6_ob4eo")]
+position = Vector2(-1148, 332)
+randomize_phase = true
+
+[node name="Enemy - Jester12" parent="Enemy Feed Tape" index="37" instance=ExtResource("6_ob4eo")]
+position = Vector2(-1246, 335)
+randomize_phase = true
+
+[node name="Enemy - Jester13" parent="Enemy Feed Tape" index="38" instance=ExtResource("6_ob4eo")]
+position = Vector2(-3623, 590)
+randomize_phase = true
+
+[node name="Enemy - Jester39" parent="Enemy Feed Tape" index="39" instance=ExtResource("6_ob4eo")]
+position = Vector2(-3690, 530)
+randomize_phase = true
+
+[node name="Enemy - Jester40" parent="Enemy Feed Tape" index="40" instance=ExtResource("6_ob4eo")]
+position = Vector2(-3700, 638)
+randomize_phase = true
+
+[node name="Enemy - Jester41" parent="Enemy Feed Tape" index="41" instance=ExtResource("6_ob4eo")]
+position = Vector2(-3760, 571)
+randomize_phase = true
+
+[node name="Enemy - Jester42" parent="Enemy Feed Tape" index="42" instance=ExtResource("6_ob4eo")]
+position = Vector2(-3840, 638)
+randomize_phase = true
+
+[node name="Enemy - Jester48" parent="Enemy Feed Tape" index="43" instance=ExtResource("6_ob4eo")]
+position = Vector2(-4410, 849)
+randomize_phase = true
+
+[node name="Enemy - Jester49" parent="Enemy Feed Tape" index="44" instance=ExtResource("6_ob4eo")]
+position = Vector2(-4477, 789)
+randomize_phase = true
+
+[node name="Enemy - Jester50" parent="Enemy Feed Tape" index="45" instance=ExtResource("6_ob4eo")]
+position = Vector2(-4487, 897)
+randomize_phase = true
+
+[node name="Enemy - Jester51" parent="Enemy Feed Tape" index="46" instance=ExtResource("6_ob4eo")]
+position = Vector2(-4547, 830)
+randomize_phase = true
+
+[node name="Enemy - Jester52" parent="Enemy Feed Tape" index="47" instance=ExtResource("6_ob4eo")]
+position = Vector2(-4561, 736)
+randomize_phase = true
+
+[node name="Enemy - Jester61" parent="Enemy Feed Tape" index="48" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5466, 461)
+randomize_phase = true
+
+[node name="Enemy - Jester62" parent="Enemy Feed Tape" index="49" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5533, 401)
+randomize_phase = true
+
+[node name="Enemy - Jester63" parent="Enemy Feed Tape" index="50" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5543, 509)
+randomize_phase = true
+
+[node name="Enemy - Jester64" parent="Enemy Feed Tape" index="51" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5603, 442)
+randomize_phase = true
+
+[node name="Enemy - Jester65" parent="Enemy Feed Tape" index="52" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5617, 348)
+randomize_phase = true
+
+[node name="Enemy - Jester66" parent="Enemy Feed Tape" index="53" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5929, 231)
+randomize_phase = true
+
+[node name="Enemy - Jester67" parent="Enemy Feed Tape" index="54" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5908, 327)
+randomize_phase = true
+
+[node name="Enemy - Jester68" parent="Enemy Feed Tape" index="55" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5916, 428)
+randomize_phase = true
+
+[node name="Enemy - Jester69" parent="Enemy Feed Tape" index="56" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5916, 529)
+randomize_phase = true
+
+[node name="Enemy - Jester70" parent="Enemy Feed Tape" index="57" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5916, 609)
+randomize_phase = true
+
+[node name="Enemy - Jester71" parent="Enemy Feed Tape" index="58" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5916, 710)
+randomize_phase = true
+
+[node name="Enemy - Jester72" parent="Enemy Feed Tape" index="59" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5913, 848)
+randomize_phase = true
+
+[node name="Enemy - Jester73" parent="Enemy Feed Tape" index="60" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5916, 963)
+randomize_phase = true
+
+[node name="Enemy - Jester74" parent="Enemy Feed Tape" index="61" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5823, 904)
+randomize_phase = true
+
+[node name="Enemy - Jester75" parent="Enemy Feed Tape" index="62" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5836, 792)
+randomize_phase = true
+
+[node name="Enemy - Jester76" parent="Enemy Feed Tape" index="63" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5833, 701)
+randomize_phase = true
+
+[node name="Enemy - Jester77" parent="Enemy Feed Tape" index="64" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5841, 560)
+randomize_phase = true
+
+[node name="Enemy - Jester78" parent="Enemy Feed Tape" index="65" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5833, 469)
+randomize_phase = true
+
+[node name="Enemy - Jester79" parent="Enemy Feed Tape" index="66" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5828, 384)
+randomize_phase = true
+
+[node name="Enemy - Jester80" parent="Enemy Feed Tape" index="67" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5844, 256)
+randomize_phase = true
+
+[node name="Enemy - Jester81" parent="Enemy Feed Tape" index="68" instance=ExtResource("6_ob4eo")]
+position = Vector2(-6319, 210)
+randomize_phase = true
+
+[node name="Enemy - Jester82" parent="Enemy Feed Tape" index="69" instance=ExtResource("6_ob4eo")]
+position = Vector2(-6298, 306)
+randomize_phase = true
+
+[node name="Enemy - Jester83" parent="Enemy Feed Tape" index="70" instance=ExtResource("6_ob4eo")]
+position = Vector2(-6306, 407)
+randomize_phase = true
+
+[node name="Enemy - Jester84" parent="Enemy Feed Tape" index="71" instance=ExtResource("6_ob4eo")]
+position = Vector2(-6306, 508)
+randomize_phase = true
+
+[node name="Enemy - Jester85" parent="Enemy Feed Tape" index="72" instance=ExtResource("6_ob4eo")]
+position = Vector2(-6306, 588)
+randomize_phase = true
+
+[node name="Enemy - Jester86" parent="Enemy Feed Tape" index="73" instance=ExtResource("6_ob4eo")]
+position = Vector2(-6306, 689)
+randomize_phase = true
+
+[node name="Enemy - Jester87" parent="Enemy Feed Tape" index="74" instance=ExtResource("6_ob4eo")]
+position = Vector2(-6303, 827)
+randomize_phase = true
+
+[node name="Enemy - Jester88" parent="Enemy Feed Tape" index="75" instance=ExtResource("6_ob4eo")]
+position = Vector2(-6306, 942)
+randomize_phase = true
+
+[node name="Enemy - Jester89" parent="Enemy Feed Tape" index="76" instance=ExtResource("6_ob4eo")]
+position = Vector2(-6213, 883)
+randomize_phase = true
+
+[node name="Enemy - Jester90" parent="Enemy Feed Tape" index="77" instance=ExtResource("6_ob4eo")]
+position = Vector2(-6226, 771)
+randomize_phase = true
+
+[node name="Enemy - Jester91" parent="Enemy Feed Tape" index="78" instance=ExtResource("6_ob4eo")]
+position = Vector2(-6223, 680)
+randomize_phase = true
+
+[node name="Enemy - Jester92" parent="Enemy Feed Tape" index="79" instance=ExtResource("6_ob4eo")]
+position = Vector2(-6231, 539)
+randomize_phase = true
+
+[node name="Enemy - Jester93" parent="Enemy Feed Tape" index="80" instance=ExtResource("6_ob4eo")]
+position = Vector2(-6223, 448)
+randomize_phase = true
+
+[node name="Enemy - Jester94" parent="Enemy Feed Tape" index="81" instance=ExtResource("6_ob4eo")]
+position = Vector2(-6218, 363)
+randomize_phase = true
+
+[node name="Enemy - Jester95" parent="Enemy Feed Tape" index="82" instance=ExtResource("6_ob4eo")]
+position = Vector2(-6234, 235)
+randomize_phase = true
+
+[node name="Enemy - Jester54" parent="Enemy Feed Tape" index="83" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5174, 852)
+randomize_phase = true
+
+[node name="Enemy - Jester55" parent="Enemy Feed Tape" index="84" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5241, 792)
+randomize_phase = true
+
+[node name="Enemy - Jester56" parent="Enemy Feed Tape" index="85" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5251, 900)
+randomize_phase = true
+
+[node name="Enemy - Jester57" parent="Enemy Feed Tape" index="86" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5311, 833)
+randomize_phase = true
+
+[node name="Enemy - Jester58" parent="Enemy Feed Tape" index="87" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5325, 739)
+randomize_phase = true
+
+[node name="Enemy - Jester59" parent="Enemy Feed Tape" index="88" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5165, 737)
+randomize_phase = true
+
+[node name="Enemy - Jester60" parent="Enemy Feed Tape" index="89" instance=ExtResource("6_ob4eo")]
+position = Vector2(-5249, 684)
+randomize_phase = true
+
+[node name="Enemy - Jester53" parent="Enemy Feed Tape" index="90" instance=ExtResource("6_ob4eo")]
+position = Vector2(-4713, 258)
+randomize_phase = true
+
+[node name="Enemy - Jester43" parent="Enemy Feed Tape" index="91" instance=ExtResource("6_ob4eo")]
+position = Vector2(-4162, 294)
+randomize_phase = true
+
+[node name="Enemy - Jester44" parent="Enemy Feed Tape" index="92" instance=ExtResource("6_ob4eo")]
+position = Vector2(-4288, 197)
+randomize_phase = true
+
+[node name="Enemy - Jester45" parent="Enemy Feed Tape" index="93" instance=ExtResource("6_ob4eo")]
+position = Vector2(-4287, 345)
+randomize_phase = true
+
+[node name="Enemy - Jester46" parent="Enemy Feed Tape" index="94" instance=ExtResource("6_ob4eo")]
+position = Vector2(-4350, 269)
+randomize_phase = true
+
+[node name="Enemy - Jester47" parent="Enemy Feed Tape" index="95" instance=ExtResource("6_ob4eo")]
+position = Vector2(-4358, 363)
+randomize_phase = true
+
+[node name="Enemy - Archer" parent="Enemy Feed Tape" index="96" instance=ExtResource("7_gexg0")]
+position = Vector2(-1620, 637)
+
+[node name="Enemy - Archer2" parent="Enemy Feed Tape" index="97" instance=ExtResource("7_gexg0")]
+position = Vector2(-1804, 421)
+
+[node name="Enemy - Archer3" parent="Enemy Feed Tape" index="98" instance=ExtResource("7_gexg0")]
+position = Vector2(-2878, 535)
+
+[node name="Enemy - Archer4" parent="Enemy Feed Tape" index="99" instance=ExtResource("7_gexg0")]
+position = Vector2(-2981, 319)
+
+[node name="Enemy - Archer5" parent="Enemy Feed Tape" index="100" instance=ExtResource("7_gexg0")]
+position = Vector2(-3010, 752)
+
+[node name="Enemy - Archer6" parent="Enemy Feed Tape" index="101" instance=ExtResource("7_gexg0")]
+position = Vector2(-3006, 620)
+
+[node name="Enemy - Archer7" parent="Enemy Feed Tape" index="102" instance=ExtResource("7_gexg0")]
+position = Vector2(-2990, 434)
+
+[node name="Enemy - Archer8" parent="Enemy Feed Tape" index="103" instance=ExtResource("7_gexg0")]
+position = Vector2(-3129, 535)
+
+[node name="Enemy - Knight" parent="Enemy Feed Tape" index="104" instance=ExtResource("8_dwoln")]
+position = Vector2(-4084, 524)
+
+[node name="Enemy - Knight2" parent="Enemy Feed Tape" index="105" instance=ExtResource("8_dwoln")]
+position = Vector2(-4762, 620)
+
+[node name="Enemy - Knight3" parent="Enemy Feed Tape" index="106" instance=ExtResource("8_dwoln")]
+position = Vector2(-5621, 734)
+
+[node name="Enemy - Knight4" parent="Enemy Feed Tape" index="107" instance=ExtResource("8_dwoln")]
+position = Vector2(-6490, 195)
+
+[node name="Enemy - Knight5" parent="Enemy Feed Tape" index="108" instance=ExtResource("8_dwoln")]
+position = Vector2(-6490, 297)
+
+[node name="Enemy - Knight6" parent="Enemy Feed Tape" index="109" instance=ExtResource("8_dwoln")]
+position = Vector2(-6487, 405)
+
+[node name="Enemy - Knight7" parent="Enemy Feed Tape" index="110" instance=ExtResource("8_dwoln")]
+position = Vector2(-6493, 510)
+
+[node name="Enemy - Knight8" parent="Enemy Feed Tape" index="111" instance=ExtResource("8_dwoln")]
+position = Vector2(-6484, 624)
+
+[node name="Enemy - Knight9" parent="Enemy Feed Tape" index="112" instance=ExtResource("8_dwoln")]
+position = Vector2(-6487, 738)
+
+[node name="Enemy - Knight10" parent="Enemy Feed Tape" index="113" instance=ExtResource("8_dwoln")]
+position = Vector2(-6481, 849)
+
+[node name="Enemy - Knight11" parent="Enemy Feed Tape" index="114" instance=ExtResource("8_dwoln")]
+position = Vector2(-6478, 945)
+
+[node name="Enemy - Knight12" parent="Enemy Feed Tape" index="115" instance=ExtResource("8_dwoln")]
+position = Vector2(-4941, 359)
+
+[node name="Enemy - Knight13" parent="Enemy Feed Tape" index="116" instance=ExtResource("8_dwoln")]
+position = Vector2(-5029, 338)
+
+[node name="Enemy - Knight14" parent="Enemy Feed Tape" index="117" instance=ExtResource("8_dwoln")]
+position = Vector2(-5098, 389)
+
+[node name="Enemy - Knight15" parent="Enemy Feed Tape" index="118" instance=ExtResource("8_dwoln")]
+position = Vector2(-4241, 282)
+
+[node name="Enemy - Archer9" parent="Enemy Feed Tape" index="119" instance=ExtResource("7_gexg0")]
+position = Vector2(-5092, 323)
+
+[node name="Enemy - Archer10" parent="Enemy Feed Tape" index="120" instance=ExtResource("7_gexg0")]
+position = Vector2(-5217, 310)
+
+[node name="Enemy - Archer11" parent="Enemy Feed Tape" index="121" instance=ExtResource("7_gexg0")]
+position = Vector2(-5148, 363)
+
+[node name="Enemy - Archer12" parent="Enemy Feed Tape" index="122" instance=ExtResource("7_gexg0")]
+position = Vector2(-5272, 355)
+
+[node name="Enemy - Archer13" parent="Enemy Feed Tape" index="123" instance=ExtResource("7_gexg0")]
+position = Vector2(-6026, 209)
+
+[node name="Enemy - Archer14" parent="Enemy Feed Tape" index="124" instance=ExtResource("7_gexg0")]
+position = Vector2(-6016, 337)
+
+[node name="Enemy - Archer15" parent="Enemy Feed Tape" index="125" instance=ExtResource("7_gexg0")]
+position = Vector2(-6016, 485)
+
+[node name="Enemy - Archer16" parent="Enemy Feed Tape" index="126" instance=ExtResource("7_gexg0")]
+position = Vector2(-6026, 620)
+
+[node name="Enemy - Archer17" parent="Enemy Feed Tape" index="127" instance=ExtResource("7_gexg0")]
+position = Vector2(-6023, 728)
+
+[node name="Enemy - Archer18" parent="Enemy Feed Tape" index="128" instance=ExtResource("7_gexg0")]
+position = Vector2(-6016, 842)
+
+[node name="Enemy - Archer19" parent="Enemy Feed Tape" index="129" instance=ExtResource("7_gexg0")]
+position = Vector2(-6016, 946)
