@@ -13,7 +13,7 @@ config_version=5
 config/name="We Wizards 3"
 run/main_scene="res://Scenes/Menus/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://Sprites/icon.svg"
+config/icon="res://Sprites/warlock.png"
 
 [autoload]
 
