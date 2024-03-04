@@ -207,12 +207,12 @@ offset_bottom = 220.0
 cards = Array[PackedScene]([ExtResource("19_0o358"), ExtResource("20_tkhon"), ExtResource("21_lwsqc")])
 connected_map_nodes = [NodePath("../Level - Level 2"), NodePath("../Level - Level 3a"), NodePath("../Level - Level 3b - Super Silly")]
 
-[node name="Cards - Scortched Earth (+2 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+[node name="Cards - Belphegor\'s Deal (+3 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 619.0
 offset_top = 263.0
 offset_right = 671.0
 offset_bottom = 311.0
-cards = Array[PackedScene]([ExtResource("21_lx1sb"), ExtResource("20_tkhon"), ExtResource("14_3vtqq"), ExtResource("21_bj66l")])
+cards = Array[PackedScene]([ExtResource("21_lx1sb"), ExtResource("21_lwsqc"), ExtResource("14_3vtqq"), ExtResource("21_bj66l")])
 connected_map_nodes = [NodePath("../Level - Level 3a")]
 
 [node name="Cards - Marutha\'s Deal (+2 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
@@ -220,7 +220,7 @@ offset_left = 1126.0
 offset_top = 265.0
 offset_right = 1178.0
 offset_bottom = 313.0
-cards = Array[PackedScene]([ExtResource("23_rlx2y"), ExtResource("21_lwsqc"), ExtResource("15_wpld2")])
+cards = Array[PackedScene]([ExtResource("23_rlx2y"), ExtResource("20_tkhon"), ExtResource("15_wpld2")])
 connected_map_nodes = [NodePath("../Level - Level 3b - Super Silly")]
 
 [node name="Level - Level 3a" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
@@ -229,7 +229,7 @@ offset_top = 267.0
 offset_right = 849.0
 offset_bottom = 315.0
 level = ExtResource("21_ditay")
-connected_map_nodes = [NodePath("../Cards - Supercharge (+2 others)"), NodePath("../Cards - Scortched Earth (+2 others)"), NodePath("../Cards - Fire Ball Recipe (+3 others)")]
+connected_map_nodes = [NodePath("../Cards - Supercharge (+2 others)"), NodePath("../Cards - Belphegor\'s Deal (+3 others)"), NodePath("../Cards - Fire Ball Recipe (+3 others)")]
 
 [node name="Level - Level 3b - Super Silly" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 941.0

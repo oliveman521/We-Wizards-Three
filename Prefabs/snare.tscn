@@ -9,6 +9,7 @@ radius = 10.8722
 [node name="Snare" type="Area2D"]
 scale = Vector2(1.75, 1.75)
 script = ExtResource("1_6o2yw")
+damage = 2
 
 [node name="Snare Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_e1ii4")
