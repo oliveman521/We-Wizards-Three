@@ -24,6 +24,7 @@ var max_combo: int:
 var last_pickup_type: Supply
 
 @onready var gfx: AnimatedSprite2D = %GFX as AnimatedSprite2D
+@onready var stun_timer: Timer = $"Stun Timer"
 
 var boost_multiplier: float = 3
 var boost_durration: float = 0.1
@@ -33,6 +34,8 @@ var boosting: bool = false:
 	get:
 		return !boost_timer.is_stopped()
 
+var is_stunned: bool: 
+	get: return not stun_timer.is_stopped()
 
 var input_dir : Vector2
 
@@ -43,6 +46,9 @@ func _ready() -> void:
 	combo = 0
 
 func _process(_delta: float) -> void:
+	
+	if is_stunned: return
+	
 	if not boosting: #we can only update our movement direction if we aren;'t boosting
 		input_dir = Input.get_vector("labyrinth_left","labyrinth_right","labyrinth_up","labyrinth_down")
 	
@@ -72,7 +78,6 @@ func _process(_delta: float) -> void:
 		gfx.play()
 
 func _on_collection_hitbox_area_entered(area: Area2D) -> void:
-	
 	if area is Pickup:
 		var pickup: Pickup= area as Pickup
 		if pickup.supply_to_be_gained == last_pickup_type:
@@ -83,3 +88,14 @@ func _on_collection_hitbox_area_entered(area: Area2D) -> void:
 		
 		pickup.supply_to_be_gained.on_pickup(combo * pickup.count_to_be_gained)
 		pickup.queue_free()
+
+func take_damage(amnt: int) -> void:
+	var stun_time: float = amnt
+	
+	combo = 0
+	
+	if stun_timer.time_left < stun_time:
+		stun_timer.wait_time = stun_time
+		stun_timer.start()
+	
+	GameManager.spawn_popup(global_position, "Stunned!", Color.YELLOW)

@@ -1,0 +1,49 @@
+[gd_scene load_steps=10 format=3 uid="uid://d5j3jxrrldi3"]
+
+[ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_deers"]
+[ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_j4y7n"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_37klr"]
+[ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Effects/card_text.tscn" id="4_jl8oo"]
+[ext_resource type="FontFile" uid="uid://t4iceb2drwa2" path="res://UI/Fonts/Franklin Gothic Medium Regular.ttf" id="5_hgbx0"]
+[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_StoreroomEffects.gd" id="6_grji5"]
+[ext_resource type="PackedScene" uid="uid://b02qbm1dc1ap3" path="res://Prefabs/snare.tscn" id="7_jujw2"]
+[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_Damage.gd" id="8_uegu8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n4mn2"]
+font = ExtResource("5_hgbx0")
+font_size = 21
+font_color = Color(0.996078, 0.321569, 0.309804, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Belphegor\'s Deal" instance=ExtResource("1_deers")]
+card_type = "Fire Damage"
+card_name = "Belphegor's Deal"
+
+[node name="Background Color" parent="Card Face" index="0"]
+color = Color(0.486275, 0.105882, 0.0352941, 1)
+
+[node name="Essence x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_j4y7n")]
+layout_mode = 2
+supply = ExtResource("3_37klr")
+
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
+text = "Belphegor's Deal"
+
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("4_jl8oo")]
+layout_mode = 2
+text = "Spawn 3 snares in the Storeroom"
+label_settings = SubResource("LabelSettings_n4mn2")
+
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label2" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1" instance=ExtResource("4_jl8oo")]
+layout_mode = 2
+text = "Then, deal 2 damage to every enemy"
+
+[node name="CardEffect_StoreroomEffects" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2"]
+script = ExtResource("6_grji5")
+spawn_in_storeroom = ExtResource("7_jujw2")
+count = 3
+
+[node name="Damage" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="3"]
+script = ExtResource("8_uegu8")
+amnt = 2

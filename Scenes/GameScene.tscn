@@ -259,6 +259,9 @@ debug_color = Color(0.768627, 0.411765, 0.462745, 0.419608)
 [node name="Boost Timer" type="Timer" parent="Storeroom Manager/Apprentice Character"]
 one_shot = true
 
+[node name="Stun Timer" type="Timer" parent="Storeroom Manager/Apprentice Character"]
+one_shot = true
+
 [node name="Card Manager" type="Node2D" parent="." groups=["CardManager"]]
 position = Vector2(986, 8)
 script = ExtResource("21_k4wdt")

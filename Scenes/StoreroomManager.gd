@@ -3,7 +3,8 @@ class_name StoreroomManager
 
 @onready var storeroom_tile_map: TileMap = %"Storeroom Tile Map"
 @onready var pickup_spawner: Node2D = %"Pickup Spawner"
-var pickup_prefab: PackedScene = preload("uid://5g7xihe0lyk3")
+const pickup_prefab: PackedScene = preload("uid://5g7xihe0lyk3")
+const snare_prefab: PackedScene = preload("uid://b02qbm1dc1ap3")
 
 @export var available_supplies : Array[Supply]
 @export var repeat_spawn_curve : Curve
@@ -82,8 +83,11 @@ func spawn_pickup() -> void:
 	new_pickup.global_position = grid.cell_to_world_pos(cell)
 	new_pickup.set_type_of_pickup(pickup_type, randi_range(pickup_type.pickup_count_min, pickup_type.pickup_count_max))
 
-func spawn_snare() -> void:
-	pass
+func spawn_object(prefab: PackedScene) -> void:
+	var cell: Vector2i = pick_vacant_cell()
+	var new_snare: Node = prefab.instantiate()
+	add_child(new_snare)
+	new_snare.global_position = grid.cell_to_world_pos(cell)
 
 func pick_vacant_cell() -> Vector2i:
 	const min_cells_from_player = 2

@@ -8,7 +8,7 @@
 [ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="5_br3fs"]
 [ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_Draw.gd" id="6_mn1lc"]
 
-[node name="Card" instance=ExtResource("1_mfa5x")]
+[node name="Magma Spray" instance=ExtResource("1_mfa5x")]
 card_type = "Fire Damage"
 card_name = "Magma Spray"
 
@@ -19,9 +19,10 @@ color = Color(0.486275, 0.105882, 0.0352941, 1)
 layout_mode = 2
 supply = ExtResource("3_4qsnt")
 
-[node name="Fire Gem x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="1" instance=ExtResource("2_557sh")]
+[node name="Fire Gem x2" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="1" instance=ExtResource("2_557sh")]
 layout_mode = 2
 supply = ExtResource("3_x8h0f")
+count = 2
 
 [node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
 text = "Magma Spray"

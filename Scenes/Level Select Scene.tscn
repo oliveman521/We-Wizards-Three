@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://bpfb1n271ove4"]
+[gd_scene load_steps=52 format=3 uid="uid://bpfb1n271ove4"]
 
 [ext_resource type="Script" path="res://Scenes/Level Select Map/LevelSelectMenu.gd" id="1_xcx1n"]
 [ext_resource type="Script" path="res://Scenes/Level Select Map/MapManager.gd" id="2_6iwrn"]
@@ -25,8 +25,9 @@
 [ext_resource type="PackedScene" uid="uid://c3nxruvppvko5" path="res://Cards/Card Pool/card_well_read.tscn" id="21_bj66l"]
 [ext_resource type="PackedScene" uid="uid://ddmofotpnip81" path="res://Scenes/Levels/Level 3a.tscn" id="21_ditay"]
 [ext_resource type="PackedScene" uid="uid://deoygvkkffvpu" path="res://Cards/Card Pool/card_magma_spray.tscn" id="21_lwsqc"]
-[ext_resource type="PackedScene" uid="uid://dbv60sy2epipf" path="res://Cards/Card Pool/card_deal_with_marutha.tscn" id="22_blmvi"]
+[ext_resource type="PackedScene" uid="uid://d5j3jxrrldi3" path="res://Cards/Card Pool/card_belphegor's_deal.tscn" id="21_lx1sb"]
 [ext_resource type="PackedScene" uid="uid://tth5yw0eirm6" path="res://Cards/Card Pool/card_librarian_golem.tscn" id="22_dsx6i"]
+[ext_resource type="PackedScene" uid="uid://dbv60sy2epipf" path="res://Cards/Card Pool/card_marutha's_deal.tscn" id="23_rlx2y"]
 [ext_resource type="PackedScene" uid="uid://50477ao4osxc" path="res://Scenes/Levels/Level 3b - Super Silly.tscn" id="24_0bg83"]
 [ext_resource type="PackedScene" uid="uid://6685qupifd8s" path="res://Cards/Card Pool/card_fire_ball_recipe.tscn" id="24_rjnis"]
 [ext_resource type="PackedScene" uid="uid://dio6uti0xbamv" path="res://Scenes/Levels/Level 4 - Knights.tscn" id="25_q6lle"]
@@ -211,15 +212,15 @@ offset_left = 619.0
 offset_top = 263.0
 offset_right = 671.0
 offset_bottom = 311.0
-cards = Array[PackedScene]([ExtResource("20_tkhon"), ExtResource("14_3vtqq"), ExtResource("21_bj66l")])
+cards = Array[PackedScene]([ExtResource("21_lx1sb"), ExtResource("20_tkhon"), ExtResource("14_3vtqq"), ExtResource("21_bj66l")])
 connected_map_nodes = [NodePath("../Level - Level 3a")]
 
-[node name="Cards - Deal With Marutha (+2 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+[node name="Cards - Marutha\'s Deal (+2 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 1126.0
 offset_top = 265.0
 offset_right = 1178.0
 offset_bottom = 313.0
-cards = Array[PackedScene]([ExtResource("22_blmvi"), ExtResource("21_lwsqc"), ExtResource("15_wpld2")])
+cards = Array[PackedScene]([ExtResource("23_rlx2y"), ExtResource("21_lwsqc"), ExtResource("15_wpld2")])
 connected_map_nodes = [NodePath("../Level - Level 3b - Super Silly")]
 
 [node name="Level - Level 3a" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
@@ -236,7 +237,7 @@ offset_top = 263.0
 offset_right = 1074.0
 offset_bottom = 311.0
 level = ExtResource("24_0bg83")
-connected_map_nodes = [NodePath("../Cards - Supercharge (+2 others)"), NodePath("../Cards - Deal With Marutha (+2 others)"), NodePath("../Cards - Fire Ball Recipe (+3 others)")]
+connected_map_nodes = [NodePath("../Cards - Supercharge (+2 others)"), NodePath("../Cards - Marutha\'s Deal (+2 others)"), NodePath("../Cards - Fire Ball Recipe (+3 others)")]
 
 [node name="Cards - Fire Ball Recipe (+3 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 862.0
