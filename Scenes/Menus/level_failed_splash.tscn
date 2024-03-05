@@ -18,7 +18,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Level lost!
 
-You lose!"
+You had to pay your taxes >:("
 label_settings = ExtResource("1_02qxl")
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -11,11 +11,12 @@ offset_top = 176.0
 offset_right = 225.0
 offset_bottom = 276.0
 script = ExtResource("1_i67is")
+always_on = null
 
 [node name="Icon" type="TextureRect" parent="."]
 layout_mode = 2
 texture = ExtResource("2_c7r2c")
-expand_mode = 2
+expand_mode = 3
 stretch_mode = 4
 
 [node name="Count" type="Label" parent="."]

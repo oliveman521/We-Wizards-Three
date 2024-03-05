@@ -120,7 +120,7 @@ script = ExtResource("5_2m5ee")
 title = "Your Deck"
 text1 = "Before each battle you'll choose 15 spell cards from your card pool that'll compose your deck."
 text2 = "Between battles you'll unlock more cards and can add/remove cards from your deck."
-button_text = "Let's kick some ass"
+button_text = "Let's kick some butt"
 
 [node name="Level Select Menu" type="Control" groups=["Level Select Menu"]]
 layout_mode = 3

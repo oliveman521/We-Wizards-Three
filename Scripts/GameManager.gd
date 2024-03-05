@@ -36,11 +36,19 @@ var lives: int = 0:
 		if lives <= 0:
 			game_over()
 
-var all_supplies: Array[Supply] = []
+var all_supplies: Array[Supply] = [
+	preload("res://Supplies/Blank_Scroll.tres"),
+	preload("res://Supplies/essence.tres"),
+	preload("res://Supplies/Fire_Gem.tres"),
+	preload("res://Supplies/Fire_Scroll.tres"),
+	preload("res://Supplies/Lightning_Gem.tres"),
+	preload("res://Supplies/Lightning_Scroll.tres"),
+	preload("res://Supplies/Mana_Scroll.tres"),
+	preload("res://Supplies/Tablet.tres"),
+]
 
 const DECK_MAX_SIZE: int = 15
 var curr_save: Resource = preload("res://Cards/card_base.tscn")
-
 
 var current_save: Resource = load("uid://ds1jr58cmcm3j") #FOR SOME REASON THIS HAS TO BE LOAD AND NOT PRELOAD AND I DON"T NO WHY SO LONG 4 HOURS OF MY LIFE IT WAS NICE KNOWING YA
 var card_pool: Array[PackedScene] = []
@@ -51,7 +59,6 @@ const level_select_scene: PackedScene = preload("uid://bpfb1n271ove4")
 const game_scene: PackedScene = preload("uid://c4qnaj4cqxgny")
 const deck_builder_scene: PackedScene = preload("res://Scenes/Menus/deck_builder_menu.tscn")
 
-var in_progress_level: PackedScene
 
 func _ready() -> void:
 	#on game boot, fill out our deck if its missing any cards
@@ -59,19 +66,10 @@ func _ready() -> void:
 		if current_save.cards_in_deck.size() >= DECK_MAX_SIZE:
 			break
 		current_save.cards_in_deck.append(card_prefab)
-	
-	
-	#also load all of the potential supplies:
-	#we'll also load all levels in the level folder. In the future this will be less dumb
-	var supplies_path: String = "res://Supplies/"
-	var dir:= DirAccess.open(supplies_path)
-	if dir:
-		dir.list_dir_begin()
-		var file_name: String = dir.get_next()
-		while file_name != "":
-			if file_name.ends_with(".tres"):
-				all_supplies.append(load(supplies_path.path_join(file_name)) as Supply)
-			file_name = dir.get_next()
+
+
+var in_progress_level: PackedScene
+
 
 func start_level(level_prefab: PackedScene) -> void:
 	if in_progress_level != null:
@@ -80,13 +78,14 @@ func start_level(level_prefab: PackedScene) -> void:
 	
 	in_progress_level = level_prefab
 	
-	var level: LevelData = level_prefab.instantiate() as LevelData
 	
-	#reset all supplies to their starting value
+	#reset some values
+	lives = 3
 	for supply: Supply in all_supplies:
-		supply.supply_count = supply.starting_count
-
-
+		supply.supply_count = 0
+	
+	#load the new scene in
+	var level: LevelData = level_prefab.instantiate() as LevelData
 	get_tree().change_scene_to_packed(game_scene)
 	await get_tree().node_added #Singleton references should all connect by the end of ready
 	await get_tree().current_scene.ready
@@ -94,8 +93,8 @@ func start_level(level_prefab: PackedScene) -> void:
 	storeroom_Manager.load_new_layout(level.storeroom_tile_map)
 	storeroom_Manager.available_supplies = level.supplies_present
 	storeroom_Manager.minimum_pickups = level.supplies_spawned_at_once
-	lives = 3
-
+	
+	
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("debug_mode"):
@@ -105,7 +104,6 @@ func _process(_delta: float) -> void:
 
 func spawn_popup(location: Vector2, message: String, color: Color = Color(1,1,1), lifetime:float = 1) -> void:
 	const popup_prefab: Resource = preload("res://UI/popup_text.tscn")
-	
 	var new_popup_text: Label = popup_prefab.instantiate()
 	add_child(new_popup_text)
 	new_popup_text.initialize(location, message, color, lifetime)

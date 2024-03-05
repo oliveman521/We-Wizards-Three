@@ -23,7 +23,7 @@ func _draw() -> void:
 
 func _on_button_down() -> void:
 	if locked:
-		GameManager.spawn_popup(global_position,"Level is locked",Color.RED,)
+		GameManager.spawn_popup(get_global_mouse_position(),"Level is locked",Color.RED,)
 		return
 	if level:
 		level_select.open_level_info_panel(level)

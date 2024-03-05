@@ -18,20 +18,21 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -68.0
-offset_top = -14.0
-offset_right = 68.0
-offset_bottom = 14.0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 277.0
+offset_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "+ 1 blah blah"
+text = "+ 1 blah blah "
 label_settings = ExtResource("1_hxws0")
+horizontal_alignment = 1
+autowrap_mode = 2
 script = ExtResource("1_lyxdu")
 fade_curve = SubResource("Curve_gqq20")
 rise_curve = SubResource("Curve_3hofk")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
-autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

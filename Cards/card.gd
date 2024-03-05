@@ -54,6 +54,9 @@ var center_position: Vector2:
 	set(new_value):
 		global_position = new_value - size/2
 
+var supplies_interacted_with: Array[Supply]:
+	get:
+		return []
 
 var card_manager: CardManager:
 	get: return GameManager.card_manager as CardManager
@@ -70,6 +73,15 @@ func check_costs() -> bool:
 		if node.check_cost() == false:
 			return false
 	return true
+
+func get_supply_costs() -> Array[Supply]:
+	var costs: Array[Supply] = []
+	for node: Node in costs_UI_section.get_children():
+		if node is CardSupplyIcon:
+			node = node as CardSupplyIcon
+			for i in range(node.count):
+				costs.append(node.supply)
+	return costs
 
 func play() -> void:
 	if not check_costs(): #TODO currently this is a double check and shouldn't be necessary

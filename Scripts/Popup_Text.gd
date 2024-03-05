@@ -16,6 +16,8 @@ func initialize(location: Vector2, message: String, color: Color, lifetime:float
 	text = message
 	modulate = color
 	lifetime_timer.wait_time = lifetime
+	lifetime_timer.start()
+	location = location - size/2
 	global_position = location + Vector2(randf_range(-POSITION_NOISE,POSITION_NOISE),randf_range(-POSITION_NOISE,POSITION_NOISE))
 	start_pos = global_position
 

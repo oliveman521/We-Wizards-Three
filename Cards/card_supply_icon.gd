@@ -1,5 +1,6 @@
 @tool
 extends Control
+class_name CardSupplyIcon
 
 @export var supply: Supply:
 	set(new_val):

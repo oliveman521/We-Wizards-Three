@@ -13,7 +13,7 @@ func _draw() -> void:
 
 func _on_button_down() -> void:
 	if locked:
-		GameManager.spawn_popup(global_position,"Ability is locked",Color.RED,)
+		GameManager.spawn_popup(get_global_mouse_position(),"Ability is locked",Color.RED,)
 		return
 	
 	var display_name := ability_name
@@ -24,7 +24,7 @@ func _on_button_down() -> void:
 	level_select.open_misc_info_panel("New Ability! - " + display_name,sub_header, ability_image, ability_description, "Cool!", color)
 	
 	if is_explored:
-		GameManager.spawn_popup(global_position,"Ability already claimed",Color.RED,)
+		GameManager.spawn_popup(get_global_mouse_position(),"Ability already claimed",Color.RED,)
 	else:
 		GameManager.current_save.misc_unlocks.append(ability_name)
 		is_explored = true

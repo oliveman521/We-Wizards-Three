@@ -16,11 +16,11 @@ func _draw() -> void:
 
 func _on_button_down() -> void:
 	if locked:
-		GameManager.spawn_popup(global_position,"Card is locked",Color.RED,)
+		GameManager.spawn_popup(get_global_mouse_position(),"Card is locked",Color.RED,)
 		return
 	
 	if is_explored:
-		GameManager.spawn_popup(global_position,"Card already claimed",Color.RED,)
+		GameManager.spawn_popup(get_global_mouse_position(),"Card already claimed",Color.RED,)
 		return
 	
 	level_select.open_card_unlock_panel(cards)
