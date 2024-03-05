@@ -30,6 +30,7 @@ text = "Librarian Golem"
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("5_lrmod")]
 layout_mode = 2
+text = "Every 5 seconds, draw a card"
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Exhaust" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1" instance=ExtResource("6_t3y3o")]
 layout_mode = 2

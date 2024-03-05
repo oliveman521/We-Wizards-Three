@@ -337,22 +337,18 @@ offset_bottom = 523.0
 [node name="Supply UI2" parent="Enchanter Supplies" instance=ExtResource("12_hfyto")]
 layout_mode = 2
 supply = ExtResource("10_uhmuu")
-always_on = false
 
 [node name="Supply UI" parent="Enchanter Supplies" instance=ExtResource("12_hfyto")]
 layout_mode = 2
 supply = ExtResource("10_leahy")
-always_on = false
 
 [node name="Supply UI3" parent="Enchanter Supplies" instance=ExtResource("12_hfyto")]
 layout_mode = 2
 supply = ExtResource("12_i116q")
-always_on = false
 
 [node name="Supply UI4" parent="Enchanter Supplies" instance=ExtResource("12_hfyto")]
 layout_mode = 2
 supply = ExtResource("13_k5kcy")
-always_on = false
 
 [node name="Ammo Counters" type="HBoxContainer" parent="."]
 offset_left = 440.0
@@ -369,12 +365,10 @@ always_on = true
 [node name="Supply UI6" parent="Ammo Counters" instance=ExtResource("12_hfyto")]
 layout_mode = 2
 supply = ExtResource("6_almpy")
-always_on = false
 
 [node name="Supply UI7" parent="Ammo Counters" instance=ExtResource("12_hfyto")]
 layout_mode = 2
 supply = ExtResource("5_mhcks")
-always_on = false
 
 [node name="Lives UI" type="HBoxContainer" parent="."]
 anchors_preset = 5

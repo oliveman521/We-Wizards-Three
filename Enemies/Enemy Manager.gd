@@ -57,8 +57,11 @@ func _process(delta: float) -> void:
 	var feed_mult: float = 1
 	if Input.is_key_pressed(KEY_P):
 		feed_mult = 5
-	enemy_feed_tape.global_position.x += delta * FEED_RATE * feed_mult
+		
+	
+	#TODO both advancing the feedtape and checking for victory are pretty needlessly expensive
+	#Advanceing the feed tape
+	enemy_feed_tape.global_position.x += delta * FEED_RATE * feed_mult 
 	
 	if len(active_enemies) == 0 && len(inactive_enemies) == 0:
-		#no enemies remain
 		GameManager.level_won()

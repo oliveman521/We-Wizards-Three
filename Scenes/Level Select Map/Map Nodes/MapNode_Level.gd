@@ -16,7 +16,7 @@ func _draw() -> void:
 		level_data.queue_free()
 		label.text = level_data.level_name
 	else:
-		button.text = self.name
+		label.text = self.name
 	
 	super._draw()
 

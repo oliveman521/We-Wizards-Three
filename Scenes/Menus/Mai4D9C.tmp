@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dpdlppetxwu3m"]
+[gd_scene load_steps=7 format=3 uid="uid://dpdlppetxwu3m"]
 
 [ext_resource type="Script" path="res://Scenes/Menus/basic_menu_behaviors.gd" id="1_6kucs"]
-[ext_resource type="Texture2D" uid="uid://xpv4l51vknn1" path="res://Sprites/Full Art/Logo.png" id="2_0stpq"]
 [ext_resource type="Texture2D" uid="uid://djhnxxx8ohfly" path="res://Sprites/Full Art/Enchanter_Full_art.png" id="2_3sqmn"]
 [ext_resource type="Script" path="res://Scenes/Menus/slide_in_and_bob.gd" id="3_rnfgn"]
 [ext_resource type="Texture2D" uid="uid://l0ln5ifa7tf" path="res://Sprites/Full Art/Librarian_full_photo.png" id="4_1c3gq"]
@@ -16,39 +15,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6kucs")
-
-[node name="Logo" type="Sprite2D" parent="."]
-position = Vector2(971, 569)
-texture = ExtResource("2_0stpq")
-script = ExtResource("3_rnfgn")
-
-[node name="EnchanterFullArt" type="Sprite2D" parent="."]
-position = Vector2(963, 520)
-texture = ExtResource("2_3sqmn")
-script = ExtResource("3_rnfgn")
-direction = Vector2(0, 1)
-enter_time = 2.0
-
-[node name="EnchanterArm(forLayering)" type="Sprite2D" parent="EnchanterFullArt"]
-z_index = 1
-position = Vector2(0, 2)
-texture = ExtResource("4_vdr7c")
-
-[node name="LibrarianFullPhoto" type="Sprite2D" parent="."]
-position = Vector2(1424, 602)
-texture = ExtResource("4_1c3gq")
-script = ExtResource("3_rnfgn")
-direction = Vector2(-1, 0)
-enter_time = 1.5
-bob_dist = -20
-
-[node name="WarlockFullPhoto" type="Sprite2D" parent="."]
-position = Vector2(539, 636)
-texture = ExtResource("5_ti0fm")
-script = ExtResource("3_rnfgn")
-direction = Vector2(1, 0)
-enter_time = 1.0
-bob_dist = -20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -65,8 +31,25 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 13
 alignment = 1
+
+[node name="EnchanterFullArt" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(400, -21)
+texture = ExtResource("2_3sqmn")
 script = ExtResource("3_rnfgn")
-bob_dist = 0
+direction = Vector2(0, 1)
+
+[node name="EnchanterArm(forLayering)" type="Sprite2D" parent="VBoxContainer/EnchanterFullArt"]
+z_index = 1
+position = Vector2(0, 2)
+texture = ExtResource("4_vdr7c")
+
+[node name="LibrarianFullPhoto" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(861, 61)
+texture = ExtResource("4_1c3gq")
+
+[node name="WarlockFullPhoto" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(-24, 95)
+texture = ExtResource("5_ti0fm")
 
 [node name="Play" type="Button" parent="VBoxContainer"]
 layout_mode = 2

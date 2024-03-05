@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqgaio16e7poi"]
+
+[ext_resource type="Script" path="res://Projectiles/Explosion.gd" id="1_gpwec"]
+[ext_resource type="Texture2D" uid="uid://byryijvvf5qgd" path="res://Sprites/white ring.png" id="2_7ufg5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_40uv1"]
+radius = 1.0
+
+[node name="Explosion" type="Node2D"]
+script = ExtResource("1_gpwec")
+radius = 100.0
+
+[node name="Explosion Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Explosion Hitbox"]
+shape = SubResource("CircleShape2D_40uv1")
+
+[node name="Explosion Visual" type="Sprite2D" parent="."]
+modulate = Color(0.878431, 0.392157, 0.00784314, 1)
+position = Vector2(1, 0.999999)
+texture = ExtResource("2_7ufg5")

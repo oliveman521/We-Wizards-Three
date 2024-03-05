@@ -6,9 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ox81m"]
 size = Vector2(54, 93)
 
-[node name="BaseEnemy" type="Area2D" groups=["Enemies"]]
+[node name="Base" type="Area2D" groups=["Enemies"]]
 script = ExtResource("1_kdqp5")
-enemy_name = "BaseEnemy"
+enemy_name = "Base"
 
 [node name="Sprite" type="Sprite2D" parent="."]
 position = Vector2(0, -6)

@@ -17,6 +17,13 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6kucs")
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 563.0
+offset_top = 611.0
+offset_right = 1358.0
+offset_bottom = 634.0
+
 [node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(971, 569)
 texture = ExtResource("2_0stpq")
@@ -27,7 +34,7 @@ position = Vector2(963, 520)
 texture = ExtResource("2_3sqmn")
 script = ExtResource("3_rnfgn")
 direction = Vector2(0, 1)
-enter_time = 2.0
+enter_time = 1.0
 
 [node name="EnchanterArm(forLayering)" type="Sprite2D" parent="EnchanterFullArt"]
 z_index = 1
@@ -39,16 +46,13 @@ position = Vector2(1424, 602)
 texture = ExtResource("4_1c3gq")
 script = ExtResource("3_rnfgn")
 direction = Vector2(-1, 0)
-enter_time = 1.5
-bob_dist = -20
+enter_time = 0.75
 
 [node name="WarlockFullPhoto" type="Sprite2D" parent="."]
 position = Vector2(539, 636)
 texture = ExtResource("5_ti0fm")
 script = ExtResource("3_rnfgn")
 direction = Vector2(1, 0)
-enter_time = 1.0
-bob_dist = -20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -66,7 +70,6 @@ grow_vertical = 2
 theme_override_constants/separation = 13
 alignment = 1
 script = ExtResource("3_rnfgn")
-bob_dist = 0
 
 [node name="Play" type="Button" parent="VBoxContainer"]
 layout_mode = 2

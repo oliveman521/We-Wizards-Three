@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxjug8dnpnau1"]
+
+[ext_resource type="PackedScene" uid="uid://c5hptnef0j41i" path="res://Projectiles/base_projectile.tscn" id="1_2boc7"]
+[ext_resource type="Script" path="res://Projectiles/explosive_projectile.gd" id="2_8pc1w"]
+
+[node name="Bullet" instance=ExtResource("1_2boc7")]
+script = ExtResource("2_8pc1w")
+explosive_damage = 2.0
+speed = 500.0
+damage = 2.0
+
+[node name="Sprite" parent="." index="1"]
+modulate = Color(0.882353, 0.333333, 0, 1)
+scale = Vector2(2, 2)
