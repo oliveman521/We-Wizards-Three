@@ -3,15 +3,15 @@ class_name Projectile
 
 @export var speed: float = 750
 @export var damage: float = 1
-@export var ammo_type: Ammo_Type
+@export var damage_type: GameManager.Damage_Type
+@export var spawn_on_hit: Array[PackedScene]
+
+
 @onready var sprite: Sprite2D = $Sprite
 
 var direction: Vector2 = Vector2(-1,0)
 
 @export_enum("Enemy", "Player") var target:int = 0
-
-#Note: if I add a _ready later, it might interfere with the explosive projectile
-#note 2: this can be fixed with a super call. TODO impliment that fix
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,6 +25,10 @@ func _on_area_exited(area: Area2D) -> void:
 		queue_free()
 
 func impact_effect() -> void:
+	for item: PackedScene in spawn_on_hit:
+		var new_node: Node2D = item.instantiate() as Node2D
+		new_node.global_position = global_position
+		add_sibling(new_node)
 	queue_free() #delete bullet
 
 
@@ -36,5 +40,5 @@ func _on_body_entered(body: Node2D) -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Enemies") and target == 0:
-		area.take_damage(ammo_type.damage_type, damage)
+		area.take_damage(damage_type, damage)
 		impact_effect()

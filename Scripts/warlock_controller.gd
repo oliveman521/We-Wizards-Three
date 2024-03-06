@@ -54,11 +54,10 @@ func shoot(ammo_type: Ammo_Type) -> void:
 	if fire_cooldown_timer.time_left > 0:
 		return
 	
-	if ammo_type.use_supply():
+	if true: #ammo_type.use_supply():
 		var new_projectile: Node2D = ammo_type.projectile_prefab.instantiate()
 		projectile_container.add_child(new_projectile)
 		new_projectile.set_global_position(projectile_spawn_point.global_position)
-		new_projectile.ammo_type = ammo_type
 		
 		var cool_down:float = ammo_type.fire_cooldown
 		var fire_rate_multiplier: float = GameManager.get_passive_ability_count(GameManager.Passive_Ability_Tag.WARLOCK_FIRE_RATE)

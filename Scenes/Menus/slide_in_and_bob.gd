@@ -5,6 +5,7 @@ extends Node
 @export var direction: Vector2 = Vector2.UP:
 	set(new_val):
 		direction = new_val.normalized()
+@export var enter_delay: float = 0
 @export var enter_time: float = 0.5
 var distance: float = 1920
 var starting_pos: Vector2
@@ -17,6 +18,9 @@ var bob_time = 3:
 func _ready() -> void:
 	starting_pos = self.global_position
 	self.global_position = starting_pos - direction * distance
+	
+	await get_tree().create_timer(enter_delay).timeout
+	
 	
 	var tween:= get_tree().create_tween()
 	tween.set_ease(Tween.EASE_OUT)

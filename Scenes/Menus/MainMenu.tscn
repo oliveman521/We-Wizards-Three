@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dpdlppetxwu3m"]
+[gd_scene load_steps=9 format=3 uid="uid://dpdlppetxwu3m"]
 
 [ext_resource type="Script" path="res://Scenes/Menus/basic_menu_behaviors.gd" id="1_6kucs"]
 [ext_resource type="Texture2D" uid="uid://xpv4l51vknn1" path="res://Sprites/Full Art/Logo.png" id="2_0stpq"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://l0ln5ifa7tf" path="res://Sprites/Full Art/Librarian_full_photo.png" id="4_1c3gq"]
 [ext_resource type="Texture2D" uid="uid://bj2t0eu3jo3e7" path="res://Sprites/Full Art/enchanter arm (for layering).png" id="4_vdr7c"]
 [ext_resource type="Texture2D" uid="uid://c3hauy1txd3ms" path="res://Sprites/Full Art/Warlock_Full_Photo.png" id="5_ti0fm"]
+[ext_resource type="LabelSettings" uid="uid://cpmxmv1dxwx7s" path="res://UI/Fonts/medium_text.tres" id="8_nyogq"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -21,13 +22,14 @@ script = ExtResource("1_6kucs")
 position = Vector2(971, 569)
 texture = ExtResource("2_0stpq")
 script = ExtResource("3_rnfgn")
+bob_dist = 10
 
 [node name="EnchanterFullArt" type="Sprite2D" parent="."]
 position = Vector2(963, 520)
 texture = ExtResource("2_3sqmn")
 script = ExtResource("3_rnfgn")
 direction = Vector2(0, 1)
-enter_time = 2.0
+enter_delay = 0.2
 
 [node name="EnchanterArm(forLayering)" type="Sprite2D" parent="EnchanterFullArt"]
 z_index = 1
@@ -35,11 +37,11 @@ position = Vector2(0, 2)
 texture = ExtResource("4_vdr7c")
 
 [node name="LibrarianFullPhoto" type="Sprite2D" parent="."]
-position = Vector2(1424, 602)
+position = Vector2(1421, 602)
 texture = ExtResource("4_1c3gq")
 script = ExtResource("3_rnfgn")
 direction = Vector2(-1, 0)
-enter_time = 1.5
+enter_delay = 0.15
 bob_dist = -20
 
 [node name="WarlockFullPhoto" type="Sprite2D" parent="."]
@@ -47,7 +49,7 @@ position = Vector2(539, 636)
 texture = ExtResource("5_ti0fm")
 script = ExtResource("3_rnfgn")
 direction = Vector2(1, 0)
-enter_time = 1.0
+enter_delay = 0.1
 bob_dist = -20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -77,6 +79,19 @@ text = "Play!"
 layout_mode = 2
 theme_override_font_sizes/font_size = 75
 text = "Quit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1420.0
+offset_top = 13.0
+offset_right = 1909.0
+offset_bottom = 90.0
+text = "A Game by Oliver Philbrick
+Additional Art Assets by Micah Kelly"
+label_settings = ExtResource("8_nyogq")
+script = ExtResource("3_rnfgn")
+direction = Vector2(0, 1)
+bob_dist = 5
 
 [connection signal="button_down" from="VBoxContainer/Play" to="." method="load_level_select_menu"]
 [connection signal="button_down" from="VBoxContainer/Quit" to="." method="quit"]

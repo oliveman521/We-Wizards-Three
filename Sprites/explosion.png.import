@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s6h81ktj0str"
-path="res://.godot/imported/Cover Art.png-be36cbed9c345d410a6da8ed6c402f56.ctex"
+uid="uid://cjc6fklipitfu"
+path="res://.godot/imported/explosion.png-03dbcc1860a0b88a11042db44c8cc013.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Full Art/Cover Art.png"
-dest_files=["res://.godot/imported/Cover Art.png-be36cbed9c345d410a6da8ed6c402f56.ctex"]
+source_file="res://Sprites/explosion.png"
+dest_files=["res://.godot/imported/explosion.png-03dbcc1860a0b88a11042db44c8cc013.ctex"]
 
 [params]
 
