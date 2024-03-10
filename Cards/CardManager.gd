@@ -11,7 +11,7 @@ var card_pool: Array[Card] = []
 @onready var hand_card_anchors: Array[Node] = $"Hand/Hand Anchors".get_children()
 
 @onready var ongoing_abilities_region: HBoxContainer = %"Ongoing Abilities"
-@onready var card_draw_sound: AudioStreamPlayer2D = %"Card Draw Sound"
+@onready var card_draw_sound: AudioStreamPlayer2D = $"Card Draw Sound"
 
 
 
