@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5hptnef0j41i"]
+[gd_scene load_steps=6 format=3 uid="uid://c5hptnef0j41i"]
 
 [ext_resource type="Script" path="res://Projectiles/Projectile.gd" id="1_crw26"]
 [ext_resource type="Texture2D" uid="uid://0foiqbcwyum0" path="res://Sprites/Bullet.png" id="2_56jjv"]
+[ext_resource type="AudioStream" uid="uid://cjstqnfwlhhu5" path="res://Projectiles/Projectile Sounds/base_shot.wav" id="3_q2rqx"]
+[ext_resource type="AudioStream" uid="uid://bwk678sl2ck7e" path="res://Projectiles/Projectile Sounds/Hit Sound.wav" id="4_dguvx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_b78vr"]
 radius = 9.6
@@ -19,6 +21,13 @@ scale = Vector2(1.48651, 1.5)
 texture = ExtResource("2_56jjv")
 
 [node name="OnHitEffects" type="Node2D" parent="."]
+
+[node name="Shoot Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_q2rqx")
+
+[node name="Hit Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_dguvx")
+volume_db = -3.134
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

@@ -1,0 +1,536 @@
+[gd_scene load_steps=10 format=3 uid="uid://bajlv8q00iyvv"]
+
+[ext_resource type="PackedScene" uid="uid://ddavd71iwja5g" path="res://Levels/template_level.tscn" id="1_4myf4"]
+[ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Tablet.tres" id="2_ceexs"]
+[ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Blank_Scroll.tres" id="3_io3cn"]
+[ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="4_1vtqx"]
+[ext_resource type="PackedScene" uid="uid://b5t5chbh5x6vr" path="res://Enemies/enemy_peasent.tscn" id="4_v0ccy"]
+[ext_resource type="PackedScene" uid="uid://cn7apof2y3wfd" path="res://Enemies/enemy_archer.tscn" id="5_qkgbx"]
+[ext_resource type="PackedScene" uid="uid://d02ehopagg68u" path="res://Enemies/enemy_hulking_peasent.tscn" id="6_cd5x2"]
+[ext_resource type="PackedScene" uid="uid://c6afi4js5waro" path="res://Enemies/enemy_jester.tscn" id="7_n7ohh"]
+[ext_resource type="PackedScene" uid="uid://dbc3v7h72rrl8" path="res://Enemies/enemy_knight.tscn" id="8_sk3t7"]
+
+[node name="Bonus Level - No Essence" instance=ExtResource("1_4myf4")]
+level_name = "Bonus Level - No Essence"
+supplies_present = Array[Resource("res://Supplies/Supply.gd")]([ExtResource("2_ceexs"), ExtResource("3_io3cn"), ExtResource("4_1vtqx")])
+supplies_spawned_at_once = 10
+
+[node name="Peasent" parent="Enemy Feed Tape" index="0" instance=ExtResource("4_v0ccy")]
+position = Vector2(-354, 291)
+
+[node name="Archer" parent="Enemy Feed Tape" index="1" instance=ExtResource("5_qkgbx")]
+position = Vector2(-602, 547)
+enemy_name = "Archer"
+
+[node name="Archer2" parent="Enemy Feed Tape" index="2" instance=ExtResource("5_qkgbx")]
+position = Vector2(-911, 318)
+enemy_name = "Archer"
+
+[node name="Archer3" parent="Enemy Feed Tape" index="3" instance=ExtResource("5_qkgbx")]
+position = Vector2(-1131, 788)
+enemy_name = "Archer"
+
+[node name="Archer4" parent="Enemy Feed Tape" index="4" instance=ExtResource("5_qkgbx")]
+position = Vector2(-1546, 657)
+enemy_name = "Archer"
+
+[node name="Archer5" parent="Enemy Feed Tape" index="5" instance=ExtResource("5_qkgbx")]
+position = Vector2(-2716, 822)
+enemy_name = "Archer"
+
+[node name="Archer6" parent="Enemy Feed Tape" index="6" instance=ExtResource("5_qkgbx")]
+position = Vector2(-3122, 360)
+enemy_name = "Archer"
+
+[node name="Archer7" parent="Enemy Feed Tape" index="7" instance=ExtResource("5_qkgbx")]
+position = Vector2(-3983, 228)
+enemy_name = "Archer"
+
+[node name="Archer8" parent="Enemy Feed Tape" index="8" instance=ExtResource("5_qkgbx")]
+position = Vector2(-3983, 337)
+enemy_name = "Archer"
+
+[node name="Archer9" parent="Enemy Feed Tape" index="9" instance=ExtResource("5_qkgbx")]
+position = Vector2(-3983, 446)
+enemy_name = "Archer"
+
+[node name="Archer10" parent="Enemy Feed Tape" index="10" instance=ExtResource("5_qkgbx")]
+position = Vector2(-3979, 552)
+enemy_name = "Archer"
+
+[node name="Archer11" parent="Enemy Feed Tape" index="11" instance=ExtResource("5_qkgbx")]
+position = Vector2(-4077, 510)
+enemy_name = "Archer"
+
+[node name="Archer12" parent="Enemy Feed Tape" index="12" instance=ExtResource("5_qkgbx")]
+position = Vector2(-4077, 306)
+enemy_name = "Archer"
+
+[node name="Archer13" parent="Enemy Feed Tape" index="13" instance=ExtResource("5_qkgbx")]
+position = Vector2(-6536, 466)
+enemy_name = "Archer"
+
+[node name="Archer14" parent="Enemy Feed Tape" index="14" instance=ExtResource("5_qkgbx")]
+position = Vector2(-6606, 684)
+enemy_name = "Archer"
+
+[node name="Archer15" parent="Enemy Feed Tape" index="15" instance=ExtResource("5_qkgbx")]
+position = Vector2(-6620, 234)
+enemy_name = "Archer"
+
+[node name="Archer16" parent="Enemy Feed Tape" index="16" instance=ExtResource("5_qkgbx")]
+position = Vector2(-1894, 386)
+enemy_name = "Archer"
+
+[node name="Peasent2" parent="Enemy Feed Tape" index="17" instance=ExtResource("4_v0ccy")]
+position = Vector2(-412, 562)
+
+[node name="Peasent3" parent="Enemy Feed Tape" index="18" instance=ExtResource("4_v0ccy")]
+position = Vector2(-710, 295)
+
+[node name="Peasent4" parent="Enemy Feed Tape" index="19" instance=ExtResource("4_v0ccy")]
+position = Vector2(-473, 778)
+
+[node name="Peasent5" parent="Enemy Feed Tape" index="20" instance=ExtResource("4_v0ccy")]
+position = Vector2(-698, 774)
+
+[node name="Peasent6" parent="Enemy Feed Tape" index="21" instance=ExtResource("4_v0ccy")]
+position = Vector2(-1356, 773)
+
+[node name="Peasent7" parent="Enemy Feed Tape" index="22" instance=ExtResource("4_v0ccy")]
+position = Vector2(-1227, 350)
+
+[node name="Peasent8" parent="Enemy Feed Tape" index="23" instance=ExtResource("4_v0ccy")]
+position = Vector2(-1346, 562)
+
+[node name="Peasent9" parent="Enemy Feed Tape" index="24" instance=ExtResource("4_v0ccy")]
+position = Vector2(-2088, 647)
+
+[node name="Peasent10" parent="Enemy Feed Tape" index="25" instance=ExtResource("4_v0ccy")]
+position = Vector2(-1726, 760)
+
+[node name="Peasent11" parent="Enemy Feed Tape" index="26" instance=ExtResource("4_v0ccy")]
+position = Vector2(-1678, 472)
+
+[node name="Peasent12" parent="Enemy Feed Tape" index="27" instance=ExtResource("4_v0ccy")]
+position = Vector2(-1822, 251)
+
+[node name="Peasent13" parent="Enemy Feed Tape" index="28" instance=ExtResource("4_v0ccy")]
+position = Vector2(-1887, 599)
+
+[node name="Peasent14" parent="Enemy Feed Tape" index="29" instance=ExtResource("4_v0ccy")]
+position = Vector2(-2968, 251)
+
+[node name="Peasent15" parent="Enemy Feed Tape" index="30" instance=ExtResource("4_v0ccy")]
+position = Vector2(-2825, 794)
+
+[node name="Peasent16" parent="Enemy Feed Tape" index="31" instance=ExtResource("4_v0ccy")]
+position = Vector2(-3243, 356)
+
+[node name="Peasent17" parent="Enemy Feed Tape" index="32" instance=ExtResource("4_v0ccy")]
+position = Vector2(-3243, 356)
+
+[node name="Peasent18" parent="Enemy Feed Tape" index="33" instance=ExtResource("4_v0ccy")]
+position = Vector2(-3125, 681)
+
+[node name="Peasent19" parent="Enemy Feed Tape" index="34" instance=ExtResource("4_v0ccy")]
+position = Vector2(-3151, 853)
+
+[node name="Peasent20" parent="Enemy Feed Tape" index="35" instance=ExtResource("4_v0ccy")]
+position = Vector2(-3096, 204)
+
+[node name="Peasent21" parent="Enemy Feed Tape" index="36" instance=ExtResource("4_v0ccy")]
+position = Vector2(-2919, 850)
+
+[node name="Peasent22" parent="Enemy Feed Tape" index="37" instance=ExtResource("4_v0ccy")]
+position = Vector2(-1940, 769)
+
+[node name="Peasent23" parent="Enemy Feed Tape" index="38" instance=ExtResource("4_v0ccy")]
+position = Vector2(-1493, 829)
+
+[node name="Peasent24" parent="Enemy Feed Tape" index="39" instance=ExtResource("4_v0ccy")]
+position = Vector2(-868, 935)
+
+[node name="Peasent25" parent="Enemy Feed Tape" index="40" instance=ExtResource("4_v0ccy")]
+position = Vector2(-163, 263)
+
+[node name="Peasent26" parent="Enemy Feed Tape" index="41" instance=ExtResource("4_v0ccy")]
+position = Vector2(-103, 763)
+
+[node name="Peasent27" parent="Enemy Feed Tape" index="42" instance=ExtResource("4_v0ccy")]
+position = Vector2(-1128, 373)
+
+[node name="Peasent28" parent="Enemy Feed Tape" index="43" instance=ExtResource("4_v0ccy")]
+position = Vector2(-1166, 271)
+
+[node name="Peasent29" parent="Enemy Feed Tape" index="44" instance=ExtResource("4_v0ccy")]
+position = Vector2(-1450, 495)
+
+[node name="Peasent30" parent="Enemy Feed Tape" index="45" instance=ExtResource("4_v0ccy")]
+position = Vector2(-1314, 363)
+
+[node name="Peasent31" parent="Enemy Feed Tape" index="46" instance=ExtResource("4_v0ccy")]
+position = Vector2(-3728, 524)
+
+[node name="Peasent32" parent="Enemy Feed Tape" index="47" instance=ExtResource("4_v0ccy")]
+position = Vector2(-3629, 547)
+
+[node name="Peasent33" parent="Enemy Feed Tape" index="48" instance=ExtResource("4_v0ccy")]
+position = Vector2(-3667, 445)
+
+[node name="Peasent34" parent="Enemy Feed Tape" index="49" instance=ExtResource("4_v0ccy")]
+position = Vector2(-3705, 601)
+
+[node name="Peasent35" parent="Enemy Feed Tape" index="50" instance=ExtResource("4_v0ccy")]
+position = Vector2(-3815, 537)
+
+[node name="Peasent36" parent="Enemy Feed Tape" index="51" instance=ExtResource("4_v0ccy")]
+position = Vector2(-4227, 403)
+
+[node name="Peasent37" parent="Enemy Feed Tape" index="52" instance=ExtResource("4_v0ccy")]
+position = Vector2(-4088, 437)
+
+[node name="Peasent38" parent="Enemy Feed Tape" index="53" instance=ExtResource("4_v0ccy")]
+position = Vector2(-4154, 312)
+
+[node name="Peasent39" parent="Enemy Feed Tape" index="54" instance=ExtResource("4_v0ccy")]
+position = Vector2(-4204, 480)
+
+[node name="Peasent40" parent="Enemy Feed Tape" index="55" instance=ExtResource("4_v0ccy")]
+position = Vector2(-4068, 374)
+
+[node name="Peasent41" parent="Enemy Feed Tape" index="56" instance=ExtResource("4_v0ccy")]
+position = Vector2(-4293, 332)
+
+[node name="Peasent42" parent="Enemy Feed Tape" index="57" instance=ExtResource("4_v0ccy")]
+position = Vector2(-4565, 847)
+
+[node name="Peasent43" parent="Enemy Feed Tape" index="58" instance=ExtResource("4_v0ccy")]
+position = Vector2(-4466, 870)
+
+[node name="Peasent44" parent="Enemy Feed Tape" index="59" instance=ExtResource("4_v0ccy")]
+position = Vector2(-4504, 768)
+
+[node name="Peasent45" parent="Enemy Feed Tape" index="60" instance=ExtResource("4_v0ccy")]
+position = Vector2(-4542, 924)
+
+[node name="Peasent46" parent="Enemy Feed Tape" index="61" instance=ExtResource("4_v0ccy")]
+position = Vector2(-4652, 860)
+
+[node name="Peasent47" parent="Enemy Feed Tape" index="62" instance=ExtResource("4_v0ccy")]
+position = Vector2(-4885, 588)
+
+[node name="Peasent48" parent="Enemy Feed Tape" index="63" instance=ExtResource("4_v0ccy")]
+position = Vector2(-4786, 611)
+
+[node name="Peasent49" parent="Enemy Feed Tape" index="64" instance=ExtResource("4_v0ccy")]
+position = Vector2(-4824, 509)
+
+[node name="Peasent50" parent="Enemy Feed Tape" index="65" instance=ExtResource("4_v0ccy")]
+position = Vector2(-4862, 665)
+
+[node name="Peasent51" parent="Enemy Feed Tape" index="66" instance=ExtResource("4_v0ccy")]
+position = Vector2(-4972, 601)
+
+[node name="Peasent52" parent="Enemy Feed Tape" index="67" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5100, 305)
+
+[node name="Peasent53" parent="Enemy Feed Tape" index="68" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5001, 328)
+
+[node name="Peasent54" parent="Enemy Feed Tape" index="69" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5039, 226)
+
+[node name="Peasent55" parent="Enemy Feed Tape" index="70" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5077, 382)
+
+[node name="Peasent56" parent="Enemy Feed Tape" index="71" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5187, 318)
+
+[node name="Peasent57" parent="Enemy Feed Tape" index="72" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5663, 371)
+
+[node name="Peasent58" parent="Enemy Feed Tape" index="73" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5564, 394)
+
+[node name="Peasent59" parent="Enemy Feed Tape" index="74" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5602, 292)
+
+[node name="Peasent60" parent="Enemy Feed Tape" index="75" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5640, 448)
+
+[node name="Peasent61" parent="Enemy Feed Tape" index="76" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5750, 384)
+
+[node name="Peasent62" parent="Enemy Feed Tape" index="77" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6021, 194)
+
+[node name="Peasent63" parent="Enemy Feed Tape" index="78" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6011, 298)
+
+[node name="Peasent64" parent="Enemy Feed Tape" index="79" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6018, 402)
+
+[node name="Peasent65" parent="Enemy Feed Tape" index="80" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6011, 520)
+
+[node name="Peasent66" parent="Enemy Feed Tape" index="81" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6011, 641)
+
+[node name="Peasent67" parent="Enemy Feed Tape" index="82" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6014, 755)
+
+[node name="Peasent68" parent="Enemy Feed Tape" index="83" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6024, 842)
+
+[node name="Peasent69" parent="Enemy Feed Tape" index="84" instance=ExtResource("4_v0ccy")]
+position = Vector2(-4677, 260)
+
+[node name="Peasent70" parent="Enemy Feed Tape" index="85" instance=ExtResource("4_v0ccy")]
+position = Vector2(-4011, 812)
+
+[node name="Peasent71" parent="Enemy Feed Tape" index="86" instance=ExtResource("4_v0ccy")]
+position = Vector2(-3813, 254)
+
+[node name="Peasent72" parent="Enemy Feed Tape" index="87" instance=ExtResource("4_v0ccy")]
+position = Vector2(-3112, 503)
+
+[node name="Peasent73" parent="Enemy Feed Tape" index="88" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6015, 940)
+
+[node name="Peasent74" parent="Enemy Feed Tape" index="89" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5959, 244)
+
+[node name="Peasent75" parent="Enemy Feed Tape" index="90" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5966, 348)
+
+[node name="Peasent76" parent="Enemy Feed Tape" index="91" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5959, 466)
+
+[node name="Peasent77" parent="Enemy Feed Tape" index="92" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5963, 587)
+
+[node name="Peasent78" parent="Enemy Feed Tape" index="93" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5966, 701)
+
+[node name="Peasent79" parent="Enemy Feed Tape" index="94" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5952, 845)
+
+[node name="Peasent80" parent="Enemy Feed Tape" index="95" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5967, 886)
+
+[node name="Peasent81" parent="Enemy Feed Tape" index="96" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6567, 174)
+
+[node name="Peasent82" parent="Enemy Feed Tape" index="97" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6557, 278)
+
+[node name="Peasent83" parent="Enemy Feed Tape" index="98" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6564, 382)
+
+[node name="Peasent84" parent="Enemy Feed Tape" index="99" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6413, 600)
+
+[node name="Peasent85" parent="Enemy Feed Tape" index="100" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6375, 487)
+
+[node name="Peasent86" parent="Enemy Feed Tape" index="101" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6560, 735)
+
+[node name="Peasent87" parent="Enemy Feed Tape" index="102" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6570, 822)
+
+[node name="Peasent88" parent="Enemy Feed Tape" index="103" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6546, 920)
+
+[node name="Peasent89" parent="Enemy Feed Tape" index="104" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6665, 174)
+
+[node name="Peasent90" parent="Enemy Feed Tape" index="105" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6662, 278)
+
+[node name="Peasent91" parent="Enemy Feed Tape" index="106" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6655, 500)
+
+[node name="Peasent92" parent="Enemy Feed Tape" index="107" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6437, 413)
+
+[node name="Peasent93" parent="Enemy Feed Tape" index="108" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6658, 735)
+
+[node name="Peasent94" parent="Enemy Feed Tape" index="109" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6644, 920)
+
+[node name="Peasent95" parent="Enemy Feed Tape" index="110" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6752, 181)
+
+[node name="Peasent96" parent="Enemy Feed Tape" index="111" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6742, 285)
+
+[node name="Peasent97" parent="Enemy Feed Tape" index="112" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6769, 416)
+
+[node name="Peasent98" parent="Enemy Feed Tape" index="113" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6749, 524)
+
+[node name="Peasent99" parent="Enemy Feed Tape" index="114" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6742, 628)
+
+[node name="Peasent100" parent="Enemy Feed Tape" index="115" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6745, 742)
+
+[node name="Peasent101" parent="Enemy Feed Tape" index="116" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6755, 829)
+
+[node name="Peasent102" parent="Enemy Feed Tape" index="117" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6731, 927)
+
+[node name="Peasent103" parent="Enemy Feed Tape" index="118" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6836, 151)
+
+[node name="Peasent104" parent="Enemy Feed Tape" index="119" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6826, 255)
+
+[node name="Peasent105" parent="Enemy Feed Tape" index="120" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6833, 359)
+
+[node name="Peasent106" parent="Enemy Feed Tape" index="121" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6826, 477)
+
+[node name="Peasent107" parent="Enemy Feed Tape" index="122" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6826, 598)
+
+[node name="Peasent108" parent="Enemy Feed Tape" index="123" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6823, 664)
+
+[node name="Peasent109" parent="Enemy Feed Tape" index="124" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6815, 826)
+
+[node name="Hulking Peasent" parent="Enemy Feed Tape" index="125" instance=ExtResource("6_cd5x2")]
+position = Vector2(-2029, 494)
+
+[node name="Hulking Peasent2" parent="Enemy Feed Tape" index="126" instance=ExtResource("6_cd5x2")]
+position = Vector2(-2999, 719)
+
+[node name="Hulking Peasent3" parent="Enemy Feed Tape" index="127" instance=ExtResource("6_cd5x2")]
+position = Vector2(-3345, 253)
+
+[node name="Hulking Peasent4" parent="Enemy Feed Tape" index="128" instance=ExtResource("6_cd5x2")]
+position = Vector2(-3937, 375)
+
+[node name="Hulking Peasent5" parent="Enemy Feed Tape" index="129" instance=ExtResource("6_cd5x2")]
+position = Vector2(-6654, 798)
+
+[node name="Hulking Peasent6" parent="Enemy Feed Tape" index="130" instance=ExtResource("6_cd5x2")]
+position = Vector2(-6463, 497)
+
+[node name="Hulking Peasent7" parent="Enemy Feed Tape" index="131" instance=ExtResource("6_cd5x2")]
+position = Vector2(-6674, 383)
+
+[node name="Peasent110" parent="Enemy Feed Tape" index="132" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6815, 897)
+
+[node name="Peasent111" parent="Enemy Feed Tape" index="133" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5515, 734)
+
+[node name="Peasent112" parent="Enemy Feed Tape" index="134" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5416, 757)
+
+[node name="Peasent113" parent="Enemy Feed Tape" index="135" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5454, 655)
+
+[node name="Peasent114" parent="Enemy Feed Tape" index="136" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5560, 648)
+
+[node name="Peasent115" parent="Enemy Feed Tape" index="137" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5405, 852)
+
+[node name="Peasent116" parent="Enemy Feed Tape" index="138" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5365, 677)
+
+[node name="Peasent117" parent="Enemy Feed Tape" index="139" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5492, 811)
+
+[node name="Peasent118" parent="Enemy Feed Tape" index="140" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5602, 747)
+
+[node name="Peasent119" parent="Enemy Feed Tape" index="141" instance=ExtResource("4_v0ccy")]
+position = Vector2(-3374, 591)
+
+[node name="Peasent120" parent="Enemy Feed Tape" index="142" instance=ExtResource("4_v0ccy")]
+position = Vector2(-2578, 235)
+
+[node name="Peasent121" parent="Enemy Feed Tape" index="143" instance=ExtResource("4_v0ccy")]
+position = Vector2(-3239, 199)
+
+[node name="Peasent122" parent="Enemy Feed Tape" index="144" instance=ExtResource("4_v0ccy")]
+position = Vector2(-2847, 646)
+
+[node name="Peasent123" parent="Enemy Feed Tape" index="145" instance=ExtResource("4_v0ccy")]
+position = Vector2(-3067, 846)
+
+[node name="Peasent124" parent="Enemy Feed Tape" index="146" instance=ExtResource("4_v0ccy")]
+position = Vector2(-3067, 846)
+
+[node name="Peasent125" parent="Enemy Feed Tape" index="147" instance=ExtResource("4_v0ccy")]
+position = Vector2(-2139, 316)
+
+[node name="Peasent126" parent="Enemy Feed Tape" index="148" instance=ExtResource("4_v0ccy")]
+position = Vector2(-2912, 395)
+
+[node name="Peasent127" parent="Enemy Feed Tape" index="149" instance=ExtResource("4_v0ccy")]
+position = Vector2(-2590, 839)
+
+[node name="Peasent128" parent="Enemy Feed Tape" index="150" instance=ExtResource("4_v0ccy")]
+position = Vector2(-3441, 818)
+
+[node name="Peasent129" parent="Enemy Feed Tape" index="151" instance=ExtResource("4_v0ccy")]
+position = Vector2(-3468, 294)
+
+[node name="Peasent130" parent="Enemy Feed Tape" index="152" instance=ExtResource("4_v0ccy")]
+position = Vector2(-2778, 246)
+
+[node name="Peasent131" parent="Enemy Feed Tape" index="153" instance=ExtResource("4_v0ccy")]
+position = Vector2(-3727, 898)
+
+[node name="Peasent132" parent="Enemy Feed Tape" index="154" instance=ExtResource("4_v0ccy")]
+position = Vector2(-6197, 320)
+
+[node name="Peasent133" parent="Enemy Feed Tape" index="155" instance=ExtResource("4_v0ccy")]
+position = Vector2(-5111, 834)
+
+[node name="Peasent134" parent="Enemy Feed Tape" index="156" instance=ExtResource("4_v0ccy")]
+position = Vector2(-4224, 762)
+
+[node name="Peasent135" parent="Enemy Feed Tape" index="157" instance=ExtResource("4_v0ccy")]
+position = Vector2(-2038, 943)
+
+[node name="Peasent136" parent="Enemy Feed Tape" index="158" instance=ExtResource("4_v0ccy")]
+position = Vector2(-2308, 227)
+
+[node name="Peasent137" parent="Enemy Feed Tape" index="159" instance=ExtResource("4_v0ccy")]
+position = Vector2(-2645, 565)
+
+[node name="Jester" parent="Enemy Feed Tape" index="160" instance=ExtResource("7_n7ohh")]
+position = Vector2(-2408, 434)
+
+[node name="Jester2" parent="Enemy Feed Tape" index="161" instance=ExtResource("7_n7ohh")]
+position = Vector2(-2332, 544)
+
+[node name="Jester3" parent="Enemy Feed Tape" index="162" instance=ExtResource("7_n7ohh")]
+position = Vector2(-2425, 635)
+
+[node name="Jester4" parent="Enemy Feed Tape" index="163" instance=ExtResource("7_n7ohh")]
+position = Vector2(-2511, 542)
+
+[node name="Knight" parent="Enemy Feed Tape" index="164" instance=ExtResource("8_sk3t7")]
+position = Vector2(-4512, 559)
+
+[node name="Knight2" parent="Enemy Feed Tape" index="165" instance=ExtResource("8_sk3t7")]
+position = Vector2(-5193, 581)
+
+[node name="Knight3" parent="Enemy Feed Tape" index="166" instance=ExtResource("8_sk3t7")]
+position = Vector2(-5798, 575)
+
+[node name="Peasent138" parent="Enemy Feed Tape" index="167" instance=ExtResource("4_v0ccy")]
+position = Vector2(-1541, 278)

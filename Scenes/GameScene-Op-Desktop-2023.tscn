@@ -1,0 +1,395 @@
+[gd_scene load_steps=40 format=3 uid="uid://c4qnaj4cqxgny"]
+
+[ext_resource type="Script" path="res://Scripts/warlock_controller.gd" id="1_6dk5y"]
+[ext_resource type="Texture2D" uid="uid://b8boy6md2mbll" path="res://Sprites/warlock.png" id="2_bsyth"]
+[ext_resource type="Script" path="res://Enemies/Enemy Manager.gd" id="3_yxut5"]
+[ext_resource type="Script" path="res://Levels/feed_tape_debug_graphic.gd" id="4_dbx0g"]
+[ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Supplies/Mana_Scroll.tres" id="4_gwhl1"]
+[ext_resource type="PackedScene" uid="uid://b5t5chbh5x6vr" path="res://Enemies/enemy_peasent.tscn" id="5_2n0xo"]
+[ext_resource type="Resource" uid="uid://0wqn3ujbcm2j" path="res://Supplies/Lightning_Scroll.tres" id="5_mhcks"]
+[ext_resource type="PackedScene" uid="uid://dbc3v7h72rrl8" path="res://Enemies/enemy_knight.tscn" id="6_7a1d2"]
+[ext_resource type="Resource" uid="uid://bow64ukpfnomj" path="res://Supplies/Fire_Scroll.tres" id="6_almpy"]
+[ext_resource type="Script" path="res://Scenes/StoreroomManager.gd" id="7_jcmi4"]
+[ext_resource type="Script" path="res://UI/Health_UI.gd" id="8_cvh7f"]
+[ext_resource type="PackedScene" uid="uid://2jby5kudglct" path="res://UI/heart_UI.tscn" id="8_m3b1b"]
+[ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Blank_Scroll.tres" id="10_leahy"]
+[ext_resource type="Script" path="res://Scripts/Grid.gd" id="10_u3nn8"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="10_uhmuu"]
+[ext_resource type="Script" path="res://Scripts/Apprentice_Character_Controller.gd" id="12_f757m"]
+[ext_resource type="PackedScene" uid="uid://btsj4ae1ih5n1" path="res://UI/supply_ui.tscn" id="12_hfyto"]
+[ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="12_i116q"]
+[ext_resource type="Texture2D" uid="uid://bnf1qbyi4gps" path="res://Sprites/apprentice.png" id="13_5iwmc"]
+[ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="13_k5kcy"]
+[ext_resource type="LabelSettings" uid="uid://cpmxmv1dxwx7s" path="res://UI/Fonts/medium_text.tres" id="14_03ooj"]
+[ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="14_ap4t0"]
+[ext_resource type="Script" path="res://Levels/storeroom_size_constrainer.gd" id="15_e7bj7"]
+[ext_resource type="TileSet" uid="uid://cynof41cb1hco" path="res://Levels/StoreroomTiles.tres" id="16_355m6"]
+[ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Tablet.tres" id="17_pouyb"]
+[ext_resource type="Script" path="res://Cards/CardManager.gd" id="21_k4wdt"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ek7uc"]
+radius = 13.0
+height = 68.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odmoc"]
+size = Vector2(26, 880)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c5j76"]
+size = Vector2(19.5, 1101)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ckvp"]
+size = Vector2(1078, 1225)
+
+[sub_resource type="Curve" id="Curve_o25to"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.146939, 0.157212), 0.0, 0.0, 0, 0, Vector2(0.991837, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2dgt"]
+atlas = ExtResource("13_5iwmc")
+region = Rect2(0, 0, 32, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8u3bd"]
+atlas = ExtResource("13_5iwmc")
+region = Rect2(32, 0, 32, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xoi1x"]
+atlas = ExtResource("13_5iwmc")
+region = Rect2(64, 0, 32, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1dbr"]
+atlas = ExtResource("13_5iwmc")
+region = Rect2(96, 0, 32, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7xf5"]
+atlas = ExtResource("13_5iwmc")
+region = Rect2(128, 0, 32, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ep5n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2dgt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8u3bd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xoi1x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a1dbr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i7xf5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8u3bd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2dgt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 25.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ohmts"]
+radius = 77.666
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2uhtv"]
+size = Vector2(202, 193)
+
+[node name="Game" type="Node2D"]
+position = Vector2(0, -5)
+
+[node name="Warlock Game" type="Node2D" parent="."]
+
+[node name="BackGround" type="ColorRect" parent="Warlock Game"]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 938.0
+offset_bottom = 1106.0
+color = Color(0.356863, 0.266667, 0.207843, 0.298039)
+
+[node name="Warlock" type="CharacterBody2D" parent="Warlock Game" groups=["Player"]]
+position = Vector2(901, 529)
+script = ExtResource("1_6dk5y")
+
+[node name="Sprite2D" type="Sprite2D" parent="Warlock Game/Warlock"]
+position = Vector2(-2, -3)
+scale = Vector2(2, 2)
+texture = ExtResource("2_bsyth")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Warlock Game/Warlock"]
+shape = SubResource("CapsuleShape2D_ek7uc")
+
+[node name="Projectile Spawn Point" type="Node2D" parent="Warlock Game/Warlock"]
+position = Vector2(-32, 2)
+
+[node name="FireCooldownTimer" type="Timer" parent="Warlock Game/Warlock"]
+one_shot = true
+
+[node name="Stun Timer" type="Timer" parent="Warlock Game/Warlock"]
+one_shot = true
+
+[node name="Enemy Manager" type="Node2D" parent="Warlock Game" groups=["EnemyManager"]]
+script = ExtResource("3_yxut5")
+
+[node name="Enemy Spawn Area" type="CollisionShape2D" parent="Warlock Game/Enemy Manager"]
+unique_name_in_owner = true
+position = Vector2(-19, 537)
+shape = SubResource("RectangleShape2D_odmoc")
+
+[node name="Test Feed Tape" type="Node2D" parent="Warlock Game/Enemy Manager"]
+script = ExtResource("4_dbx0g")
+
+[node name="Peasent" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_2n0xo")]
+position = Vector2(-377, 494)
+
+[node name="Peasent2" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_2n0xo")]
+position = Vector2(-637, 604)
+
+[node name="Peasent3" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_2n0xo")]
+position = Vector2(-751, 305)
+
+[node name="Knight" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("6_7a1d2")]
+position = Vector2(-453, 292)
+
+[node name="Projectile Container" type="Node2D" parent="Warlock Game"]
+unique_name_in_owner = true
+
+[node name="Tower Hit Zone" type="Area2D" parent="Warlock Game"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Warlock Game/Tower Hit Zone"]
+position = Vector2(966.25, 539)
+shape = SubResource("RectangleShape2D_c5j76")
+
+[node name="Play Boundry" type="Area2D" parent="Warlock Game"]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Warlock Game/Play Boundry"]
+position = Vector2(434, 527.5)
+shape = SubResource("RectangleShape2D_2ckvp")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
+[node name="Storeroom Manager" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(995, 548)
+script = ExtResource("7_jcmi4")
+available_supplies = Array[Resource("res://Supplies/Supply.gd")]([ExtResource("10_leahy"), ExtResource("10_uhmuu"), ExtResource("12_i116q"), ExtResource("13_k5kcy"), ExtResource("4_gwhl1"), ExtResource("17_pouyb")])
+repeat_spawn_curve = SubResource("Curve_o25to")
+
+[node name="Background" type="ColorRect" parent="Storeroom Manager"]
+offset_right = 896.0
+offset_bottom = 512.0
+color = Color(0.176471, 0.25098, 0.345098, 1)
+script = ExtResource("15_e7bj7")
+
+[node name="Boundry Reference" type="ReferenceRect" parent="Storeroom Manager/Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+border_width = 3.3
+
+[node name="Grid" type="Node2D" parent="Storeroom Manager"]
+unique_name_in_owner = true
+script = ExtResource("10_u3nn8")
+
+[node name="Storeroom Tile Map" type="TileMap" parent="Storeroom Manager"]
+unique_name_in_owner = true
+position = Vector2(8, 8)
+scale = Vector2(2, 2)
+tile_set = ExtResource("16_355m6")
+rendering_quadrant_size = 8
+format = 2
+layer_0/tile_data = PackedInt32Array(-1, 1, 0, 65535, 1, 0, 131071, 1, 0, -65536, 1, 0, -65535, 1, 0, -65534, 1, 0, -65533, 1, 0, 196607, 1, 0, 262143, 1, 0, 327679, 1, 0, 393215, 1, 0, 458751, 1, 0, 524287, 1, 0, 589823, 1, 0, 655359, 1, 0, 720895, 1, 0, 786431, 1, 0, 851967, 1, 0, 917503, 1, 0, 983039, 1, 0, 1048575, 1, 0, 1114111, 1, 0, 1179647, 1, 0, 1245183, 1, 0, 1310719, 1, 0, 1376255, 1, 0, 1441791, 1, 0, 1507327, 1, 0, 1572863, 1, 0, 1638399, 1, 0, 1703935, 1, 0, 1769471, 1, 0, 1835007, 1, 0, 1900543, 1, 0, 1966079, 1, 0, 2031615, 1, 0, 2097151, 1, 0, 2031616, 1, 0, 2031617, 1, 0, 2031618, 1, 0, 2031619, 1, 0, 2031620, 1, 0, 2031621, 1, 0, 2031622, 1, 0, 2031623, 1, 0, 2031624, 1, 0, 2031625, 1, 0, 2031626, 1, 0, 2031627, 1, 0, 2031628, 1, 0, 2031629, 1, 0, 2031630, 1, 0, 2031631, 1, 0, 2031632, 1, 0, 2031633, 1, 0, 2031634, 1, 0, 2031635, 1, 0, 2031636, 1, 0, 2031637, 1, 0, 2031638, 1, 0, 2031639, 1, 0, 2031640, 1, 0, 2031641, 1, 0, 2031642, 1, 0, 2031643, 1, 0, 2031644, 1, 0, 2031645, 1, 0, 2031646, 1, 0, 2031647, 1, 0, 2031648, 1, 0, 2031649, 1, 0, 2031651, 1, 0, 2031650, 1, 0, -65532, 1, 0, -65531, 1, 0, -65530, 1, 0, -65529, 1, 0, -65528, 1, 0, -65527, 1, 0, -65526, 1, 0, -65525, 1, 0, -65524, 1, 0, -65523, 1, 0, -65522, 1, 0, -65521, 1, 0, -65520, 1, 0, -65519, 1, 0, -65518, 1, 0, -65517, 1, 0, -65516, 1, 0, -65515, 1, 0, -65514, 1, 0, -65513, 1, 0, -65512, 1, 0, -65511, 1, 0, -65510, 1, 0, -65509, 1, 0, -65508, 1, 0, -65507, 1, 0, -65506, 1, 0, -65505, 1, 0, -65504, 1, 0, -65503, 1, 0, -65502, 1, 0, -65501, 1, 0, -65500, 1, 0, 2031652, 1, 0, -65499, 1, 0, 2031653, 1, 0, -65498, 1, 0, 2031654, 1, 0, -65497, 1, 0, 2031655, 1, 0, -65496, 1, 0, 2031656, 1, 0, -65495, 1, 0, 2031657, 1, 0, -65494, 1, 0, 2031658, 1, 0, -65493, 1, 0, 2031659, 1, 0, -65492, 1, 0, 2031660, 1, 0, -65491, 1, 0, 2031661, 1, 0, -65490, 1, 0, 2031662, 1, 0, -65489, 1, 0, 2031663, 1, 0, -65488, 1, 0, 2031664, 1, 0, -65487, 1, 0, 2031665, 1, 0, -65486, 1, 0, 2031666, 1, 0, -65485, 1, 0, 2031667, 1, 0, -65484, 1, 0, 2031668, 1, 0, -65483, 1, 0, 2031669, 1, 0, -65482, 1, 0, 2031670, 1, 0, -65481, 1, 0, 55, 1, 0, 65591, 1, 0, 131127, 1, 0, 196663, 1, 0, 262199, 1, 0, 327735, 1, 0, 393271, 1, 0, 458807, 1, 0, 524343, 1, 0, 589879, 1, 0, 655415, 1, 0, 720951, 1, 0, 786487, 1, 0, 852023, 1, 0, 917559, 1, 0, 983095, 1, 0, 1048631, 1, 0, 1114167, 1, 0, 1179703, 1, 0, 1245239, 1, 0, 1310775, 1, 0, 1376311, 1, 0, 1441847, 1, 0, 1507383, 1, 0, 1572919, 1, 0, 1638455, 1, 0, 1703991, 1, 0, 1769527, 1, 0, 1835063, 1, 0, 1900599, 1, 0, 1966135, 1, 0, 2031671, 1, 0, 1769475, 1, 0, 1769476, 1, 0, 1769477, 1, 0, 1769478, 1, 0, 1769479, 1, 0, 1769480, 1, 0, 1769481, 1, 0, 1769482, 1, 0, 1769483, 1, 0, 1507336, 1, 0, 1507337, 1, 0, 1507338, 1, 0, 1507339, 1, 0, 1441803, 1, 0, 1376267, 1, 0, 1310731, 1, 0, 1245195, 1, 0, 1179659, 1, 0, 1114123, 1, 0, 1048587, 1, 0, 983051, 1, 0, 917515, 1, 0, 851979, 1, 0, 786443, 1, 0, 458763, 1, 0, 393227, 1, 0, 327691, 1, 0, 262155, 1, 0, 196619, 1, 0, 131083, 1, 0, 65547, 1, 0, 11, 1, 0, 458768, 1, 0, 458769, 1, 0, 458770, 1, 0, 458771, 1, 0, 458772, 1, 0, 458773, 1, 0, 458774, 1, 0, 458775, 1, 0, 458776, 1, 0, 458777, 1, 0, 458778, 1, 0, 458779, 1, 0, 458780, 1, 0, 458781, 1, 0, 458782, 1, 0, 458783, 1, 0, 458784, 1, 0, 458785, 1, 0, 458786, 1, 0, 458787, 1, 0, 458788, 1, 0, 458789, 1, 0, 458790, 1, 0, 458795, 1, 0, 393259, 1, 0, 327723, 1, 0, 262187, 1, 0, 196651, 1, 0, 131115, 1, 0, 65579, 1, 0, 43, 1, 0, 524331, 1, 0, 589867, 1, 0, 655403, 1, 0, 720939, 1, 0, 786475, 1, 0, 852011, 1, 0, 917547, 1, 0, 983083, 1, 0, 983084, 1, 0, 983085, 1, 0, 983086, 1, 0, 1507378, 1, 0, 1507377, 1, 0, 1507376, 1, 0, 1507375, 1, 0, 1507374, 1, 0, 1507373, 1, 0, 1507372, 1, 0, 1507371, 1, 0, 1572907, 1, 0, 1638443, 1, 0, 1703979, 1, 0, 1769515, 1, 0, 1835051, 1, 0, 1900587, 1, 0, 1966123, 1, 0, 1703971, 1, 0, 1638435, 1, 0, 1572899, 1, 0, 1507363, 1, 0, 1441827, 1, 0, 1376291, 1, 0, 1310755, 1, 0, 1245219, 1, 0, 1179683, 1, 0, 1114147, 1, 0, 1048611, 1, 0, 983075, 1, 0, 1507328, 1, 0, 1507329, 1, 0, 1507330, 1, 0, 983092, 1, 0, 983093, 1, 0, 983094, 1, 0, 983087, 1, 0, 720896, 1, 0, 720897, 1, 0, 720898, 1, 0, 65559, 1, 0, 131095, 1, 0, 23, 1, 0, 983059, 1, 0, 1048595, 1, 0, 1114131, 1, 0, 1179667, 1, 0, 1245203, 1, 0, 1310739, 1, 0, 1376275, 1, 0, 1441811, 1, 0, 1507347, 1, 0, 1572883, 1, 0, 1638419, 1, 0, 1703955, 1, 0, 1703963, 1, 0, 1638427, 1, 0, 1572891, 1, 0, 1507355, 1, 0, 1441819, 1, 0, 1376283, 1, 0, 1310747, 1, 0, 1245211, 1, 0, 1179675, 1, 0, 1114139, 1, 0, 1048603, 1, 0, 983067, 1, 0, 1769516, 1, 0, 1769517, 1, 0, 1769518, 1, 0, 1769519, 1, 0, 1769520, 1, 0, 1769521, 1, 0, 1769522, 1, 0, 1835058, 1, 0, 1835059, 1, 0, 1835060, 1, 0, 1835061, 1, 0, 1835062, 1, 0, 1769525, 1, 0, 1769524, 1, 0, 1769523, 1, 0, 1769526, 1, 0, 1900598, 1, 0, 1966134, 1, 0, 1966133, 1, 0, 1966132, 1, 0, 1966131, 1, 0, 1966130, 1, 0, 1966129, 1, 0, 1966128, 1, 0, 1966127, 1, 0, 1966126, 1, 0, 1966125, 1, 0, 1966124, 1, 0, 1900588, 1, 0, 1835052, 1, 0, 1835053, 1, 0, 1835054, 1, 0, 1835055, 1, 0, 1835056, 1, 0, 1835057, 1, 0, 1900597, 1, 0, 1900592, 1, 0, 1900591, 1, 0, 1900590, 1, 0, 1900589, 1, 0, 1900593, 1, 0, 1900594, 1, 0, 458791, 1, 0, 393255, 1, 0, 327719, 1, 0, 262183, 1, 0)
+
+[node name="Pickup Spawner" type="Node2D" parent="Storeroom Manager"]
+unique_name_in_owner = true
+position = Vector2(0, 3)
+
+[node name="Apprentice Character" type="CharacterBody2D" parent="Storeroom Manager"]
+unique_name_in_owner = true
+position = Vector2(497, 198)
+scale = Vector2(0.25, 0.25)
+floor_stop_on_slope = false
+floor_block_on_wall = false
+script = ExtResource("12_f757m")
+
+[node name="GFX" type="AnimatedSprite2D" parent="Storeroom Manager/Apprentice Character"]
+unique_name_in_owner = true
+scale = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_5ep5n")
+frame_progress = 0.356408
+
+[node name="Hit Box" type="CollisionShape2D" parent="Storeroom Manager/Apprentice Character"]
+shape = SubResource("CircleShape2D_ohmts")
+
+[node name="Collection Hitbox" type="Area2D" parent="Storeroom Manager/Apprentice Character"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Storeroom Manager/Apprentice Character/Collection Hitbox"]
+position = Vector2(4, 3.5)
+shape = SubResource("RectangleShape2D_2uhtv")
+debug_color = Color(0.768627, 0.411765, 0.462745, 0.419608)
+
+[node name="Boost Timer" type="Timer" parent="Storeroom Manager/Apprentice Character"]
+one_shot = true
+
+[node name="Stun Timer" type="Timer" parent="Storeroom Manager/Apprentice Character"]
+one_shot = true
+
+[node name="Card Manager" type="Node2D" parent="." groups=["CardManager"]]
+position = Vector2(986, 8)
+script = ExtResource("21_k4wdt")
+
+[node name="ColorRect" type="ColorRect" parent="Card Manager"]
+offset_right = 931.0
+offset_bottom = 526.0
+color = Color(0.47451, 0.0352941, 0.32549, 0.356863)
+
+[node name="Ongoing Abilities Area" type="MarginContainer" parent="Card Manager"]
+offset_left = 20.0
+offset_top = 13.0
+offset_right = 681.0
+offset_bottom = 93.0
+
+[node name="ColorRect" type="ColorRect" parent="Card Manager/Ongoing Abilities Area"]
+layout_mode = 2
+color = Color(0.364706, 0.337255, 0.470588, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Card Manager/Ongoing Abilities Area"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Ongoing Abilities" type="HBoxContainer" parent="Card Manager/Ongoing Abilities Area/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Hand" type="Node2D" parent="Card Manager"]
+position = Vector2(17, 108)
+
+[node name="ColorRect2" type="ColorRect" parent="Card Manager/Hand"]
+offset_right = 665.0
+offset_bottom = 299.0
+color = Color(0.282353, 0.282353, 0.282353, 1)
+
+[node name="Hand Anchors" type="Node2D" parent="Card Manager/Hand"]
+
+[node name="Hand Anchor 1" type="Marker2D" parent="Card Manager/Hand/Hand Anchors"]
+position = Vector2(120, 152)
+
+[node name="Hand Anchor 2" type="Marker2D" parent="Card Manager/Hand/Hand Anchors"]
+position = Vector2(328, 151)
+
+[node name="Hand Anchor 3" type="Marker2D" parent="Card Manager/Hand/Hand Anchors"]
+position = Vector2(533, 151)
+
+[node name="Queue" type="Marker2D" parent="Card Manager"]
+unique_name_in_owner = true
+position = Vector2(798, 255)
+
+[node name="Card Spawn Point" type="Marker2D" parent="Card Manager"]
+position = Vector2(1071, 507)
+
+[node name="Combo Display" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+offset_left = 1704.0
+offset_top = 1000.0
+offset_right = 1886.0
+offset_bottom = 1055.0
+
+[node name="Combo Background" type="ColorRect" parent="Combo Display"]
+layout_mode = 2
+color = Color(0.52549, 0.403922, 0.25098, 1)
+
+[node name="Control" type="MarginContainer" parent="Combo Display"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="H Box Container" type="HBoxContainer" parent="Combo Display/Control"]
+layout_mode = 2
+alignment = 1
+
+[node name="Combo Label" type="Label" parent="Combo Display/Control/H Box Container"]
+layout_mode = 2
+text = "Combo: "
+label_settings = ExtResource("14_03ooj")
+
+[node name="Combo Num Label" type="Label" parent="Combo Display/Control/H Box Container"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+label_settings = ExtResource("14_ap4t0")
+
+[node name="Enchanter Supplies" type="HBoxContainer" parent="."]
+offset_left = 991.0
+offset_top = 423.0
+offset_right = 1967.0
+offset_bottom = 523.0
+
+[node name="Supply UI2" parent="Enchanter Supplies" instance=ExtResource("12_hfyto")]
+layout_mode = 2
+supply = ExtResource("10_uhmuu")
+
+[node name="Supply UI" parent="Enchanter Supplies" instance=ExtResource("12_hfyto")]
+layout_mode = 2
+supply = ExtResource("10_leahy")
+
+[node name="Supply UI3" parent="Enchanter Supplies" instance=ExtResource("12_hfyto")]
+layout_mode = 2
+supply = ExtResource("12_i116q")
+
+[node name="Supply UI4" parent="Enchanter Supplies" instance=ExtResource("12_hfyto")]
+layout_mode = 2
+supply = ExtResource("13_k5kcy")
+
+[node name="Ammo Counters" type="HBoxContainer" parent="."]
+offset_left = 440.0
+offset_top = 28.0
+offset_right = 946.0
+offset_bottom = 128.0
+alignment = 2
+
+[node name="Supply UI5" parent="Ammo Counters" instance=ExtResource("12_hfyto")]
+layout_mode = 2
+supply = ExtResource("4_gwhl1")
+always_on = true
+
+[node name="Supply UI6" parent="Ammo Counters" instance=ExtResource("12_hfyto")]
+layout_mode = 2
+supply = ExtResource("6_almpy")
+
+[node name="Supply UI7" parent="Ammo Counters" instance=ExtResource("12_hfyto")]
+layout_mode = 2
+supply = ExtResource("5_mhcks")
+
+[node name="Lives UI" type="HBoxContainer" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 25.0
+offset_top = 21.0
+offset_right = 374.0
+offset_bottom = 124.0
+grow_horizontal = 2
+script = ExtResource("8_cvh7f")
+
+[node name="TextureRect" parent="Lives UI" instance=ExtResource("8_m3b1b")]
+layout_mode = 2
+
+[node name="TextureRect2" parent="Lives UI" instance=ExtResource("8_m3b1b")]
+layout_mode = 2
+
+[node name="TextureRect3" parent="Lives UI" instance=ExtResource("8_m3b1b")]
+layout_mode = 2
+
+[connection signal="area_entered" from="Storeroom Manager/Apprentice Character/Collection Hitbox" to="Storeroom Manager/Apprentice Character" method="_on_collection_hitbox_area_entered"]
+[connection signal="child_order_changed" from="Card Manager/Hand" to="Card Manager" method="arrange_cards_in_playspace"]
+[connection signal="child_order_changed" from="Card Manager/Queue" to="Card Manager" method="arrange_cards_in_playspace"]

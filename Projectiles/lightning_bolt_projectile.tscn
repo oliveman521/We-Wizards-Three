@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://chokjmvo87ktx"]
+[gd_scene load_steps=5 format=3 uid="uid://chokjmvo87ktx"]
 
 [ext_resource type="PackedScene" uid="uid://c5hptnef0j41i" path="res://Projectiles/base_projectile.tscn" id="1_r08g1"]
 [ext_resource type="Script" path="res://Projectiles/lightning_bolt_projectile.gd" id="2_24wbr"]
+[ext_resource type="AudioStream" uid="uid://c53gk7yvtmgt3" path="res://Projectiles/Projectile Sounds/Lightning Strike FX.wav" id="3_ti5tm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sxgq2"]
 size = Vector2(791.2, 13.6)
@@ -20,3 +21,6 @@ shape = SubResource("RectangleShape2D_sxgq2")
 modulate = Color(1, 1, 0.478431, 1)
 position = Vector2(598, 0)
 scale = Vector2(0.826293, 75.379)
+
+[node name="Shoot Sound" parent="." index="3"]
+stream = ExtResource("3_ti5tm")

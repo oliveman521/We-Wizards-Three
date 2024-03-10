@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Effects/card_text.tscn" id="4_jl8oo"]
 [ext_resource type="FontFile" uid="uid://t4iceb2drwa2" path="res://UI/Fonts/Franklin Gothic Medium Regular.ttf" id="5_hgbx0"]
 [ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_StoreroomEffects.gd" id="6_grji5"]
-[ext_resource type="PackedScene" uid="uid://b02qbm1dc1ap3" path="res://Prefabs/snare.tscn" id="7_jujw2"]
+[ext_resource type="PackedScene" uid="uid://b02qbm1dc1ap3" path="res://Storeroom/snare.tscn" id="7_jujw2"]
 [ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_Damage.gd" id="8_uegu8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n4mn2"]

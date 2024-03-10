@@ -2,14 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://dxstlyven322l" path="res://Enemies/enemy_base.tscn" id="1_ru7do"]
 [ext_resource type="PackedScene" uid="uid://dkn1p6g0q7pqb" path="res://Projectiles/projectile_arrow.tscn" id="2_a75xx"]
-[ext_resource type="Texture2D" uid="uid://cjb1srtgrk802" path="res://Sprites/Enemies/archer.png" id="3_hk655"]
+[ext_resource type="Texture2D" uid="uid://cjb1srtgrk802" path="res://Enemies/Enemy Sprites/archer.png" id="3_vgscl"]
 
-[node name="archer" instance=ExtResource("1_ru7do")]
-enemy_name = "archer"
+[node name="Enemy - Archer" instance=ExtResource("1_ru7do")]
+enemy_name = "Archer"
 move_speed = 25.0
 vulnerabilities = Array[int]([1])
 projectile_prefab = ExtResource("2_a75xx")
 fire_interval = 5.0
 
 [node name="Sprite" parent="." index="0"]
-texture = ExtResource("3_hk655")
+texture = ExtResource("3_vgscl")

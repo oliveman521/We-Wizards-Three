@@ -11,6 +11,7 @@ class_name Explosion
 @export var damage_type: GameManager.Damage_Type = GameManager.Damage_Type.FIRE
 @export var post_animation_hold_time: float = 5
 
+var visual_size_multiplier: float = 1.5
 @onready var visial: AnimatedSprite2D = $"Explosion Visual"
 @onready var explosion_hitbox: Area2D = $"Explosion Hitbox"
 
@@ -25,7 +26,7 @@ func _ready() -> void:
 	
 	#Explosion animation
 	var final_visual_scale: float = (radius*2) / visial.sprite_frames.get_frame_texture("default",0).get_size().x
-	print(final_visual_scale)
+	final_visual_scale *= visual_size_multiplier
 	visial.scale = Vector2(final_visual_scale, final_visual_scale)
 	
 	visial.play()

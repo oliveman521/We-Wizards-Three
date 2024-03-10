@@ -20,6 +20,7 @@ config/icon="res://Sprites/warlock.png"
 [autoload]
 
 GameManager="*res://Scripts/GameManager.gd"
+SoundManager="*res://Scripts/SoundManager.gd"
 
 [debug]
 
@@ -36,7 +37,11 @@ window/stretch/mode="viewport"
 [file_customization]
 
 folder_colors={
+"res://Enemies/": "red",
+"res://Enemies/Enemy Sprites/": "yellow",
+"res://Levels/": "pink",
 "res://Prefabs/": "purple",
+"res://Projectiles/Projectile Sounds/": "green",
 "res://SaveData/": "blue",
 "res://Sprites/": "yellow"
 }

@@ -13,6 +13,9 @@ class_name Enemy
 @export var move_speed: float= 50
 @export var health: float = 5
 
+@export var spawn_on_death: Array[PackedScene]
+
+@export_group("Damage Types")
 @export var vulnerabilities: Array[GameManager.Damage_Type]
 @export var resistances: Array[GameManager.Damage_Type]
 @export var immunities: Array[GameManager.Damage_Type]
@@ -55,7 +58,7 @@ func shoot_projectile() -> void:
 	warlock.projectile_container.add_child(projectile)
 	projectile.global_position = projectile_spawner.global_position
 	projectile.direction = projectile_spawner.target_position.normalized()
-	projectile.target = 1 #1 means the projectile will try to damage players
+	projectile.target = "Player"
 	fire_rate_timer.wait_time = fire_interval * randf_range(0.8,1.2)
 
 func take_damage(damage_type: GameManager.Damage_Type, amnt: float) -> void:
@@ -86,6 +89,10 @@ func take_damage(damage_type: GameManager.Damage_Type, amnt: float) -> void:
 		die()
 
 func die() -> void:
+	for item: PackedScene in spawn_on_death:
+		var new_node: Node2D = item.instantiate() as Node2D
+		new_node.global_position = global_position
+		add_sibling(new_node)
 	queue_free()
 
 func _on_area_entered(area: Area2D) -> void:

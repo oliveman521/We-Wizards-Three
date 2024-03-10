@@ -30,6 +30,11 @@ var boost_multiplier: float = 3
 var boost_durration: float = 0.1
 @onready var boost_timer: Timer = $"Boost Timer"
 
+@onready var footstep_timer: Timer = $"Footstep Timer"
+@onready var footstep_sound: AudioStreamPlayer2D = $"Footstep Sound"
+var distance_per_footstep: float = 75
+
+
 var boosting: bool = false:
 	get:
 		return !boost_timer.is_stopped()
@@ -44,6 +49,10 @@ var input_dir : Vector2
 func _ready() -> void:
 	GameManager.apprentice_character = self as ApprenticeCharacter
 	combo = 0
+	footstep_timer.timeout.connect(func() -> void:
+		SoundManager.play_sound(footstep_sound,0.2)
+		footstep_timer.start()
+		)
 
 func _process(_delta: float) -> void:
 	
@@ -67,6 +76,15 @@ func _process(_delta: float) -> void:
 	
 	move_and_slide()
 	
+	#sounds
+	if velocity.length() == 0:
+		footstep_timer.stop()
+	else:
+		footstep_timer.wait_time = 1/velocity.length() * distance_per_footstep
+		if footstep_timer.is_stopped():
+			footstep_timer.wait_time *= 0.3
+			footstep_timer.start()
+	
 	#animations 
 	if input_dir.x > 0: #moving right
 		gfx.flip_h = true
@@ -86,6 +104,9 @@ func _on_collection_hitbox_area_entered(area: Area2D) -> void:
 			combo = 1
 		last_pickup_type = pickup.supply_to_be_gained
 		
+		if combo > 0:
+			pickup.pickup_sound.pitch_scale += 0.1 * combo
+		SoundManager.play_sound(pickup.pickup_sound)
 		pickup.supply_to_be_gained.on_pickup(combo * pickup.count_to_be_gained)
 		pickup.queue_free()
 

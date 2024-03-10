@@ -11,6 +11,12 @@ class_name Card
 @onready var effects_UI_section: Control = %Effects
 @onready var background_color_UI: ColorRect =  %"Background Color"
 
+@onready var play_sound: AudioStreamPlayer2D = %"Play Sound"
+@onready var discard_sound: AudioStreamPlayer2D = %"Discard Sound"
+@onready var cannot_be_played_sound: AudioStreamPlayer2D = %"Cannot Be Played Sound"
+
+
+
 @export_enum("Misc", "Draw", "Fire Damage", "Lightning Damage", "Crafting", "Buff") var card_type: String = "Misc":
 	set(new_val):
 		card_type = new_val
@@ -89,6 +95,8 @@ func play() -> void:
 		return
 	card_played.emit() 
 	
+	SoundManager.play_sound(play_sound)
+	
 	#Spend all the costs
 	for node: Node in costs_UI_section.get_children():
 		node.spend_cost()
@@ -126,10 +134,10 @@ func _on_button_gui_input(event: InputEvent) -> void:
 	if event.button_index == MOUSE_BUTTON_WHEEL_DOWN or event.button_index == MOUSE_BUTTON_WHEEL_UP:
 		return
 	
-	
 	card_pressed.emit()
 	
 	if deck_building_mode && event.button_index == MOUSE_BUTTON_LEFT:
+		SoundManager.play_sound(discard_sound)		
 		if in_deck:
 			slide_card_away(Vector2.LEFT, Color(0,0,1,0))
 		else:
@@ -141,8 +149,10 @@ func _on_button_gui_input(event: InputEvent) -> void:
 			play()
 		else:
 			GameManager.spawn_popup(center_position,"Not Enough Resources!",Color(1,0.8,.1))
+			SoundManager.play_sound(cannot_be_played_sound)
 	elif event.button_index == MOUSE_BUTTON_RIGHT:
 		card_discarded.emit()
+		SoundManager.play_sound(discard_sound)
 		await slide_card_away(Vector2.DOWN, Color(1,0,0,0))
 		card_manager.cards_in_deck.append(self.duplicate()) #TODO. This should somehow go back to the deck. Right now it's doing some christopher nolan's the prestige type shit
 		queue_free()

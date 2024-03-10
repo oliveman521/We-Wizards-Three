@@ -11,6 +11,8 @@ var card_pool: Array[Card] = []
 @onready var hand_card_anchors: Array[Node] = $"Hand/Hand Anchors".get_children()
 
 @onready var ongoing_abilities_region: HBoxContainer = %"Ongoing Abilities"
+@onready var card_draw_sound: AudioStreamPlayer2D = %"Card Draw Sound"
+
 
 
 var max_hand_size: int:
@@ -74,6 +76,7 @@ func draw_random_card() -> void:
 		#TODO graphic
 		return
 	
+	SoundManager.play_sound(card_draw_sound)
 	add_child(new_card)
 	new_card.global_position = card_spawn_point.global_position
 

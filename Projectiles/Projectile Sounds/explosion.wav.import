@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b87xyx5ebj1c5"
+path="res://.godot/imported/explosion.wav-850207f7cae7e514e66513b98052cfdc.sample"
+
+[deps]
+
+source_file="res://Projectiles/Projectile Sounds/explosion.wav"
+dest_files=["res://.godot/imported/explosion.wav-850207f7cae7e514e66513b98052cfdc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

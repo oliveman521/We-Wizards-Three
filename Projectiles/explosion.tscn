@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://dqgaio16e7poi"]
+[gd_scene load_steps=15 format=3 uid="uid://dqgaio16e7poi"]
 
 [ext_resource type="Script" path="res://Projectiles/Explosion.gd" id="1_gpwec"]
 [ext_resource type="Texture2D" uid="uid://cjc6fklipitfu" path="res://Sprites/explosion.png" id="2_uuevf"]
+[ext_resource type="AudioStream" uid="uid://b87xyx5ebj1c5" path="res://Projectiles/Projectile Sounds/explosion.wav" id="3_secmb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_40uv1"]
 radius = 1.0
@@ -45,7 +46,7 @@ region = Rect2(936, 0, 117, 70)
 [sub_resource type="SpriteFrames" id="SpriteFrames_7lp2s"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 2.0,
 "texture": SubResource("AtlasTexture_wcx5g")
 }, {
 "duration": 1.0,
@@ -78,9 +79,9 @@ animations = [{
 }]
 
 [node name="Explosion" type="Node2D"]
-position = Vector2(282, 282)
+position = Vector2(528, 423)
 script = ExtResource("1_gpwec")
-radius = 200.0
+radius = 100.0
 
 [node name="Explosion Hitbox" type="Area2D" parent="."]
 
@@ -88,5 +89,8 @@ radius = 200.0
 shape = SubResource("CircleShape2D_40uv1")
 
 [node name="Explosion Visual" type="AnimatedSprite2D" parent="."]
-z_index = -1
 sprite_frames = SubResource("SpriteFrames_7lp2s")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_secmb")
+autoplay = true
