@@ -54,7 +54,7 @@ func shoot(ammo_type: Ammo_Type) -> void:
 	if fire_cooldown_timer.time_left > 0:
 		return
 	
-	if ammo_type.use_supply():
+	if ammo_type.use_supply() or GameManager.debug_mode:
 		var new_projectile: Node2D = ammo_type.projectile_prefab.instantiate()
 		projectile_container.add_child(new_projectile)
 		new_projectile.set_global_position(projectile_spawn_point.global_position)

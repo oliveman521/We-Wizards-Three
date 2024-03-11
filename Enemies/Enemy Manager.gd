@@ -39,6 +39,7 @@ func spawn_enemy(enemy_prefab: PackedScene) -> void:
 	var y_spawn_max := rect_pos.y - rect_size.y/2
 	new_enemy.global_position = Vector2(x_spawn, randf_range(y_spawn_min,y_spawn_max))
 	add_child(new_enemy)
+	new_enemy.activate()
 
 var inactive_enemies: Array[Enemy]:
 	get:

@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cf2tx5dypsmoq"]
+
+[ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_wimv8"]
+[ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_xouro"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_ur5a0"]
+[ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Supplies/Mana_Scroll.tres" id="4_hu1ig"]
+
+[node name="Scroll Mountain" instance=ExtResource("1_wimv8")]
+card_type = "Crafting"
+card_name = "Scroll Mountain"
+
+[node name="Background Color" parent="Card Face" index="0"]
+color = Color(0.780392, 0.588235, 0.313726, 1)
+
+[node name="Essence x10" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_xouro")]
+layout_mode = 2
+supply = ExtResource("3_ur5a0")
+count = 10
+
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
+text = "Scroll Mountain"
+
+[node name="Mana Scroll x150" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("2_xouro")]
+layout_mode = 2
+supply = ExtResource("4_hu1ig")
+count = 150

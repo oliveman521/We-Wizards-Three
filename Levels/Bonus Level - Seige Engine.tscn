@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://4l40ype480h"]
+
+[ext_resource type="PackedScene" uid="uid://ddavd71iwja5g" path="res://Levels/template_level.tscn" id="1_7e435"]
+[ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Tablet.tres" id="2_ieovm"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_a6262"]
+[ext_resource type="PackedScene" uid="uid://c67dhecvk3b28" path="res://Enemies/enemy_seige_engine.tscn" id="5_kwnhh"]
+
+[node name="Bonus Level - Seige Engine" instance=ExtResource("1_7e435")]
+level_name = "Bonus Level - Seige Engine"
+supplies_present = Array[Resource("res://Supplies/Supply.gd")]([ExtResource("2_ieovm"), ExtResource("3_a6262")])
+supplies_spawned_at_once = 10
+
+[node name="Enemy - Seige Engine" parent="Enemy Feed Tape" index="0" instance=ExtResource("5_kwnhh")]
+position = Vector2(-192, 501)

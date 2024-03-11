@@ -16,9 +16,9 @@ font_color = Color(0.996078, 0.321569, 0.309804, 1)
 outline_size = 8
 outline_color = Color(0, 0, 0, 1)
 
-[node name="Deal With Marutha" instance=ExtResource("1_m4j7l")]
+[node name="Marutha\'s Deal" instance=ExtResource("1_m4j7l")]
 card_type = "Crafting"
-card_name = "Deal With Marutha"
+card_name = "Marutha's Deal"
 
 [node name="Background Color" parent="Card Face" index="0"]
 color = Color(0.780392, 0.588235, 0.313726, 1)
@@ -28,11 +28,11 @@ layout_mode = 2
 supply = ExtResource("3_4o2dq")
 
 [node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
-text = "Deal With Marutha"
+text = "Marutha's Deal"
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("4_0tx7l")]
 layout_mode = 2
-text = "Spawn 4 Jesters."
+text = "Spawn 3 Jesters."
 label_settings = SubResource("LabelSettings_n4mn2")
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label2" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1" instance=ExtResource("4_0tx7l")]
@@ -47,4 +47,4 @@ count = 20
 [node name="CardEffect_SpawnEnemies" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="3"]
 script = ExtResource("6_ec50i")
 enemy_prefab = ExtResource("7_iwkvn")
-count = 4
+count = 3

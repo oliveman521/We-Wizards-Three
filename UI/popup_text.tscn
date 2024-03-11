@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://14rg16g7dhgq"]
 
 [ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="1_hxws0"]
-[ext_resource type="Script" path="res://Scripts/Popup_Text.gd" id="1_lyxdu"]
+[ext_resource type="Script" path="res://UI/Popup_Text.gd" id="1_lyxdu"]
 
 [sub_resource type="Curve" id="Curve_gqq20"]
 _data = [Vector2(0.358268, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -5.5284, 0.0, 0, 0]

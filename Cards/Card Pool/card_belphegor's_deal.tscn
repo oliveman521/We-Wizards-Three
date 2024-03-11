@@ -32,7 +32,7 @@ text = "Belphegor's Deal"
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("4_jl8oo")]
 layout_mode = 2
-text = "Spawn 4 snares in the Storeroom"
+text = "Spawn 3 snares in the Storeroom"
 label_settings = SubResource("LabelSettings_n4mn2")
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label2" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1" instance=ExtResource("4_jl8oo")]
@@ -42,7 +42,7 @@ text = "Then, deal 2 damage to every enemy"
 [node name="CardEffect_StoreroomEffects" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2"]
 script = ExtResource("6_grji5")
 spawn_in_storeroom = ExtResource("7_jujw2")
-count = 4
+count = 3
 
 [node name="Damage" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="3"]
 script = ExtResource("8_uegu8")

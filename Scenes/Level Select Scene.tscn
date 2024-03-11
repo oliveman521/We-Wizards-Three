@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://bpfb1n271ove4"]
+[gd_scene load_steps=56 format=3 uid="uid://bpfb1n271ove4"]
 
 [ext_resource type="Script" path="res://Scenes/Level Select Map/LevelSelectMenu.gd" id="1_xcx1n"]
 [ext_resource type="Script" path="res://Scenes/Level Select Map/MapManager.gd" id="2_6iwrn"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://cde83i8rqdtlj" path="res://Scenes/Level Select Map/Map Nodes/MapNode_New_Ability.tscn" id="15_oso2k"]
 [ext_resource type="PackedScene" uid="uid://dt27624gh16cs" path="res://Cards/Card Pool/card_singe.tscn" id="15_wpld2"]
 [ext_resource type="PackedScene" uid="uid://dmdss2aqbb1lg" path="res://Levels/Level 2.tscn" id="16_okn0a"]
+[ext_resource type="PackedScene" uid="uid://4l40ype480h" path="res://Levels/Bonus Level - Seige Engine.tscn" id="18_7emhd"]
 [ext_resource type="PackedScene" uid="uid://ccqqvfnjhvb3t" path="res://Cards/Card Pool/card_supercharge.tscn" id="19_0o358"]
 [ext_resource type="PackedScene" uid="uid://bhq4tuy1yifyy" path="res://Cards/Card Pool/card_scortched_earth.tscn" id="20_tkhon"]
 [ext_resource type="PackedScene" uid="uid://c3nxruvppvko5" path="res://Cards/Card Pool/card_well_read.tscn" id="21_bj66l"]
@@ -30,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://50477ao4osxc" path="res://Levels/Level 3b - Super Silly.tscn" id="24_0bg83"]
 [ext_resource type="PackedScene" uid="uid://ddmofotpnip81" path="res://Levels/Level 3A - (s)Laughter.tscn" id="24_j8tib"]
 [ext_resource type="PackedScene" uid="uid://6685qupifd8s" path="res://Cards/Card Pool/card_fire_ball_recipe.tscn" id="24_rjnis"]
+[ext_resource type="PackedScene" uid="uid://cf2tx5dypsmoq" path="res://Cards/Card Pool/card_scroll_mountain.tscn" id="25_1n2im"]
 [ext_resource type="PackedScene" uid="uid://dio6uti0xbamv" path="res://Levels/Level 4 - Knights.tscn" id="25_q6lle"]
 [ext_resource type="PackedScene" uid="uid://don0td5sje72h" path="res://Levels/Level 5a - Silly Arrows.tscn" id="26_a0t0h"]
 [ext_resource type="PackedScene" uid="uid://cgklhf7q88enf" path="res://Cards/Card Pool/card_shock.tscn" id="26_cxv1b"]
@@ -39,6 +41,7 @@
 [ext_resource type="PackedScene" uid="uid://ddysngdfm7vje" path="res://Levels/Bonus Level - No Draw.tscn" id="30_knvvg"]
 [ext_resource type="PackedScene" uid="uid://cthet27f7cioc" path="res://Levels/Level 6.tscn" id="33_fxcku"]
 [ext_resource type="PackedScene" uid="uid://dfuh7fif3lr3e" path="res://Cards/Card Pool/card_lightning_scroll_recipe.tscn" id="33_kctbv"]
+[ext_resource type="PackedScene" uid="uid://ddx0lb70hxnsq" path="res://Cards/Card Pool/card_well_read+.tscn" id="34_ttysr"]
 [ext_resource type="PackedScene" uid="uid://o3tq5x43hvo7" path="res://Levels/Level 7 - Knightfall.tscn" id="35_f7wne"]
 [ext_resource type="PackedScene" uid="uid://djyq018lrnfov" path="res://Levels/Level 666.tscn" id="36_gc4ss"]
 [ext_resource type="Texture2D" uid="uid://c5da5jr0p5j5o" path="res://Sprites/Map Doodles/devil horns.png" id="37_xackh"]
@@ -198,7 +201,23 @@ offset_top = 56.0
 offset_right = 973.0
 offset_bottom = 104.0
 level = ExtResource("16_okn0a")
-connected_map_nodes = [NodePath("../Cards - Supercharge (+2 others)"), NodePath("../Ability - Max Combo")]
+connected_map_nodes = [NodePath("../Cards - Supercharge (+2 others)"), NodePath("../Ability - Max Combo"), NodePath("../Level - Bonus Level - Seige Engine")]
+
+[node name="Level - Bonus Level - Seige Engine" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
+offset_left = 1117.0
+offset_top = 51.0
+offset_right = 1250.0
+offset_bottom = 99.0
+level = ExtResource("18_7emhd")
+connected_map_nodes = [NodePath("../Level - Level 2"), NodePath("../Cards - Scroll Mountain")]
+
+[node name="Cards - Marutha\'s Deal (+2 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+offset_left = 1126.0
+offset_top = 265.0
+offset_right = 1178.0
+offset_bottom = 313.0
+cards = Array[PackedScene]([ExtResource("23_rlx2y"), ExtResource("20_tkhon"), ExtResource("15_wpld2")])
+connected_map_nodes = [NodePath("../Level - Level 3b - Super Silly")]
 
 [node name="Cards - Supercharge (+2 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 875.0
@@ -216,13 +235,13 @@ offset_bottom = 311.0
 cards = Array[PackedScene]([ExtResource("21_lx1sb"), ExtResource("21_lwsqc"), ExtResource("14_3vtqq"), ExtResource("21_bj66l")])
 connected_map_nodes = [NodePath("../Level - Level 3A - (s)Laughter")]
 
-[node name="Cards - Marutha\'s Deal (+2 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
-offset_left = 1126.0
-offset_top = 265.0
-offset_right = 1178.0
-offset_bottom = 313.0
-cards = Array[PackedScene]([ExtResource("23_rlx2y"), ExtResource("20_tkhon"), ExtResource("15_wpld2")])
-connected_map_nodes = [NodePath("../Level - Level 3b - Super Silly")]
+[node name="Cards - Scroll Mountain" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+offset_left = 1421.0
+offset_top = 50.0
+offset_right = 1473.0
+offset_bottom = 98.0
+cards = Array[PackedScene]([ExtResource("25_1n2im")])
+connected_map_nodes = [NodePath("../Level - Bonus Level - Seige Engine")]
 
 [node name="Level - Level 3A - (s)Laughter" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 716.0
@@ -238,7 +257,7 @@ offset_top = 263.0
 offset_right = 1074.0
 offset_bottom = 311.0
 level = ExtResource("24_0bg83")
-connected_map_nodes = [NodePath("../Cards - Supercharge (+2 others)"), NodePath("../Cards - Marutha\'s Deal (+2 others)"), NodePath("../Cards - Fire Ball Recipe (+3 others)")]
+connected_map_nodes = [NodePath("../Cards - Supercharge (+2 others)"), NodePath("../Cards - Fire Ball Recipe (+3 others)"), NodePath("../Cards - Marutha\'s Deal (+2 others)")]
 
 [node name="Cards - Fire Ball Recipe (+3 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 862.0
@@ -270,7 +289,7 @@ offset_top = 404.0
 offset_right = 1255.0
 offset_bottom = 452.0
 level = ExtResource("29_v2ygy")
-connected_map_nodes = [NodePath("../Level - Level 4 - Knights"), NodePath("../Cards - Magma Spray")]
+connected_map_nodes = [NodePath("../Level - Level 4 - Knights"), NodePath("../Cards - Magma Spray (+1 others)")]
 
 [node name="Ability - Librarian Boost" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("15_oso2k")]
 offset_left = 571.0
@@ -305,15 +324,15 @@ offset_left = 1502.0
 offset_top = 504.0
 offset_right = 1554.0
 offset_bottom = 552.0
-cards = Array[PackedScene]([ExtResource("22_dsx6i"), ExtResource("24_rjnis")])
+cards = Array[PackedScene]([ExtResource("22_dsx6i"), ExtResource("34_ttysr")])
 connected_map_nodes = [NodePath("../Level - Bonus Level - No Draw")]
 
-[node name="Cards - Magma Spray" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+[node name="Cards - Magma Spray (+1 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 1320.0
 offset_top = 331.0
 offset_right = 1372.0
 offset_bottom = 379.0
-cards = Array[PackedScene]([ExtResource("21_lwsqc")])
+cards = Array[PackedScene]([ExtResource("21_lwsqc"), ExtResource("24_rjnis")])
 connected_map_nodes = [NodePath("../Level - Bonus Level - No Essence")]
 
 [node name="Level - Bonus Level - No Draw" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
@@ -364,8 +383,8 @@ offset_bottom = 946.0
 level = ExtResource("36_gc4ss")
 connected_map_nodes = [NodePath("../Level - Level 7 - Knightfall")]
 
-[node name="DevilHorns" type="Sprite2D" parent="Map Manager"]
-position = Vector2(1826, 894)
+[node name="DevilHorns" type="Sprite2D" parent="Map Manager/Level - Level 666"]
+position = Vector2(61, -4)
 scale = Vector2(0.410593, 0.391358)
 texture = ExtResource("37_xackh")
 

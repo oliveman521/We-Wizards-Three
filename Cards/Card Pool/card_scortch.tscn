@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://5wdcju2fxgnc"]
+
+[ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_ira1j"]
+[ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_sm8m8"]
+[ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="3_l1ayp"]
+[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_Damage.gd" id="4_san8k"]
+[ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="5_x7xlb"]
+
+[node name="Scortch" instance=ExtResource("1_ira1j")]
+scale = Vector2(1, 0.990783)
+card_type = "Fire Damage"
+card_name = "Scortch"
+
+[node name="Background Color" parent="Card Face" index="0"]
+color = Color(0.486275, 0.105882, 0.0352941, 1)
+
+[node name="Fire Gem x2" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_sm8m8")]
+layout_mode = 2
+supply = ExtResource("3_l1ayp")
+count = 2
+
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
+text = "Scortch"
+
+[node name="Card Face Margin_VBoxContainer_Effects#CardEffect_Damage" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0"]
+script = ExtResource("4_san8k")
+dmg_type = 1
+amnt = 2
+targets = "Random"
+target_count = 4
+
+[node name="Card Face Margin_VBoxContainer_Effects#Label" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1"]
+layout_mode = 2
+text = "Deal 2 damage to 4 random enemies"
+label_settings = ExtResource("5_x7xlb")
+horizontal_alignment = 1
+autowrap_mode = 2

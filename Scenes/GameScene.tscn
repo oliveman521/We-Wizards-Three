@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://c4qnaj4cqxgny"]
+[gd_scene load_steps=42 format=3 uid="uid://c4qnaj4cqxgny"]
 
 [ext_resource type="Script" path="res://Scripts/warlock_controller.gd" id="1_6dk5y"]
 [ext_resource type="Texture2D" uid="uid://b8boy6md2mbll" path="res://Sprites/warlock.png" id="2_bsyth"]
@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://Levels/feed_tape_debug_graphic.gd" id="4_l8m8i"]
 [ext_resource type="PackedScene" uid="uid://b5t5chbh5x6vr" path="res://Enemies/enemy_peasent.tscn" id="5_fixi5"]
 [ext_resource type="PackedScene" uid="uid://dbc3v7h72rrl8" path="res://Enemies/enemy_knight.tscn" id="6_cjgit"]
-[ext_resource type="Script" path="res://Scenes/StoreroomManager.gd" id="7_1og6d"]
+[ext_resource type="Script" path="res://Storeroom/StoreroomManager.gd" id="7_1og6d"]
 [ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Blank_Scroll.tres" id="8_clxw8"]
 [ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="9_dc2ld"]
 [ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="10_5v06q"]
@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bnf1qbyi4gps" path="res://Sprites/apprentice.png" id="13_5iwmc"]
 [ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Tablet.tres" id="13_ynu4b"]
 [ext_resource type="Script" path="res://Levels/storeroom_size_constrainer.gd" id="14_7s006"]
-[ext_resource type="Script" path="res://Scripts/Grid.gd" id="15_y83i1"]
+[ext_resource type="Script" path="res://Storeroom/Grid.gd" id="15_y83i1"]
 [ext_resource type="TileSet" uid="uid://cynof41cb1hco" path="res://Levels/StoreroomTiles.tres" id="16_i7p3x"]
 [ext_resource type="Script" path="res://Scripts/Apprentice_Character_Controller.gd" id="17_866m0"]
 [ext_resource type="Script" path="res://Cards/CardManager.gd" id="19_pbgl2"]
@@ -23,6 +23,7 @@
 [ext_resource type="AudioStream" uid="uid://cluutx7eq6nwh" path="res://Cards/Card Sounds/card_sliding.wav" id="20_tsk7n"]
 [ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="21_5p0wj"]
 [ext_resource type="PackedScene" uid="uid://btsj4ae1ih5n1" path="res://UI/supply_ui.tscn" id="22_orqwg"]
+[ext_resource type="Texture2D" uid="uid://bj6e14qigcant" path="res://Sprites/Essence.png" id="23_8aelf"]
 [ext_resource type="Resource" uid="uid://bow64ukpfnomj" path="res://Supplies/Fire_Scroll.tres" id="23_ncq1s"]
 [ext_resource type="Resource" uid="uid://0wqn3ujbcm2j" path="res://Supplies/Lightning_Scroll.tres" id="24_0jap5"]
 [ext_resource type="Script" path="res://UI/Health_UI.gd" id="25_kiqjr"]
@@ -307,10 +308,10 @@ stream = ExtResource("20_tsk7n")
 
 [node name="Combo Display" type="MarginContainer" parent="."]
 unique_name_in_owner = true
-offset_left = 1704.0
-offset_top = 1000.0
-offset_right = 1886.0
-offset_bottom = 1055.0
+offset_left = 1694.0
+offset_top = 998.0
+offset_right = 1897.0
+offset_bottom = 1053.0
 
 [node name="Combo Background" type="ColorRect" parent="Combo Display"]
 layout_mode = 2
@@ -318,8 +319,8 @@ color = Color(0.52549, 0.403922, 0.25098, 1)
 
 [node name="Control" type="MarginContainer" parent="Combo Display"]
 layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_right = 10
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
 
 [node name="H Box Container" type="HBoxContainer" parent="Combo Display/Control"]
 layout_mode = 2
@@ -335,6 +336,13 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "0"
 label_settings = ExtResource("21_5p0wj")
+
+[node name="Combo Type Icon" type="TextureRect" parent="Combo Display/Control/H Box Container"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("23_8aelf")
+stretch_mode = 5
 
 [node name="Enchanter Supplies" type="HBoxContainer" parent="."]
 offset_left = 991.0

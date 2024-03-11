@@ -11,7 +11,7 @@ class_name Explosion
 @export var damage_type: GameManager.Damage_Type = GameManager.Damage_Type.FIRE
 @export var post_animation_hold_time: float = 5
 
-var visual_size_multiplier: float = 1.5
+var visual_size_multiplier: float = 1.2
 @onready var visial: AnimatedSprite2D = $"Explosion Visual"
 @onready var explosion_hitbox: Area2D = $"Explosion Hitbox"
 

@@ -10,18 +10,28 @@ var combo: int = 1:
 		#update UI
 		var combo_num_label: Label = %"Combo Num Label" as Label
 		var combo_display: Control = %"Combo Display" as Control
+		var combo_type_icon: TextureRect = %"Combo Type Icon" as TextureRect
+
 
 		if max_combo <= 1:
 			combo_display.visible = false
 		
 		combo_num_label.text = str(combo)
+		
+		if last_pickup_type:
+			combo_type_icon.visible = true
+			combo_type_icon.texture = last_pickup_type.icon
+		else:
+			combo_type_icon.visible = false
+
+var last_pickup_type: Supply
+
 
 var max_combo_bonus: int = 0
 var max_combo: int:
 	get:
 		return 1 + GameManager.current_save.check_unlock("Max Combo") + max_combo_bonus
 
-var last_pickup_type: Supply
 
 @onready var gfx: AnimatedSprite2D = %GFX as AnimatedSprite2D
 @onready var stun_timer: Timer = $"Stun Timer"
@@ -104,9 +114,13 @@ func _on_collection_hitbox_area_entered(area: Area2D) -> void:
 			combo = 1
 		last_pickup_type = pickup.supply_to_be_gained
 		
+		combo = combo #Refreshes the combo graphic again to reflect the new pickup type if its changed
+		
+		# Sounds!
 		if combo > 0:
 			pickup.pickup_sound.pitch_scale += 0.1 * combo
 		SoundManager.play_sound(pickup.pickup_sound)
+		
 		pickup.supply_to_be_gained.on_pickup(combo * pickup.count_to_be_gained)
 		pickup.queue_free()
 
