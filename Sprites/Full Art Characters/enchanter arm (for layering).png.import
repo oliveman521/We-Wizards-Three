@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xpv4l51vknn1"
-path="res://.godot/imported/Logo.png-f3e12a48c15f9d4233db466e561c77e7.ctex"
+uid="uid://bj2t0eu3jo3e7"
+path="res://.godot/imported/enchanter arm (for layering).png-9874c6761906e42b929ab5c431f4205a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Full Art/Logo.png"
-dest_files=["res://.godot/imported/Logo.png-f3e12a48c15f9d4233db466e561c77e7.ctex"]
+source_file="res://Sprites/Full Art Characters/enchanter arm (for layering).png"
+dest_files=["res://.godot/imported/enchanter arm (for layering).png-9874c6761906e42b929ab5c431f4205a.ctex"]
 
 [params]
 

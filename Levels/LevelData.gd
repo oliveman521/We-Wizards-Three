@@ -16,6 +16,7 @@ var enemy_feed_tape: Node2D:
 var storeroom_tile_map: Node2D:
 	get: return %"Storeroom Tile Map"
 
+
 var enemies_present: Array[Enemy]:
 	get:
 		var ep: Array[Enemy] = []

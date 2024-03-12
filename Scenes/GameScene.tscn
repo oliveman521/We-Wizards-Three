@@ -40,7 +40,7 @@ size = Vector2(26, 880)
 size = Vector2(19.5, 1101)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ckvp"]
-size = Vector2(1078, 1225)
+size = Vector2(1019, 1119)
 
 [sub_resource type="Curve" id="Curve_o25to"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.146939, 0.157212), 0.0, 0.0, 0, 0, Vector2(0.991837, 0), 0.0, 0.0, 0, 0]
@@ -111,7 +111,14 @@ offset_left = 1.0
 offset_top = 1.0
 offset_right = 938.0
 offset_bottom = 1106.0
-color = Color(0.356863, 0.266667, 0.207843, 0.298039)
+color = Color(0, 0.462745, 0.0666667, 0.298039)
+
+[node name="Warlock Move Area" type="ColorRect" parent="Warlock Game"]
+offset_left = 677.0
+offset_top = 16.0
+offset_right = 941.0
+offset_bottom = 1073.0
+color = Color(0.388235, 0.301961, 0.133333, 0.537255)
 
 [node name="Warlock" type="CharacterBody2D" parent="Warlock Game" groups=["Player"]]
 position = Vector2(901, 529)
@@ -170,7 +177,7 @@ shape = SubResource("RectangleShape2D_c5j76")
 unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Warlock Game/Play Boundry"]
-position = Vector2(434, 527.5)
+position = Vector2(463.5, 545.5)
 shape = SubResource("RectangleShape2D_2ckvp")
 debug_color = Color(0, 0.6, 0.701961, 0)
 

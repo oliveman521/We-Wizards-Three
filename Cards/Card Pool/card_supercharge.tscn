@@ -8,24 +8,24 @@
 [ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_OngoingAbility.gd" id="6_d47is"]
 [ext_resource type="PackedScene" uid="uid://cprfumcfqrt3i" path="res://Cards/Ongoing Abilities/ongoing_ability_double_damage.tscn" id="7_5cdf6"]
 
-[node name="Card" instance=ExtResource("1_cmu8b")]
+[node name="Supercharge" instance=ExtResource("1_cmu8b")]
 card_type = "Buff"
-card_name = "Super Charge"
+card_name = "Supercharge"
 
 [node name="Background Color" parent="Card Face" index="0"]
 color = Color(0.227451, 0.486275, 0.243137, 1)
 
-[node name="Essence x3" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_2hf8y")]
+[node name="Essence x2" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_2hf8y")]
 layout_mode = 2
 supply = ExtResource("3_trh0o")
-count = 3
+count = 2
 
 [node name="Fire Gem x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="1" instance=ExtResource("2_2hf8y")]
 layout_mode = 2
 supply = ExtResource("4_lyhoa")
 
 [node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
-text = "Super Charge"
+text = "Supercharge"
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0"]
 layout_mode = 2

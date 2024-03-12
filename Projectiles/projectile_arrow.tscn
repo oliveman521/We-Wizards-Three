@@ -8,7 +8,7 @@ radius = 3.2
 height = 19.2
 
 [node name="Projectile" instance=ExtResource("1_xnejf")]
-speed = 150.0
+speed = 200.0
 
 [node name="CollisionShape2D" parent="." index="0"]
 position = Vector2(10, 0)

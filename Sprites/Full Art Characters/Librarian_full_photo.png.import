@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3hauy1txd3ms"
-path="res://.godot/imported/Warlock_Full_Photo.png-6a3f3d79ecc44cdafaf82594b80efe2f.ctex"
+uid="uid://l0ln5ifa7tf"
+path="res://.godot/imported/Librarian_full_photo.png-2eb4e05b8e0a61d2844193a5caeca3ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Full Art/Warlock_Full_Photo.png"
-dest_files=["res://.godot/imported/Warlock_Full_Photo.png-6a3f3d79ecc44cdafaf82594b80efe2f.ctex"]
+source_file="res://Sprites/Full Art Characters/Librarian_full_photo.png"
+dest_files=["res://.godot/imported/Librarian_full_photo.png-2eb4e05b8e0a61d2844193a5caeca3ad.ctex"]
 
 [params]
 

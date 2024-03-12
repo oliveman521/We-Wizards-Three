@@ -2,7 +2,7 @@ extends Control
 class_name  OngoingAbility
 
 
-@export var passive_ability_tag: GameManager.Passive_Ability_Tag = GameManager.Passive_Ability_Tag.NONE
+@export var passive_ability_tag: String = "None"
 @export var tool_tip: String = "This is not yet implimented" #TODO impliment this
 var id: String
 

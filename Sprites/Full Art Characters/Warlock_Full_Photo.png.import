@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djhnxxx8ohfly"
-path="res://.godot/imported/Enchanter_Full_art.png-ae426d4af23d9f37c1a2019b91f02c4a.ctex"
+uid="uid://c3hauy1txd3ms"
+path="res://.godot/imported/Warlock_Full_Photo.png-2eb66e4e1d2f7d60d34e41b06e2e01ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Full Art/Enchanter_Full_art.png"
-dest_files=["res://.godot/imported/Enchanter_Full_art.png-ae426d4af23d9f37c1a2019b91f02c4a.ctex"]
+source_file="res://Sprites/Full Art Characters/Warlock_Full_Photo.png"
+dest_files=["res://.godot/imported/Warlock_Full_Photo.png-2eb66e4e1d2f7d60d34e41b06e2e01ac.ctex"]
 
 [params]
 

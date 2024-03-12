@@ -6,13 +6,6 @@ enum Damage_Type{
 	LIGHTNING
 }
 
-enum Passive_Ability_Tag{ #add new passives to the end for best results
-	NONE,
-	WARLOCK_FIRE_RATE,
-	MANA_DAMAGE,
-	DOUBLE_DAMAGE,
-}
-
 #TODO delete these
 const MANA: Ammo_Type = preload("uid://dfoqxs41hjlrc")
 const FIRE: Ammo_Type = preload("uid://bow64ukpfnomj")
@@ -69,6 +62,8 @@ func _ready() -> void:
 
 
 var in_progress_level: PackedScene
+var level_about_to_begin: LevelData
+
 
 
 func start_level(level_prefab: PackedScene) -> void:
@@ -77,7 +72,6 @@ func start_level(level_prefab: PackedScene) -> void:
 		return
 	
 	in_progress_level = level_prefab
-	
 	
 	#reset some values
 	lives = 3
@@ -155,7 +149,7 @@ func level_won() -> void:
 	
 	end_sequence = false
 
-func get_passive_ability_count(ability_tag: Passive_Ability_Tag ) -> float:
+func get_passive_ability_count(ability_tag: String) -> float:
 	var count: float = 0
 	for node: Node in card_manager.ongoing_abilities_region.get_children():
 		if node is OngoingAbility:

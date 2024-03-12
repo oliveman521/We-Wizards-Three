@@ -17,7 +17,9 @@ var warned_about_unplayable_cards: Array[PackedScene] = []
 
 func populate(level_prefab: PackedScene) -> void:
 	var level_data: LevelData = level_prefab.instantiate() as LevelData
+	GameManager.level_about_to_begin = level_data
 	
+
 	title_label.text = level_data.level_name
 	
 	for c: Node in supply_icons_container.get_children():
@@ -37,7 +39,6 @@ func populate(level_prefab: PackedScene) -> void:
 		icon_UI.texture = enemy.icon
 		enemy_icons_container.add_child(icon_UI)
 	
-	
 	start_button.button_down.connect(func()-> void:
 		if not deck_building_menu.is_open:
 			deck_building_menu.open_deck_builder_menu()
@@ -48,18 +49,18 @@ func populate(level_prefab: PackedScene) -> void:
 			GameManager.spawn_popup(get_global_mouse_position(), "Deck needs " + str(x) + " more cards!", Color.FIREBRICK)
 			return
 		
+
 		#Check if their deck has unplayable cards
 		for card_prefab: PackedScene in GameManager.current_save.cards_in_deck:
 			var card: Card = card_prefab.instantiate() as Card
 			get_tree().current_scene.add_child(card)
 			card.global_position = Vector2(-1000,-1000)
-			for supply: Supply in card.get_supply_costs():
-				if !level_data.supplies_present.has(supply):
-					if warned_about_unplayable_cards != GameManager.current_save.cards_in_deck: #if they haven't changed their deck
-						warned_about_unplayable_cards = GameManager.current_save.cards_in_deck
-						GameManager.spawn_popup(get_global_mouse_position(), "Warning: Your deck has costs that do not spawn in this level", Color.ORANGE,6)
-						start_button.text = "Play anyway?"
-						return
+			if card.can_card_be_played_on_level(level_data):
+				if warned_about_unplayable_cards != GameManager.current_save.cards_in_deck: #if they haven't changed their deck
+					warned_about_unplayable_cards = GameManager.current_save.cards_in_deck
+					GameManager.spawn_popup(get_global_mouse_position(), "Warning: Your deck has costs that do not spawn in this level", Color.ORANGE,6)
+					start_button.text = "Play anyway?"
+					return
 			card.queue_free()
 		
 		

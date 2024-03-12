@@ -4,8 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dvwcfb2twq8st" path="res://Sprites/mana bolt damage icon.png" id="2_5bwg1"]
 
 [node name="Ongoing Ability" instance=ExtResource("1_ai4sk")]
-passive_ability_tag = 2
-stack_behavior = "Add"
+passive_ability_tag = "Mana Damage"
 
 [node name="Icon" parent="Icon Margin" index="0"]
 texture = ExtResource("2_5bwg1")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://bpfb1n271ove4"]
+[gd_scene load_steps=59 format=3 uid="uid://bpfb1n271ove4"]
 
 [ext_resource type="Script" path="res://Scenes/Level Select Map/LevelSelectMenu.gd" id="1_xcx1n"]
 [ext_resource type="Script" path="res://Scenes/Level Select Map/MapManager.gd" id="2_6iwrn"]
@@ -12,9 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://830fliunjvdu" path="res://Sprites/Comic Panels/door slam.png" id="8_7wuin"]
 [ext_resource type="Texture2D" uid="uid://cxme5dqwjo81m" path="res://Sprites/Comic Panels/Telling the gang.png" id="9_dk514"]
 [ext_resource type="Theme" uid="uid://btsp3ifn1m5n3" path="res://Scenes/Menus/Menus.tres" id="10_2ecuw"]
+[ext_resource type="Texture2D" uid="uid://c3hauy1txd3ms" path="res://Sprites/Full Art Characters/Warlock_Full_Photo.png" id="11_j1nec"]
 [ext_resource type="Script" path="res://Scenes/Menus/deck_builder_menu.gd" id="11_t8gd0"]
 [ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="12_fdwhl"]
 [ext_resource type="PackedScene" uid="uid://nr4hlan2e2hj" path="res://Levels/Level 1 - It Begins.tscn" id="12_k3ykg"]
+[ext_resource type="Texture2D" uid="uid://l0ln5ifa7tf" path="res://Sprites/Full Art Characters/Librarian_full_photo.png" id="12_smoli"]
+[ext_resource type="Texture2D" uid="uid://djhnxxx8ohfly" path="res://Sprites/Full Art Characters/Enchanter_Full_art.png" id="13_3raak"]
 [ext_resource type="PackedScene" uid="uid://b585ymf1lip61" path="res://Scenes/Level Select Map/Map Nodes/MapNode_Tutorial.tscn" id="13_7kiee"]
 [ext_resource type="PackedScene" uid="uid://rfnlpy50ihlp" path="res://Cards/Card Pool/card_printing_press.tscn" id="14_3vtqq"]
 [ext_resource type="PackedScene" uid="uid://cde83i8rqdtlj" path="res://Scenes/Level Select Map/Map Nodes/MapNode_New_Ability.tscn" id="15_oso2k"]
@@ -89,7 +92,7 @@ button_text = "We will do what we must..."
 [sub_resource type="Resource" id="Resource_ptob5"]
 script = ExtResource("5_2m5ee")
 title = "How To Play"
-text1 = "We Wizard's Three is an ansymetric co-op game for 3 players where you defend your tower from the infernal KRS (King's Revenue Service)"
+text1 = "We Wizard's Three is an Asymetric co-op game for 3 players where you defend your tower from the infernal KRS (King's Revenue Service)"
 text2 = ""
 button_text = "Cool!"
 
@@ -98,6 +101,7 @@ script = ExtResource("5_2m5ee")
 title = "The Warlock"
 text1 = "The First player is the Warlock.
 They will fight off waves of incoming KRS agents."
+image = ExtResource("11_j1nec")
 text2 = "The Warlock uses WASD to move and
 F, G, and H to fire"
 button_text = "Right on"
@@ -107,6 +111,7 @@ script = ExtResource("5_2m5ee")
 title = "The Librarian"
 text1 = "The Second player is The Librarian.
 They run around the storeroom to collect resources to supply the other players."
+image = ExtResource("12_smoli")
 text2 = "The Librarian uses the arrow keys to move"
 button_text = "Sounds good!"
 
@@ -115,6 +120,7 @@ script = ExtResource("5_2m5ee")
 title = "The Enchanter"
 text1 = "The Third player is the Enchanter.
 They will cast spell cards from a deck to help aid their teammates."
+image = ExtResource("13_3raak")
 text2 = "The Enchanter uses the mouse to play spell cards. 
 Left click to cast the spell, Right click to discard it"
 button_text = "You got it"

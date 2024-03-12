@@ -5,7 +5,7 @@
 [ext_resource type="LabelSettings" uid="uid://cpmxmv1dxwx7s" path="res://UI/Fonts/medium_text.tres" id="3_h54a3"]
 
 [node name="Ongoing Ability" instance=ExtResource("1_eea0j")]
-passive_ability_tag = 3
+passive_ability_tag = "Double Damage"
 stack_behavior = "Reset Timer"
 timed = true
 time = 10.0

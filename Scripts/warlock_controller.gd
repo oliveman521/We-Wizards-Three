@@ -9,6 +9,9 @@ var base_speed: float = 250
 @onready var projectile_container: Node2D = %"Projectile Container"
 @onready var stun_timer: Timer = $"Stun Timer" as Timer
 
+
+
+
 var is_stunned: bool: 
 	get: return not stun_timer.is_stopped()
 
@@ -25,20 +28,22 @@ func _process(_delta: float) -> void:
 	var x_min: float = 0
 	var x_max: float = get_viewport_rect().size.y
 
-	var input_dir: float = -Input.get_axis("ship_left", "ship_right")
-	if input_dir != 0:
-		velocity.y = input_dir * move_speed
+	var input_dir: Vector2 = Input.get_vector("warlock_left","warlock_right","warlock_up","warlock_down")
+	if input_dir != Vector2.ZERO:
+		velocity = input_dir * move_speed
 	else:
-		velocity.y = move_toward(velocity.y, 0, base_speed) #smooth slowdown
+		velocity = Vector2.ZERO
 	
-	# Check for if we are exceed our screen edges
-	if position.y > x_max:
-		position.y = x_max
-		velocity.y = 0
-		
-	if position.y < x_min:
-		position.y = x_min
-		velocity.y = 0
+	
+	var warlock_move_area: ColorRect = $"../Warlock Move Area"
+	var collision_shape_2d: CollisionShape2D = $CollisionShape2D
+	var move_area_rect: Rect2 = warlock_move_area.get_global_rect()
+	
+	#TODO this creates a bit of jitter when ramming the walls
+	var warlock_rect: Rect2 = collision_shape_2d.shape.get_rect()
+	position.y = clamp(position.y, move_area_rect.position.y + warlock_rect.size.y/2, move_area_rect.end.y - warlock_rect.size.y/2)
+	position.x = clamp(position.x, move_area_rect.position.x + warlock_rect.size.x/2, move_area_rect.end.x - warlock_rect.size.x/2)
+
 	
 	#Bullets
 	if Input.is_action_pressed("ship_shoot1"):
@@ -60,7 +65,7 @@ func shoot(ammo_type: Ammo_Type) -> void:
 		new_projectile.set_global_position(projectile_spawn_point.global_position)
 		
 		var cool_down:float = ammo_type.fire_cooldown
-		var fire_rate_multiplier: float = GameManager.get_passive_ability_count(GameManager.Passive_Ability_Tag.WARLOCK_FIRE_RATE)
+		var fire_rate_multiplier: float = GameManager.get_passive_ability_count("Warlock Fire Rate")
 		fire_rate_multiplier = clamp(fire_rate_multiplier, 1, 10) #TODO I don't love this solution
 		cool_down /= fire_rate_multiplier
 		

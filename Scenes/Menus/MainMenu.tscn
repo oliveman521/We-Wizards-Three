@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://dpdlppetxwu3m"]
 
 [ext_resource type="Script" path="res://Scenes/Menus/basic_menu_behaviors.gd" id="1_6kucs"]
-[ext_resource type="Texture2D" uid="uid://xpv4l51vknn1" path="res://Sprites/Full Art/Logo.png" id="2_0stpq"]
-[ext_resource type="Texture2D" uid="uid://djhnxxx8ohfly" path="res://Sprites/Full Art/Enchanter_Full_art.png" id="2_3sqmn"]
+[ext_resource type="Texture2D" uid="uid://xpv4l51vknn1" path="res://Sprites/Full Art Characters/Logo.png" id="2_5u8bt"]
 [ext_resource type="Script" path="res://Scenes/Menus/slide_in_and_bob.gd" id="3_rnfgn"]
-[ext_resource type="Texture2D" uid="uid://l0ln5ifa7tf" path="res://Sprites/Full Art/Librarian_full_photo.png" id="4_1c3gq"]
-[ext_resource type="Texture2D" uid="uid://bj2t0eu3jo3e7" path="res://Sprites/Full Art/enchanter arm (for layering).png" id="4_vdr7c"]
-[ext_resource type="Texture2D" uid="uid://c3hauy1txd3ms" path="res://Sprites/Full Art/Warlock_Full_Photo.png" id="5_ti0fm"]
+[ext_resource type="Texture2D" uid="uid://djhnxxx8ohfly" path="res://Sprites/Full Art Characters/Enchanter_Full_art.png" id="4_repax"]
+[ext_resource type="Texture2D" uid="uid://bj2t0eu3jo3e7" path="res://Sprites/Full Art Characters/enchanter arm (for layering).png" id="5_ic7ft"]
+[ext_resource type="Texture2D" uid="uid://l0ln5ifa7tf" path="res://Sprites/Full Art Characters/Librarian_full_photo.png" id="6_dshrp"]
+[ext_resource type="Texture2D" uid="uid://c3hauy1txd3ms" path="res://Sprites/Full Art Characters/Warlock_Full_Photo.png" id="7_fj31c"]
 [ext_resource type="LabelSettings" uid="uid://cpmxmv1dxwx7s" path="res://UI/Fonts/medium_text.tres" id="8_nyogq"]
 
 [node name="MainMenu" type="Control"]
@@ -20,13 +20,13 @@ script = ExtResource("1_6kucs")
 
 [node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(971, 569)
-texture = ExtResource("2_0stpq")
+texture = ExtResource("2_5u8bt")
 script = ExtResource("3_rnfgn")
 bob_dist = 10
 
 [node name="EnchanterFullArt" type="Sprite2D" parent="."]
 position = Vector2(963, 520)
-texture = ExtResource("2_3sqmn")
+texture = ExtResource("4_repax")
 script = ExtResource("3_rnfgn")
 direction = Vector2(0, 1)
 enter_delay = 0.2
@@ -34,11 +34,11 @@ enter_delay = 0.2
 [node name="EnchanterArm(forLayering)" type="Sprite2D" parent="EnchanterFullArt"]
 z_index = 1
 position = Vector2(0, 2)
-texture = ExtResource("4_vdr7c")
+texture = ExtResource("5_ic7ft")
 
 [node name="LibrarianFullPhoto" type="Sprite2D" parent="."]
 position = Vector2(1421, 602)
-texture = ExtResource("4_1c3gq")
+texture = ExtResource("6_dshrp")
 script = ExtResource("3_rnfgn")
 direction = Vector2(-1, 0)
 enter_delay = 0.15
@@ -46,7 +46,7 @@ bob_dist = -20
 
 [node name="WarlockFullPhoto" type="Sprite2D" parent="."]
 position = Vector2(539, 636)
-texture = ExtResource("5_ti0fm")
+texture = ExtResource("7_fj31c")
 script = ExtResource("3_rnfgn")
 direction = Vector2(1, 0)
 enter_delay = 0.1

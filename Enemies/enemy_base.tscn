@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxstlyven322l"]
+[gd_scene load_steps=5 format=3 uid="uid://dxstlyven322l"]
 
 [ext_resource type="Script" path="res://Enemies/Enemy.gd" id="1_kdqp5"]
 [ext_resource type="Texture2D" uid="uid://dmfnvhpd45csc" path="res://Enemies/Enemy Sprites/Knight.png" id="2_2irau"]
+[ext_resource type="AudioStream" uid="uid://dqosky0tpk8r8" path="res://Life Lost Sound.wav" id="3_vofas"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ox81m"]
 size = Vector2(54, 78)
@@ -33,5 +34,9 @@ modulate = Color(1, 1, 1, 0.0392157)
 position = Vector2(-8, -8)
 scale = Vector2(3.7, 5.1)
 
+[node name="Damaged Base Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_vofas")
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_enter"]

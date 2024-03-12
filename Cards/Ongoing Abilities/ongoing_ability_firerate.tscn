@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cqhvrcljhh74a" path="res://Sprites/fire_rate_icon.png" id="2_vp1ef"]
 
 [node name="Ongoing Ability" instance=ExtResource("1_jlquv")]
-passive_ability_tag = 1
+passive_ability_tag = "Warlock Fire Rate"
 stack_behavior = "Multiply"
 
 [node name="Icon" parent="Icon Margin" index="0"]

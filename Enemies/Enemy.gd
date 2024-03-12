@@ -13,6 +13,10 @@ class_name Enemy
 @export var move_speed: float= 50
 @export var health: float = 5
 
+@export var shovable: bool = true
+var is_being_shoved: bool
+
+
 @export var spawn_on_death: Array[PackedScene]
 
 @export_group("Damage Types")
@@ -28,7 +32,9 @@ class_name Enemy
 
 var active: bool = false
 
+
 const DAMAGE_COLOR = Color(1,0,0)
+
 
 var icon: Texture:
 	get:
@@ -42,9 +48,10 @@ var icon: Texture:
 
 func _process(delta: float) -> void:
 	if Engine.is_editor_hint(): return
-	
-	if active:
-		move(delta)
+	if !active: return
+	if is_being_shoved: return
+
+	move(delta)
 
 func _ready() -> void:
 	name = "Enemy - " + enemy_name
@@ -64,8 +71,8 @@ func shoot_projectile() -> void:
 func take_damage(damage_type: GameManager.Damage_Type, amnt: float) -> void:
 	
 	if damage_type == GameManager.Damage_Type.MANA:
-		amnt += GameManager.get_passive_ability_count(GameManager.Passive_Ability_Tag.MANA_DAMAGE)
-	for i in range (GameManager.get_passive_ability_count(GameManager.Passive_Ability_Tag.DOUBLE_DAMAGE)):
+		amnt += GameManager.get_passive_ability_count("Mana Damage")
+	for i in range (GameManager.get_passive_ability_count("Double Damage")):
 		amnt *= 2
 	
 	if immunities.has(damage_type):
@@ -95,9 +102,12 @@ func die() -> void:
 		add_sibling(new_node)
 	queue_free()
 
+
 func _on_area_entered(area: Area2D) -> void:
 	if area.name == "Tower Hit Zone":
 		GameManager.lives -= 1
+		GameManager.spawn_popup(global_position, "LIFE LOST!", Color.RED)
+		SoundManager.play_sound($"Damaged Base Sound")
 		queue_free()
 
 func _on_screen_enter() -> void:
@@ -111,3 +121,22 @@ func activate() -> void:
 		fire_rate_timer.wait_time = fire_interval
 		fire_rate_timer.start()
 		fire_rate_timer.timeout.connect(shoot_projectile)
+
+
+func _on_body_entered(body: Node2D) -> void:
+	if !shovable: return
+	if is_being_shoved: return
+	
+	#TODO this should continue as long as we're still overlapping
+	if body is WarlockCharacter:
+		var shove_dist: float = 50
+		var shove_time: float = 0.3
+		
+		is_being_shoved = true
+		var tween: Tween = get_tree().create_tween()
+		tween.set_ease(Tween.EASE_OUT)
+		tween.set_trans(Tween.TRANS_SINE)
+		tween.tween_property(self,"position", position - Vector2(shove_dist,0), shove_time)
+		await tween.finished
+		
+		is_being_shoved = false
