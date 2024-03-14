@@ -29,6 +29,9 @@
 [ext_resource type="Script" path="res://UI/Health_UI.gd" id="25_kiqjr"]
 [ext_resource type="PackedScene" uid="uid://2jby5kudglct" path="res://UI/heart_UI.tscn" id="26_fl5xy"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ckvp"]
+size = Vector2(1019, 1119)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ek7uc"]
 radius = 13.0
 height = 68.0
@@ -38,9 +41,6 @@ size = Vector2(26, 880)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c5j76"]
 size = Vector2(19.5, 1101)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ckvp"]
-size = Vector2(1019, 1119)
 
 [sub_resource type="Curve" id="Curve_o25to"]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.146939, 0.157212), 0.0, 0.0, 0, 0, Vector2(0.991837, 0), 0.0, 0.0, 0, 0]
@@ -106,6 +106,14 @@ position = Vector2(0, -5)
 
 [node name="Warlock Game" type="Node2D" parent="."]
 
+[node name="Play Boundry" type="Area2D" parent="Warlock Game"]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Warlock Game/Play Boundry"]
+position = Vector2(463.5, 545.5)
+shape = SubResource("RectangleShape2D_2ckvp")
+debug_color = Color(0, 0.6, 0.701961, 0)
+
 [node name="BackGround" type="ColorRect" parent="Warlock Game"]
 offset_left = 1.0
 offset_top = 1.0
@@ -152,16 +160,16 @@ shape = SubResource("RectangleShape2D_odmoc")
 [node name="Test Feed Tape" type="Node2D" parent="Warlock Game/Enemy Manager"]
 script = ExtResource("4_l8m8i")
 
-[node name="Peasent" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_fixi5")]
+[node name="Enemy - Peasent" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_fixi5")]
 position = Vector2(-377, 494)
 
-[node name="Peasent2" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_fixi5")]
+[node name="Enemy - Peasent2" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_fixi5")]
 position = Vector2(-637, 604)
 
-[node name="Peasent3" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_fixi5")]
+[node name="Enemy - Peasent3" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_fixi5")]
 position = Vector2(-751, 305)
 
-[node name="Knight" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("6_cjgit")]
+[node name="Enemy - Knight" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("6_cjgit")]
 position = Vector2(-453, 292)
 
 [node name="Projectile Container" type="Node2D" parent="Warlock Game"]
@@ -172,14 +180,6 @@ unique_name_in_owner = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Warlock Game/Tower Hit Zone"]
 position = Vector2(966.25, 539)
 shape = SubResource("RectangleShape2D_c5j76")
-
-[node name="Play Boundry" type="Area2D" parent="Warlock Game"]
-unique_name_in_owner = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Warlock Game/Play Boundry"]
-position = Vector2(463.5, 545.5)
-shape = SubResource("RectangleShape2D_2ckvp")
-debug_color = Color(0, 0.6, 0.701961, 0)
 
 [node name="Storeroom Manager" type="Node2D" parent="."]
 unique_name_in_owner = true

@@ -69,6 +69,7 @@ func shoot_projectile() -> void:
 	fire_rate_timer.wait_time = fire_interval * randf_range(0.8,1.2)
 
 func take_damage(damage_type: GameManager.Damage_Type, amnt: float) -> void:
+	if !active: return
 	
 	if damage_type == GameManager.Damage_Type.MANA:
 		amnt += GameManager.get_passive_ability_count("Mana Damage")

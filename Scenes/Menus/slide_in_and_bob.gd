@@ -9,8 +9,8 @@ extends Node
 @export var enter_time: float = 0.5
 var distance: float = 1920
 var starting_pos: Vector2
-@export var bob_dist = 20
-var bob_time = 3:
+@export var bob_dist: float = 20
+var bob_time: float = 3:
 	get:
 		return bob_time * randf_range(0.7,1.3)
 

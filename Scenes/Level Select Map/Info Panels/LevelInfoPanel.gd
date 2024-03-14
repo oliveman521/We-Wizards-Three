@@ -55,7 +55,7 @@ func populate(level_prefab: PackedScene) -> void:
 			var card: Card = card_prefab.instantiate() as Card
 			get_tree().current_scene.add_child(card)
 			card.global_position = Vector2(-1000,-1000)
-			if card.can_card_be_played_on_level(level_data):
+			if !card.can_card_be_played_on_level(level_data):
 				if warned_about_unplayable_cards != GameManager.current_save.cards_in_deck: #if they haven't changed their deck
 					warned_about_unplayable_cards = GameManager.current_save.cards_in_deck
 					GameManager.spawn_popup(get_global_mouse_position(), "Warning: Your deck has costs that do not spawn in this level", Color.ORANGE,6)

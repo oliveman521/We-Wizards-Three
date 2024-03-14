@@ -6,9 +6,9 @@
 [ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="4_ptmc0"]
 [ext_resource type="Resource" uid="uid://bow64ukpfnomj" path="res://Supplies/Fire_Scroll.tres" id="5_jp836"]
 
-[node name="Card - Fire Ball Scroll" instance=ExtResource("1_u53ie")]
+[node name="Fire Ball Recipe" instance=ExtResource("1_u53ie")]
 card_type = "Crafting"
-card_name = "Fire Ball Scroll"
+card_name = "Fire Ball Recipe"
 
 [node name="Background Color" parent="Card Face" index="0"]
 color = Color(0.780392, 0.588235, 0.313726, 1)
@@ -23,7 +23,7 @@ layout_mode = 2
 supply = ExtResource("4_ptmc0")
 
 [node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
-text = "Fire Ball Scroll"
+text = "Fire Ball Recipe"
 
 [node name="Fire Scroll x2" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("2_5wrxn")]
 layout_mode = 2

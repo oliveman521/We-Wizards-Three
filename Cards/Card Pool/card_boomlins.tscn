@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://d1lawaxsvcjjm"]
+
+[ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_nce1h"]
+[ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_afwdd"]
+[ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="3_pqf75"]
+[ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="4_q2wt1"]
+[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_Draw.gd" id="5_i1oqr"]
+[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_SpawnEnemies.gd" id="6_svfcy"]
+[ext_resource type="PackedScene" uid="uid://fcfai4qbfgtb" path="res://Enemies/enemy_boomlin.tscn" id="7_3mkk0"]
+
+[node name="Boomlins" instance=ExtResource("1_nce1h")]
+scale = Vector2(1, 0.990783)
+card_type = "Fire Damage"
+card_name = "Boomlins"
+
+[node name="Background Color" parent="Card Face" index="0"]
+color = Color(0.486275, 0.105882, 0.0352941, 1)
+
+[node name="Fire Gem x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_afwdd")]
+layout_mode = 2
+supply = ExtResource("3_pqf75")
+
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
+text = "Boomlins"
+
+[node name="Label - Spawn" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0"]
+layout_mode = 2
+text = "Spawn 2 Boomlins."
+label_settings = ExtResource("4_q2wt1")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label - Draw a card" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1"]
+modulate = Color(0.282353, 0.611765, 1, 1)
+layout_mode = 2
+text = "Draw a card."
+label_settings = ExtResource("4_q2wt1")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Draw a card" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2"]
+script = ExtResource("5_i1oqr")
+
+[node name="CardEffect_SpawnEnemies" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="3"]
+script = ExtResource("6_svfcy")
+enemy_prefab = ExtResource("7_3mkk0")
+count = 2

@@ -6,7 +6,7 @@
 [ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="5_0taev"]
 [ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_Draw.gd" id="5_knf5d"]
 
-[node name="Card" instance=ExtResource("1_rdb2o")]
+[node name="Well Read" instance=ExtResource("1_rdb2o")]
 card_type = "Draw"
 card_name = "Well Read"
 

@@ -1,0 +1,96 @@
+[gd_scene load_steps=6 format=3 uid="uid://b3sgly2pkxavh"]
+
+[ext_resource type="PackedScene" uid="uid://ddavd71iwja5g" path="res://Levels/template_level.tscn" id="1_2k2og"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="2_di45i"]
+[ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="3_gaqf3"]
+[ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Tablet.tres" id="4_0jgth"]
+[ext_resource type="PackedScene" uid="uid://fcfai4qbfgtb" path="res://Enemies/enemy_boomlin.tscn" id="5_qcemw"]
+
+[node name="Bonus Level - Boomlins" instance=ExtResource("1_2k2og")]
+level_name = "Bonus Level - Boomlins"
+supplies_present = Array[Resource("res://Supplies/Supply.gd")]([ExtResource("2_di45i"), ExtResource("3_gaqf3"), ExtResource("4_0jgth")])
+supplies_spawned_at_once = 9
+
+[node name="Boomlin" parent="Enemy Feed Tape" index="0" instance=ExtResource("5_qcemw")]
+position = Vector2(-337, 379)
+
+[node name="Boomlin2" parent="Enemy Feed Tape" index="1" instance=ExtResource("5_qcemw")]
+position = Vector2(-897, 554)
+
+[node name="Boomlin3" parent="Enemy Feed Tape" index="2" instance=ExtResource("5_qcemw")]
+position = Vector2(-1200, 319)
+
+[node name="Boomlin4" parent="Enemy Feed Tape" index="3" instance=ExtResource("5_qcemw")]
+position = Vector2(-1321, 685)
+
+[node name="Boomlin5" parent="Enemy Feed Tape" index="4" instance=ExtResource("5_qcemw")]
+position = Vector2(-1385, 609)
+
+[node name="Boomlin6" parent="Enemy Feed Tape" index="5" instance=ExtResource("5_qcemw")]
+position = Vector2(-1419, 737)
+
+[node name="Boomlin7" parent="Enemy Feed Tape" index="6" instance=ExtResource("5_qcemw")]
+position = Vector2(-1729, 299)
+
+[node name="Boomlin8" parent="Enemy Feed Tape" index="7" instance=ExtResource("5_qcemw")]
+position = Vector2(-1777, 379)
+
+[node name="Boomlin9" parent="Enemy Feed Tape" index="8" instance=ExtResource("5_qcemw")]
+position = Vector2(-1830, 470)
+
+[node name="Boomlin10" parent="Enemy Feed Tape" index="9" instance=ExtResource("5_qcemw")]
+position = Vector2(-1883, 568)
+
+[node name="Boomlin11" parent="Enemy Feed Tape" index="10" instance=ExtResource("5_qcemw")]
+position = Vector2(-1940, 662)
+
+[node name="Boomlin12" parent="Enemy Feed Tape" index="11" instance=ExtResource("5_qcemw")]
+position = Vector2(-2012, 790)
+
+[node name="Boomlin13" parent="Enemy Feed Tape" index="12" instance=ExtResource("5_qcemw")]
+position = Vector2(-2084, 714)
+
+[node name="Boomlin14" parent="Enemy Feed Tape" index="13" instance=ExtResource("5_qcemw")]
+position = Vector2(-2133, 597)
+
+[node name="Boomlin15" parent="Enemy Feed Tape" index="14" instance=ExtResource("5_qcemw")]
+position = Vector2(-2171, 499)
+
+[node name="Boomlin16" parent="Enemy Feed Tape" index="15" instance=ExtResource("5_qcemw")]
+position = Vector2(-2209, 401)
+
+[node name="Boomlin17" parent="Enemy Feed Tape" index="16" instance=ExtResource("5_qcemw")]
+position = Vector2(-2247, 288)
+
+[node name="Boomlin18" parent="Enemy Feed Tape" index="17" instance=ExtResource("5_qcemw")]
+position = Vector2(-2285, 194)
+
+[node name="Boomlin19" parent="Enemy Feed Tape" index="18" instance=ExtResource("5_qcemw")]
+position = Vector2(-2368, 764)
+
+[node name="Boomlin20" parent="Enemy Feed Tape" index="19" instance=ExtResource("5_qcemw")]
+position = Vector2(-2458, 765)
+
+[node name="Boomlin21" parent="Enemy Feed Tape" index="20" instance=ExtResource("5_qcemw")]
+position = Vector2(-2405, 678)
+
+[node name="Boomlin22" parent="Enemy Feed Tape" index="21" instance=ExtResource("5_qcemw")]
+position = Vector2(-2405, 678)
+
+[node name="Boomlin23" parent="Enemy Feed Tape" index="22" instance=ExtResource("5_qcemw")]
+position = Vector2(-1058, 797)
+
+[node name="Boomlin24" parent="Enemy Feed Tape" index="23" instance=ExtResource("5_qcemw")]
+position = Vector2(-2594, 372)
+
+[node name="Boomlin27" parent="Enemy Feed Tape" index="24" instance=ExtResource("5_qcemw")]
+position = Vector2(-2870, 761)
+
+[node name="Boomlin28" parent="Enemy Feed Tape" index="25" instance=ExtResource("5_qcemw")]
+position = Vector2(-3172, 500)
+
+[node name="Boomlin25" parent="Enemy Feed Tape" index="26" instance=ExtResource("5_qcemw")]
+position = Vector2(-2922, 240)
+
+[node name="Boomlin26" parent="Enemy Feed Tape" index="27" instance=ExtResource("5_qcemw")]
+position = Vector2(-748, 281)

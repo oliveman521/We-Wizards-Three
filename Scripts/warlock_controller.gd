@@ -25,8 +25,6 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if is_stunned: return
-	var x_min: float = 0
-	var x_max: float = get_viewport_rect().size.y
 
 	var input_dir: Vector2 = Input.get_vector("warlock_left","warlock_right","warlock_up","warlock_down")
 	if input_dir != Vector2.ZERO:

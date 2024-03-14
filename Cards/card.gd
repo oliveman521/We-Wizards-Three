@@ -68,12 +68,7 @@ var supplies_interacted_with: Array[Supply]:
 var card_manager: CardManager:
 	get: return GameManager.card_manager as CardManager
 
-var deck_building_menu: DeckBuildingMenu:
-	get: return GameManager.dec
 
-@onready var multiples_indicator: Control = %"Multiples Indicator"
-@onready var multiples_number: Label = %"Multiples Number"
-var in_deck: bool = false;
 signal card_pressed
 
 var exhausts_on_play: bool:
@@ -108,7 +103,7 @@ func _ready() -> void:
 	background_color_UI.color = card_type_color_dict[card_type]
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if card_mode == HAND_MODE:
 		if check_costs():
 			highlight(Color.FOREST_GREEN)
@@ -175,13 +170,18 @@ func enter_hand_mode() -> void:
 func enter_preview_mode() -> void:
 	card_mode = PREVIEW_MODE
 	button.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	print(num_in_collection)
+
 	if num_in_collection == 0:
 		highlight(Color.YELLOW)
 
-func enter_deck_building_mode(count: int, card_in_deck: bool) -> void:
-	self.in_deck = card_in_deck
+@onready var multiples_indicator: HBoxContainer = %"Multiples Indicator"
+
+func enter_deck_building_mode(count: int) -> void:
 	card_mode = DECK_BUILDING_MODE
+	button.mouse_filter = Control.MOUSE_FILTER_STOP
+	
+	var multiples_number: Label = %"Multiples Number" as Label
+	
 	if count > 1:
 		multiples_indicator.visible = true
 		multiples_number.text = str(count)
@@ -197,11 +197,6 @@ func _on_button_gui_input(event: InputEvent) -> void:
 	card_pressed.emit()
 	
 	if card_mode == DECK_BUILDING_MODE && event.button_index == MOUSE_BUTTON_LEFT:
-		SoundManager.play_sound(discard_sound)		
-		if in_deck:
-			slide_card_away(Vector2.LEFT, Color(0,0,1,0))
-		else:
-			slide_card_away(Vector2.RIGHT, Color(0,0,1,0))
 		return
 	
 	if event.button_index == MOUSE_BUTTON_LEFT:
@@ -221,16 +216,21 @@ func _on_button_gui_input(event: InputEvent) -> void:
 const SLIDE_DISTANCE: = 100
 const MOVE_TIME: = .25
 
-func move_center_to(target_pos: Vector2) -> void:
+func move_center_to(target_pos: Vector2, move_time: float = MOVE_TIME) -> void:
 	var tween:= get_tree().create_tween()
-	tween.tween_property(self, "center_position", target_pos, MOVE_TIME).set_trans(Tween.TRANS_SINE)
+	tween.tween_property(self, "center_position", target_pos, move_time).set_trans(Tween.TRANS_SINE)
 	await tween.finished
 
-func slide_card_away(dir: Vector2, color: Color = Color(0,0,0,0)) -> void:
+func slide_card_away(dir: Vector2, color: Color = Color(0,0,0,0), move_time: float = MOVE_TIME) -> void:
+	
+	if multiples_indicator.visible: #if we have a multiples indicator, leave it behind
+		multiples_indicator.reparent(get_tree().root)
+		tree_exiting.connect(multiples_indicator.queue_free)
+	
 	button.mouse_filter = Control.MOUSE_FILTER_IGNORE #make sure we can't detect more inputs
 	var target_pos: Vector2 = center_position + dir * SLIDE_DISTANCE
 	var tween:= get_tree().create_tween()
-	tween.tween_property(self, "modulate", color, MOVE_TIME).set_trans(Tween.TRANS_SINE)
-	await move_center_to(target_pos)
+	tween.tween_property(self, "modulate", color, move_time).set_trans(Tween.TRANS_SINE)
+	await move_center_to(target_pos, move_time)
 	button.mouse_filter = Control.MOUSE_FILTER_PASS #TODO This should probably be changed. RN this is setting the mouse filter back so that if the card is to be added to the deck it'll still be clickable, but I think the whole deck data management needs to be reworked
 

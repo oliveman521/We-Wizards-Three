@@ -68,7 +68,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0.145098, 0.141176, 0.152941, 0.427451)
 
-[node name="MarginContainer" type="MarginContainer" parent="Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container"]
+[node name="Card Pool Margin" type="MarginContainer" parent="Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -77,7 +77,7 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="Card Pool Container" type="HFlowContainer" parent="Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer"]
+[node name="Card Pool Container" type="HFlowContainer" parent="Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/Card Pool Margin"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -85,17 +85,16 @@ size_flags_vertical = 3
 theme_override_constants/h_separation = 10
 theme_override_constants/v_separation = 10
 
-[node name="Fire Ball Recipe" parent="Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("1_j3icq")]
+[node name="Fire Ball Recipe" parent="Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/Card Pool Margin/Card Pool Container" instance=ExtResource("1_j3icq")]
 layout_mode = 2
-card_name = "Fire Ball Recipe"
 
-[node name="Fire Ball Recipe2" parent="Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("1_j3icq")]
+[node name="Fire Ball Recipe2" parent="Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/Card Pool Margin/Card Pool Container" instance=ExtResource("1_j3icq")]
 layout_mode = 2
-card_name = "Fire Ball Recipe"
 
-[node name="Fire Ball Recipe3" parent="Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("1_j3icq")]
+[node name="Fire Ball Recipe3" parent="Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/Card Pool Margin/Card Pool Container" instance=ExtResource("1_j3icq")]
 layout_mode = 2
-card_name = "Fire Ball Recipe"
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Screen Margin/HBoxContainer"]
 layout_mode = 2
@@ -144,10 +143,8 @@ theme_override_constants/v_separation = 10
 
 [node name="Fire Ball Recipe" parent="Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("1_j3icq")]
 layout_mode = 2
-card_name = "Fire Ball Recipe"
 
 [node name="Fire Ball Recipe2" parent="Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("1_j3icq")]
 layout_mode = 2
-card_name = "Fire Ball Recipe"
 
 [connection signal="button_down" from="Screen Margin/Back Button" to="." method="confirm_deck"]
