@@ -435,7 +435,7 @@ Press O after level starts
 to auto-complete level"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(223, 297)
+position = Vector2(221, 299)
 enabled = false
 zoom = Vector2(1.75, 1.75)
 script = ExtResource("49_fpw7x")
@@ -614,6 +614,5 @@ theme = ExtResource("10_2ecuw")
 theme_override_font_sizes/font_size = 28
 text = " X "
 
-[connection signal="gui_input" from="Map Manager/Map Bounds" to="Camera2D" method="_on_map_bounds_gui_input"]
 [connection signal="button_down" from="Overlay Canvas/Edit Deck Button" to="Overlay Canvas/Deck Building Menu" method="open_deck_builder_menu"]
 [connection signal="button_down" from="Overlay Canvas/Deck Building Menu/Screen Margin/Back Button" to="Overlay Canvas/Deck Building Menu" method="close_deck_builder_menu"]
