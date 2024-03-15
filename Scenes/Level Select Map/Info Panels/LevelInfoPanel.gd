@@ -34,7 +34,7 @@ func populate(level_prefab: PackedScene) -> void:
 	for c: Node in enemy_icons_container.get_children():
 		c.queue_free()
 	
-	for enemy: Enemy in level_data.enemies_present:
+	for enemy: Enemy in level_data.unique_enemies_present:
 		var icon_UI: Node = ICON_UI_PREFAB.instantiate() as TextureRect
 		icon_UI.texture = enemy.icon
 		enemy_icons_container.add_child(icon_UI)

@@ -9,13 +9,13 @@
 [ext_resource type="PackedScene" uid="uid://c6afi4js5waro" path="res://Enemies/enemy_jester.tscn" id="6_em23s"]
 [ext_resource type="PackedScene" uid="uid://dbc3v7h72rrl8" path="res://Enemies/enemy_knight.tscn" id="7_g1gqj"]
 
-[node name="level Bonus 1" instance=ExtResource("1_krl6u")]
-level_name = "level Bonus 1"
+[node name="Bonus Level - No Draw" instance=ExtResource("1_krl6u")]
+level_name = "Bonus Level - No Draw"
 supplies_present = Array[Resource("res://Supplies/Supply.gd")]([ExtResource("2_v8ukj"), ExtResource("3_rp4hm")])
 supplies_spawned_at_once = 10
 
-[node name="Enemy - Peasent" parent="Enemy Feed Tape" index="0" instance=ExtResource("2_mjl4r")]
-position = Vector2(-354, 291)
+[node name="Peasent" parent="Enemy Feed Tape" index="0" instance=ExtResource("2_mjl4r")]
+position = Vector2(-439, 282)
 
 [node name="Enemy - Archer" parent="Enemy Feed Tape" index="1" instance=ExtResource("4_5dj55")]
 position = Vector2(-602, 547)
@@ -389,25 +389,25 @@ position = Vector2(-6823, 664)
 [node name="Enemy - Peasent97" parent="Enemy Feed Tape" index="124" instance=ExtResource("2_mjl4r")]
 position = Vector2(-6815, 826)
 
-[node name="Enemy - Peasent122" parent="Enemy Feed Tape" index="125" instance=ExtResource("3_e5bso")]
+[node name="Enemy - Hulking Peasent" parent="Enemy Feed Tape" index="125" instance=ExtResource("3_e5bso")]
 position = Vector2(-2029, 494)
 
-[node name="Enemy - Peasent123" parent="Enemy Feed Tape" index="126" instance=ExtResource("3_e5bso")]
+[node name="Enemy - Hulking Peasent2" parent="Enemy Feed Tape" index="126" instance=ExtResource("3_e5bso")]
 position = Vector2(-2999, 719)
 
-[node name="Enemy - Peasent124" parent="Enemy Feed Tape" index="127" instance=ExtResource("3_e5bso")]
+[node name="Enemy - Hulking Peasent3" parent="Enemy Feed Tape" index="127" instance=ExtResource("3_e5bso")]
 position = Vector2(-3345, 253)
 
-[node name="Enemy - Peasent125" parent="Enemy Feed Tape" index="128" instance=ExtResource("3_e5bso")]
+[node name="Enemy - Hulking Peasent4" parent="Enemy Feed Tape" index="128" instance=ExtResource("3_e5bso")]
 position = Vector2(-3937, 375)
 
-[node name="Enemy - Peasent139" parent="Enemy Feed Tape" index="129" instance=ExtResource("3_e5bso")]
+[node name="Enemy - Hulking Peasent5" parent="Enemy Feed Tape" index="129" instance=ExtResource("3_e5bso")]
 position = Vector2(-6654, 798)
 
-[node name="Enemy - Peasent140" parent="Enemy Feed Tape" index="130" instance=ExtResource("3_e5bso")]
+[node name="Enemy - Hulking Peasent6" parent="Enemy Feed Tape" index="130" instance=ExtResource("3_e5bso")]
 position = Vector2(-6463, 497)
 
-[node name="Enemy - Peasent141" parent="Enemy Feed Tape" index="131" instance=ExtResource("3_e5bso")]
+[node name="Enemy - Hulking Peasent7" parent="Enemy Feed Tape" index="131" instance=ExtResource("3_e5bso")]
 position = Vector2(-6674, 383)
 
 [node name="Enemy - Peasent98" parent="Enemy Feed Tape" index="132" instance=ExtResource("2_mjl4r")]
@@ -479,16 +479,16 @@ position = Vector2(-3727, 898)
 [node name="Enemy - Peasent81" parent="Enemy Feed Tape" index="154" instance=ExtResource("2_mjl4r")]
 position = Vector2(-6197, 320)
 
-[node name="Enemy - Peasent144" parent="Enemy Feed Tape" index="155" instance=ExtResource("2_mjl4r")]
+[node name="Enemy - Peasent122" parent="Enemy Feed Tape" index="155" instance=ExtResource("2_mjl4r")]
 position = Vector2(-5111, 834)
 
 [node name="Enemy - Peasent121" parent="Enemy Feed Tape" index="156" instance=ExtResource("2_mjl4r")]
 position = Vector2(-4224, 762)
 
-[node name="Enemy - Peasent142" parent="Enemy Feed Tape" index="157" instance=ExtResource("2_mjl4r")]
+[node name="Enemy - Peasent123" parent="Enemy Feed Tape" index="157" instance=ExtResource("2_mjl4r")]
 position = Vector2(-2038, 943)
 
-[node name="Enemy - Peasent143" parent="Enemy Feed Tape" index="158" instance=ExtResource("2_mjl4r")]
+[node name="Enemy - Peasent124" parent="Enemy Feed Tape" index="158" instance=ExtResource("2_mjl4r")]
 position = Vector2(-2308, 227)
 
 [node name="Enemy - Peasent119" parent="Enemy Feed Tape" index="159" instance=ExtResource("2_mjl4r")]
@@ -496,19 +496,15 @@ position = Vector2(-2645, 565)
 
 [node name="Enemy - Jester" parent="Enemy Feed Tape" index="160" instance=ExtResource("6_em23s")]
 position = Vector2(-2408, 434)
-randomize_phase = true
 
 [node name="Enemy - Jester2" parent="Enemy Feed Tape" index="161" instance=ExtResource("6_em23s")]
 position = Vector2(-2332, 544)
-randomize_phase = true
 
 [node name="Enemy - Jester3" parent="Enemy Feed Tape" index="162" instance=ExtResource("6_em23s")]
 position = Vector2(-2425, 635)
-randomize_phase = true
 
 [node name="Enemy - Jester4" parent="Enemy Feed Tape" index="163" instance=ExtResource("6_em23s")]
 position = Vector2(-2511, 542)
-randomize_phase = true
 
 [node name="Enemy - Knight" parent="Enemy Feed Tape" index="164" instance=ExtResource("7_g1gqj")]
 position = Vector2(-4512, 559)

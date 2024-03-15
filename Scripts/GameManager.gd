@@ -61,17 +61,20 @@ func _ready() -> void:
 		current_save.cards_in_deck.append(card_prefab)
 
 
-var in_progress_level: PackedScene
+var in_progress_level_prefab: PackedScene
+var in_progress_level: LevelData
+
 var level_about_to_begin: LevelData
 
 
 
 func start_level(level_prefab: PackedScene) -> void:
-	if in_progress_level != null:
+	if in_progress_level_prefab != null:
 		print("error. tried to start a level when one was already in progress")
 		return
 	
-	in_progress_level = level_prefab
+	in_progress_level_prefab = level_prefab
+	in_progress_level = in_progress_level_prefab.instantiate() as LevelData
 	
 	#reset some values
 	lives = 3
@@ -87,8 +90,7 @@ func start_level(level_prefab: PackedScene) -> void:
 	storeroom_Manager.load_new_layout(level.storeroom_tile_map)
 	storeroom_Manager.available_supplies = level.supplies_present
 	storeroom_Manager.minimum_pickups = level.supplies_spawned_at_once
-	
-	
+
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("debug_mode"):
@@ -105,6 +107,7 @@ func spawn_popup(location: Vector2, message: String, color: Color = Color(1,1,1)
 
 var end_sequence: bool = false
 var transition_time: float = 1
+
 func game_over() -> void:
 	var level_failed_splash: PackedScene = preload("uid://dbl6hqacylj7")
 	
@@ -122,7 +125,7 @@ func game_over() -> void:
 	await tween.finished
 	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_packed(level_select_scene)
-	in_progress_level = null
+	in_progress_level_prefab = null
 	
 	end_sequence = false
 
@@ -144,8 +147,8 @@ func level_won() -> void:
 	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_packed(level_select_scene)
 	
-	current_save.completed_levels.append(in_progress_level)
-	in_progress_level = null
+	current_save.completed_levels.append(in_progress_level_prefab)
+	in_progress_level_prefab = null
 	
 	end_sequence = false
 

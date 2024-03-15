@@ -14,4 +14,11 @@ func redraw_all_map_nodes() -> void:
 	for mn: MapNode in all_map_nodes:
 		mn.queue_redraw()
 
+func get_map_node_by_id(id: String) -> MapNode:
+	for map_node: MapNode in all_map_nodes:
+		if map_node.id == id:
+			return map_node
+	print("Failed to find map node of ID ", id)
+	return null
 
+	

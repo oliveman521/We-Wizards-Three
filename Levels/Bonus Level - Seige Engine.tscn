@@ -1,14 +1,43 @@
-[gd_scene load_steps=5 format=3 uid="uid://4l40ype480h"]
+[gd_scene load_steps=7 format=3 uid="uid://4l40ype480h"]
 
 [ext_resource type="PackedScene" uid="uid://ddavd71iwja5g" path="res://Levels/template_level.tscn" id="1_7e435"]
 [ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Tablet.tres" id="2_ieovm"]
 [ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_a6262"]
+[ext_resource type="PackedScene" uid="uid://cn7apof2y3wfd" path="res://Enemies/enemy_archer.tscn" id="4_x1ut7"]
 [ext_resource type="PackedScene" uid="uid://c67dhecvk3b28" path="res://Enemies/enemy_seige_engine.tscn" id="5_kwnhh"]
+[ext_resource type="PackedScene" uid="uid://b5t5chbh5x6vr" path="res://Enemies/enemy_peasent.tscn" id="6_q7etq"]
 
 [node name="Bonus Level - Seige Engine" instance=ExtResource("1_7e435")]
 level_name = "Bonus Level - Seige Engine"
 supplies_present = Array[Resource("res://Supplies/Supply.gd")]([ExtResource("2_ieovm"), ExtResource("3_a6262")])
 supplies_spawned_at_once = 10
 
-[node name="Enemy - Seige Engine" parent="Enemy Feed Tape" index="0" instance=ExtResource("5_kwnhh")]
+[node name="Archer" parent="Enemy Feed Tape" index="0" instance=ExtResource("4_x1ut7")]
+position = Vector2(-918, 251)
+
+[node name="Archer2" parent="Enemy Feed Tape" index="1" instance=ExtResource("4_x1ut7")]
+position = Vector2(-982, 790)
+
+[node name="Archer3" parent="Enemy Feed Tape" index="2" instance=ExtResource("4_x1ut7")]
+position = Vector2(-1688, 316)
+
+[node name="Seige Engine" parent="Enemy Feed Tape" index="3" instance=ExtResource("5_kwnhh")]
 position = Vector2(-192, 501)
+
+[node name="Peasent" parent="Enemy Feed Tape" index="4" instance=ExtResource("6_q7etq")]
+position = Vector2(-494, 267)
+
+[node name="Peasent2" parent="Enemy Feed Tape" index="5" instance=ExtResource("6_q7etq")]
+position = Vector2(-688, 784)
+
+[node name="Peasent3" parent="Enemy Feed Tape" index="6" instance=ExtResource("6_q7etq")]
+position = Vector2(-308, 789)
+
+[node name="Peasent4" parent="Enemy Feed Tape" index="7" instance=ExtResource("6_q7etq")]
+position = Vector2(-1250, 272)
+
+[node name="Peasent5" parent="Enemy Feed Tape" index="8" instance=ExtResource("6_q7etq")]
+position = Vector2(-1416, 738)
+
+[node name="Peasent6" parent="Enemy Feed Tape" index="9" instance=ExtResource("6_q7etq")]
+position = Vector2(-1550, 501)
