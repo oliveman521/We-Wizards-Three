@@ -85,7 +85,7 @@ func draw_random_card() -> void:
 
 
 func arrange_cards_in_playspace() -> void:
-	if get_tree() == null: return #this function normally triggers when nodes are rearranged. Since this happens whenever the scene is unloaded, this fires when the scene is unloading, so we should skip it if we're currently unloading
+	if !is_inside_tree(): return #this function normally triggers when nodes are rearranged. Since this happens whenever the scene is unloaded, this fires when the scene is unloading, so we should skip it if we're currently unloading
 	
 	var queue_pos: Vector2 = queue_of_cards.global_position
 	const queue_span:= Vector2(100,100)

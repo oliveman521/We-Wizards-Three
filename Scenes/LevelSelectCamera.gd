@@ -27,7 +27,8 @@ func move_to_starting_point() -> void:
 		move_to(map_manager.get_map_node_by_id(cur_save.explored_map_nodes.back()).get_global_rect().get_center())
 
 func _process(delta: float) -> void:
-
+	
+	#TODO this scrolling triggers even if we're scrolling another object
 	if Input.is_action_just_pressed("map_zoom_in"):
 		target_zoom *= Vector2(zoom_factor,zoom_factor)
 	if Input.is_action_just_pressed("map_zoom_out"):
