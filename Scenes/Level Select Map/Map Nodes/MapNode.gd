@@ -81,7 +81,7 @@ func _draw() -> void:
 	elif locked:
 		explored_icon.visible = false
 		locked_icon.visible = true
-	else: #if we're neither complete
+	else: #if we're incomplete, but unlocked
 		explored_icon.visible = false
 		locked_icon.visible = false
 	
@@ -90,6 +90,7 @@ func _draw() -> void:
 	var line_width: int = 4
 	var line_color: Color = Color.INDIAN_RED
 	
+	#TODO kinda big issue. lines are cut off when the other node is off screen
 	#TODO. Doesn't doulbe draw because it only draws halfway. This helps with laying. Long term probalby best to have the map manager handle this
 	for neighbor: MapNode in connected_map_nodes:
 		if neighbor == null: continue

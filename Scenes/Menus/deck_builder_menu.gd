@@ -3,7 +3,6 @@ class_name DeckBuildingMenu
 
 @onready var unlocked_cards_container: Control = %"Card Pool Container"
 @onready var cards_in_deck_container: HFlowContainer = %"Deck Contents Container"
-@onready var card_pool_visible_card_container: Node2D = %"Card Pool Visible Card Container"
 
 @onready var deck_label: Label = %"Deck Label"
 const card_multiples_indicator_prefab = preload("uid://dm5dny7e4dwb3")

@@ -1,6 +1,8 @@
 @tool
 extends Node2D
 
+const FEED_RATE: float = 50
+
 func _ready() -> void:
 	if not Engine.is_editor_hint():
 		GameManager.debug_mode_changed.connect(queue_redraw)
@@ -13,7 +15,6 @@ func _draw() -> void:
 	const EDGE_BUFFER: int = 100
 	const minor_tick_marks_seconds:float = 10
 	const major_tick_marks_seconds:float = 60
-	const feed_rate:float = 50
 
 	var top: int = 0
 	var bottom: int = 1080
@@ -27,8 +28,8 @@ func _draw() -> void:
 	draw_line(Vector2(0,bottom - EDGE_BUFFER),Vector2(-LINE_LENGTH,bottom- EDGE_BUFFER),Color.WHITE, 5)
 	
 	#tick Marks
-	var major_tick_mark_incriment:float = major_tick_marks_seconds * feed_rate
-	var minor_tick_mark_incriment:float = minor_tick_marks_seconds * feed_rate
+	var major_tick_mark_incriment:float = major_tick_marks_seconds * FEED_RATE
+	var minor_tick_mark_incriment:float = minor_tick_marks_seconds * FEED_RATE
 	
 	var tick_color: Color = Color(1,1,1,0.1)
 	

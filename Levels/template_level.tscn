@@ -47,4 +47,5 @@ layer_0/tile_data = PackedInt32Array(-1, 1, 0, 65535, 1, 0, 131071, 1, 0, -65536
 
 [node name="Enemy Feed Tape" type="Node2D" parent="."]
 unique_name_in_owner = true
+y_sort_enabled = true
 script = ExtResource("2_dexwh")

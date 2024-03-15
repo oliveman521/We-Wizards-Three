@@ -18,13 +18,12 @@ func _draw() -> void:
 	
 func update(diff: int = 0) -> void:
 	if not Engine.is_editor_hint():
-		var cur_level: LevelData = GameManager.in_progress_level.instantiate() as LevelData
+		var cur_level: LevelData = GameManager.in_progress_level
 		if supply.supply_count > 0 or cur_level.supplies_present.has(supply) or always_on:
 			visible = true
 		else:
 			if !get_tree().current_scene.is_node_ready():
 				visible = false #only turn it off at the beginning of the game. Once it's on it stays on
-		cur_level.queue_free()
 	
 	
 	var centerPoint: Vector2 = get_global_rect().get_center()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://bpfb1n271ove4"]
+[gd_scene load_steps=65 format=3 uid="uid://bpfb1n271ove4"]
 
 [ext_resource type="Script" path="res://Scenes/Level Select Map/LevelSelectMenu.gd" id="1_xcx1n"]
 [ext_resource type="Script" path="res://Scenes/Level Select Map/MapManager.gd" id="2_6iwrn"]
@@ -51,6 +51,9 @@
 [ext_resource type="PackedScene" uid="uid://o3tq5x43hvo7" path="res://Levels/Level 7 - Knightfall.tscn" id="35_f7wne"]
 [ext_resource type="PackedScene" uid="uid://djyq018lrnfov" path="res://Levels/Level 666.tscn" id="36_gc4ss"]
 [ext_resource type="Texture2D" uid="uid://c5da5jr0p5j5o" path="res://Sprites/Map Doodles/devil horns.png" id="37_xackh"]
+[ext_resource type="Script" path="res://Scenes/LevelSelectCamera.gd" id="49_fpw7x"]
+[ext_resource type="Script" path="res://Scenes/Level Select Map/MapControlsLabel.gd" id="50_3tvjl"]
+[ext_resource type="LabelSettings" uid="uid://cpmxmv1dxwx7s" path="res://UI/Fonts/medium_text.tres" id="50_23ce2"]
 
 [sub_resource type="Resource" id="Resource_fwqn5"]
 script = ExtResource("5_2m5ee")
@@ -137,22 +140,22 @@ button_text = "Let's kick some butt"
 
 [node name="Level Select Menu" type="Control" groups=["Level Select Menu"]]
 layout_mode = 3
-anchors_preset = 9
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_xcx1n")
-
-[node name="Panel Onscreen Marker" type="Marker2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(1417, 29)
-
-[node name="Panel Offscreen Marker" type="Marker2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(1982, 23)
 
 [node name="Map Manager" type="Control" parent="."]
 layout_mode = 1
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("2_6iwrn")
 
 [node name="StartHere" type="Sprite2D" parent="Map Manager"]
@@ -237,18 +240,18 @@ cards = Array[PackedScene]([ExtResource("19_0o358"), ExtResource("20_tkhon"), Ex
 connected_map_nodes = [NodePath("../Level - Level 2"), NodePath("../Level - Level 3A - (s)Laughter"), NodePath("../Level - Level 3b - Super Silly")]
 
 [node name="Cards - Belphegor\'s Deal (+3 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
-offset_left = 622.0
-offset_top = 338.0
-offset_right = 674.0
-offset_bottom = 386.0
+offset_left = 659.0
+offset_top = 369.0
+offset_right = 711.0
+offset_bottom = 417.0
 cards = Array[PackedScene]([ExtResource("21_lx1sb"), ExtResource("21_lwsqc"), ExtResource("14_3vtqq"), ExtResource("21_bj66l")])
 connected_map_nodes = [NodePath("../Level - Level 3A - (s)Laughter"), NodePath("../Level - Bonus Level - Boomlins")]
 
 [node name="Cards - Boomlins" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
-offset_left = 321.0
-offset_top = 448.0
-offset_right = 373.0
-offset_bottom = 496.0
+offset_left = 359.0
+offset_top = 522.0
+offset_right = 411.0
+offset_bottom = 570.0
 cards = Array[PackedScene]([ExtResource("29_il0pa")])
 connected_map_nodes = [NodePath("../Level - Bonus Level - Boomlins")]
 
@@ -269,10 +272,10 @@ level = ExtResource("24_j8tib")
 connected_map_nodes = [NodePath("../Cards - Supercharge (+2 others)"), NodePath("../Cards - Belphegor\'s Deal (+3 others)"), NodePath("../Cards - Fire Ball Recipe (+4 others)")]
 
 [node name="Level - Bonus Level - Boomlins" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
-offset_left = 453.0
-offset_top = 421.0
-offset_right = 586.0
-offset_bottom = 469.0
+offset_left = 495.0
+offset_top = 460.0
+offset_right = 628.0
+offset_bottom = 508.0
 level = ExtResource("31_3vpdt")
 connected_map_nodes = [NodePath("../Cards - Belphegor\'s Deal (+3 others)"), NodePath("../Cards - Boomlins"), null]
 
@@ -413,9 +416,43 @@ position = Vector2(61, -4)
 scale = Vector2(0.410593, 0.391358)
 texture = ExtResource("37_xackh")
 
-[node name="Edit Deck Button" type="Button" parent="."]
+[node name="Cheats Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1619.0
+offset_top = 41.0
+offset_right = 1855.0
+offset_bottom = 142.0
+text = "Cheats:
+Press K to toggle Debug mode.
+Press O after level starts
+to auto-complete level"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(221, 299)
+enabled = false
+zoom = Vector2(1.75, 1.75)
+script = ExtResource("49_fpw7x")
+
+[node name="Overlay Canvas" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
-layout_mode = 1
+
+[node name="Map Controls Label" type="Label" parent="Overlay Canvas"]
+offset_left = 19.0
+offset_top = 951.0
+offset_right = 267.0
+offset_bottom = 1068.0
+text = "Map Controls:
+Right Click To Pan
+Scroll to zoom"
+label_settings = ExtResource("50_23ce2")
+vertical_alignment = 2
+script = ExtResource("50_3tvjl")
+
+[node name="Time Since Map Moved" type="Timer" parent="Overlay Canvas/Map Controls Label"]
+one_shot = true
+
+[node name="Edit Deck Button" type="Button" parent="Overlay Canvas"]
+unique_name_in_owner = true
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
@@ -428,64 +465,63 @@ rotation = 1.5708
 theme = ExtResource("10_2ecuw")
 text = "Edit Deck"
 
-[node name="Deck Building Menu" type="MarginContainer" parent="." groups=["Deck Building Menu"]]
+[node name="Deck Building Menu" type="MarginContainer" parent="Overlay Canvas" groups=["Deck Building Menu"]]
 unique_name_in_owner = true
-layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_left = -1403.0
 offset_top = 23.0
 offset_right = -1.0
-offset_bottom = -25.0
+offset_bottom = 11.0
 grow_vertical = 2
 script = ExtResource("11_t8gd0")
 
-[node name="ColorRect" type="ColorRect" parent="Deck Building Menu"]
+[node name="ColorRect" type="ColorRect" parent="Overlay Canvas/Deck Building Menu"]
 layout_mode = 2
 color = Color(0, 0, 0, 0.137255)
 
-[node name="Screen Margin" type="MarginContainer" parent="Deck Building Menu"]
+[node name="Screen Margin" type="MarginContainer" parent="Overlay Canvas/Deck Building Menu"]
 layout_mode = 2
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Deck Building Menu/Screen Margin"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Overlay Canvas/Deck Building Menu/Screen Margin"]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 15
 alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Deck Building Menu/Screen Margin/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
 
-[node name="Owned Cards Label" type="Label" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer"]
+[node name="Owned Cards Label" type="Label" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Owned Cards"
 label_settings = ExtResource("12_fdwhl")
 horizontal_alignment = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
 
-[node name="Container" type="MarginContainer" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer"]
+[node name="Container" type="MarginContainer" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ColorRect" type="ColorRect" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container"]
+[node name="ColorRect" type="ColorRect" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0.145098, 0.141176, 0.152941, 0.427451)
 
-[node name="MarginContainer" type="MarginContainer" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container"]
+[node name="MarginContainer" type="MarginContainer" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -494,7 +530,7 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="Card Pool Container" type="HFlowContainer" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer"]
+[node name="Card Pool Container" type="HFlowContainer" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -502,45 +538,45 @@ size_flags_vertical = 3
 theme_override_constants/h_separation = 15
 theme_override_constants/v_separation = 15
 
-[node name="Fire Ball Recipe" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("24_rjnis")]
+[node name="Fire Ball Recipe" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("24_rjnis")]
 layout_mode = 2
 
-[node name="Fire Ball Recipe2" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("24_rjnis")]
+[node name="Fire Ball Recipe2" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("24_rjnis")]
 layout_mode = 2
 
-[node name="Fire Ball Recipe3" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("24_rjnis")]
+[node name="Fire Ball Recipe3" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("24_rjnis")]
 layout_mode = 2
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Deck Building Menu/Screen Margin/HBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
 
-[node name="Deck Label" type="Label" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2"]
+[node name="Deck Label" type="Label" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Deck"
 label_settings = ExtResource("12_fdwhl")
 horizontal_alignment = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
 
-[node name="Container" type="MarginContainer" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer"]
+[node name="Container" type="MarginContainer" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ColorRect" type="ColorRect" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container"]
+[node name="ColorRect" type="ColorRect" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 color = Color(0.145098, 0.141176, 0.152941, 0.427451)
 
-[node name="MarginContainer" type="MarginContainer" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container"]
+[node name="MarginContainer" type="MarginContainer" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -549,7 +585,7 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="Deck Contents Container" type="HFlowContainer" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer"]
+[node name="Deck Contents Container" type="HFlowContainer" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
@@ -557,13 +593,13 @@ size_flags_vertical = 3
 theme_override_constants/h_separation = 15
 theme_override_constants/v_separation = 15
 
-[node name="Fire Ball Recipe" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("24_rjnis")]
+[node name="Fire Ball Recipe" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("24_rjnis")]
 layout_mode = 2
 
-[node name="Fire Ball Recipe2" parent="Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("24_rjnis")]
+[node name="Fire Ball Recipe2" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("24_rjnis")]
 layout_mode = 2
 
-[node name="Back Button" type="Button" parent="Deck Building Menu/Screen Margin"]
+[node name="Back Button" type="Button" parent="Overlay Canvas/Deck Building Menu/Screen Margin"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
@@ -571,16 +607,5 @@ theme = ExtResource("10_2ecuw")
 theme_override_font_sizes/font_size = 28
 text = " X "
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 1678.0
-offset_top = 969.0
-offset_right = 1914.0
-offset_bottom = 1070.0
-text = "Cheats:
-Press K to toggle Debug mode.
-Press O after level starts
-to auto-complete level"
-
-[connection signal="button_down" from="Edit Deck Button" to="Deck Building Menu" method="open_deck_builder_menu"]
-[connection signal="button_down" from="Deck Building Menu/Screen Margin/Back Button" to="Deck Building Menu" method="close_deck_builder_menu"]
+[connection signal="button_down" from="Overlay Canvas/Edit Deck Button" to="Overlay Canvas/Deck Building Menu" method="open_deck_builder_menu"]
+[connection signal="button_down" from="Overlay Canvas/Deck Building Menu/Screen Margin/Back Button" to="Overlay Canvas/Deck Building Menu" method="close_deck_builder_menu"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://c4qnaj4cqxgny"]
+[gd_scene load_steps=43 format=3 uid="uid://c4qnaj4cqxgny"]
 
 [ext_resource type="Script" path="res://Scripts/warlock_controller.gd" id="1_6dk5y"]
 [ext_resource type="Texture2D" uid="uid://b8boy6md2mbll" path="res://Sprites/warlock.png" id="2_bsyth"]
@@ -28,6 +28,7 @@
 [ext_resource type="Resource" uid="uid://0wqn3ujbcm2j" path="res://Supplies/Lightning_Scroll.tres" id="24_0jap5"]
 [ext_resource type="Script" path="res://UI/Health_UI.gd" id="25_kiqjr"]
 [ext_resource type="PackedScene" uid="uid://2jby5kudglct" path="res://UI/heart_UI.tscn" id="26_fl5xy"]
+[ext_resource type="Script" path="res://Scenes/LevelProgress.gd" id="29_618n4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ckvp"]
 size = Vector2(1019, 1119)
@@ -160,16 +161,16 @@ shape = SubResource("RectangleShape2D_odmoc")
 [node name="Test Feed Tape" type="Node2D" parent="Warlock Game/Enemy Manager"]
 script = ExtResource("4_l8m8i")
 
-[node name="Enemy - Peasent" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_fixi5")]
+[node name="Peasent" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_fixi5")]
 position = Vector2(-377, 494)
 
-[node name="Enemy - Peasent2" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_fixi5")]
+[node name="Peasent2" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_fixi5")]
 position = Vector2(-637, 604)
 
-[node name="Enemy - Peasent3" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_fixi5")]
+[node name="Peasent3" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_fixi5")]
 position = Vector2(-751, 305)
 
-[node name="Enemy - Knight" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("6_cjgit")]
+[node name="Knight" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("6_cjgit")]
 position = Vector2(-453, 292)
 
 [node name="Projectile Container" type="Node2D" parent="Warlock Game"]
@@ -412,6 +413,14 @@ layout_mode = 2
 
 [node name="TextureRect3" parent="Lives UI" instance=ExtResource("26_fl5xy")]
 layout_mode = 2
+
+[node name="Level Progress" type="ProgressBar" parent="."]
+offset_left = 14.0
+offset_top = 1044.0
+offset_right = 937.0
+offset_bottom = 1071.0
+show_percentage = false
+script = ExtResource("29_618n4")
 
 [connection signal="area_entered" from="Storeroom Manager/Apprentice Character/Collection Hitbox" to="Storeroom Manager/Apprentice Character" method="_on_collection_hitbox_area_entered"]
 [connection signal="child_order_changed" from="Card Manager/Hand" to="Card Manager" method="arrange_cards_in_playspace"]

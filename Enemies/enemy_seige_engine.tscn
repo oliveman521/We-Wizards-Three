@@ -46,6 +46,7 @@ size = Vector2(288, 232)
 enemy_name = "Seige Engine"
 move_speed = 8.0
 health = 100.0
+shovable = false
 vulnerabilities = Array[int]([1])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
