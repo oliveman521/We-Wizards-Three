@@ -152,13 +152,16 @@ func level_won() -> void:
 	
 	end_sequence = false
 
-func get_passive_ability_count(ability_tag: String) -> float:
+func get_passive_ability_count(ability_tag: String, consume: bool = false) -> float:
 	var count: float = 0
 	for node: Node in card_manager.ongoing_abilities_region.get_children():
 		if node is OngoingAbility:
 			var ability: OngoingAbility = node as OngoingAbility
 			if ability.passive_ability_tag == ability_tag:
 				count+=ability.count
+			if consume == true:
+				ability.queue_free()
+				return count
 	return count
 
 

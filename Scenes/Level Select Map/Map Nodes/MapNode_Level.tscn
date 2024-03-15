@@ -8,4 +8,4 @@ script = ExtResource("2_jqh14")
 level = null
 
 [node name="Label" parent="." index="3"]
-text = "%Level Name%"
+text = "Map Node - Level"

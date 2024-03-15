@@ -3,8 +3,10 @@ class_name  OngoingAbility
 
 
 @export var passive_ability_tag: String = "None"
+@export var consume: bool = false
 @export var tool_tip: String = "This is not yet implimented" #TODO impliment this
 var id: String
+
 
 @export_enum("Add", "Multiply", "Reset Timer", "Independent") var stack_behavior: String = "Add"
 

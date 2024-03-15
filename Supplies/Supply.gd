@@ -24,7 +24,6 @@ func use_supply(amnt: int = 1) -> bool:
 		supply_count -= amnt
 		return true
 	else:
-		print("Out of ammo!")
 		return false
 
 func add_supply(amnt: int = 1) -> void:

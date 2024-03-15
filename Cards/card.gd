@@ -196,7 +196,7 @@ func _on_button_gui_input(event: InputEvent) -> void:
 	
 	card_pressed.emit()
 	
-	if card_mode == DECK_BUILDING_MODE && event.button_index == MOUSE_BUTTON_LEFT:
+	if card_mode == DECK_BUILDING_MODE:
 		return
 	
 	if event.button_index == MOUSE_BUTTON_LEFT:

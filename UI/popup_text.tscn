@@ -12,7 +12,7 @@ _data = [Vector2(0, 0), 0.0, 1.0, 0, 1, Vector2(1, 1), 1.0, 0.0, 1, 0]
 point_count = 2
 
 [node name="Popup Text" type="Label"]
-z_index = 1
+z_index = 1000
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

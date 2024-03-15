@@ -160,8 +160,8 @@ script = ExtResource("2_6iwrn")
 
 [node name="Map Bounds" type="Control" parent="Map Manager"]
 anchors_preset = 0
-offset_left = -358.0
-offset_top = -353.0
+offset_left = -509.0
+offset_top = -390.0
 offset_right = 2845.0
 offset_bottom = 1893.0
 
@@ -175,6 +175,7 @@ offset_left = 196.0
 offset_top = 270.0
 offset_right = 244.0
 offset_bottom = 319.0
+mouse_filter = 0
 pages = Array[ExtResource("5_2m5ee")]([SubResource("Resource_fwqn5"), SubResource("Resource_qkkho"), SubResource("Resource_7wurx"), SubResource("Resource_shqrv"), SubResource("Resource_h6qmr")])
 connected_map_nodes = [NodePath("../info - How To Play (5 pages)")]
 always_unlocked = true
@@ -184,6 +185,7 @@ offset_left = 311.0
 offset_top = 188.0
 offset_right = 359.0
 offset_bottom = 237.0
+mouse_filter = 0
 pages = Array[ExtResource("5_2m5ee")]([SubResource("Resource_ptob5"), SubResource("Resource_yrjke"), SubResource("Resource_7ukff"), SubResource("Resource_i7ote"), SubResource("Resource_7a5o2")])
 connected_map_nodes = [NodePath("../info - Intro (5 pages)"), NodePath("../Level - Level 1 - It Begins")]
 
@@ -192,6 +194,7 @@ offset_left = 404.0
 offset_top = 103.0
 offset_right = 537.0
 offset_bottom = 151.0
+mouse_filter = 0
 level = ExtResource("12_k3ykg")
 connected_map_nodes = [NodePath("../Cards - Singe (+2 others)"), NodePath("../info - How To Play (5 pages)")]
 
@@ -200,6 +203,7 @@ offset_left = 612.0
 offset_top = 51.0
 offset_right = 664.0
 offset_bottom = 99.0
+mouse_filter = 0
 cards = Array[PackedScene]([ExtResource("15_wpld2"), ExtResource("15_wpld2"), ExtResource("21_bj66l")])
 connected_map_nodes = [NodePath("../Level - Level 1 - It Begins"), NodePath("../Ability - Max Combo")]
 
@@ -208,6 +212,7 @@ offset_left = 733.0
 offset_top = 55.0
 offset_right = 778.0
 offset_bottom = 100.0
+mouse_filter = 0
 ability_name = "Max Combo"
 override_name = "Librarian Combo"
 ability_description = "The Librarian can now rack up a combo!
@@ -219,6 +224,7 @@ offset_left = 840.0
 offset_top = 56.0
 offset_right = 973.0
 offset_bottom = 104.0
+mouse_filter = 0
 level = ExtResource("16_okn0a")
 connected_map_nodes = [NodePath("../Cards - Supercharge (+2 others)"), NodePath("../Ability - Max Combo"), NodePath("../Level - Bonus Level - Seige Engine")]
 
@@ -227,6 +233,7 @@ offset_left = 1117.0
 offset_top = 51.0
 offset_right = 1250.0
 offset_bottom = 99.0
+mouse_filter = 0
 level = ExtResource("18_7emhd")
 connected_map_nodes = [NodePath("../Level - Level 2"), NodePath("../Cards - Scroll Mountain (+1 others)")]
 
@@ -235,6 +242,7 @@ offset_left = 1126.0
 offset_top = 265.0
 offset_right = 1178.0
 offset_bottom = 313.0
+mouse_filter = 0
 cards = Array[PackedScene]([ExtResource("23_rlx2y"), ExtResource("20_tkhon"), ExtResource("15_wpld2"), ExtResource("24_brisb")])
 connected_map_nodes = [NodePath("../Level - Level 3b - Super Silly")]
 
@@ -243,6 +251,7 @@ offset_left = 875.0
 offset_top = 172.0
 offset_right = 927.0
 offset_bottom = 220.0
+mouse_filter = 0
 cards = Array[PackedScene]([ExtResource("19_0o358"), ExtResource("20_tkhon"), ExtResource("21_lwsqc")])
 connected_map_nodes = [NodePath("../Level - Level 2"), NodePath("../Level - Level 3A - (s)Laughter"), NodePath("../Level - Level 3b - Super Silly")]
 
@@ -251,6 +260,7 @@ offset_left = 659.0
 offset_top = 369.0
 offset_right = 711.0
 offset_bottom = 417.0
+mouse_filter = 0
 cards = Array[PackedScene]([ExtResource("21_lx1sb"), ExtResource("21_lwsqc"), ExtResource("14_3vtqq"), ExtResource("21_bj66l")])
 connected_map_nodes = [NodePath("../Level - Level 3A - (s)Laughter"), NodePath("../Level - Bonus Level - Boomlins")]
 
@@ -259,14 +269,16 @@ offset_left = 359.0
 offset_top = 522.0
 offset_right = 411.0
 offset_bottom = 570.0
+mouse_filter = 0
 cards = Array[PackedScene]([ExtResource("29_il0pa")])
 connected_map_nodes = [NodePath("../Level - Bonus Level - Boomlins")]
 
 [node name="Cards - Scroll Mountain (+1 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
-offset_left = 1407.0
-offset_top = 48.0
-offset_right = 1459.0
-offset_bottom = 96.0
+offset_left = 1417.0
+offset_top = 55.0
+offset_right = 1469.0
+offset_bottom = 103.0
+mouse_filter = 0
 cards = Array[PackedScene]([ExtResource("25_1n2im"), ExtResource("15_wpld2")])
 connected_map_nodes = [NodePath("../Level - Bonus Level - Seige Engine")]
 
@@ -275,6 +287,7 @@ offset_left = 716.0
 offset_top = 267.0
 offset_right = 849.0
 offset_bottom = 315.0
+mouse_filter = 0
 level = ExtResource("24_j8tib")
 connected_map_nodes = [NodePath("../Cards - Supercharge (+2 others)"), NodePath("../Cards - Belphegor\'s Deal (+3 others)"), NodePath("../Cards - Fire Ball Recipe (+4 others)")]
 
@@ -283,6 +296,7 @@ offset_left = 495.0
 offset_top = 460.0
 offset_right = 628.0
 offset_bottom = 508.0
+mouse_filter = 0
 level = ExtResource("31_3vpdt")
 connected_map_nodes = [NodePath("../Cards - Belphegor\'s Deal (+3 others)"), NodePath("../Cards - Boomlins"), null]
 
@@ -291,6 +305,7 @@ offset_left = 941.0
 offset_top = 263.0
 offset_right = 1074.0
 offset_bottom = 311.0
+mouse_filter = 0
 level = ExtResource("24_0bg83")
 connected_map_nodes = [NodePath("../Cards - Supercharge (+2 others)"), NodePath("../Cards - Fire Ball Recipe (+4 others)"), NodePath("../Cards - Marutha\'s Deal (+3 others)")]
 
@@ -299,6 +314,7 @@ offset_left = 862.0
 offset_top = 387.0
 offset_right = 914.0
 offset_bottom = 435.0
+mouse_filter = 0
 cards = Array[PackedScene]([ExtResource("24_rjnis"), ExtResource("24_rjnis"), ExtResource("24_rjnis"), ExtResource("34_ttysr"), ExtResource("24_brisb")])
 connected_map_nodes = [NodePath("../Level - Level 3A - (s)Laughter"), NodePath("../Level - Level 3b - Super Silly"), NodePath("../Level - Level 4 - Knights"), null]
 
@@ -307,6 +323,7 @@ offset_left = 820.0
 offset_top = 482.0
 offset_right = 953.0
 offset_bottom = 530.0
+mouse_filter = 0
 level = ExtResource("25_q6lle")
 connected_map_nodes = [NodePath("../Cards - Fire Ball Recipe (+4 others)"), NodePath("../Level - Level 5b - Big Boys"), NodePath("../Level - Level 5a - Silly Arrows"), NodePath("../Level - Bonus Level - No Essence")]
 
@@ -315,6 +332,7 @@ offset_left = 690.0
 offset_top = 579.0
 offset_right = 823.0
 offset_bottom = 627.0
+mouse_filter = 0
 level = ExtResource("26_a0t0h")
 connected_map_nodes = [NodePath("../Level - Level 4 - Knights"), NodePath("../Ability - Librarian Boost"), NodePath("../Cards - Shock (+4 others)")]
 
@@ -323,6 +341,7 @@ offset_left = 1146.0
 offset_top = 416.0
 offset_right = 1279.0
 offset_bottom = 464.0
+mouse_filter = 0
 level = ExtResource("29_v2ygy")
 connected_map_nodes = [NodePath("../Level - Level 4 - Knights"), NodePath("../Cards - Magma Spray (+1 others)")]
 
@@ -331,6 +350,7 @@ offset_left = 559.0
 offset_top = 601.0
 offset_right = 604.0
 offset_bottom = 646.0
+mouse_filter = 0
 ability_name = "Librarian Boost"
 ability_description = "The Librarian can now boost! 
 Hit Ctrl to get a short boost of speed!"
@@ -341,6 +361,7 @@ offset_left = 946.0
 offset_top = 584.0
 offset_right = 1079.0
 offset_bottom = 632.0
+mouse_filter = 0
 level = ExtResource("27_ggwvo")
 connected_map_nodes = [NodePath("../Level - Level 4 - Knights"), NodePath("../Ability - Max Combo2"), NodePath("../Cards - Shock (+4 others)")]
 
@@ -349,6 +370,7 @@ offset_left = 1173.0
 offset_top = 626.0
 offset_right = 1218.0
 offset_bottom = 671.0
+mouse_filter = 0
 ability_name = "Max Combo"
 override_name = "+ 1 Max Combo"
 ability_description = "The Librarian's combo can now go bigger! Collect even more resources by collecting the same resources consecutively"
@@ -359,6 +381,7 @@ offset_left = 1502.0
 offset_top = 504.0
 offset_right = 1554.0
 offset_bottom = 552.0
+mouse_filter = 0
 cards = Array[PackedScene]([ExtResource("22_dsx6i"), ExtResource("34_ttysr")])
 connected_map_nodes = [NodePath("../Level - Bonus Level - No Draw")]
 
@@ -367,6 +390,7 @@ offset_left = 1323.0
 offset_top = 306.0
 offset_right = 1375.0
 offset_bottom = 354.0
+mouse_filter = 0
 cards = Array[PackedScene]([ExtResource("21_lwsqc"), ExtResource("24_rjnis")])
 connected_map_nodes = [NodePath("../Level - Bonus Level - No Essence")]
 
@@ -375,6 +399,7 @@ offset_left = 1286.0
 offset_top = 554.0
 offset_right = 1419.0
 offset_bottom = 602.0
+mouse_filter = 0
 level = ExtResource("30_knvvg")
 connected_map_nodes = [NodePath("../Ability - Max Combo2"), NodePath("../Cards - Librarian Golem (+1 others)")]
 
@@ -383,6 +408,7 @@ offset_left = 855.0
 offset_top = 688.0
 offset_right = 907.0
 offset_bottom = 736.0
+mouse_filter = 0
 cards = Array[PackedScene]([ExtResource("26_cxv1b"), ExtResource("26_cxv1b"), ExtResource("27_48o8d"), ExtResource("27_48o8d"), ExtResource("22_dsx6i")])
 connected_map_nodes = [NodePath("../Level - Level 5a - Silly Arrows"), NodePath("../Level - Level 5b - Big Boys"), NodePath("../Level - Level 6")]
 
@@ -391,6 +417,7 @@ offset_left = 817.0
 offset_top = 796.0
 offset_right = 950.0
 offset_bottom = 844.0
+mouse_filter = 0
 level = ExtResource("33_fxcku")
 connected_map_nodes = [NodePath("../Cards - Shock (+4 others)"), NodePath("../Cards - Lightning Scroll Recipe (+3 others)")]
 
@@ -399,6 +426,7 @@ offset_left = 901.0
 offset_top = 898.0
 offset_right = 953.0
 offset_bottom = 946.0
+mouse_filter = 0
 cards = Array[PackedScene]([ExtResource("33_kctbv"), ExtResource("33_kctbv"), ExtResource("33_kctbv"), ExtResource("33_kctbv")])
 connected_map_nodes = [NodePath("../Level - Level 6"), NodePath("../Level - Level 7 - Knightfall")]
 
@@ -407,6 +435,7 @@ offset_left = 1034.0
 offset_top = 908.0
 offset_right = 1167.0
 offset_bottom = 956.0
+mouse_filter = 0
 level = ExtResource("35_f7wne")
 connected_map_nodes = [NodePath("../Cards - Lightning Scroll Recipe (+3 others)"), NodePath("../Level - Level 666")]
 
@@ -415,6 +444,7 @@ offset_left = 1765.0
 offset_top = 898.0
 offset_right = 1898.0
 offset_bottom = 946.0
+mouse_filter = 0
 level = ExtResource("36_gc4ss")
 connected_map_nodes = [NodePath("../Level - Level 7 - Knightfall")]
 
@@ -435,9 +465,9 @@ Press O after level starts
 to auto-complete level"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(221, 299)
+position = Vector2(223, 297)
 enabled = false
-zoom = Vector2(1.75, 1.75)
+zoom = Vector2(2, 2)
 script = ExtResource("49_fpw7x")
 
 [node name="Overlay Canvas" type="CanvasLayer" parent="."]
@@ -614,5 +644,6 @@ theme = ExtResource("10_2ecuw")
 theme_override_font_sizes/font_size = 28
 text = " X "
 
+[connection signal="gui_input" from="Map Manager/Map Bounds" to="Camera2D" method="map_bound_input"]
 [connection signal="button_down" from="Overlay Canvas/Edit Deck Button" to="Overlay Canvas/Deck Building Menu" method="open_deck_builder_menu"]
 [connection signal="button_down" from="Overlay Canvas/Deck Building Menu/Screen Margin/Back Button" to="Overlay Canvas/Deck Building Menu" method="close_deck_builder_menu"]

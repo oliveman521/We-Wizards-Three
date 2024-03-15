@@ -79,7 +79,7 @@ func draw_random_card() -> void:
 	SoundManager.play_sound(card_draw_sound)
 	add_child(new_card)
 	new_card.global_position = card_spawn_point.global_position
-
+	
 	new_card.reparent(hand_of_cards)
 	arrange_cards_in_playspace()
 

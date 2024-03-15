@@ -54,12 +54,13 @@ func arrange_UI() -> void:
 			var deck_is_full: bool = GameManager.current_save.cards_in_deck.size() >= GameManager.DECK_MAX_SIZE
 			if deck_is_full:
 				GameManager.spawn_popup(get_global_mouse_position(), "Deck is full!", Color.FIREBRICK)
+				#TODO this shows up in the wrong place. Needs to somehow interact with the canvas
 				SoundManager.play_sound(card.cannot_be_played_sound)
 				return
 			
 			#add the card to the deck
 			GameManager.current_save.cards_in_deck.append(card_prefab)
-			SoundManager.play_sound(card.discard_sound)
+			SoundManager.play_sound(card.discard_sound, 0.2)
 			#TODO make cards stack and move smoothly between positions
 			#await card.slide_card_away(Vector2.RIGHT, Color(0,0,1,0), 0.1)
 			arrange_UI()
@@ -72,6 +73,7 @@ func arrange_UI() -> void:
 		card.enter_deck_building_mode(count)
 		card.card_pressed.connect(func()->void:
 			GameManager.current_save.cards_in_deck.erase(card_prefab)
+			SoundManager.play_sound(card.discard_sound, 0.2)
 			#await card.slide_card_away(Vector2.LEFT, Color(0,0,1,0), 0.1)
 			arrange_UI()
 			)

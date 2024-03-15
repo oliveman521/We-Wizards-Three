@@ -6,7 +6,7 @@ var time_to_show: float = 10
 
 var fade_time: float = 0.5
 var last_frame_camera_pos: Vector2
-var alpha = 0
+var alpha: float = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _ready() -> void:
