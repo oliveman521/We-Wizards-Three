@@ -1,0 +1,79 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp55jow1os444"]
+
+[ext_resource type="PackedScene" uid="uid://ddavd71iwja5g" path="res://Levels/template_level.tscn" id="1_a70rw"]
+[ext_resource type="PackedScene" uid="uid://js3hynbdo0ls" path="res://Enemies/enemy_horse.tscn" id="2_re6ud"]
+
+[node name="Bonus Level - Off to the Races" instance=ExtResource("1_a70rw")]
+level_name = "Bonus Level - Off to the Races"
+
+[node name="Horse" parent="Enemy Feed Tape" index="0" instance=ExtResource("2_re6ud")]
+position = Vector2(-594, 242)
+
+[node name="Horse2" parent="Enemy Feed Tape" index="1" instance=ExtResource("2_re6ud")]
+position = Vector2(-998, 574)
+
+[node name="Horse3" parent="Enemy Feed Tape" index="2" instance=ExtResource("2_re6ud")]
+position = Vector2(-1521, 565)
+
+[node name="Horse4" parent="Enemy Feed Tape" index="3" instance=ExtResource("2_re6ud")]
+position = Vector2(-1940, 197)
+
+[node name="Horse7" parent="Enemy Feed Tape" index="4" instance=ExtResource("2_re6ud")]
+position = Vector2(-2202, 907)
+
+[node name="Horse8" parent="Enemy Feed Tape" index="5" instance=ExtResource("2_re6ud")]
+position = Vector2(-2415, 510)
+
+[node name="Horse9" parent="Enemy Feed Tape" index="6" instance=ExtResource("2_re6ud")]
+position = Vector2(-2543, 432)
+
+[node name="Horse10" parent="Enemy Feed Tape" index="7" instance=ExtResource("2_re6ud")]
+position = Vector2(-2554, 603)
+
+[node name="Horse11" parent="Enemy Feed Tape" index="8" instance=ExtResource("2_re6ud")]
+position = Vector2(-2689, 514)
+
+[node name="Horse12" parent="Enemy Feed Tape" index="9" instance=ExtResource("2_re6ud")]
+position = Vector2(-2824, 432)
+
+[node name="Horse13" parent="Enemy Feed Tape" index="10" instance=ExtResource("2_re6ud")]
+position = Vector2(-2845, 599)
+
+[node name="Horse14" parent="Enemy Feed Tape" index="11" instance=ExtResource("2_re6ud")]
+position = Vector2(-2988, 506)
+
+[node name="Horse15" parent="Enemy Feed Tape" index="12" instance=ExtResource("2_re6ud")]
+position = Vector2(-3309, 290)
+
+[node name="Horse16" parent="Enemy Feed Tape" index="13" instance=ExtResource("2_re6ud")]
+position = Vector2(-3444, 208)
+
+[node name="Horse17" parent="Enemy Feed Tape" index="14" instance=ExtResource("2_re6ud")]
+position = Vector2(-3465, 375)
+
+[node name="Horse18" parent="Enemy Feed Tape" index="15" instance=ExtResource("2_re6ud")]
+position = Vector2(-3608, 282)
+
+[node name="Horse19" parent="Enemy Feed Tape" index="16" instance=ExtResource("2_re6ud")]
+position = Vector2(-3828, 846)
+
+[node name="Horse20" parent="Enemy Feed Tape" index="17" instance=ExtResource("2_re6ud")]
+position = Vector2(-3963, 764)
+
+[node name="Horse22" parent="Enemy Feed Tape" index="18" instance=ExtResource("2_re6ud")]
+position = Vector2(-4325, 254)
+
+[node name="Horse23" parent="Enemy Feed Tape" index="19" instance=ExtResource("2_re6ud")]
+position = Vector2(-4563, 496)
+
+[node name="Horse21" parent="Enemy Feed Tape" index="20" instance=ExtResource("2_re6ud")]
+position = Vector2(-3984, 931)
+
+[node name="Horse24" parent="Enemy Feed Tape" index="21" instance=ExtResource("2_re6ud")]
+position = Vector2(-4127, 838)
+
+[node name="Horse5" parent="Enemy Feed Tape" index="22" instance=ExtResource("2_re6ud")]
+position = Vector2(-1509, 394)
+
+[node name="Horse6" parent="Enemy Feed Tape" index="23" instance=ExtResource("2_re6ud")]
+position = Vector2(-1509, 253)

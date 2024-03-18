@@ -82,6 +82,7 @@ animations = [{
 position = Vector2(528, 423)
 script = ExtResource("1_gpwec")
 radius = 150.0
+damage = 3
 
 [node name="Explosion Hitbox" type="Area2D" parent="."]
 

@@ -6,7 +6,8 @@
 
 [node name="Boomlin" instance=ExtResource("1_ld0dc")]
 enemy_name = "Boomlin"
-health = 3.0
+move_speed = 70.0
+health = 2.0
 spawn_on_death = Array[PackedScene]([ExtResource("2_u4f04")])
 
 [node name="Sprite" parent="." index="0"]

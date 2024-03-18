@@ -12,7 +12,7 @@ func _ready() -> void:
 func _draw() -> void:
 	if level:
 		var level_data: LevelData = level.instantiate() as LevelData
-		self.name = "Level - " + level_data.level_name
+		self.name = level_data.level_name
 		level_data.queue_free()
 		label.text = level_data.level_name
 	else:

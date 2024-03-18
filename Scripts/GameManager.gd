@@ -75,6 +75,7 @@ func start_level(level_prefab: PackedScene) -> void:
 	
 	in_progress_level_prefab = level_prefab
 	in_progress_level = in_progress_level_prefab.instantiate() as LevelData
+	level_about_to_begin = null
 	
 	#reset some values
 	lives = 3
@@ -90,6 +91,8 @@ func start_level(level_prefab: PackedScene) -> void:
 	storeroom_Manager.load_new_layout(level.storeroom_tile_map)
 	storeroom_Manager.available_supplies = level.supplies_present
 	storeroom_Manager.minimum_pickups = level.supplies_spawned_at_once
+
+
 
 
 func _process(_delta: float) -> void:

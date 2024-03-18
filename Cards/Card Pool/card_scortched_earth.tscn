@@ -15,15 +15,14 @@ card_name = "Scortched Earth"
 [node name="Background Color" parent="Card Face" index="0"]
 color = Color(0.486275, 0.105882, 0.0352941, 1)
 
-[node name="Essence x2" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_b6ewd")]
+[node name="Essence x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_b6ewd")]
 layout_mode = 2
 supply = ExtResource("3_8ue2b")
-count = 2
 
-[node name="Fire Gem x3" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="1" instance=ExtResource("2_b6ewd")]
+[node name="Fire Gem x4" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="1" instance=ExtResource("2_b6ewd")]
 layout_mode = 2
 supply = ExtResource("4_o5x1x")
-count = 3
+count = 4
 
 [node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
 text = "Scortched Earth"

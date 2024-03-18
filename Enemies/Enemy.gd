@@ -2,12 +2,13 @@
 extends Node2D
 class_name Enemy
 
-@export var enemy_name: String:
+var enemy_name: String:
 	get:
 		var file_name: String = scene_file_path.get_basename().split("/")[-1]
 		file_name = file_name.replace("enemy_","")
 		file_name = file_name.capitalize()
 		name = file_name
+		print(1)
 		return file_name
 
 @export var move_speed: float= 50
@@ -17,12 +18,14 @@ class_name Enemy
 var is_being_shoved: bool
 
 
-@export var spawn_on_death: Array[PackedScene]
-
 @export_group("Damage Types")
 @export var vulnerabilities: Array[GameManager.Damage_Type]
 @export var resistances: Array[GameManager.Damage_Type]
 @export var immunities: Array[GameManager.Damage_Type]
+
+@export_group("On Death Effects")
+@export var spawn_on_death: Array[PackedScene]
+@export var death_effect_location_noise: float = 25
 
 @export_group("Projectile Firing")
 @export var projectile_prefab: Resource
@@ -54,7 +57,11 @@ func _process(delta: float) -> void:
 	move(delta)
 
 func _ready() -> void:
-	name = "Enemy - " + enemy_name
+	enemy_name = enemy_name
+	
+	if !Engine.is_editor_hint():
+		if get_parent() is EnemyManager:
+			activate()
 
 func move(delta: float) -> void:
 	position.x += move_speed * delta
@@ -99,7 +106,8 @@ func take_damage(damage_type: GameManager.Damage_Type, amnt: float) -> void:
 func die() -> void:
 	for item: PackedScene in spawn_on_death:
 		var new_node: Node2D = item.instantiate() as Node2D
-		new_node.global_position = global_position
+		var randomize_location: Vector2 = Vector2(death_effect_location_noise, death_effect_location_noise)
+		new_node.global_position = global_position + randomize_location
 		add_sibling(new_node)
 	queue_free()
 

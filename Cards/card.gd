@@ -161,6 +161,7 @@ func enter_queue_mode() -> void:
 	card_mode = HAND_QUEUE_MODE
 	button.mouse_filter = Control.MOUSE_FILTER_STOP
 	card_back.visible = true
+	highlight_ui.visible = false
 
 func enter_hand_mode() -> void:
 	card_mode = HAND_MODE

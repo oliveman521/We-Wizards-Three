@@ -4,12 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://dmfnvhpd45csc" path="res://Enemies/Enemy Sprites/Knight.png" id="2_2irau"]
 [ext_resource type="AudioStream" uid="uid://dqosky0tpk8r8" path="res://Life Lost Sound.wav" id="3_vofas"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ox81m"]
-size = Vector2(54, 78)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uokdr"]
+size = Vector2(54, 92)
 
 [node name="Base" type="Area2D" groups=["Enemies"]]
 script = ExtResource("1_kdqp5")
-enemy_name = "Base"
 
 [node name="Sprite" type="Sprite2D" parent="."]
 y_sort_enabled = true
@@ -19,8 +18,8 @@ texture = ExtResource("2_2irau")
 
 [node name="Hit Box" type="CollisionShape2D" parent="."]
 modulate = Color(1, 1, 1, 0.215686)
-position = Vector2(-9, -5.5)
-shape = SubResource("RectangleShape2D_ox81m")
+position = Vector2(-5, -8)
+shape = SubResource("RectangleShape2D_uokdr")
 
 [node name="Fire Rate Timer" type="Timer" parent="."]
 

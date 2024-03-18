@@ -1,10 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://d02ehopagg68u"]
+[gd_scene load_steps=4 format=3 uid="uid://d02ehopagg68u"]
 
 [ext_resource type="PackedScene" uid="uid://dxstlyven322l" path="res://Enemies/enemy_base.tscn" id="1_01gl7"]
 [ext_resource type="Texture2D" uid="uid://d2va2o6ut61eg" path="res://Enemies/Enemy Sprites/HulkingPeasent.png" id="2_pfqre"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhmhx"]
+size = Vector2(90, 117)
+
 [node name="Hulking Peasent" instance=ExtResource("1_01gl7")]
-enemy_name = "Hulking Peasent"
 move_speed = 30.0
 health = 20.0
 
@@ -13,7 +15,8 @@ scale = Vector2(2.5, 2.5)
 texture = ExtResource("2_pfqre")
 
 [node name="Hit Box" parent="." index="1"]
-position = Vector2(-1.5, -6.5)
+position = Vector2(0, -5.5)
+shape = SubResource("RectangleShape2D_bhmhx")
 
 [node name="VisibleOnScreenNotifier2D" parent="." index="4"]
 position = Vector2(-0.5, -6.00001)

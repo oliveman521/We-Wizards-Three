@@ -20,9 +20,10 @@ layout_mode = 2
 supply = ExtResource("3_trh0o")
 count = 2
 
-[node name="Fire Gem x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="1" instance=ExtResource("2_2hf8y")]
+[node name="Fire Gem x2" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="1" instance=ExtResource("2_2hf8y")]
 layout_mode = 2
 supply = ExtResource("4_lyhoa")
+count = 2
 
 [node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
 text = "Supercharge"

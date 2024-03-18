@@ -25,7 +25,7 @@ text = "Boomlins"
 
 [node name="Label - Spawn" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0"]
 layout_mode = 2
-text = "Spawn 2 Boomlins."
+text = "Spawn 3 Boomlins."
 label_settings = ExtResource("4_q2wt1")
 horizontal_alignment = 1
 autowrap_mode = 2
@@ -44,4 +44,4 @@ script = ExtResource("5_i1oqr")
 [node name="CardEffect_SpawnEnemies" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="3"]
 script = ExtResource("6_svfcy")
 enemy_prefab = ExtResource("7_3mkk0")
-count = 2
+count = 3

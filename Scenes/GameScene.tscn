@@ -44,8 +44,8 @@ size = Vector2(26, 880)
 size = Vector2(19.5, 1101)
 
 [sub_resource type="Curve" id="Curve_o25to"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.146939, 0.157212), 0.0, 0.0, 0, 0, Vector2(0.991837, 0), 0.0, 0.0, 0, 0]
-point_count = 3
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.0900621, 0.0554187), 0.0, 0.0, 0, 0, Vector2(0.192547, 0.0554187), -0.0660918, -0.0660918, 0, 0, Vector2(0.991837, 0), 0.0, 0.0, 0, 0]
+point_count = 4
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f2dgt"]
 atlas = ExtResource("13_5iwmc")

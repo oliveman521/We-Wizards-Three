@@ -69,6 +69,7 @@ func populate(level_prefab: PackedScene) -> void:
 	)
 	
 	back_button.button_down.connect(func()-> void:
+		GameManager.level_about_to_begin = null
 		level_select_menu.close_current_info_panel()
 	)
 
