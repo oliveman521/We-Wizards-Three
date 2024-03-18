@@ -53,7 +53,7 @@ func arrange_UI() -> void:
 		card.card_pressed.connect(func()->void:
 			var deck_is_full: bool = GameManager.current_save.cards_in_deck.size() >= GameManager.DECK_MAX_SIZE
 			if deck_is_full:
-				GameManager.spawn_popup(get_global_mouse_position(), "Deck is full!", Color.FIREBRICK)
+				GameManager.spawn_popup(get_global_mouse_position(), "Deck is full!", Color.FIREBRICK, 1.5, get_parent())
 				#TODO this shows up in the wrong place. Needs to somehow interact with the canvas
 				SoundManager.play_sound(card.cannot_be_played_sound)
 				return

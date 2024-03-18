@@ -101,10 +101,10 @@ func _process(_delta: float) -> void:
 	if Input.is_key_pressed(KEY_O):
 		GameManager.level_won()
 
-func spawn_popup(location: Vector2, message: String, color: Color = Color(1,1,1), lifetime:float = 1) -> void:
+func spawn_popup(location: Vector2, message: String, color: Color = Color(1,1,1), lifetime:float = 1, parent: Node = self) -> void:
 	const popup_prefab: Resource = preload("res://UI/popup_text.tscn")
 	var new_popup_text: Label = popup_prefab.instantiate()
-	add_child(new_popup_text)
+	parent.add_child(new_popup_text)
 	new_popup_text.initialize(location, message, color, lifetime)
 
 
@@ -155,14 +155,14 @@ func level_won() -> void:
 	
 	end_sequence = false
 
-func get_passive_ability_count(ability_tag: String, consume: bool = false) -> float:
+func get_passive_ability_count(ability_tag: String) -> float:
 	var count: float = 0
 	for node: Node in card_manager.ongoing_abilities_region.get_children():
 		if node is OngoingAbility:
 			var ability: OngoingAbility = node as OngoingAbility
 			if ability.passive_ability_tag == ability_tag:
 				count+=ability.count
-			if consume == true:
+			if ability.consume == true:
 				ability.queue_free()
 				return count
 	return count

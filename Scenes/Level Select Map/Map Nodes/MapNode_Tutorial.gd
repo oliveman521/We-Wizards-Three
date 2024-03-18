@@ -13,7 +13,7 @@ func _draw() -> void:
 
 func _on_button_down() -> void:
 	if locked:
-		GameManager.spawn_popup(get_global_mouse_position(),"Info is locked",Color.RED,)
+		GameManager.spawn_popup(get_global_mouse_position(),"Info is locked",Color.RED,1)
 		return
 	
 	await level_select.open_tutorial_panel(pages)

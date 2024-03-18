@@ -121,7 +121,13 @@ func _on_collection_hitbox_area_entered(area: Area2D) -> void:
 			pickup.pickup_sound.pitch_scale += 0.1 * combo
 		SoundManager.play_sound(pickup.pickup_sound)
 		
-		pickup.supply_to_be_gained.on_pickup(combo * pickup.count_to_be_gained)
+		var gain_count: int = (combo * pickup.count_to_be_gained)
+		
+		var passive_multiplier: int =  int(GameManager.get_passive_ability_count("Next Pickup Multiplier"))
+		if passive_multiplier > 0:
+			gain_count += passive_multiplier
+		
+		pickup.supply_to_be_gained.on_pickup(gain_count)
 		pickup.queue_free()
 
 func take_damage(amnt: int) -> void:

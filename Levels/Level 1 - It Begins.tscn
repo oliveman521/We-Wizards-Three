@@ -100,137 +100,125 @@ position = Vector2(-3136, 926)
 [node name="Peasent29" parent="Enemy Feed Tape" index="28" instance=ExtResource("4_m3mer")]
 position = Vector2(-4610, 808)
 
-[node name="Peasent30" parent="Enemy Feed Tape" index="29" instance=ExtResource("4_m3mer")]
-position = Vector2(-4610, 703)
-
-[node name="Peasent31" parent="Enemy Feed Tape" index="30" instance=ExtResource("4_m3mer")]
+[node name="Peasent31" parent="Enemy Feed Tape" index="29" instance=ExtResource("4_m3mer")]
 position = Vector2(-4610, 601)
 
-[node name="Peasent32" parent="Enemy Feed Tape" index="31" instance=ExtResource("4_m3mer")]
+[node name="Peasent32" parent="Enemy Feed Tape" index="30" instance=ExtResource("4_m3mer")]
 position = Vector2(-4616, 490)
 
-[node name="Peasent33" parent="Enemy Feed Tape" index="32" instance=ExtResource("4_m3mer")]
-position = Vector2(-4619, 392)
-
-[node name="Peasent34" parent="Enemy Feed Tape" index="33" instance=ExtResource("4_m3mer")]
+[node name="Peasent34" parent="Enemy Feed Tape" index="31" instance=ExtResource("4_m3mer")]
 position = Vector2(-4619, 281)
 
-[node name="Peasent35" parent="Enemy Feed Tape" index="34" instance=ExtResource("4_m3mer")]
+[node name="Peasent35" parent="Enemy Feed Tape" index="32" instance=ExtResource("4_m3mer")]
 position = Vector2(-4622, 183)
 
-[node name="Peasent36" parent="Enemy Feed Tape" index="35" instance=ExtResource("4_m3mer")]
+[node name="Peasent36" parent="Enemy Feed Tape" index="33" instance=ExtResource("4_m3mer")]
 position = Vector2(-4616, 916)
 
-[node name="Peasent37" parent="Enemy Feed Tape" index="36" instance=ExtResource("4_m3mer")]
+[node name="Peasent37" parent="Enemy Feed Tape" index="34" instance=ExtResource("4_m3mer")]
 position = Vector2(-4677, 848)
 
-[node name="Peasent38" parent="Enemy Feed Tape" index="37" instance=ExtResource("4_m3mer")]
+[node name="Peasent38" parent="Enemy Feed Tape" index="35" instance=ExtResource("4_m3mer")]
 position = Vector2(-4677, 743)
 
-[node name="Peasent39" parent="Enemy Feed Tape" index="38" instance=ExtResource("4_m3mer")]
+[node name="Peasent39" parent="Enemy Feed Tape" index="36" instance=ExtResource("4_m3mer")]
 position = Vector2(-4677, 641)
 
-[node name="Peasent40" parent="Enemy Feed Tape" index="39" instance=ExtResource("4_m3mer")]
+[node name="Peasent40" parent="Enemy Feed Tape" index="37" instance=ExtResource("4_m3mer")]
 position = Vector2(-4683, 530)
 
-[node name="Peasent41" parent="Enemy Feed Tape" index="40" instance=ExtResource("4_m3mer")]
+[node name="Peasent41" parent="Enemy Feed Tape" index="38" instance=ExtResource("4_m3mer")]
 position = Vector2(-4686, 432)
 
-[node name="Peasent42" parent="Enemy Feed Tape" index="41" instance=ExtResource("4_m3mer")]
+[node name="Peasent42" parent="Enemy Feed Tape" index="39" instance=ExtResource("4_m3mer")]
 position = Vector2(-4686, 321)
 
-[node name="Peasent43" parent="Enemy Feed Tape" index="42" instance=ExtResource("4_m3mer")]
+[node name="Peasent43" parent="Enemy Feed Tape" index="40" instance=ExtResource("4_m3mer")]
 position = Vector2(-4689, 223)
 
-[node name="Peasent44" parent="Enemy Feed Tape" index="43" instance=ExtResource("4_m3mer")]
+[node name="Peasent44" parent="Enemy Feed Tape" index="41" instance=ExtResource("4_m3mer")]
 position = Vector2(-4683, 956)
 
-[node name="Peasent45" parent="Enemy Feed Tape" index="44" instance=ExtResource("4_m3mer")]
+[node name="Peasent45" parent="Enemy Feed Tape" index="42" instance=ExtResource("4_m3mer")]
 position = Vector2(-4748, 798)
 
-[node name="Peasent46" parent="Enemy Feed Tape" index="45" instance=ExtResource("4_m3mer")]
+[node name="Peasent46" parent="Enemy Feed Tape" index="43" instance=ExtResource("4_m3mer")]
 position = Vector2(-4748, 693)
 
-[node name="Peasent47" parent="Enemy Feed Tape" index="46" instance=ExtResource("4_m3mer")]
+[node name="Peasent47" parent="Enemy Feed Tape" index="44" instance=ExtResource("4_m3mer")]
 position = Vector2(-4748, 591)
 
-[node name="Peasent48" parent="Enemy Feed Tape" index="47" instance=ExtResource("4_m3mer")]
+[node name="Peasent48" parent="Enemy Feed Tape" index="45" instance=ExtResource("4_m3mer")]
 position = Vector2(-4754, 480)
 
-[node name="Peasent49" parent="Enemy Feed Tape" index="48" instance=ExtResource("4_m3mer")]
+[node name="Peasent49" parent="Enemy Feed Tape" index="46" instance=ExtResource("4_m3mer")]
 position = Vector2(-4757, 382)
 
-[node name="Peasent50" parent="Enemy Feed Tape" index="49" instance=ExtResource("4_m3mer")]
-position = Vector2(-4757, 271)
-
-[node name="Peasent51" parent="Enemy Feed Tape" index="50" instance=ExtResource("4_m3mer")]
+[node name="Peasent51" parent="Enemy Feed Tape" index="47" instance=ExtResource("4_m3mer")]
 position = Vector2(-4760, 173)
 
-[node name="Peasent52" parent="Enemy Feed Tape" index="51" instance=ExtResource("4_m3mer")]
-position = Vector2(-4754, 906)
-
-[node name="Peasent53" parent="Enemy Feed Tape" index="52" instance=ExtResource("4_m3mer")]
+[node name="Peasent53" parent="Enemy Feed Tape" index="48" instance=ExtResource("4_m3mer")]
 position = Vector2(-2554, 612)
 
-[node name="Peasent54" parent="Enemy Feed Tape" index="53" instance=ExtResource("4_m3mer")]
+[node name="Peasent54" parent="Enemy Feed Tape" index="49" instance=ExtResource("4_m3mer")]
 position = Vector2(-3389, 884)
 
-[node name="Peasent55" parent="Enemy Feed Tape" index="54" instance=ExtResource("4_m3mer")]
+[node name="Peasent55" parent="Enemy Feed Tape" index="50" instance=ExtResource("4_m3mer")]
 position = Vector2(-3488, 485)
 
-[node name="Peasent56" parent="Enemy Feed Tape" index="55" instance=ExtResource("4_m3mer")]
+[node name="Peasent56" parent="Enemy Feed Tape" index="51" instance=ExtResource("4_m3mer")]
 position = Vector2(-3746, 230)
 
-[node name="Peasent57" parent="Enemy Feed Tape" index="56" instance=ExtResource("4_m3mer")]
+[node name="Peasent57" parent="Enemy Feed Tape" index="52" instance=ExtResource("4_m3mer")]
 position = Vector2(-3791, 473)
 
-[node name="Peasent58" parent="Enemy Feed Tape" index="57" instance=ExtResource("4_m3mer")]
+[node name="Peasent58" parent="Enemy Feed Tape" index="53" instance=ExtResource("4_m3mer")]
 position = Vector2(-4067, 575)
 
-[node name="Peasent59" parent="Enemy Feed Tape" index="58" instance=ExtResource("4_m3mer")]
+[node name="Peasent59" parent="Enemy Feed Tape" index="54" instance=ExtResource("4_m3mer")]
 position = Vector2(-4022, 275)
 
-[node name="Peasent60" parent="Enemy Feed Tape" index="59" instance=ExtResource("4_m3mer")]
+[node name="Peasent60" parent="Enemy Feed Tape" index="55" instance=ExtResource("4_m3mer")]
 position = Vector2(-4280, 299)
 
-[node name="Peasent61" parent="Enemy Feed Tape" index="60" instance=ExtResource("4_m3mer")]
+[node name="Peasent61" parent="Enemy Feed Tape" index="56" instance=ExtResource("4_m3mer")]
 position = Vector2(-4349, 692)
 
-[node name="Peasent62" parent="Enemy Feed Tape" index="61" instance=ExtResource("4_m3mer")]
+[node name="Peasent62" parent="Enemy Feed Tape" index="57" instance=ExtResource("4_m3mer")]
 position = Vector2(-3561, 882)
 
-[node name="Peasent63" parent="Enemy Feed Tape" index="62" instance=ExtResource("4_m3mer")]
+[node name="Peasent63" parent="Enemy Feed Tape" index="58" instance=ExtResource("4_m3mer")]
 position = Vector2(-2875, 872)
 
-[node name="Peasent64" parent="Enemy Feed Tape" index="63" instance=ExtResource("4_m3mer")]
+[node name="Peasent64" parent="Enemy Feed Tape" index="59" instance=ExtResource("4_m3mer")]
 position = Vector2(-3471, 882)
 
-[node name="Peasent65" parent="Enemy Feed Tape" index="64" instance=ExtResource("4_m3mer")]
+[node name="Peasent65" parent="Enemy Feed Tape" index="60" instance=ExtResource("4_m3mer")]
 position = Vector2(-3641, 881)
 
-[node name="Peasent66" parent="Enemy Feed Tape" index="65" instance=ExtResource("4_m3mer")]
+[node name="Peasent66" parent="Enemy Feed Tape" index="61" instance=ExtResource("4_m3mer")]
 position = Vector2(-3813, 879)
 
-[node name="Peasent67" parent="Enemy Feed Tape" index="66" instance=ExtResource("4_m3mer")]
+[node name="Peasent67" parent="Enemy Feed Tape" index="62" instance=ExtResource("4_m3mer")]
 position = Vector2(-3723, 879)
 
-[node name="Peasent68" parent="Enemy Feed Tape" index="67" instance=ExtResource("4_m3mer")]
+[node name="Peasent68" parent="Enemy Feed Tape" index="63" instance=ExtResource("4_m3mer")]
 position = Vector2(-3896, 881)
 
-[node name="Peasent69" parent="Enemy Feed Tape" index="68" instance=ExtResource("4_m3mer")]
+[node name="Peasent69" parent="Enemy Feed Tape" index="64" instance=ExtResource("4_m3mer")]
 position = Vector2(-4068, 879)
 
-[node name="Peasent70" parent="Enemy Feed Tape" index="69" instance=ExtResource("4_m3mer")]
+[node name="Peasent70" parent="Enemy Feed Tape" index="65" instance=ExtResource("4_m3mer")]
 position = Vector2(-3978, 879)
 
-[node name="Peasent71" parent="Enemy Feed Tape" index="70" instance=ExtResource("4_m3mer")]
+[node name="Peasent71" parent="Enemy Feed Tape" index="66" instance=ExtResource("4_m3mer")]
 position = Vector2(-4151, 881)
 
-[node name="Peasent72" parent="Enemy Feed Tape" index="71" instance=ExtResource("4_m3mer")]
+[node name="Peasent72" parent="Enemy Feed Tape" index="67" instance=ExtResource("4_m3mer")]
 position = Vector2(-4323, 879)
 
-[node name="Peasent73" parent="Enemy Feed Tape" index="72" instance=ExtResource("4_m3mer")]
+[node name="Peasent73" parent="Enemy Feed Tape" index="68" instance=ExtResource("4_m3mer")]
 position = Vector2(-4233, 879)
 
-[node name="Peasent74" parent="Enemy Feed Tape" index="73" instance=ExtResource("4_m3mer")]
+[node name="Peasent74" parent="Enemy Feed Tape" index="69" instance=ExtResource("4_m3mer")]
 position = Vector2(-1994, 897)

@@ -5,6 +5,7 @@
 
 [node name="Ongoing Ability" instance=ExtResource("1_jlquv")]
 passive_ability_tag = "Warlock Fire Rate"
+show_times_symbol = true
 stack_behavior = "Multiply"
 
 [node name="Icon" parent="Icon Margin" index="0"]

@@ -8,7 +8,6 @@ var enemy_name: String:
 		file_name = file_name.replace("enemy_","")
 		file_name = file_name.capitalize()
 		name = file_name
-		print(1)
 		return file_name
 
 @export var move_speed: float= 50

@@ -71,7 +71,6 @@ func _ready() -> void:
 
 
 func _draw() -> void:
-	
 	var explored_icon: TextureRect = %"Explored Icon"
 	var locked_icon: TextureRect = %"Locked Icon"
 	#Icon switching for completion and locked

@@ -7,7 +7,6 @@
 [node name="Ongoing Ability" instance=ExtResource("1_peaau")]
 timed = true
 time = 5.0
-one_shot = null
 
 [node name="CardEffect_Draw" type="Node" parent="Timeout Effects" index="0"]
 script = ExtResource("2_4r3fh")

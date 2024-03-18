@@ -33,3 +33,8 @@ func _ready() -> void:
 	tween2.tween_property(self, "global_position", starting_pos + Vector2(0,-bob_dist), bob_time).set_trans(Tween.TRANS_SINE)
 	tween2.chain().tween_property(self, "global_position", starting_pos, bob_time).set_trans(Tween.TRANS_SINE)
 	tween2.set_loops()
+	
+	tree_exiting.connect(func()-> void: #this keeps it from erroring when we leave the scene
+		tween2.kill()
+		)
+

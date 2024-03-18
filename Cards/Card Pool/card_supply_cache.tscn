@@ -25,9 +25,10 @@ text = "Supply Cache"
 
 [node name="Card text" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("4_g2qdy")]
 layout_mode = 2
-text = "The next supply the librarian picks up yields 5 instead"
+text = "The next supply the librarian picks up yields an additional 5"
 
 [node name="Card text2" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1" instance=ExtResource("4_g2qdy")]
+visible = false
 layout_mode = 2
 text = "(stacks with combo)"
 label_settings = ExtResource("5_dl7ds")

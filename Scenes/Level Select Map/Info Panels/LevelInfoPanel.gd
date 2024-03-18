@@ -46,7 +46,7 @@ func populate(level_prefab: PackedScene) -> void:
 			return
 		var x: int =  GameManager.DECK_MAX_SIZE - GameManager.current_save.cards_in_deck.size()
 		if x > 0:
-			GameManager.spawn_popup(get_global_mouse_position(), "Deck needs " + str(x) + " more cards!", Color.FIREBRICK)
+			GameManager.spawn_popup(get_global_mouse_position(), "Deck needs " + str(x) + " more cards!", Color.FIREBRICK, 1, self)
 			return
 		
 
@@ -58,7 +58,7 @@ func populate(level_prefab: PackedScene) -> void:
 			if !card.can_card_be_played_on_level(level_data):
 				if warned_about_unplayable_cards != GameManager.current_save.cards_in_deck: #if they haven't changed their deck
 					warned_about_unplayable_cards = GameManager.current_save.cards_in_deck
-					GameManager.spawn_popup(get_global_mouse_position(), "Warning: Your deck has costs that do not spawn in this level", Color.ORANGE,6)
+					GameManager.spawn_popup(get_global_mouse_position(), "Warning: Your deck has costs that do not spawn in this level", Color.ORANGE,6,self)
 					start_button.text = "Play anyway?"
 					return
 			card.queue_free()

@@ -1,7 +1,7 @@
 extends Node2D
 class_name CardManager
 
-@export var starting_cards: int = 3
+@export var starting_cards_count: int = 3
 var card_pool: Array[Card] = []
 
 @onready var queue_of_cards: Node = $Queue
@@ -29,7 +29,7 @@ func _ready() -> void:
 	for scene: PackedScene in GameManager.current_save.cards_in_deck:
 		cards_in_deck.append(scene.instantiate() as Card)
 	
-	for i in range(starting_cards):
+	for i in range(starting_cards_count):
 		draw_random_card()
 
 

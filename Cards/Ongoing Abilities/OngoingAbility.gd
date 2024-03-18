@@ -5,7 +5,7 @@ class_name  OngoingAbility
 @export var passive_ability_tag: String = "None"
 @export var consume: bool = false
 @export var tool_tip: String = "This is not yet implimented" #TODO impliment this
-@export var show_multiply: bool = false
+@export var show_times_symbol: bool = false
 var id: String
 
 
@@ -31,7 +31,7 @@ var count: float = 1:
 			count_disp.visible = false
 		else:
 			var txt: String = str(count)
-			if show_multiply:
+			if show_times_symbol:
 				txt = "x" + txt
 			count_disp.text = txt
 			count_disp.visible = true
