@@ -3,3 +3,4 @@
 [ext_resource type="PackedScene" uid="uid://dqgaio16e7poi" path="res://Projectiles/explosion.tscn" id="1_fesrw"]
 
 [node name="Explosion" instance=ExtResource("1_fesrw")]
+screen_shake = null

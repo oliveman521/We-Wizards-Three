@@ -12,6 +12,8 @@ var storeroom_manager: StoreroomManager:
 	get:
 		return GameManager.storeroom_Manager as StoreroomManager
 
+signal x_callback(count: int)
+
 func card_effect() -> void:
 	pass
 

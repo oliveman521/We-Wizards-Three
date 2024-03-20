@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bhq4tuy1yifyy"]
+[gd_scene load_steps=9 format=3 uid="uid://bhq4tuy1yifyy"]
 
 [ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_qye5f"]
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_b6ewd"]
@@ -7,6 +7,7 @@
 [ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="5_3a47r"]
 [ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_Damage.gd" id="5_dhvvf"]
 [ext_resource type="PackedScene" uid="uid://dspow6wbdypge" path="res://Cards/Card Effects/exhaust.tscn" id="7_bcgrt"]
+[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_ScreenShake.gd" id="8_milk5"]
 
 [node name="Scortched Earth" instance=ExtResource("1_qye5f")]
 card_type = "Fire Damage"
@@ -41,3 +42,7 @@ autowrap_mode = 2
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Exhaust" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2" instance=ExtResource("7_bcgrt")]
 layout_mode = 2
+
+[node name="CardEffect_ScreenShake" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="3"]
+script = ExtResource("8_milk5")
+shake_amnt = 0.6

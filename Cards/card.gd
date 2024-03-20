@@ -55,6 +55,16 @@ signal card_discarded()
 			card_name_UI.text = file_name
 		return file_name
 
+@export var plus_version: bool = false:
+	set(new_val):
+		plus_version = new_val
+		if not Engine.is_editor_hint(): return
+		const plus_color: Color = Color("65ee71")
+		if new_val == true:
+			card_name_UI.modulate = plus_color
+		else:
+			card_name_UI.modulate = Color.WHITE
+
 var center_position: Vector2:
 	get:
 		return global_position + size/2
@@ -207,12 +217,15 @@ func _on_button_gui_input(event: InputEvent) -> void:
 			GameManager.spawn_popup(center_position,"Not Enough Resources!",Color(1,0.8,.1))
 			SoundManager.play_sound(cannot_be_played_sound)
 	elif event.button_index == MOUSE_BUTTON_RIGHT:
-		card_discarded.emit()
-		SoundManager.play_sound(discard_sound)
-		await slide_card_away(Vector2.DOWN, Color(1,0,0,0))
-		card_manager.cards_in_deck.append(self.duplicate()) #TODO. This should somehow go back to the deck. Right now it's doing some christopher nolan's the prestige type shit
-		queue_free()
+		discard()
 
+
+func discard() -> void:
+	card_discarded.emit()
+	SoundManager.play_sound(discard_sound)
+	await slide_card_away(Vector2.DOWN, Color(1,0,0,0))
+	card_manager.cards_in_deck.append(self.duplicate()) #TODO. This should somehow go back to the deck. Right now it's doing some christopher nolan's the prestige type shit
+	queue_free()
 
 const SLIDE_DISTANCE: = 100
 const MOVE_TIME: = .25

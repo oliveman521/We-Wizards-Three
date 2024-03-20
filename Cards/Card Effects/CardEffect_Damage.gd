@@ -7,6 +7,14 @@ class_name CardEffect_Damage
 @export_enum("All", "First", "MostHP", "Random") var targets: String = "All"
 @export var target_count:int = 1
 
+func damage_x_targets(x: int):
+	target_count = x
+	use_effect()
+
+func deal_x_damage(x: int):
+	amnt = x
+	use_effect()
+
 func use_effect() -> void:
 	#TODO impliment the other kinds of damage
 	if targets == "All":

@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://bpfb1n271ove4"]
+[gd_scene load_steps=71 format=3 uid="uid://bpfb1n271ove4"]
 
 [ext_resource type="Script" path="res://Scenes/Level Select Map/LevelSelectMenu.gd" id="1_xcx1n"]
 [ext_resource type="Script" path="res://Scenes/Level Select Map/MapManager.gd" id="2_6iwrn"]
@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://4l40ype480h" path="res://Levels/Bonus Level - Seige Engine.tscn" id="18_7emhd"]
 [ext_resource type="PackedScene" uid="uid://ccqqvfnjhvb3t" path="res://Cards/Card Pool/card_supercharge.tscn" id="19_0o358"]
 [ext_resource type="PackedScene" uid="uid://shwywe7qw2jx" path="res://Cards/Card Pool/card_scroll_reserves.tscn" id="19_1v8j7"]
+[ext_resource type="PackedScene" uid="uid://b2wt5v3t3gjkc" path="res://Cards/Card Pool/card_rain_of_ash.tscn" id="20_712ye"]
 [ext_resource type="PackedScene" uid="uid://dmdss2aqbb1lg" path="res://Levels/Level 3.tscn" id="20_qv78i"]
 [ext_resource type="PackedScene" uid="uid://bhq4tuy1yifyy" path="res://Cards/Card Pool/card_scortched_earth.tscn" id="20_tkhon"]
 [ext_resource type="PackedScene" uid="uid://c3nxruvppvko5" path="res://Cards/Card Pool/card_well_read.tscn" id="21_bj66l"]
@@ -35,7 +36,6 @@
 [ext_resource type="PackedScene" uid="uid://tth5yw0eirm6" path="res://Cards/Card Pool/card_librarian_golem.tscn" id="22_dsx6i"]
 [ext_resource type="PackedScene" uid="uid://dbv60sy2epipf" path="res://Cards/Card Pool/card_marutha's_deal.tscn" id="23_rlx2y"]
 [ext_resource type="PackedScene" uid="uid://50477ao4osxc" path="res://Levels/Level 3b - Super Silly.tscn" id="24_0bg83"]
-[ext_resource type="PackedScene" uid="uid://5wdcju2fxgnc" path="res://Cards/Card Pool/card_scortch.tscn" id="24_brisb"]
 [ext_resource type="PackedScene" uid="uid://ddmofotpnip81" path="res://Levels/Level 3A - (s)Laughter.tscn" id="24_j8tib"]
 [ext_resource type="PackedScene" uid="uid://6685qupifd8s" path="res://Cards/Card Pool/card_fire_ball_recipe.tscn" id="24_rjnis"]
 [ext_resource type="PackedScene" uid="uid://cf2tx5dypsmoq" path="res://Cards/Card Pool/card_scroll_mountain.tscn" id="25_1n2im"]
@@ -44,6 +44,7 @@
 [ext_resource type="PackedScene" uid="uid://cgklhf7q88enf" path="res://Cards/Card Pool/card_shock.tscn" id="26_cxv1b"]
 [ext_resource type="PackedScene" uid="uid://bt6cb8kc2x7u4" path="res://Cards/Card Pool/card_quick_cast.tscn" id="27_48o8d"]
 [ext_resource type="PackedScene" uid="uid://qiwvts513giv" path="res://Levels/Level 5b - Big Boys.tscn" id="27_ggwvo"]
+[ext_resource type="PackedScene" uid="uid://5wdcju2fxgnc" path="res://Cards/Card Pool/card_singe+.tscn" id="28_olfey"]
 [ext_resource type="PackedScene" uid="uid://d1lawaxsvcjjm" path="res://Cards/Card Pool/card_boomlins.tscn" id="29_il0pa"]
 [ext_resource type="PackedScene" uid="uid://bajlv8q00iyvv" path="res://Levels/Bonus Level - No Essence.tscn" id="29_v2ygy"]
 [ext_resource type="PackedScene" uid="uid://ddysngdfm7vje" path="res://Levels/Bonus Level - No Draw.tscn" id="30_knvvg"]
@@ -171,10 +172,10 @@ script = ExtResource("2_6iwrn")
 
 [node name="Map Bounds" type="Control" parent="Map Manager"]
 anchors_preset = 0
-offset_left = -696.0
-offset_top = -339.0
-offset_right = 3812.0
-offset_bottom = 1408.0
+offset_left = -281.0
+offset_top = -379.0
+offset_right = 3808.0
+offset_bottom = 1270.0
 
 [node name="StartHere" type="Sprite2D" parent="Map Manager"]
 position = Vector2(162, 187)
@@ -207,9 +208,9 @@ offset_right = 509.0
 offset_bottom = 490.0
 mouse_filter = 0
 level = ExtResource("12_k3ykg")
-connected_map_nodes = [NodePath("../info - Welcome! (5 pages)"), NodePath("../Cards - Stockpile (+4 others)")]
+connected_map_nodes = [NodePath("../info - Welcome! (5 pages)"), NodePath("../Cards - Stockpile (+6 others)")]
 
-[node name="Cards - Stockpile (+4 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+[node name="Cards - Stockpile (+6 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 545.0
 offset_top = 497.0
 offset_right = 597.0
@@ -219,19 +220,19 @@ cards = Array[PackedScene]([ExtResource("17_xsr76"), ExtResource("17_xsr76"), Ex
 connected_map_nodes = [NodePath("../Level 1 - It Begins"), NodePath("../info - Exhaust")]
 
 [node name="info - Exhaust" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("13_7kiee")]
-offset_left = 649.0
-offset_top = 530.0
-offset_right = 697.0
-offset_bottom = 579.0
+offset_left = 642.0
+offset_top = 542.0
+offset_right = 690.0
+offset_bottom = 591.0
 mouse_filter = 0
 pages = Array[ExtResource("5_2m5ee")]([SubResource("Resource_ptob5")])
-connected_map_nodes = [NodePath("../Cards - Stockpile (+4 others)"), NodePath("../Ability - Max Combo")]
+connected_map_nodes = [NodePath("../Cards - Stockpile (+6 others)"), NodePath("../Ability - Max Combo")]
 
 [node name="Level 2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
-offset_left = 896.0
-offset_top = 560.0
-offset_right = 1029.0
-offset_bottom = 608.0
+offset_left = 884.0
+offset_top = 584.0
+offset_right = 1017.0
+offset_bottom = 632.0
 mouse_filter = 0
 level = ExtResource("16_okn0a")
 connected_map_nodes = [NodePath("../Cards - Singe (+4 others)"), NodePath("../Ability - Max Combo"), NodePath("../Bonus Level - Seige Engine")]
@@ -246,10 +247,10 @@ cards = Array[PackedScene]([ExtResource("15_wpld2"), ExtResource("15_wpld2"), Ex
 connected_map_nodes = [NodePath("../Level 2"), NodePath("../Level 3")]
 
 [node name="Ability - Max Combo" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("15_oso2k")]
-offset_left = 770.0
-offset_top = 555.0
-offset_right = 815.0
-offset_bottom = 600.0
+offset_left = 749.0
+offset_top = 588.0
+offset_right = 794.0
+offset_bottom = 633.0
 mouse_filter = 0
 ability_name = "Max Combo"
 override_name = "Librarian Combo"
@@ -267,13 +268,13 @@ level = ExtResource("20_qv78i")
 connected_map_nodes = [NodePath("../Cards - Supercharge (+2 others)"), NodePath("../Cards - Singe (+4 others)")]
 
 [node name="Bonus Level - Seige Engine" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
-offset_left = 914.0
-offset_top = 429.0
-offset_right = 1047.0
-offset_bottom = 477.0
+offset_left = 908.0
+offset_top = 432.0
+offset_right = 1041.0
+offset_bottom = 480.0
 mouse_filter = 0
 level = ExtResource("18_7emhd")
-connected_map_nodes = [NodePath("../Cards - Scroll Mountain (+1 others)"), NodePath("../Level 2")]
+connected_map_nodes = [NodePath("../Cards - Scroll Mountain (+1 others)"), NodePath("../Level 2"), NodePath("../Cards - Scroll Mountain (+1 others)2")]
 
 [node name="Cards - Marutha\'s Deal (+2 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 1621.0
@@ -281,7 +282,7 @@ offset_top = 260.0
 offset_right = 1673.0
 offset_bottom = 308.0
 mouse_filter = 0
-cards = Array[PackedScene]([ExtResource("23_rlx2y"), ExtResource("20_tkhon"), ExtResource("24_brisb")])
+cards = Array[PackedScene]([ExtResource("23_rlx2y"), ExtResource("20_tkhon"), ExtResource("28_olfey")])
 connected_map_nodes = [NodePath("../Level 3b - Super Silly")]
 
 [node name="Cards - Supercharge (+2 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
@@ -302,22 +303,31 @@ mouse_filter = 0
 cards = Array[PackedScene]([ExtResource("21_lx1sb"), ExtResource("21_lwsqc"), ExtResource("14_3vtqq"), ExtResource("21_bj66l")])
 connected_map_nodes = [NodePath("../Level 3A - (s)Laughter"), NodePath("../Bonus Level - Boomlins")]
 
-[node name="Cards - Boomlins" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+[node name="Cards - Boomlins (+1 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 1731.0
 offset_top = 1093.0
 offset_right = 1783.0
 offset_bottom = 1141.0
 mouse_filter = 0
-cards = Array[PackedScene]([ExtResource("29_il0pa")])
+cards = Array[PackedScene]([ExtResource("29_il0pa"), null])
 connected_map_nodes = [NodePath("../Bonus Level - Boomlins")]
 
 [node name="Cards - Scroll Mountain (+1 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
-offset_left = 973.0
-offset_top = 261.0
-offset_right = 1025.0
-offset_bottom = 309.0
+offset_left = 949.0
+offset_top = 267.0
+offset_right = 1001.0
+offset_bottom = 315.0
 mouse_filter = 0
 cards = Array[PackedScene]([ExtResource("25_1n2im"), ExtResource("25_1n2im")])
+connected_map_nodes = [NodePath("../Bonus Level - Seige Engine")]
+
+[node name="Cards - Scroll Mountain (+1 others)2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+offset_left = 1174.0
+offset_top = 173.0
+offset_right = 1226.0
+offset_bottom = 221.0
+mouse_filter = 0
+cards = Array[PackedScene]([ExtResource("20_712ye")])
 connected_map_nodes = [NodePath("../Bonus Level - Seige Engine")]
 
 [node name="Level 3A - (s)Laughter" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
@@ -336,7 +346,7 @@ offset_right = 1793.0
 offset_bottom = 986.0
 mouse_filter = 0
 level = ExtResource("31_3vpdt")
-connected_map_nodes = [NodePath("../Cards - Belphegor\'s Deal (+3 others)"), NodePath("../Cards - Boomlins"), null]
+connected_map_nodes = [NodePath("../Cards - Belphegor\'s Deal (+3 others)"), NodePath("../Cards - Boomlins (+1 others)"), null]
 
 [node name="Level 3b - Super Silly" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 1602.0
@@ -348,12 +358,12 @@ level = ExtResource("24_0bg83")
 connected_map_nodes = [NodePath("../Cards - Supercharge (+2 others)"), NodePath("../Cards - Fire Ball Recipe (+4 others)"), NodePath("../Cards - Marutha\'s Deal (+2 others)")]
 
 [node name="Cards - Fire Ball Recipe (+4 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
-offset_left = 1779.0
-offset_top = 552.0
-offset_right = 1831.0
-offset_bottom = 600.0
+offset_left = 1780.0
+offset_top = 553.0
+offset_right = 1832.0
+offset_bottom = 601.0
 mouse_filter = 0
-cards = Array[PackedScene]([ExtResource("24_rjnis"), ExtResource("24_rjnis"), ExtResource("24_rjnis"), ExtResource("34_ttysr"), ExtResource("24_brisb")])
+cards = Array[PackedScene]([ExtResource("24_rjnis"), ExtResource("24_rjnis"), ExtResource("24_rjnis"), ExtResource("34_ttysr"), ExtResource("28_olfey")])
 connected_map_nodes = [NodePath("../Level 3A - (s)Laughter"), NodePath("../Level 3b - Super Silly"), NodePath("../Level 4 - Knights"), null]
 
 [node name="Level 4 - Knights" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]

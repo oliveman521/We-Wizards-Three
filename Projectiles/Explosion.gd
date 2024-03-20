@@ -8,6 +8,7 @@ class_name Explosion
 		radius = new_val
 		queue_redraw()
 @export var damage: int = 2
+@export var screen_shake: float = 0.25
 @export var damage_type: GameManager.Damage_Type = GameManager.Damage_Type.FIRE
 @export var post_animation_hold_time: float = 5
 
@@ -30,6 +31,9 @@ func _ready() -> void:
 	visial.scale = Vector2(final_visual_scale, final_visual_scale)
 	
 	visial.play()
+	
+	#screen_shake 
+	GameCamera.instance.shake(screen_shake)
 	
 	#damage in circle
 	explosion_hitbox.scale = Vector2(radius,radius)

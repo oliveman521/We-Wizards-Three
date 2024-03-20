@@ -8,6 +8,9 @@ class_name Projectile
 
 @onready var sprite: Sprite2D = $Sprite
 
+@export_range(0,0.5) var screen_shake_on_shot: float = 0.01
+@export_range(0,0.5) var screen_shake_on_hit: float = 0.01
+
 @export var shoot_sound_pitch_variance: float = 0.2
 @onready var shoot_sound: AudioStreamPlayer2D = $"Shoot Sound"
 @onready var hit_sound: AudioStreamPlayer2D = $"Hit Sound"
@@ -19,6 +22,8 @@ var direction: Vector2 = Vector2(-1,0)
 
 func _ready() -> void:
 	SoundManager.play_sound(shoot_sound, shoot_sound_pitch_variance)
+	GameCamera.instance.shake(screen_shake_on_shot)
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,6 +37,7 @@ func _on_area_exited(area: Area2D) -> void:
 		queue_free()
 
 func impact_effect() -> void:
+	GameCamera.instance.shake(screen_shake_on_hit)
 	SoundManager.play_sound(hit_sound)
 	for item: PackedScene in spawn_on_hit:
 		var new_node: Node2D = item.instantiate() as Node2D

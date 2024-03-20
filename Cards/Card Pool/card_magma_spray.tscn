@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://deoygvkkffvpu"]
+[gd_scene load_steps=9 format=3 uid="uid://deoygvkkffvpu"]
 
 [ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_mfa5x"]
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_557sh"]
@@ -6,7 +6,8 @@
 [ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="3_x8h0f"]
 [ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_Damage.gd" id="4_fqa6u"]
 [ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="5_br3fs"]
-[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_Draw.gd" id="6_mn1lc"]
+[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_DrawDiscard.gd" id="7_27ydv"]
+[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_ScreenShake.gd" id="8_t1apa"]
 
 [node name="Magma Spray" instance=ExtResource("1_mfa5x")]
 card_type = "Fire Damage"
@@ -50,4 +51,8 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#CardEffect_Draw" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="3"]
-script = ExtResource("6_mn1lc")
+script = ExtResource("7_27ydv")
+
+[node name="CardEffect_ScreenShake" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="4"]
+script = ExtResource("8_t1apa")
+shake_amnt = 0.3

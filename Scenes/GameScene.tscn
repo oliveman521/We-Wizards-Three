@@ -1,6 +1,7 @@
-[gd_scene load_steps=43 format=3 uid="uid://c4qnaj4cqxgny"]
+[gd_scene load_steps=44 format=3 uid="uid://c4qnaj4cqxgny"]
 
 [ext_resource type="Script" path="res://Scripts/warlock_controller.gd" id="1_6dk5y"]
+[ext_resource type="Script" path="res://Scenes/GameCamera.gd" id="1_s2bat"]
 [ext_resource type="Texture2D" uid="uid://b8boy6md2mbll" path="res://Sprites/warlock.png" id="2_bsyth"]
 [ext_resource type="Script" path="res://Enemies/Enemy Manager.gd" id="3_yxut5"]
 [ext_resource type="Script" path="res://Levels/feed_tape_debug_graphic.gd" id="4_l8m8i"]
@@ -104,6 +105,11 @@ size = Vector2(202, 193)
 
 [node name="Game" type="Node2D"]
 position = Vector2(0, -5)
+
+[node name="Game Camera" type="Camera2D" parent="."]
+position = Vector2(960, 540)
+ignore_rotation = false
+script = ExtResource("1_s2bat")
 
 [node name="Warlock Game" type="Node2D" parent="."]
 

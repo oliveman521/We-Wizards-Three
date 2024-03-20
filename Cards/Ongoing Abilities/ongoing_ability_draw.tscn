@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://5p2uuetniwn6"]
 
 [ext_resource type="PackedScene" uid="uid://bj3xl0y5gxddn" path="res://Cards/Ongoing Abilities/ongoing_ability_base.tscn" id="1_peaau"]
-[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_Draw.gd" id="2_4r3fh"]
+[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_DrawDiscard.gd" id="2_4r3fh"]
 [ext_resource type="Texture2D" uid="uid://cm2qu0i8qc1s0" path="res://Sprites/Tablet.png" id="2_g2ogb"]
 
 [node name="Ongoing Ability" instance=ExtResource("1_peaau")]
