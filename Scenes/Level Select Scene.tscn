@@ -208,9 +208,9 @@ offset_right = 509.0
 offset_bottom = 490.0
 mouse_filter = 0
 level = ExtResource("12_k3ykg")
-connected_map_nodes = [NodePath("../info - Welcome! (5 pages)"), NodePath("../Cards - Stockpile (+6 others)")]
+connected_map_nodes = [NodePath("../info - Welcome! (5 pages)"), NodePath("../Cards - Stockpile (+4 others)")]
 
-[node name="Cards - Stockpile (+6 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+[node name="Cards - Stockpile (+4 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 545.0
 offset_top = 497.0
 offset_right = 597.0
@@ -226,7 +226,7 @@ offset_right = 690.0
 offset_bottom = 591.0
 mouse_filter = 0
 pages = Array[ExtResource("5_2m5ee")]([SubResource("Resource_ptob5")])
-connected_map_nodes = [NodePath("../Cards - Stockpile (+6 others)"), NodePath("../Ability - Max Combo")]
+connected_map_nodes = [NodePath("../Cards - Stockpile (+4 others)"), NodePath("../Ability - Max Combo")]
 
 [node name="Level 2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 884.0
@@ -274,7 +274,7 @@ offset_right = 1041.0
 offset_bottom = 480.0
 mouse_filter = 0
 level = ExtResource("18_7emhd")
-connected_map_nodes = [NodePath("../Cards - Scroll Mountain (+1 others)"), NodePath("../Level 2"), NodePath("../Cards - Scroll Mountain (+1 others)2")]
+connected_map_nodes = [NodePath("../Cards - Scroll Mountain (+1 others)"), NodePath("../Level 2"), NodePath("../Cards - Rain Of Ash")]
 
 [node name="Cards - Marutha\'s Deal (+2 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 1621.0
@@ -321,7 +321,7 @@ mouse_filter = 0
 cards = Array[PackedScene]([ExtResource("25_1n2im"), ExtResource("25_1n2im")])
 connected_map_nodes = [NodePath("../Bonus Level - Seige Engine")]
 
-[node name="Cards - Scroll Mountain (+1 others)2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+[node name="Cards - Rain Of Ash" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 1174.0
 offset_top = 173.0
 offset_right = 1226.0

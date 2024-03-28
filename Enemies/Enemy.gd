@@ -116,6 +116,7 @@ func _on_area_entered(area: Area2D) -> void:
 		GameManager.lives -= 1
 		GameManager.spawn_popup(global_position, "LIFE LOST!", Color.RED)
 		SoundManager.play_sound($"Damaged Base Sound")
+		GameCamera.instance.shake(0.6)
 		queue_free()
 
 func _on_screen_enter() -> void:

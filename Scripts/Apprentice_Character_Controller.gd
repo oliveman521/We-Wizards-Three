@@ -33,7 +33,6 @@ var max_combo: int:
 		return 1 + GameManager.current_save.check_unlock("Max Combo") + max_combo_bonus
 
 
-@onready var gfx: AnimatedSprite2D = %GFX as AnimatedSprite2D
 @onready var stun_timer: Timer = $"Stun Timer"
 
 var boost_multiplier: float = 3
@@ -96,14 +95,10 @@ func _process(_delta: float) -> void:
 			footstep_timer.start()
 	
 	#animations 
-	if input_dir.x > 0: #moving right
-		gfx.flip_h = true
-	elif input_dir.x < 0: #moving left
-		gfx.flip_h = false
-	if velocity == Vector2.ZERO && gfx.is_playing():
-		gfx.stop()
-	elif gfx.is_playing() == false:
-		gfx.play()
+	#if input_dir.x > 0: #moving right
+		#gfx.flip_h = true
+	#elif input_dir.x < 0: #moving left
+		#gfx.flip_h = false
 
 func _on_collection_hitbox_area_entered(area: Area2D) -> void:
 	if area is Pickup:

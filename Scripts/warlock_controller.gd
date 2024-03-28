@@ -82,5 +82,5 @@ func take_damage(damage: float) -> void:
 		stun_timer.start()
 	
 	GameManager.spawn_popup(position, "Stunned!", Color.YELLOW)
-	
+	GameCamera.instance.shake(0.15)
 	
