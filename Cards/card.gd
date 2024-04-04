@@ -76,7 +76,7 @@ var supplies_interacted_with: Array[Supply]:
 		return []
 
 var card_manager: CardManager:
-	get: return GameManager.card_manager as CardManager
+	get: return CardManager.instance
 
 
 signal card_pressed
@@ -145,7 +145,8 @@ func play() -> void:
 	if not check_costs(): #TODO currently this is a double check and shouldn't be necessary
 		print("!!!You can't play that card because it costs too much! This should never fire")
 		return
-	card_played.emit() 
+	card_played.emit()
+	card_manager.instance.card_played.emit(self)
 	
 	SoundManager.play_sound(play_sound)
 	
@@ -158,10 +159,10 @@ func play() -> void:
 		if node.has_method("use_effect"):
 			await node.use_effect()
 	
-	await slide_card_away(Vector2.UP, Color(0,1,0,0))
-	#animate it flying away
+	await slide_card_away(Vector2.LEFT, Color(0,1,0,0)) #animate it flying away
 	
 	if exhausts_on_play: #return card to our deck as long as we aren't supposed to exhaust
+		print("card exhausted")
 		pass #TODO exhaust visual
 	else:
 		card_manager.cards_in_deck.append(self.duplicate()) #NOTE this duplicate is transparent cuz dumb reasons. This should be be fixed, but I'll add a quick note to make it full visible on arrangeing the playspace
@@ -222,6 +223,7 @@ func _on_button_gui_input(event: InputEvent) -> void:
 
 func discard() -> void:
 	card_discarded.emit()
+	card_manager.instance.card_discarded.emit(self)
 	SoundManager.play_sound(discard_sound)
 	await slide_card_away(Vector2.DOWN, Color(1,0,0,0))
 	card_manager.cards_in_deck.append(self.duplicate()) #TODO. This should somehow go back to the deck. Right now it's doing some christopher nolan's the prestige type shit

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x7an8jnbjlfc"
-path="res://.godot/imported/Active_Warlock.svg-5015652132263608e44b1770a3154abc.ctex"
+uid="uid://ohhniyb0i6dk"
+path="res://.godot/imported/Active_Warlock.svg-8dfed2246687d2f1499875c0866a486d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/SVG Characters/Active_Warlock.svg"
-dest_files=["res://.godot/imported/Active_Warlock.svg-5015652132263608e44b1770a3154abc.ctex"]
+source_file="res://Sprites/Retired/Active_Warlock.svg"
+dest_files=["res://.godot/imported/Active_Warlock.svg-8dfed2246687d2f1499875c0866a486d.ctex"]
 
 [params]
 

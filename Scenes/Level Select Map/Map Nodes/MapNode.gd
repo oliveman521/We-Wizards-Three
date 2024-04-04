@@ -87,7 +87,7 @@ func _draw() -> void:
 	#TODO get these to render behind
 	#Lines that connect nodes
 	var line_width: int = 4
-	var line_color: Color = Color.INDIAN_RED
+	var line_color: Color = map_manager.line_color
 	
 	#TODO kinda big issue. lines are cut off when the other node is off screen
 	#TODO. Doesn't doulbe draw because it only draws halfway. This helps with laying. Long term probalby best to have the map manager handle this

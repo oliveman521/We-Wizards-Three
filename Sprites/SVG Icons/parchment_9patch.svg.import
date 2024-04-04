@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ll7cd4xfftb5"
-path="res://.godot/imported/drawing.svg-95ecc608f6269b0e6101138b20b76665.ctex"
+uid="uid://b2oavhmebld0n"
+path="res://.godot/imported/parchment_9patch.svg-5628ac4d430ae4220a68bf873758b362.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/SVG Characters/Narrow Boarder/drawing.svg"
-dest_files=["res://.godot/imported/drawing.svg-95ecc608f6269b0e6101138b20b76665.ctex"]
+source_file="res://Sprites/SVG Icons/parchment_9patch.svg"
+dest_files=["res://.godot/imported/parchment_9patch.svg-5628ac4d430ae4220a68bf873758b362.ctex"]
 
 [params]
 
@@ -32,6 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
+svg/scale=0.5
 editor/scale_with_editor_scale=false
 editor/convert_colors_with_editor_theme=false

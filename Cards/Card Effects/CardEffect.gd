@@ -2,7 +2,7 @@ extends Node
 class_name CardEffect
 
 var card_manager: CardManager:
-	get: return GameManager.card_manager as CardManager
+	get: return CardManager.instance
 		
 var enemy_manager: EnemyManager:
 	get:

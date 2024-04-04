@@ -15,7 +15,6 @@ var storeroom_Manager: StoreroomManager
 var apprentice_character: ApprenticeCharacter
 var warlock_character: WarlockCharacter
 var enemy_manager: EnemyManager
-var card_manager: CardManager
 
 signal debug_mode_changed()
 var debug_mode: bool = false:
@@ -157,7 +156,7 @@ func level_won() -> void:
 
 func get_passive_ability_count(ability_tag: String) -> float:
 	var count: float = 0
-	for node: Node in card_manager.ongoing_abilities_region.get_children():
+	for node: Node in CardManager.instance.ongoing_abilities_region.get_children():
 		if node is OngoingAbility:
 			var ability: OngoingAbility = node as OngoingAbility
 			if ability.passive_ability_tag == ability_tag:

@@ -1,8 +1,8 @@
-[gd_scene load_steps=59 format=3 uid="uid://c4qnaj4cqxgny"]
+[gd_scene load_steps=54 format=3 uid="uid://c4qnaj4cqxgny"]
 
 [ext_resource type="Script" path="res://Scripts/warlock_controller.gd" id="1_6dk5y"]
 [ext_resource type="Script" path="res://Scenes/GameCamera.gd" id="1_s2bat"]
-[ext_resource type="Texture2D" uid="uid://uahkyy7pck2d" path="res://Sprites/SVG Characters/Warlock/Warlock.svg" id="3_2dsv6"]
+[ext_resource type="Texture2D" uid="uid://b8boy6md2mbll" path="res://Sprites/warlock.png" id="2_bsyth"]
 [ext_resource type="Script" path="res://Enemies/Enemy Manager.gd" id="3_yxut5"]
 [ext_resource type="Script" path="res://Levels/feed_tape_debug_graphic.gd" id="4_l8m8i"]
 [ext_resource type="PackedScene" uid="uid://b5t5chbh5x6vr" path="res://Enemies/enemy_peasent.tscn" id="5_fixi5"]
@@ -227,7 +227,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-25, 20), Vector2(0, -80), Vector2(35, -5), Vector2(0, -80)]
+"values": [Vector2(-50, 20), Vector2(0, -80), Vector2(90, -5), Vector2(0, -80)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -239,7 +239,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [-0.174533, -0.23911, -0.280998, -0.0802851]
+"values": [-0.174533, 0.0, 0.195477, 0.0]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -297,133 +297,8 @@ _data = {
 "Walk": SubResource("Animation_ve6a6")
 }
 
-[sub_resource type="Animation" id="Animation_hql61"]
-resource_name = "Idle"
-length = 1.5
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("LibrarianBody/LibrarianArm:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.1, 0.3, 0.8, 1.1),
-"transitions": PackedFloat32Array(1, 1.68179, 2.54912, 1.46409),
-"update": 0,
-"values": [-0.869174, -0.869174, -0.837758, -0.837758]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("LibrarianBody/LibrarianArm:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.1, 0.3, 0.8, 1.1),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(-217.143, 55), Vector2(-217.143, 55), Vector2(-217.143, 50), Vector2(-217.143, 50)]
-}
-
-[sub_resource type="Animation" id="Animation_lql6v"]
-resource_name = "Pickup"
-length = 0.4
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("LibrarianBody/LibrarianArm:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [-0.136136, -2.35969, -1.24791]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("LibrarianBody/LibrarianArm:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(-217.143, 57.1429), Vector2(-159.114, 34.286), Vector2(-188.129, 45.7145)]
-}
-
-[sub_resource type="Animation" id="Animation_1br2w"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("LibrarianBody/LibrarianArm:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-0.869174]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("LibrarianBody/LibrarianArm:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-194.286, 34.2858)]
-}
-
-[sub_resource type="Animation" id="Animation_ys6ik"]
-resource_name = "Walk"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("LibrarianBody/LibrarianArm:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_j67lp"]
-_data = {
-"Idle": SubResource("Animation_hql61"),
-"Pickup": SubResource("Animation_lql6v"),
-"RESET": SubResource("Animation_1br2w"),
-"Walk": SubResource("Animation_ys6ik")
-}
-
-[sub_resource type="Animation" id="Animation_c425b"]
-resource_name = "Cast"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.6),
-"transitions": PackedFloat32Array(1, 0.34151, 1),
-"update": 0,
-"values": [0.493928, -1.29503, 0.493928]
-}
-
 [sub_resource type="Animation" id="Animation_ajjpy"]
 resource_name = "Discard"
-length = 0.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -431,7 +306,7 @@ tracks/0/path = NodePath(".:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0542979, 0.2, 0.6),
+"times": PackedFloat32Array(0, 0.1, 0.3, 1),
 "transitions": PackedFloat32Array(1.18921, 0.406126, 1.46409, 0.965939),
 "update": 0,
 "values": [0.510112, 0.314159, 2.10487, 0.510112]
@@ -467,6 +342,22 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.493928]
+}
+
+[sub_resource type="Animation" id="Animation_c425b"]
+resource_name = "Cast"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6),
+"transitions": PackedFloat32Array(1, 0.34151, 1),
+"update": 0,
+"values": [0.493928, -1.29503, 0.493928]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_su1b8"]
@@ -515,14 +406,14 @@ script = ExtResource("1_6dk5y")
 
 [node name="Sprite2D" type="Sprite2D" parent="Warlock Game/Warlock"]
 position = Vector2(-2, -3)
-scale = Vector2(0.08, 0.08)
-texture = ExtResource("3_2dsv6")
+scale = Vector2(2, 2)
+texture = ExtResource("2_bsyth")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Warlock Game/Warlock"]
 shape = SubResource("CapsuleShape2D_ek7uc")
 
 [node name="Projectile Spawn Point" type="Node2D" parent="Warlock Game/Warlock"]
-position = Vector2(-32, -1)
+position = Vector2(-32, 2)
 
 [node name="FireCooldownTimer" type="Timer" parent="Warlock Game/Warlock"]
 one_shot = true
@@ -572,7 +463,7 @@ repeat_spawn_curve = SubResource("Curve_o25to")
 [node name="Background" type="ColorRect" parent="Storeroom Manager"]
 offset_right = 896.0
 offset_bottom = 512.0
-color = Color(0.239216, 0.211765, 0.380392, 1)
+color = Color(0.145098, 0.129412, 0.231373, 1)
 script = ExtResource("14_7s006")
 
 [node name="Boundry Reference" type="ReferenceRect" parent="Storeroom Manager/Background"]
@@ -634,7 +525,7 @@ unique_name_in_owner = true
 position = Vector2(-20, -16)
 scale = Vector2(0.35, 0.35)
 
-[node name="MovementAnimationPlayer" type="AnimationPlayer" parent="Storeroom Manager/Apprentice Character/Librarian GFX"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Storeroom Manager/Apprentice Character/Librarian GFX"]
 unique_name_in_owner = true
 libraries = {
 "": SubResource("AnimationLibrary_c3o5b")
@@ -649,22 +540,10 @@ texture = ExtResource("20_fbkrd")
 [node name="LibrarianBody" type="Sprite2D" parent="Storeroom Manager/Apprentice Character/Librarian GFX"]
 position = Vector2(-10, 5)
 texture = ExtResource("19_j2csh")
-offset = Vector2(57.09, 0)
-
-[node name="ArmAnimationPlayer" type="AnimationPlayer" parent="Storeroom Manager/Apprentice Character/Librarian GFX/LibrarianBody"]
-unique_name_in_owner = true
-root_node = NodePath("../..")
-libraries = {
-"": SubResource("AnimationLibrary_j67lp")
-}
-playback_default_blend_time = 0.2
 
 [node name="LibrarianArm" type="Sprite2D" parent="Storeroom Manager/Apprentice Character/Librarian GFX/LibrarianBody"]
-z_as_relative = false
-position = Vector2(-194.286, 34.2858)
-rotation = -0.869174
+position = Vector2(211.999, 162.999)
 texture = ExtResource("22_hhkpc")
-offset = Vector2(-124.353, 51.245)
 
 [node name="LibrarianRightFoot" type="Sprite2D" parent="Storeroom Manager/Apprentice Character/Librarian GFX"]
 position = Vector2(130, 370)
@@ -733,13 +612,13 @@ stream = ExtResource("20_tsk7n")
 [node name="Combo Display" type="MarginContainer" parent="."]
 unique_name_in_owner = true
 offset_left = 1694.0
-offset_top = 1000.0
+offset_top = 998.0
 offset_right = 1897.0
-offset_bottom = 1055.0
+offset_bottom = 1053.0
 
 [node name="Combo Background" type="ColorRect" parent="Combo Display"]
 layout_mode = 2
-color = Color(0.643137, 0.568627, 1, 1)
+color = Color(0.52549, 0.403922, 0.25098, 1)
 
 [node name="Control" type="MarginContainer" parent="Combo Display"]
 layout_mode = 2
@@ -769,10 +648,10 @@ texture = ExtResource("23_8aelf")
 stretch_mode = 5
 
 [node name="Enchanter Supplies" type="HBoxContainer" parent="."]
-offset_left = 1006.0
-offset_top = 425.0
-offset_right = 1863.0
-offset_bottom = 525.0
+offset_left = 1110.0
+offset_top = 423.0
+offset_right = 1967.0
+offset_bottom = 523.0
 
 [node name="Supply UI2" parent="Enchanter Supplies" instance=ExtResource("22_orqwg")]
 layout_mode = 2
@@ -839,7 +718,7 @@ show_percentage = false
 script = ExtResource("29_618n4")
 
 [node name="Enchanter Character" type="Node2D" parent="."]
-position = Vector2(1338, 449)
+position = Vector2(1321, 444)
 scale = Vector2(0.147355, 0.147355)
 script = ExtResource("34_lmgov")
 

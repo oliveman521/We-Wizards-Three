@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://6685qupifd8s"]
+[gd_scene load_steps=7 format=3 uid="uid://6685qupifd8s"]
 
 [ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_u53ie"]
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_5wrxn"]
 [ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Blank_Scroll.tres" id="3_coce5"]
 [ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="4_ptmc0"]
 [ext_resource type="Resource" uid="uid://bow64ukpfnomj" path="res://Supplies/Fire_Scroll.tres" id="5_jp836"]
+[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_GainSupplies.gd" id="6_hsiyy"]
 
 [node name="Fire Ball Recipe" instance=ExtResource("1_u53ie")]
 card_type = "Crafting"
@@ -29,3 +30,8 @@ text = "Fire Ball Recipe"
 layout_mode = 2
 supply = ExtResource("5_jp836")
 count = 2
+
+[node name="CardEffect_GainSupplies" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1"]
+script = ExtResource("6_hsiyy")
+type = ExtResource("5_jp836")
+gain_amnt = 2

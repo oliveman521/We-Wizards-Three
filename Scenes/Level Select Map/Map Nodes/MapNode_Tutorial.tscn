@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://de756ivob0cql" path="res://Scenes/Level Select Map/Map Nodes/MapNode.tscn" id="1_65y3i"]
 [ext_resource type="Script" path="res://Scenes/Level Select Map/Map Nodes/MapNode_Tutorial.gd" id="2_gsb8x"]
-[ext_resource type="Texture2D" uid="uid://b4qxnhpkh2mso" path="res://Sprites/UI Icons/info.svg" id="3_aflvy"]
+[ext_resource type="Texture2D" uid="uid://dmdqs4opsomjo" path="res://Sprites/SVG Icons/info.svg" id="3_5p6g8"]
 
 [node name="Insert Name" instance=ExtResource("1_65y3i")]
 offset_right = 48.0
@@ -12,7 +12,7 @@ pages = Array[Resource("res://Scenes/Level Select Map/Info Panels/TutorialInfoPa
 
 [node name="Button" parent="." index="0"]
 theme_override_font_sizes/font_size = 36
-icon = ExtResource("3_aflvy")
+icon = ExtResource("3_5p6g8")
 icon_alignment = 1
 expand_icon = true
 

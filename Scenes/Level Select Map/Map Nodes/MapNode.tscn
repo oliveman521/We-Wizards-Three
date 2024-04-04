@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://de756ivob0cql"]
+[gd_scene load_steps=6 format=3 uid="uid://de756ivob0cql"]
 
 [ext_resource type="Script" path="res://Scenes/Level Select Map/Map Nodes/MapNode.gd" id="1_yufi2"]
-[ext_resource type="Texture2D" uid="uid://d1k283focdx4o" path="res://Sprites/UI Icons/Check.svg" id="2_wh5h6"]
-[ext_resource type="Texture2D" uid="uid://dlvc3iksf0q21" path="res://Sprites/UI Icons/padlock.svg" id="3_lc30j"]
+[ext_resource type="Texture2D" uid="uid://dewtu4s3ndkgn" path="res://Sprites/SVG Icons/check.svg" id="2_f2x51"]
+[ext_resource type="Theme" uid="uid://bc5qy3dgbkg6c" path="res://UI/Partchment.tres" id="2_pyj5k"]
+[ext_resource type="Texture2D" uid="uid://c3ytrwi2qobyq" path="res://Sprites/SVG Icons/lock.svg" id="3_8gfu3"]
 [ext_resource type="LabelSettings" uid="uid://qxlhypxjoo85" path="res://UI/Fonts/tiny_text.tres" id="4_meekf"]
 
 [node name="Map Node" type="Control"]
@@ -11,6 +12,7 @@ anchors_preset = 0
 offset_right = 133.0
 offset_bottom = 48.0
 mouse_filter = 2
+theme = ExtResource("2_pyj5k")
 script = ExtResource("1_yufi2")
 
 [node name="Button" type="Button" parent="."]
@@ -24,35 +26,35 @@ mouse_filter = 1
 
 [node name="Explored Icon" type="TextureRect" parent="."]
 unique_name_in_owner = true
-modulate = Color(0, 0.509804, 0.101961, 1)
+modulate = Color(0, 0.5535, 0.81, 1)
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -20.0
-offset_top = -19.0
-offset_right = 20.0
-offset_bottom = 21.0
+offset_left = -24.0
+offset_top = -18.0
+offset_right = 16.0
+offset_bottom = 22.0
 grow_horizontal = 0
 mouse_filter = 2
-texture = ExtResource("2_wh5h6")
+texture = ExtResource("2_f2x51")
 expand_mode = 1
 
 [node name="Locked Icon" type="TextureRect" parent="."]
 unique_name_in_owner = true
 visible = false
-modulate = Color(0.839216, 0.0392157, 0, 1)
+modulate = Color(1, 0.388235, 0.380392, 1)
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -20.0
-offset_top = -19.0
-offset_right = 20.0
-offset_bottom = 21.0
+offset_left = -21.0
+offset_top = -23.0
+offset_right = 19.0
+offset_bottom = 17.0
 grow_horizontal = 0
 mouse_filter = 2
-texture = ExtResource("3_lc30j")
+texture = ExtResource("3_8gfu3")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="."]

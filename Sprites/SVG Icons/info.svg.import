@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://i6raidbptmmr"
-path="res://.godot/imported/Librarian.svg-7101a8ad30d2f1aaca93d32600ee700d.ctex"
+uid="uid://dmdqs4opsomjo"
+path="res://.godot/imported/info.svg-cbc30ec5079887e3014e1b21c8309601.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/SVG Characters/Narrow Boarder/Librarian.svg"
-dest_files=["res://.godot/imported/Librarian.svg-7101a8ad30d2f1aaca93d32600ee700d.ctex"]
+source_file="res://Sprites/SVG Icons/info.svg"
+dest_files=["res://.godot/imported/info.svg-cbc30ec5079887e3014e1b21c8309601.ctex"]
 
 [params]
 

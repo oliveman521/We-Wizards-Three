@@ -6,9 +6,9 @@
 [ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="4_i3b8k"]
 [ext_resource type="Resource" uid="uid://0wqn3ujbcm2j" path="res://Supplies/Lightning_Scroll.tres" id="5_6n3gn"]
 
-[node name="Card - Lightning Scroll" instance=ExtResource("1_kf2lo")]
+[node name="Lightning Scroll Recipe" instance=ExtResource("1_kf2lo")]
 card_type = "Crafting"
-card_name = "Lightning Scroll"
+card_name = "Lightning Scroll Recipe"
 
 [node name="Background Color" parent="Card Face" index="0"]
 color = Color(0.780392, 0.588235, 0.313726, 1)
@@ -22,7 +22,7 @@ layout_mode = 2
 supply = ExtResource("4_i3b8k")
 
 [node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
-text = "Lightning Scroll"
+text = "Lightning Scroll Recipe"
 
 [node name="Lightning Scroll x1" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("2_xlur8")]
 layout_mode = 2

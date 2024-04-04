@@ -2,6 +2,8 @@
 extends Control
 class_name MapManager
 
+@export var line_color: Color
+
 var all_map_nodes: Array[MapNode]:
 	get:
 		var map_nodes: Array[MapNode] = []

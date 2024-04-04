@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://53eyth1grx8d"
-path="res://.godot/imported/Enchanter.svg-ddaa013acac44ff9d71f1a4c9ccb74e9.ctex"
+uid="uid://i6raidbptmmr"
+path="res://.godot/imported/Librarian.svg-3e34996113bb0b68f1ddcde06accc131.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/SVG Characters/Narrow Boarder/Enchanter.svg"
-dest_files=["res://.godot/imported/Enchanter.svg-ddaa013acac44ff9d71f1a4c9ccb74e9.ctex"]
+source_file="res://Sprites/Retired/Librarian.svg"
+dest_files=["res://.godot/imported/Librarian.svg-3e34996113bb0b68f1ddcde06accc131.ctex"]
 
 [params]
 
