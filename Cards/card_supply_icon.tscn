@@ -24,7 +24,7 @@ script = ExtResource("1_8pbka")
 
 [node name="Icon" type="TextureRect" parent="."]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(35, 35)
+custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 texture = ExtResource("3_ho5hp")
 expand_mode = 1

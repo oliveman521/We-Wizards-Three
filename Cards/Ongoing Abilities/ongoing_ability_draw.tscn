@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bj3xl0y5gxddn" path="res://Cards/Ongoing Abilities/ongoing_ability_base.tscn" id="1_peaau"]
 [ext_resource type="Script" path="res://Cards/Card Components/CardEffect_DrawDiscard.gd" id="2_4r3fh"]
-[ext_resource type="Texture2D" uid="uid://cm2qu0i8qc1s0" path="res://Sprites/Retired/Tablet.png" id="2_g2ogb"]
+[ext_resource type="Texture2D" uid="uid://hsv4ge3p87k3" path="res://Cards/Card Sprites/card_icon.svg" id="3_jl25t"]
 
 [node name="Ongoing Ability" instance=ExtResource("1_peaau")]
 timed = true
@@ -12,4 +12,4 @@ time = 5.0
 script = ExtResource("2_4r3fh")
 
 [node name="Icon" parent="Icon Margin" index="0"]
-texture = ExtResource("2_g2ogb")
+texture = ExtResource("3_jl25t")

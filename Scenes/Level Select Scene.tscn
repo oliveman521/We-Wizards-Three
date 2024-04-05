@@ -25,7 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://4l40ype480h" path="res://Levels/Bonus Level - Seige Engine.tscn" id="18_7emhd"]
 [ext_resource type="PackedScene" uid="uid://rfnlpy50ihlp" path="res://Cards/Card Pool/card_orb_press.tscn" id="18_ofx21"]
 [ext_resource type="PackedScene" uid="uid://ccqqvfnjhvb3t" path="res://Cards/Card Pool/card_supercharge.tscn" id="19_0o358"]
-[ext_resource type="PackedScene" uid="uid://shwywe7qw2jx" path="res://Cards/Card Pool/card_orb_reserves.tscn" id="19_1v8j7"]
+[ext_resource type="PackedScene" uid="uid://shwywe7qw2jx" path="res://Cards/Card Pool/card_orb_reserves.tscn" id="19_g6nc3"]
 [ext_resource type="PackedScene" uid="uid://b2wt5v3t3gjkc" path="res://Cards/Card Pool/card_rain_of_ash.tscn" id="20_712ye"]
 [ext_resource type="PackedScene" uid="uid://dmdss2aqbb1lg" path="res://Levels/Level 3.tscn" id="20_qv78i"]
 [ext_resource type="PackedScene" uid="uid://bhq4tuy1yifyy" path="res://Cards/Card Pool/card_scortched_earth.tscn" id="20_tkhon"]
@@ -237,7 +237,7 @@ offset_top = 497.0
 offset_right = 597.0
 offset_bottom = 545.0
 mouse_filter = 0
-cards = Array[PackedScene]([ExtResource("17_xsr76"), ExtResource("17_xsr76"), ExtResource("17_xsr76"), ExtResource("18_ofx21"), ExtResource("19_1v8j7")])
+cards = Array[PackedScene]([ExtResource("17_xsr76"), ExtResource("17_xsr76"), ExtResource("17_xsr76"), ExtResource("18_ofx21"), ExtResource("19_g6nc3")])
 connected_map_nodes = [NodePath("../Level 1 - It Begins"), NodePath("../info - Exhaust")]
 
 [node name="info - Exhaust" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("13_7kiee")]

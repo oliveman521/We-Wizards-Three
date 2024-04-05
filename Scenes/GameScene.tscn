@@ -27,13 +27,9 @@
 [ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="21_5p0wj"]
 [ext_resource type="Texture2D" uid="uid://bib82puqqynfm" path="res://Sprites/SVG Characters/Librarian/Librarian_Arm.svg" id="22_hhkpc"]
 [ext_resource type="PackedScene" uid="uid://btsj4ae1ih5n1" path="res://UI/supply_ui.tscn" id="22_orqwg"]
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://bj6e14qigcant" path="res://Sprites/Retired/Essence.png" id="23_8aelf"]
-=======
-[ext_resource type="Texture2D" uid="uid://bj6e14qigcant" path="res://Sprites/Essence.png" id="23_8aelf"]
->>>>>>> 94d5872c67ce46431befe9aef39590b14f823816
 [ext_resource type="Script" path="res://UI/Health_UI.gd" id="25_kiqjr"]
 [ext_resource type="PackedScene" uid="uid://2jby5kudglct" path="res://UI/heart_UI.tscn" id="26_fl5xy"]
+[ext_resource type="Texture2D" uid="uid://bj6e14qigcant" path="res://Sprites/Retired/Essence.png" id="27_fy6kv"]
 [ext_resource type="Resource" uid="uid://bow64ukpfnomj" path="res://Supplies/Fire_Orb.tres" id="29_0cds8"]
 [ext_resource type="Script" path="res://Scenes/LevelProgress.gd" id="29_618n4"]
 [ext_resource type="Resource" uid="uid://0wqn3ujbcm2j" path="res://Supplies/Lightning_Orb.tres" id="30_8qded"]
@@ -502,7 +498,7 @@ debug_color = Color(0, 0.6, 0.701961, 0)
 [node name="BackGround" type="ColorRect" parent="Warlock Game"]
 offset_left = -6.0
 offset_top = -17.0
-offset_right = 1911.0
+offset_right = 1924.0
 offset_bottom = 1088.0
 color = Color(0.1882, 0.171, 0.3, 1)
 
@@ -772,14 +768,14 @@ label_settings = ExtResource("21_5p0wj")
 unique_name_in_owner = true
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
-texture = ExtResource("23_8aelf")
+texture = ExtResource("27_fy6kv")
 stretch_mode = 5
 
 [node name="Enchanter Supplies" type="HBoxContainer" parent="."]
-offset_left = 1112.0
-offset_top = 439.0
-offset_right = 1713.0
-offset_bottom = 529.0
+offset_left = 995.0
+offset_top = 438.0
+offset_right = 1596.0
+offset_bottom = 528.0
 theme_override_constants/separation = 20
 
 [node name="Supply UI2" parent="Enchanter Supplies" instance=ExtResource("22_orqwg")]
@@ -848,11 +844,13 @@ show_percentage = false
 script = ExtResource("29_618n4")
 
 [node name="Enchanter Character" type="Node2D" parent="."]
-position = Vector2(1055, 443)
+z_index = 100
+position = Vector2(1516, 453)
 scale = Vector2(0.147355, 0.147355)
 script = ExtResource("34_lmgov")
 
 [node name="Body" type="Sprite2D" parent="Enchanter Character"]
+position = Vector2(0.00082841, 0.000207102)
 texture = ExtResource("31_p3e2w")
 offset = Vector2(80.19, 0)
 
