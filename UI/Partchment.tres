@@ -1,7 +1,10 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bc5qy3dgbkg6c"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bc5qy3dgbkg6c"]
 
 [ext_resource type="StyleBox" uid="uid://br10tcir22qb5" path="res://UI/Parchment Style Box.tres" id="1_un8c8"]
+[ext_resource type="FontFile" uid="uid://fpanfqc8xxjo" path="res://UI/Fonts/Handwriting-Regular.otf" id="2_t0acf"]
 
 [resource]
+default_font = ExtResource("2_t0acf")
+default_font_size = 12
 Button/styles/normal = ExtResource("1_un8c8")
 Panel/styles/panel = ExtResource("1_un8c8")

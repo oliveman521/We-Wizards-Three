@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_xouro"]
 [ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_ur5a0"]
 [ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Supplies/Mana_Scroll.tres" id="4_hu1ig"]
-[ext_resource type="PackedScene" uid="uid://dspow6wbdypge" path="res://Cards/Card Effects/exhaust.tscn" id="5_wn80o"]
+[ext_resource type="PackedScene" uid="uid://dspow6wbdypge" path="res://Cards/Card Components/exhaust.tscn" id="5_wn80o"]
 
 [node name="Scroll Mountain" instance=ExtResource("1_wimv8")]
 card_type = "Crafting"

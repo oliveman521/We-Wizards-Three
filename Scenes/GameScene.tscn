@@ -511,11 +511,12 @@ color = Color(0.257207, 0.2337, 0.41, 1)
 
 [node name="Warlock" type="CharacterBody2D" parent="Warlock Game" groups=["Player"]]
 position = Vector2(901, 529)
+motion_mode = 1
 script = ExtResource("1_6dk5y")
 
 [node name="Sprite2D" type="Sprite2D" parent="Warlock Game/Warlock"]
-position = Vector2(-2, -3)
-scale = Vector2(0.08, 0.08)
+position = Vector2(-4.00002, 3.99997)
+scale = Vector2(0.102494, 0.102494)
 texture = ExtResource("3_2dsv6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Warlock Game/Warlock"]
@@ -572,7 +573,7 @@ repeat_spawn_curve = SubResource("Curve_o25to")
 [node name="Background" type="ColorRect" parent="Storeroom Manager"]
 offset_right = 896.0
 offset_bottom = 512.0
-color = Color(0.239216, 0.211765, 0.380392, 1)
+color = Color(0, 0.247059, 0.360784, 1)
 script = ExtResource("14_7s006")
 
 [node name="Boundry Reference" type="ReferenceRect" parent="Storeroom Manager/Background"]
@@ -632,7 +633,7 @@ one_shot = true
 [node name="Librarian GFX" type="Node2D" parent="Storeroom Manager/Apprentice Character"]
 unique_name_in_owner = true
 position = Vector2(-20, -16)
-scale = Vector2(0.35, 0.35)
+scale = Vector2(0.375, 0.375)
 
 [node name="MovementAnimationPlayer" type="AnimationPlayer" parent="Storeroom Manager/Apprentice Character/Librarian GFX"]
 unique_name_in_owner = true
@@ -707,7 +708,7 @@ position = Vector2(17, 108)
 [node name="ColorRect2" type="ColorRect" parent="Card Manager/Hand"]
 offset_right = 665.0
 offset_bottom = 299.0
-color = Color(0.282353, 0.282353, 0.282353, 1)
+color = Color(0.2, 0.13, 0, 1)
 
 [node name="Hand Anchors" type="Node2D" parent="Card Manager/Hand"]
 
@@ -839,7 +840,7 @@ show_percentage = false
 script = ExtResource("29_618n4")
 
 [node name="Enchanter Character" type="Node2D" parent="."]
-position = Vector2(1338, 449)
+position = Vector2(1559, 439)
 scale = Vector2(0.147355, 0.147355)
 script = ExtResource("34_lmgov")
 

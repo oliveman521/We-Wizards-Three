@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_da2hk"]
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_0kypi"]
 [ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="3_ne2w8"]
-[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_Damage.gd" id="4_fr6mv"]
+[ext_resource type="Script" path="res://Cards/Card Components/CardEffect_Damage.gd" id="4_fr6mv"]
 [ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="5_ij75g"]
 
 [node name="Shock" instance=ExtResource("1_da2hk")]

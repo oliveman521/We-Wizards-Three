@@ -32,6 +32,9 @@ var label: Label:
 var button: Button:
 	get: return $Button
 
+var icon: TextureRect:
+	get: return $Icon
+
 var id: String:
 	get: return get_path()
 

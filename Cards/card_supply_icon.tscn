@@ -1,14 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://d335ngol841kr"]
+[gd_scene load_steps=6 format=3 uid="uid://d335ngol841kr"]
 
+[ext_resource type="Theme" uid="uid://bc5qy3dgbkg6c" path="res://UI/Partchment.tres" id="1_2iaa2"]
 [ext_resource type="Script" path="res://Cards/card_supply_icon.gd" id="1_8pbka"]
 [ext_resource type="Texture2D" uid="uid://cnm40sd26ufh" path="res://Sprites/Question Mark.png" id="1_sylqm"]
 [ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="2_mkbpv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ato81"]
+font_size = 30
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Card Supply Icon" type="MarginContainer"]
 offset_right = 58.0
 offset_bottom = 57.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = ExtResource("1_2iaa2")
 script = ExtResource("1_8pbka")
 
 [node name="Icon" type="TextureRect" parent="."]
@@ -37,7 +44,10 @@ theme_override_constants/separation = 3
 unique_name_in_owner = true
 layout_mode = 2
 text = "x"
-label_settings = ExtResource("2_mkbpv")
+label_settings = SubResource("LabelSettings_ato81")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
 
 [node name="Number" type="Label" parent="MarginContainer/Multiples Indicator"]
 unique_name_in_owner = true

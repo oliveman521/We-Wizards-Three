@@ -4,11 +4,14 @@ extends MapNode
 @export var ability_name: String = "Insert Name"
 @export var override_name: String = ""
 @export var ability_image: Texture
+@export var ability_icon: Texture
+
 @export_multiline var ability_description: String = "Insert Description"
 var color: Color = Color("00482bb4")
  
 func _draw() -> void:
 	self.name = "Ability - " + ability_name
+	icon.texture = ability_icon
 	super._draw()
 
 func _on_button_down() -> void:

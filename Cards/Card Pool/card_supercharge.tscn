@@ -5,7 +5,7 @@
 [ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_trh0o"]
 [ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="4_lyhoa"]
 [ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="6_a4wjg"]
-[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_OngoingAbility.gd" id="6_d47is"]
+[ext_resource type="Script" path="res://Cards/Card Components/CardEffect_OngoingAbility.gd" id="6_d47is"]
 [ext_resource type="PackedScene" uid="uid://cprfumcfqrt3i" path="res://Cards/Ongoing Abilities/ongoing_ability_double_damage.tscn" id="7_5cdf6"]
 
 [node name="Supercharge" instance=ExtResource("1_cmu8b")]

@@ -5,8 +5,8 @@
 [ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_u3jbm"]
 [ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="5_12kla"]
 [ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Supplies/Mana_Scroll.tres" id="5_53qm7"]
-[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_GainSupplies.gd" id="6_k084k"]
-[ext_resource type="PackedScene" uid="uid://dspow6wbdypge" path="res://Cards/Card Effects/exhaust.tscn" id="7_wnskr"]
+[ext_resource type="Script" path="res://Cards/Card Components/CardEffect_GainSupplies.gd" id="6_k084k"]
+[ext_resource type="PackedScene" uid="uid://dspow6wbdypge" path="res://Cards/Card Components/exhaust.tscn" id="7_wnskr"]
 
 [node name="Card" instance=ExtResource("1_x1har")]
 card_type = "Crafting"

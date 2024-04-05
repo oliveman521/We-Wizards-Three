@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bjcoqsewim8ni" path="res://Sprites/square 9-tile.png" id="1_mri46"]
 [ext_resource type="Texture2D" uid="uid://dmmx82yti0hqm" path="res://Sprites/square 9-tile boarder.png" id="2_60hth"]
-[ext_resource type="FontFile" uid="uid://c54h26n4ynwhs" path="res://UI/FFFFORWA.TTF" id="3_egl5y"]
+[ext_resource type="FontFile" uid="uid://c54h26n4ynwhs" path="res://UI/Fonts/FFFFORWA (pixel font).TTF" id="3_egl5y"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_pneq6"]
 font = ExtResource("3_egl5y")

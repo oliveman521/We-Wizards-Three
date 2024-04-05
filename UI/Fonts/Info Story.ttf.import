@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://c2p8qbyleb0au"
-path="res://.godot/imported/MedievalSharp-BoldOblique.ttf-4769900b9a4a42ef519c5e3441669a2c.fontdata"
+uid="uid://dlt608jfryhnw"
+path="res://.godot/imported/Info Story.ttf-919043ee0f0f5bd3852ed14f1fc61623.fontdata"
 
 [deps]
 
-source_file="res://UI/Fonts/MedievalSharp-BoldOblique.ttf"
-dest_files=["res://.godot/imported/MedievalSharp-BoldOblique.ttf-4769900b9a4a42ef519c5e3441669a2c.fontdata"]
+source_file="res://UI/Fonts/Info Story.ttf"
+dest_files=["res://.godot/imported/Info Story.ttf-919043ee0f0f5bd3852ed14f1fc61623.fontdata"]
 
 [params]
 
@@ -22,7 +22,7 @@ allow_system_fallback=true
 force_autohinter=false
 hinting=1
 subpixel_positioning=1
-oversampling=0.0
+oversampling=3.0
 Fallbacks=null
 fallbacks=[]
 Compress=null

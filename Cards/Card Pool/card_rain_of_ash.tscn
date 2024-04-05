@@ -3,10 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_ft74s"]
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_ojt02"]
 [ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="3_5jod2"]
-[ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Effects/card_text.tscn" id="4_0hbfb"]
+[ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Components/card_text.tscn" id="4_0hbfb"]
 [ext_resource type="FontFile" uid="uid://t4iceb2drwa2" path="res://UI/Fonts/Franklin Gothic Medium Regular.ttf" id="5_0qy5n"]
-[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_DrawDiscard.gd" id="6_da4o5"]
-[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_Damage.gd" id="7_chi1p"]
+[ext_resource type="Script" path="res://Cards/Card Components/CardEffect_DrawDiscard.gd" id="6_da4o5"]
+[ext_resource type="Script" path="res://Cards/Card Components/CardEffect_Damage.gd" id="7_chi1p"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_iwok5"]
 font = ExtResource("5_0qy5n")

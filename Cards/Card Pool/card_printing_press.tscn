@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_k6un5"]
 [ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_m57di"]
 [ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="5_wms0t"]
-[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_OngoingAbility.gd" id="6_40n7q"]
+[ext_resource type="Script" path="res://Cards/Card Components/CardEffect_OngoingAbility.gd" id="6_40n7q"]
 [ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Supplies/Mana_Scroll.tres" id="6_haloc"]
 [ext_resource type="PackedScene" uid="uid://2a7skipqumtp" path="res://Cards/Ongoing Abilities/ongoing_ability_gain_scrolls.tscn" id="7_6ef6k"]
 

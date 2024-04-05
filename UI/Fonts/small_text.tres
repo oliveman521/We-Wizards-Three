@@ -1,9 +1,6 @@
-[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://buqi3tt5804u0"]
-
-[ext_resource type="FontFile" uid="uid://b0o2c31ahl71h" path="res://UI/Fonts/MedievalSharp-Bold.ttf" id="1_qb7lk"]
+[gd_resource type="LabelSettings" format=3 uid="uid://buqi3tt5804u0"]
 
 [resource]
-font = ExtResource("1_qb7lk")
-font_size = 21
+font_size = 30
 outline_size = 8
 outline_color = Color(0, 0, 0, 1)

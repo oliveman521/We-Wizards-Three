@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://2a7skipqumtp"]
 
 [ext_resource type="PackedScene" uid="uid://bj3xl0y5gxddn" path="res://Cards/Ongoing Abilities/ongoing_ability_base.tscn" id="1_6h7rb"]
-[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_GainSupplies.gd" id="2_dkqtu"]
+[ext_resource type="Script" path="res://Cards/Card Components/CardEffect_GainSupplies.gd" id="2_dkqtu"]
 [ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Supplies/Mana_Scroll.tres" id="3_d0bm7"]
 [ext_resource type="Texture2D" uid="uid://cgp2ycf40jjlk" path="res://Sprites/scroll.png" id="4_6b033"]
 

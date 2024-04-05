@@ -11,12 +11,15 @@ script = ExtResource("2_txubq")
 ability_name = "Insert Name"
 override_name = ""
 ability_image = null
+ability_icon = ExtResource("3_hyags")
 ability_description = "Insert Description"
 
 [node name="Button" parent="." index="0"]
-icon = ExtResource("3_hyags")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Label" parent="." index="3"]
+[node name="Icon" parent="." index="1"]
+texture = ExtResource("3_hyags")
+
+[node name="Label" parent="." index="2"]
 visible = false

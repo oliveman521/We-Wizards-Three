@@ -5,9 +5,9 @@
 [ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_t2fp0"]
 [ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="4_ssy8d"]
 [ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="5_5ed16"]
-[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_OngoingAbility.gd" id="6_u18rv"]
+[ext_resource type="Script" path="res://Cards/Card Components/CardEffect_OngoingAbility.gd" id="6_u18rv"]
 [ext_resource type="PackedScene" uid="uid://c7dw3bs2deeos" path="res://Cards/Ongoing Abilities/ongoing_ability_firerate.tscn" id="7_34dfu"]
-[ext_resource type="PackedScene" uid="uid://dspow6wbdypge" path="res://Cards/Card Effects/exhaust.tscn" id="8_af6hp"]
+[ext_resource type="PackedScene" uid="uid://dspow6wbdypge" path="res://Cards/Card Components/exhaust.tscn" id="8_af6hp"]
 
 [node name="Card" instance=ExtResource("1_rnr8d")]
 card_type = "Buff"

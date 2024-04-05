@@ -1,13 +1,31 @@
-[gd_scene load_steps=10 format=3 uid="uid://disxs45wl3yv"]
+[gd_scene load_steps=18 format=3 uid="uid://disxs45wl3yv"]
 
+[ext_resource type="Theme" uid="uid://bc5qy3dgbkg6c" path="res://UI/Partchment.tres" id="1_73hnv"]
 [ext_resource type="Script" path="res://Cards/card.gd" id="1_k85f2"]
 [ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="3_408xq"]
+[ext_resource type="Texture2D" uid="uid://dnoi8xpbgtrq5" path="res://Cards/Card Sprites/card_Card Face.svg" id="3_dbhyy"]
 [ext_resource type="Texture2D" uid="uid://bjcoqsewim8ni" path="res://Sprites/square 9-tile.png" id="4_vdse1"]
+[ext_resource type="Texture2D" uid="uid://dli1c6hif1xfd" path="res://Cards/Card Sprites/card_Text Box.svg" id="4_xufv8"]
 [ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="5_d15rv"]
 [ext_resource type="Texture2D" uid="uid://cnm40sd26ufh" path="res://Sprites/Question Mark.png" id="5_kdyh7"]
 [ext_resource type="Texture2D" uid="uid://cyl1384d5qx5u" path="res://Sprites/UI Icons/warning.svg" id="6_7vawg"]
 [ext_resource type="AudioStream" uid="uid://cluutx7eq6nwh" path="res://Cards/Card Sounds/card_sliding.wav" id="6_gtkcw"]
+[ext_resource type="Texture2D" uid="uid://b6mu74bdr7sgh" path="res://Cards/Card Sprites/card_Top.svg" id="6_xsm3h"]
 [ext_resource type="AudioStream" uid="uid://j663hxy28dxc" path="res://Cards/Card Sounds/cannot_play_sound.wav" id="7_dru8e"]
+[ext_resource type="Texture2D" uid="uid://b6h65243p62xr" path="res://Cards/Card Sprites/card_Top Nubs.svg" id="7_uwg45"]
+[ext_resource type="Texture2D" uid="uid://y2rl2878gbei" path="res://Cards/Card Sprites/card_Bottom.svg" id="8_cayra"]
+[ext_resource type="Texture2D" uid="uid://q3ui4sm7mq0n" path="res://Cards/Card Sprites/card_Bottom Nubs.svg" id="9_tepyg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3adcx"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 10
+anti_aliasing_size = 10.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fakr3"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -18,11 +36,11 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 200.0
 offset_bottom = 280.0
+theme = ExtResource("1_73hnv")
 script = ExtResource("1_k85f2")
 card_name = "Base"
 
-[node name="Highlight" type="ColorRect" parent="."]
-visible = false
+[node name="Highlight" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -30,21 +48,12 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -104.0
-offset_top = -144.0
+offset_top = -162.0
 offset_right = 104.0
-offset_bottom = 144.0
+offset_bottom = 154.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(1, 1, 1, 0.560784)
-
-[node name="Margin Color" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.0431373, 0.0313726, 0.0627451, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_3adcx")
 
 [node name="Card Face" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -53,22 +62,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
 
-[node name="Background Color" type="ColorRect" parent="Card Face"]
-unique_name_in_owner = true
+[node name="Card body sprite" type="TextureRect" parent="Card Face"]
 layout_mode = 2
-color = Color(0.231373, 0.0352941, 0.486275, 1)
+texture = ExtResource("3_dbhyy")
+expand_mode = 1
 
 [node name="Internal Margin" type="MarginContainer" parent="Card Face"]
 layout_mode = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Card Face/Internal Margin"]
 layout_mode = 2
@@ -81,13 +86,21 @@ alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Card Face/Internal Margin/VBoxContainer"]
 layout_mode = 2
+theme_override_constants/margin_top = 0
 
-[node name="ColorRect" type="ColorRect" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer"]
-custom_minimum_size = Vector2(0, 10)
+[node name="Text Box Border" type="TextureRect" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer"]
 layout_mode = 2
-color = Color(0, 0, 0, 1)
+texture = ExtResource("4_xufv8")
+expand_mode = 1
 
-[node name="CardName" type="Label" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 2
+
+[node name="CardName" type="Label" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Base"
@@ -100,6 +113,66 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 alignment = 1
+
+[node name="Top Roll" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = -21.0
+offset_right = 5.0
+offset_bottom = -261.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_xsm3h")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Top Nubs" type="TextureRect" parent="Top Roll"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = 4.0
+offset_right = 10.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_uwg45")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Bottom Roll" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = 252.0
+offset_right = 5.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_cayra")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Bottom Nubs" type="TextureRect" parent="Bottom Roll"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = 5.0
+offset_right = 8.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_tepyg")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="Button" type="Button" parent="."]
 unique_name_in_owner = true

@@ -10,9 +10,11 @@ script = ExtResource("2_11pcl")
 cards = Array[PackedScene]([])
 
 [node name="Button" parent="." index="0"]
-icon = ExtResource("2_fmuua")
 icon_alignment = 1
 expand_icon = true
 
-[node name="Label" parent="." index="3"]
+[node name="Icon" parent="." index="1"]
+texture = ExtResource("2_fmuua")
+
+[node name="Label" parent="." index="2"]
 visible = false
