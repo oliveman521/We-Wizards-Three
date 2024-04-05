@@ -27,7 +27,11 @@
 [ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="21_5p0wj"]
 [ext_resource type="Texture2D" uid="uid://bib82puqqynfm" path="res://Sprites/SVG Characters/Librarian/Librarian_Arm.svg" id="22_hhkpc"]
 [ext_resource type="PackedScene" uid="uid://btsj4ae1ih5n1" path="res://UI/supply_ui.tscn" id="22_orqwg"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://bj6e14qigcant" path="res://Sprites/Retired/Essence.png" id="23_8aelf"]
+=======
+[ext_resource type="Texture2D" uid="uid://bj6e14qigcant" path="res://Sprites/Essence.png" id="23_8aelf"]
+>>>>>>> 94d5872c67ce46431befe9aef39590b14f823816
 [ext_resource type="Script" path="res://UI/Health_UI.gd" id="25_kiqjr"]
 [ext_resource type="PackedScene" uid="uid://2jby5kudglct" path="res://UI/heart_UI.tscn" id="26_fl5xy"]
 [ext_resource type="Resource" uid="uid://bow64ukpfnomj" path="res://Supplies/Fire_Orb.tres" id="29_0cds8"]

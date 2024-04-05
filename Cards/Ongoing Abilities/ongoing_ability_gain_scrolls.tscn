@@ -3,7 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://bj3xl0y5gxddn" path="res://Cards/Ongoing Abilities/ongoing_ability_base.tscn" id="1_6h7rb"]
 [ext_resource type="Script" path="res://Cards/Card Components/CardEffect_GainSupplies.gd" id="2_dkqtu"]
 [ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Supplies/Mana_Orb.tres" id="3_d0bm7"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://cgp2ycf40jjlk" path="res://Sprites/Retired/scroll.png" id="4_6b033"]
+=======
+[ext_resource type="Texture2D" uid="uid://cgp2ycf40jjlk" path="res://Sprites/scroll.png" id="4_6b033"]
+>>>>>>> 94d5872c67ce46431befe9aef39590b14f823816
 
 [node name="Ongoing Ability" instance=ExtResource("1_6h7rb")]
 timed = true
