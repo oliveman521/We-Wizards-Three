@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_oa6sd"]
 [ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_4o2dq"]
 [ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Components/card_text.tscn" id="4_0tx7l"]
-[ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Supplies/Mana_Scroll.tres" id="4_ylby3"]
+[ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Supplies/Mana_Orb.tres" id="4_ylby3"]
 [ext_resource type="FontFile" uid="uid://t4iceb2drwa2" path="res://UI/Fonts/Franklin Gothic Medium Regular.ttf" id="5_5jxjr"]
 [ext_resource type="Script" path="res://Cards/Card Components/CardEffect_SpawnEnemies.gd" id="6_ec50i"]
 [ext_resource type="PackedScene" uid="uid://c6afi4js5waro" path="res://Enemies/enemy_jester.tscn" id="7_iwkvn"]

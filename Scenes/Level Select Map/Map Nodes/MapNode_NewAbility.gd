@@ -24,7 +24,7 @@ func _on_button_down() -> void:
 		display_name = override_name
 	
 	var sub_header: String = " == " + display_name + " == "
-	level_select.open_misc_info_panel("New Ability! - " + display_name,sub_header, ability_image, ability_description, "Cool!", color)
+	level_select.open_misc_info_panel("New Ability! - " + display_name,sub_header, ability_image, ability_description, "Cool!")
 	
 	if is_explored:
 		GameManager.spawn_popup(get_global_mouse_position(),"Ability already claimed",Color.RED,)

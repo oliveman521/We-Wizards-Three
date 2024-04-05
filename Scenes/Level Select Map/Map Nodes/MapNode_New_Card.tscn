@@ -2,19 +2,19 @@
 
 [ext_resource type="PackedScene" uid="uid://de756ivob0cql" path="res://Scenes/Level Select Map/Map Nodes/MapNode.tscn" id="1_wmlpy"]
 [ext_resource type="Script" path="res://Scenes/Level Select Map/Map Nodes/MapNode_New_Card.gd" id="2_11pcl"]
-[ext_resource type="Texture2D" uid="uid://cm2qu0i8qc1s0" path="res://Sprites/Tablet.png" id="2_fmuua"]
+[ext_resource type="Texture2D" uid="uid://hsv4ge3p87k3" path="res://Cards/Card Sprites/card_icon.svg" id="3_r4k2l"]
 
 [node name="Map Node - Card" instance=ExtResource("1_wmlpy")]
 offset_right = 52.0
 script = ExtResource("2_11pcl")
 cards = Array[PackedScene]([])
 
-[node name="Button" parent="." index="0"]
+[node name="Button" parent="." index="1"]
 icon_alignment = 1
 expand_icon = true
 
-[node name="Icon" parent="." index="1"]
-texture = ExtResource("2_fmuua")
+[node name="Icon" parent="." index="2"]
+texture = ExtResource("3_r4k2l")
 
-[node name="Label" parent="." index="2"]
+[node name="Label" parent="." index="3"]
 visible = false

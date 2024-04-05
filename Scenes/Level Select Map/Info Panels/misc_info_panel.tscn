@@ -10,9 +10,6 @@ offset_left = 983.0
 offset_bottom = 898.0
 script = ExtResource("2_mftr5")
 
-[node name="Background" parent="." index="0"]
-color = Color(0, 0.282353, 0.168627, 0.705882)
-
 [node name="Title Label" parent="Info Margin/Vertical Layout" index="0"]
 text = "Misc Info Here"
 

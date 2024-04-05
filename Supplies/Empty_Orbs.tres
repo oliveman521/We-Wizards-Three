@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Supply" load_steps=3 format=3 uid="uid://dgsybemasha7i"]
+
+[ext_resource type="Texture2D" uid="uid://y442weww01xm" path="res://Sprites/SVG Icons/orb.svg" id="1_52y2m"]
+[ext_resource type="Script" path="res://Supplies/Supply.gd" id="2_uovyo"]
+
+[resource]
+script = ExtResource("2_uovyo")
+supply_name = "Empty Orb"
+icon = ExtResource("1_52y2m")
+starting_count = 5
+color = Color(1, 1, 1, 1)
+pickup_spawn_rate = 1.0
+pickup_count_min = 1
+pickup_count_max = 1
+supply_count = 0

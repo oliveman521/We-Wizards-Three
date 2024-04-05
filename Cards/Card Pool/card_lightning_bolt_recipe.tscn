@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_kf2lo"]
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_xlur8"]
-[ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Blank_Scroll.tres" id="3_yspcd"]
+[ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Empty_Orbs.tres" id="3_yspcd"]
 [ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="4_i3b8k"]
-[ext_resource type="Resource" uid="uid://0wqn3ujbcm2j" path="res://Supplies/Lightning_Scroll.tres" id="5_6n3gn"]
+[ext_resource type="Resource" uid="uid://0wqn3ujbcm2j" path="res://Supplies/Lightning_Orb.tres" id="5_6n3gn"]
 
 [node name="Lightning Scroll Recipe" instance=ExtResource("1_kf2lo")]
 card_type = "Crafting"

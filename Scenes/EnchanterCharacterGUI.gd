@@ -21,12 +21,12 @@ func _ready() -> void:
 	right_arm_neutral_angle = right_arm.rotation_degrees
 	
 	animation_player.play(IDLE_ANIM)
-	CardManager.instance.card_played.connect(func(card) -> void:
+	CardManager.instance.card_played.connect(func(_card: Card) -> void:
 		animation_player.play(IDLE_ANIM)#this makes it so it'll restart the animation if it's alteady playign the play animation. Otherwise if we're already playing a card it'll just finish that animation unaffected
 		animation_player.play(PLAY_ANIM)
 		animation_player.queue(IDLE_ANIM)
 		)
-	CardManager.instance.card_discarded.connect(func(card) -> void:
+	CardManager.instance.card_discarded.connect(func(_card: Card) -> void:
 		animation_player.play(IDLE_ANIM)
 		animation_player.play(DISCARD_ANIM)
 		animation_player.queue(IDLE_ANIM)

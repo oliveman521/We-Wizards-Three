@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpdlppetxwu3m"]
+[gd_scene load_steps=10 format=3 uid="uid://dpdlppetxwu3m"]
 
 [ext_resource type="Script" path="res://Scenes/Menus/basic_menu_behaviors.gd" id="1_6kucs"]
+[ext_resource type="Theme" uid="uid://bc5qy3dgbkg6c" path="res://UI/Partchment.tres" id="1_knrb3"]
 [ext_resource type="Texture2D" uid="uid://xpv4l51vknn1" path="res://Sprites/Full Art Characters/Logo.png" id="2_5u8bt"]
 [ext_resource type="Script" path="res://Scenes/Menus/slide_in_and_bob.gd" id="3_rnfgn"]
 [ext_resource type="Texture2D" uid="uid://djhnxxx8ohfly" path="res://Sprites/Full Art Characters/Enchanter_Full_art.png" id="4_repax"]
@@ -16,7 +17,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_knrb3")
 script = ExtResource("1_6kucs")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.180392, 0.164706, 0.290196, 1)
 
 [node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(971, 569)
@@ -37,7 +48,7 @@ position = Vector2(0, 2)
 texture = ExtResource("5_ic7ft")
 
 [node name="LibrarianFullPhoto" type="Sprite2D" parent="."]
-position = Vector2(1421, 602)
+position = Vector2(1416, 628)
 texture = ExtResource("6_dshrp")
 script = ExtResource("3_rnfgn")
 direction = Vector2(-1, 0)
@@ -72,23 +83,46 @@ bob_dist = 0
 
 [node name="Play" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 75
+theme_override_font_sizes/font_size = 150
 text = "Play!"
+
+[node name="Panel" type="Panel" parent="VBoxContainer/Play"]
+modulate = Color(0.211765, 0.192157, 0.341176, 0.780392)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 75
+theme_override_font_sizes/font_size = 150
 text = "Quit"
+
+[node name="Panel" type="Panel" parent="VBoxContainer/Quit"]
+modulate = Color(0.213293, 0.1938, 0.34, 0.780392)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1420.0
-offset_top = 13.0
-offset_right = 1909.0
-offset_bottom = 90.0
+offset_left = 1405.0
+offset_top = 23.0
+offset_right = 1894.0
+offset_bottom = 100.0
 text = "A Game by Oliver Philbrick
 Additional Art Assets by Micah Kelly"
 label_settings = ExtResource("8_nyogq")
+horizontal_alignment = 2
 script = ExtResource("3_rnfgn")
 direction = Vector2(0, 1)
 bob_dist = 5

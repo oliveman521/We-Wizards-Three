@@ -11,7 +11,7 @@ func damage_x_targets(x: int):
 	target_count = x
 	use_effect()
 
-func deal_x_damage(x: int):
+func deal_x_damage(x: int) -> void:
 	amnt = x
 	use_effect()
 

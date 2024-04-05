@@ -12,15 +12,12 @@
 card_type = "Crafting"
 card_name = "Supply Cache"
 
-[node name="Background Color" parent="Card Face" index="0"]
-color = Color(0.780392, 0.588235, 0.313726, 1)
-
 [node name="Essence x2" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_7naf4")]
 layout_mode = 2
 supply = ExtResource("3_0br8a")
 count = 2
 
-[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer" index="0"]
 text = "Supply Cache"
 
 [node name="Card text" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("4_g2qdy")]

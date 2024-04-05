@@ -13,7 +13,6 @@ const LIGHTNING: Ammo_Type = preload("uid://0wqn3ujbcm2j")
 
 var storeroom_Manager: StoreroomManager
 var apprentice_character: ApprenticeCharacter
-var warlock_character: WarlockCharacter
 var enemy_manager: EnemyManager
 
 signal debug_mode_changed()
@@ -29,13 +28,13 @@ var lives: int = 0:
 			game_over()
 
 var all_supplies: Array[Supply] = [
-	preload("res://Supplies/Blank_Scroll.tres"),
+	preload("uid://dgsybemasha7i"),
 	preload("res://Supplies/essence.tres"),
 	preload("res://Supplies/Fire_Gem.tres"),
-	preload("res://Supplies/Fire_Scroll.tres"),
+	preload("uid://bow64ukpfnomj"),
 	preload("res://Supplies/Lightning_Gem.tres"),
-	preload("res://Supplies/Lightning_Scroll.tres"),
-	preload("res://Supplies/Mana_Scroll.tres"),
+	preload("uid://0wqn3ujbcm2j"),
+	preload("uid://dfoqxs41hjlrc"),
 	preload("res://Supplies/Tablet.tres"),
 ]
 

@@ -15,6 +15,16 @@ mouse_filter = 2
 theme = ExtResource("2_pyj5k")
 script = ExtResource("1_yufi2")
 
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 0.705882, 0.160784, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
 [node name="Button" type="Button" parent="."]
 modulate = Color(1, 0.686275, 0.101961, 1)
 layout_mode = 1

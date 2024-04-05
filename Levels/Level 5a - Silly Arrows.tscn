@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ddavd71iwja5g" path="res://Levels/template_level.tscn" id="1_wmrxe"]
 [ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="2_yk86e"]
 [ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="3_hhepp"]
-[ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Blank_Scroll.tres" id="4_fuf48"]
+[ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Empty_Orbs.tres" id="4_fuf48"]
 [ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Tablet.tres" id="5_pjq3h"]
 [ext_resource type="PackedScene" uid="uid://c6afi4js5waro" path="res://Enemies/enemy_jester.tscn" id="6_ob4eo"]
 [ext_resource type="PackedScene" uid="uid://cn7apof2y3wfd" path="res://Enemies/enemy_archer.tscn" id="7_gexg0"]
