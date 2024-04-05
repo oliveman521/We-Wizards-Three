@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmmx82yti0hqm"
-path="res://.godot/imported/square 9-tile boarder.png-36760bc5aaf402ac8978cb0cc17085f7.ctex"
+uid="uid://phbvd4pqvcuy"
+path="res://.godot/imported/nuke_symbol.png-a5d6339f1298e05834cb86c10e669eb5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/square 9-tile boarder.png"
-dest_files=["res://.godot/imported/square 9-tile boarder.png-36760bc5aaf402ac8978cb0cc17085f7.ctex"]
+source_file="res://Sprites/Retired/nuke_symbol.png"
+dest_files=["res://.godot/imported/nuke_symbol.png-a5d6339f1298e05834cb86c10e669eb5.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf6kriq5iojoy"
-path="res://.godot/imported/hazard-sign.svg-aa0c23c509f29ffdeb0d2e8ac8824f15.ctex"
+uid="uid://d1k283focdx4o"
+path="res://.godot/imported/Check.svg-2b336a2702c20d0b588a3b5c48f7a4d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI Icons/hazard-sign.svg"
-dest_files=["res://.godot/imported/hazard-sign.svg-aa0c23c509f29ffdeb0d2e8ac8824f15.ctex"]
+source_file="res://Sprites/Retired/UI Icons/Check.svg"
+dest_files=["res://.godot/imported/Check.svg-2b336a2702c20d0b588a3b5c48f7a4d4.ctex"]
 
 [params]
 

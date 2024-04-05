@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boee8f6nfsk2l"
-path="res://.godot/imported/Energy_Icon.png-6088b7793e37449b8987d6a84653d735.ctex"
+uid="uid://b4qxnhpkh2mso"
+path="res://.godot/imported/info.svg-446dbb1c83f586425127df53b13e9248.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Energy_Icon.png"
-dest_files=["res://.godot/imported/Energy_Icon.png-6088b7793e37449b8987d6a84653d735.ctex"]
+source_file="res://Sprites/Retired/UI Icons/info.svg"
+dest_files=["res://.godot/imported/info.svg-446dbb1c83f586425127df53b13e9248.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

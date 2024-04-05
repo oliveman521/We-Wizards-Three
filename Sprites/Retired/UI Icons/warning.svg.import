@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgp2ycf40jjlk"
-path="res://.godot/imported/scroll.png-94de52f189f05049a721c9f9e651dca6.ctex"
+uid="uid://cyl1384d5qx5u"
+path="res://.godot/imported/warning.svg-87028a89b368a290946d3bfa67562094.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/scroll.png"
-dest_files=["res://.godot/imported/scroll.png-94de52f189f05049a721c9f9e651dca6.ctex"]
+source_file="res://Sprites/Retired/UI Icons/warning.svg"
+dest_files=["res://.godot/imported/warning.svg-87028a89b368a290946d3bfa67562094.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

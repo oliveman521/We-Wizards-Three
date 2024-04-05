@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1k283focdx4o"
-path="res://.godot/imported/Check.svg-840c82e85e6873e2f12718c8164d0074.ctex"
+uid="uid://dmmx82yti0hqm"
+path="res://.godot/imported/square 9-tile boarder.png-9dfc1369309aa77f1c81f86be882cd32.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI Icons/Check.svg"
-dest_files=["res://.godot/imported/Check.svg-840c82e85e6873e2f12718c8164d0074.ctex"]
+source_file="res://Sprites/Retired/square 9-tile boarder.png"
+dest_files=["res://.godot/imported/square 9-tile boarder.png-9dfc1369309aa77f1c81f86be882cd32.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjcoqsewim8ni"
-path="res://.godot/imported/square 9-tile.png-759bb42078e5a6fb0d7803e9cb95958b.ctex"
+uid="uid://c2bby0o70br6q"
+path="res://.godot/imported/first_pancake_standin.svg-2bf032ae950410afb6ff66901cc7310d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/square 9-tile.png"
-dest_files=["res://.godot/imported/square 9-tile.png-759bb42078e5a6fb0d7803e9cb95958b.ctex"]
+source_file="res://Sprites/SVG Icons/first_pancake_standin.svg"
+dest_files=["res://.godot/imported/first_pancake_standin.svg-2bf032ae950410afb6ff66901cc7310d.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

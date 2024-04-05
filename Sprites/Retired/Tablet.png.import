@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dayw62taqldwq"
-path="res://.godot/imported/Evil Ship.png-5b6aaa7f7b037bb1f1b16dfcec0a4ed2.ctex"
+uid="uid://cm2qu0i8qc1s0"
+path="res://.godot/imported/Tablet.png-0d53ce53b34bedfee4a83fb3bfdc9e66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Evil Ship.png"
-dest_files=["res://.godot/imported/Evil Ship.png-5b6aaa7f7b037bb1f1b16dfcec0a4ed2.ctex"]
+source_file="res://Sprites/Retired/Tablet.png"
+dest_files=["res://.godot/imported/Tablet.png-0d53ce53b34bedfee4a83fb3bfdc9e66.ctex"]
 
 [params]
 

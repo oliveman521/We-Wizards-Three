@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4qxnhpkh2mso"
-path="res://.godot/imported/info.svg-f217365d186aaf14dc113bb46ccf5bdb.ctex"
+uid="uid://dlvc3iksf0q21"
+path="res://.godot/imported/padlock.svg-9e370bd831e196b87d396a49f40a88c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI Icons/info.svg"
-dest_files=["res://.godot/imported/info.svg-f217365d186aaf14dc113bb46ccf5bdb.ctex"]
+source_file="res://Sprites/Retired/UI Icons/padlock.svg"
+dest_files=["res://.godot/imported/padlock.svg-9e370bd831e196b87d396a49f40a88c3.ctex"]
 
 [params]
 

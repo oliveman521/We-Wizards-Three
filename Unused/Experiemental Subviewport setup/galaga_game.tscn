@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dolldx3qedfka"]
 
 [ext_resource type="Script" path="res://Scripts/Warlock.gd" id="1_aiwae"]
-[ext_resource type="Texture2D" uid="uid://dj3333rn0atgv" path="res://Sprites/Ship.png" id="2_prt4s"]
+[ext_resource type="Texture2D" uid="uid://dj3333rn0atgv" path="res://Sprites/Retired/Ship.png" id="2_prt4s"]
 [ext_resource type="Script" path="res://Enemies/Enemy Manager.gd" id="3_ekp57"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ek7uc"]

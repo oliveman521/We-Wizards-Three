@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://de756ivob0cql"]
 
 [ext_resource type="Script" path="res://Scenes/Level Select Map/Map Nodes/MapNode.gd" id="1_yufi2"]
-[ext_resource type="Texture2D" uid="uid://d1k283focdx4o" path="res://Sprites/UI Icons/Check.svg" id="2_wh5h6"]
-[ext_resource type="Texture2D" uid="uid://dlvc3iksf0q21" path="res://Sprites/UI Icons/padlock.svg" id="3_lc30j"]
+[ext_resource type="Texture2D" uid="uid://d1k283focdx4o" path="res://Sprites/Retired/UI Icons/Check.svg" id="2_wh5h6"]
+[ext_resource type="Texture2D" uid="uid://dlvc3iksf0q21" path="res://Sprites/Retired/UI Icons/padlock.svg" id="3_lc30j"]
 [ext_resource type="LabelSettings" uid="uid://qxlhypxjoo85" path="res://UI/Fonts/tiny_text.tres" id="4_meekf"]
 
 [node name="Map Node" type="Control"]

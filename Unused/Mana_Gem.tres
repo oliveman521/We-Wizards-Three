@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Supply" load_steps=3 format=3 uid="uid://bu3ei37lhx6dm"]
 
-[ext_resource type="Texture2D" uid="uid://c08m73sb8von0" path="res://Sprites/crystal.png" id="1_ftiun"]
+[ext_resource type="Texture2D" uid="uid://c08m73sb8von0" path="res://Sprites/Retired/crystal.png" id="1_ftiun"]
 [ext_resource type="Script" path="res://Supplies/Supply.gd" id="2_7w47e"]
 
 [resource]

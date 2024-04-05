@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://phbvd4pqvcuy"
-path="res://.godot/imported/nuke_symbol.png-c4cb13ace352a89161995ceb68b3e3d6.ctex"
+uid="uid://boee8f6nfsk2l"
+path="res://.godot/imported/Energy_Icon.png-3c5297bc7c45de6c4d109a41810a3512.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/nuke_symbol.png"
-dest_files=["res://.godot/imported/nuke_symbol.png-c4cb13ace352a89161995ceb68b3e3d6.ctex"]
+source_file="res://Sprites/Retired/Energy_Icon.png"
+dest_files=["res://.godot/imported/Energy_Icon.png-3c5297bc7c45de6c4d109a41810a3512.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://btsj4ae1ih5n1"]
 
 [ext_resource type="Script" path="res://UI/Supply_UI.gd" id="1_i67is"]
-[ext_resource type="Texture2D" uid="uid://c08m73sb8von0" path="res://Sprites/crystal.png" id="2_c7r2c"]
+[ext_resource type="Texture2D" uid="uid://c08m73sb8von0" path="res://Sprites/Retired/crystal.png" id="2_c7r2c"]
 [ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="3_yt7m4"]
 
 [node name="Supply UI" type="HBoxContainer"]

@@ -14,8 +14,8 @@ config/name="We Wizards 3"
 run/main_scene="res://Scenes/Menus/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/bg_color=Color(0.133333, 0.121569, 0.211765, 1)
-boot_splash/image="res://Sprites/UI Icons/first_pancake_standin.png"
-config/icon="res://Sprites/warlock.png"
+boot_splash/image="res://Sprites/SVG Icons/first_pancake_standin.png"
+config/icon="res://Sprites/Retired/warlock.png"
 
 [autoload]
 

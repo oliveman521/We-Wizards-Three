@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhu5lwjeucanx"
-path="res://.godot/imported/Heart.png-e910d028e12b6ab43422798cb5418f7e.ctex"
+uid="uid://dj3333rn0atgv"
+path="res://.godot/imported/Ship.png-1d2b4ff2f2a178468e32f4e0564a0462.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Heart.png"
-dest_files=["res://.godot/imported/Heart.png-e910d028e12b6ab43422798cb5418f7e.ctex"]
+source_file="res://Sprites/Retired/Ship.png"
+dest_files=["res://.godot/imported/Ship.png-1d2b4ff2f2a178468e32f4e0564a0462.ctex"]
 
 [params]
 

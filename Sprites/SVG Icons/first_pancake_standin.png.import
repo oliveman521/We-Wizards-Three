@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2bby0o70br6q"
-path="res://.godot/imported/first_pancake_standin.svg-69e2ff77b235f9d4aa88501be84b5f72.ctex"
+uid="uid://dbemly6umhklm"
+path="res://.godot/imported/first_pancake_standin.png-621349a1f1c6a48ca5af993cbac53836.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI Icons/first_pancake_standin.svg"
-dest_files=["res://.godot/imported/first_pancake_standin.svg-69e2ff77b235f9d4aa88501be84b5f72.ctex"]
+source_file="res://Sprites/SVG Icons/first_pancake_standin.png"
+dest_files=["res://.godot/imported/first_pancake_standin.png-621349a1f1c6a48ca5af993cbac53836.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

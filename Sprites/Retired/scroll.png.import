@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlvc3iksf0q21"
-path="res://.godot/imported/padlock.svg-3bc3269a99bc441840677e75e2e0e877.ctex"
+uid="uid://cgp2ycf40jjlk"
+path="res://.godot/imported/scroll.png-51efa8e33d71d4f5fbf4bcbc51edf0f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI Icons/padlock.svg"
-dest_files=["res://.godot/imported/padlock.svg-3bc3269a99bc441840677e75e2e0e877.ctex"]
+source_file="res://Sprites/Retired/scroll.png"
+dest_files=["res://.godot/imported/scroll.png-51efa8e33d71d4f5fbf4bcbc51edf0f4.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

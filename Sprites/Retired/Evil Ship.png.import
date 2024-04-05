@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dj3333rn0atgv"
-path="res://.godot/imported/Ship.png-d6898bd410dcafdd90baf6595b371339.ctex"
+uid="uid://dayw62taqldwq"
+path="res://.godot/imported/Evil Ship.png-b18162ff10eb03c1cabb57acc19c8824.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Ship.png"
-dest_files=["res://.godot/imported/Ship.png-d6898bd410dcafdd90baf6595b371339.ctex"]
+source_file="res://Sprites/Retired/Evil Ship.png"
+dest_files=["res://.godot/imported/Evil Ship.png-b18162ff10eb03c1cabb57acc19c8824.ctex"]
 
 [params]
 

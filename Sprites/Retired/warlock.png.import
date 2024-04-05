@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b8boy6md2mbll"
-path="res://.godot/imported/warlock.png-e6a1029772270a8d1c9bb6be052ef027.ctex"
+path="res://.godot/imported/warlock.png-7a980f72864e71080c3ed8fbbeb1cbf2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/warlock.png"
-dest_files=["res://.godot/imported/warlock.png-e6a1029772270a8d1c9bb6be052ef027.ctex"]
+source_file="res://Sprites/Retired/warlock.png"
+dest_files=["res://.godot/imported/warlock.png-7a980f72864e71080c3ed8fbbeb1cbf2.ctex"]
 
 [params]
 

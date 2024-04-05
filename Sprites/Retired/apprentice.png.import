@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byryijvvf5qgd"
-path="res://.godot/imported/white ring.png-fb1cb889f4ada53d87ea5500c6c9d57d.ctex"
+uid="uid://bnf1qbyi4gps"
+path="res://.godot/imported/apprentice.png-18b1c3f2aadbf6115fdabbc2f0dd5b52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/white ring.png"
-dest_files=["res://.godot/imported/white ring.png-fb1cb889f4ada53d87ea5500c6c9d57d.ctex"]
+source_file="res://Sprites/Retired/apprentice.png"
+dest_files=["res://.godot/imported/apprentice.png-18b1c3f2aadbf6115fdabbc2f0dd5b52.ctex"]
 
 [params]
 

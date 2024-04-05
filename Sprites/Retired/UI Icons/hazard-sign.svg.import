@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj6e14qigcant"
-path="res://.godot/imported/Essence.png-c57a5343c68214e839310c591dce7fcf.ctex"
+uid="uid://cf6kriq5iojoy"
+path="res://.godot/imported/hazard-sign.svg-976bcd281b42bc2ecbe342fb4b58d1ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Essence.png"
-dest_files=["res://.godot/imported/Essence.png-c57a5343c68214e839310c591dce7fcf.ctex"]
+source_file="res://Sprites/Retired/UI Icons/hazard-sign.svg"
+dest_files=["res://.godot/imported/hazard-sign.svg-976bcd281b42bc2ecbe342fb4b58d1ce.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

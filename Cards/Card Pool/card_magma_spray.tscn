@@ -13,9 +13,6 @@
 card_type = "Fire Damage"
 card_name = "Magma Spray"
 
-[node name="Background Color" parent="Card Face" index="0"]
-color = Color(0.486275, 0.105882, 0.0352941, 1)
-
 [node name="Essence x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_557sh")]
 layout_mode = 2
 supply = ExtResource("3_4qsnt")
@@ -25,7 +22,7 @@ layout_mode = 2
 supply = ExtResource("3_x8h0f")
 count = 2
 
-[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer" index="0"]
 text = "Magma Spray"
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#CardEffect_Damage" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0"]
@@ -43,7 +40,6 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label2" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2"]
-modulate = Color(0.282353, 0.611765, 1, 1)
 layout_mode = 2
 text = "Draw a card."
 label_settings = ExtResource("5_br3fs")
@@ -56,3 +52,9 @@ script = ExtResource("7_27ydv")
 [node name="CardEffect_ScreenShake" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="4"]
 script = ExtResource("8_t1apa")
 shake_amnt = 0.3
+
+[node name="Top Nubs" parent="Top Roll" index="0"]
+modulate = Color(1, 0.172549, 0.160784, 1)
+
+[node name="Bottom Nubs" parent="Bottom Roll" index="0"]
+modulate = Color(1, 0.388235, 0.380392, 1)

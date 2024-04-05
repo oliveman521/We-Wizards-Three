@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbemly6umhklm"
-path="res://.godot/imported/first_pancake_standin.png-40f619a38f483a0c565d44a1977048fc.ctex"
+uid="uid://bhu5lwjeucanx"
+path="res://.godot/imported/Heart.png-c746abc8f5984c0fc1b951fc9c34937a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI Icons/first_pancake_standin.png"
-dest_files=["res://.godot/imported/first_pancake_standin.png-40f619a38f483a0c565d44a1977048fc.ctex"]
+source_file="res://Sprites/Retired/Heart.png"
+dest_files=["res://.godot/imported/Heart.png-c746abc8f5984c0fc1b951fc9c34937a.ctex"]
 
 [params]
 

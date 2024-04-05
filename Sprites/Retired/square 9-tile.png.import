@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c08m73sb8von0"
-path="res://.godot/imported/crystal.png-40ec88c5921cbe6cacb4942b16fcac0a.ctex"
+uid="uid://bjcoqsewim8ni"
+path="res://.godot/imported/square 9-tile.png-c636106248e86b6dda8ff478a418dee5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/crystal.png"
-dest_files=["res://.godot/imported/crystal.png-40ec88c5921cbe6cacb4942b16fcac0a.ctex"]
+source_file="res://Sprites/Retired/square 9-tile.png"
+dest_files=["res://.godot/imported/square 9-tile.png-c636106248e86b6dda8ff478a418dee5.ctex"]
 
 [params]
 
