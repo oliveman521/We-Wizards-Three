@@ -2,8 +2,12 @@
 
 [ext_resource type="Theme" uid="uid://bc5qy3dgbkg6c" path="res://UI/Partchment.tres" id="1_2iaa2"]
 [ext_resource type="Script" path="res://Cards/card_supply_icon.gd" id="1_8pbka"]
-[ext_resource type="Texture2D" uid="uid://cnm40sd26ufh" path="res://Sprites/Question Mark.png" id="1_sylqm"]
-[ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="2_mkbpv"]
+[ext_resource type="Texture2D" uid="uid://bh5r23nqrfhf3" path="res://Sprites/SVG Icons/question_mark.svg" id="3_ho5hp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1as26"]
+font_size = 20
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ato81"]
 font_size = 30
@@ -20,10 +24,10 @@ script = ExtResource("1_8pbka")
 
 [node name="Icon" type="TextureRect" parent="."]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(35, 35)
 layout_mode = 2
-texture = ExtResource("1_sylqm")
-expand_mode = 3
+texture = ExtResource("3_ho5hp")
+expand_mode = 1
 stretch_mode = 5
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -39,18 +43,19 @@ layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 theme_override_constants/separation = 3
+alignment = 2
 
 [node name="X" type="Label" parent="MarginContainer/Multiples Indicator"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "x"
-label_settings = SubResource("LabelSettings_ato81")
+label_settings = SubResource("LabelSettings_1as26")
 horizontal_alignment = 1
-vertical_alignment = 1
+vertical_alignment = 2
 uppercase = true
 
 [node name="Number" type="Label" parent="MarginContainer/Multiples Indicator"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "1"
-label_settings = ExtResource("2_mkbpv")
+label_settings = SubResource("LabelSettings_ato81")

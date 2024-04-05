@@ -2,6 +2,6 @@
 
 [resource]
 line_spacing = 1.0
-font_size = 25
-outline_size = 8
+font_size = 26
+font_color = Color(0, 0, 0, 1)
 outline_color = Color(0, 0, 0, 1)

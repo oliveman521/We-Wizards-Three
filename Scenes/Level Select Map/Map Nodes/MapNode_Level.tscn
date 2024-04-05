@@ -7,5 +7,5 @@
 script = ExtResource("2_jqh14")
 level = null
 
-[node name="Label" parent="." index="3"]
+[node name="Label" parent="." index="2"]
 text = "Level Map Node - Level"

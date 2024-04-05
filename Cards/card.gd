@@ -3,19 +3,20 @@ extends Control
 class_name Card
 
 @onready var button: Button = %Button
-@onready var card_back: Control = %"Card Back"
 
 @onready var card_name_UI: Label = %CardName
 @onready var costs_UI_section: Control = %Costs
 @onready var effects_UI_section: Control = %Effects
-@onready var background_color_UI: ColorRect =  %"Background Color"
 
 @onready var play_sound: AudioStreamPlayer2D = %"Play Sound"
 @onready var discard_sound: AudioStreamPlayer2D = %"Discard Sound"
 @onready var cannot_be_played_sound: AudioStreamPlayer2D = %"Cannot Be Played Sound"
+@onready var roll_animation_player: AnimationPlayer = $RollAnimationPlayer
+const UNROLL_ANIMATION: String = "Unroll"
+const ROLL_ANIMATION: String = "Roll Up"
 
-@onready var highlight_ui: ColorRect = $Highlight
-@onready var warning_ui: TextureRect = $Warning
+
+@onready var highlight_ui: Control = $Highlight
 
 var card_mode: String = "none"
 const DECK_BUILDING_MODE = "DECK_BUILDING_MODE"
@@ -27,18 +28,18 @@ const PREVIEW_MODE = "PREVIEW_MODE"
 @export_enum("Misc", "Draw", "Fire Damage", "Lightning Damage", "Crafting", "Buff") var card_type: String = "Misc":
 	set(new_val):
 		card_type = new_val
-		if background_color_UI:
-			background_color_UI.color = card_type_color_dict[card_type]
+		%"Top Nubs".modulate = card_type_color_dict[card_type]
+		%"Bottom Nubs".modulate = card_type_color_dict[card_type]		
 		queue_redraw()
 
 #TODO mixed type cards would be kinda sick
 var card_type_color_dict: Dictionary = {
-	"Misc": Color("#3b097c"), 
-	"Draw" : Color("#09117c"), 
-	"Fire Damage": Color("#7c1b09"),
-	"Lightning Damage": Color("#96901e"),	
-	"Crafting": Color("#c79650"),
-	"Buff": Color("#3a7c3e"),
+	"Misc": Color("#58508d"), 
+	"Draw" : Color("#003f5c"), 
+	"Fire Damage": Color("#ff6361"),
+	"Lightning Damage": Color("#ffa600"),	
+	"Crafting": Color("#58508d"),
+	"Buff": Color("#50bc7c"),
 }
 
 
@@ -110,12 +111,15 @@ func get_supply_costs() -> Array[Supply]:
 	return costs
 
 func _ready() -> void:
-	background_color_UI.color = card_type_color_dict[card_type]
+	card_type = card_type
+	card_name
 
 
 func _process(_delta: float) -> void:
 	if card_mode == HAND_MODE:
-		if check_costs():
+		if roll_animation_player.is_playing():
+			highlight_ui.visible = false
+		elif check_costs():
 			highlight(Color.FOREST_GREEN)
 		else:
 			highlight_ui.visible = false
@@ -169,20 +173,25 @@ func play() -> void:
 	queue_free()
 
 func enter_queue_mode() -> void:
-	card_mode = HAND_QUEUE_MODE
-	button.mouse_filter = Control.MOUSE_FILTER_STOP
-	card_back.visible = true
-	highlight_ui.visible = false
+	const rotation_noise: float = 15
+	if card_mode != HAND_QUEUE_MODE:
+		card_mode = HAND_QUEUE_MODE
+		rotation_degrees += randf_range(-rotation_noise, rotation_noise)
+		button.mouse_filter = Control.MOUSE_FILTER_STOP
+		highlight_ui.visible = false
+		roll_animation_player.play(ROLL_ANIMATION)
 
 func enter_hand_mode() -> void:
-	card_mode = HAND_MODE
-	button.mouse_filter = Control.MOUSE_FILTER_STOP
-	card_back.visible = false
+	if card_mode != HAND_MODE:
+		card_mode = HAND_MODE
+		rotation_degrees = 0
+		button.mouse_filter = Control.MOUSE_FILTER_STOP
+		roll_animation_player.play(UNROLL_ANIMATION)
 
 func enter_preview_mode() -> void:
 	card_mode = PREVIEW_MODE
 	button.mouse_filter = Control.MOUSE_FILTER_IGNORE
-
+	roll_animation_player.play(UNROLL_ANIMATION)
 	if num_in_collection == 0:
 		highlight(Color.YELLOW)
 
@@ -223,6 +232,7 @@ func _on_button_gui_input(event: InputEvent) -> void:
 
 func discard() -> void:
 	card_discarded.emit()
+	roll_animation_player.play(ROLL_ANIMATION)
 	card_manager.instance.card_discarded.emit(self)
 	SoundManager.play_sound(discard_sound)
 	await slide_card_away(Vector2.DOWN, Color(1,0,0,0))

@@ -2,5 +2,5 @@
 
 [resource]
 font_size = 30
-outline_size = 8
+font_color = Color(0, 0, 0, 1)
 outline_color = Color(0, 0, 0, 1)

@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://fpanfqc8xxjo"
-path="res://.godot/imported/Handwriting-Regular.otf-a8ed65f1c443813aa5a5e92830ef3123.fontdata"
+uid="uid://wfhbxbd421gx"
+path="res://.godot/imported/Mungil-Regular.ttf-ebec70054c32e5e72a99fc7811bd3ea2.fontdata"
 
 [deps]
 
-source_file="res://UI/Fonts/Handwriting-Regular.otf"
-dest_files=["res://.godot/imported/Handwriting-Regular.otf-a8ed65f1c443813aa5a5e92830ef3123.fontdata"]
+source_file="res://UI/Fonts/Mungil-Regular.ttf"
+dest_files=["res://.godot/imported/Mungil-Regular.ttf-ebec70054c32e5e72a99fc7811bd3ea2.fontdata"]
 
 [params]
 
@@ -22,7 +22,7 @@ allow_system_fallback=true
 force_autohinter=false
 hinting=1
 subpixel_positioning=1
-oversampling=5.0
+oversampling=3.0
 Fallbacks=null
 fallbacks=[]
 Compress=null

@@ -1,9 +1,5 @@
-[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bejclfut5msaj"]
-
-[ext_resource type="FontFile" uid="uid://t4iceb2drwa2" path="res://UI/Fonts/Franklin Gothic Medium Regular.ttf" id="1_g08ir"]
+[gd_resource type="LabelSettings" format=3 uid="uid://bejclfut5msaj"]
 
 [resource]
-font = ExtResource("1_g08ir")
 font_size = 21
-outline_size = 8
-outline_color = Color(0, 0, 0, 1)
+font_color = Color(0, 0, 0, 1)

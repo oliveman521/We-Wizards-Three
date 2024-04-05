@@ -683,17 +683,8 @@ size_flags_vertical = 3
 theme_override_constants/h_separation = 15
 theme_override_constants/v_separation = 15
 
-[node name="Fire Ball Recipe" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("24_rjnis")]
+[node name="Boomlins" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("29_il0pa")]
 layout_mode = 2
-theme = null
-
-[node name="Fire Ball Recipe2" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("24_rjnis")]
-layout_mode = 2
-theme = null
-
-[node name="Fire Ball Recipe3" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("24_rjnis")]
-layout_mode = 2
-theme = null
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer"]
 layout_mode = 2
@@ -741,16 +732,12 @@ size_flags_vertical = 3
 theme_override_constants/h_separation = 15
 theme_override_constants/v_separation = 15
 
-[node name="Fire Ball Recipe" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("24_rjnis")]
+[node name="Boomlins" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("29_il0pa")]
 layout_mode = 2
-theme = null
-
-[node name="Fire Ball Recipe2" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("24_rjnis")]
-layout_mode = 2
-theme = null
 
 [node name="Back Button" parent="Overlay Canvas/Deck Building Menu/Screen Margin" instance=ExtResource("61_r60pi")]
 layout_mode = 2
 
 [connection signal="gui_input" from="Map Manager/Map Bounds" to="Camera2D" method="map_bound_input"]
 [connection signal="button_down" from="Overlay Canvas/Edit Deck Button" to="Overlay Canvas/Deck Building Menu" method="open_deck_builder_menu"]
+[connection signal="button_down" from="Overlay Canvas/Deck Building Menu/Screen Margin/Back Button" to="Overlay Canvas/Deck Building Menu" method="close_deck_builder_menu"]

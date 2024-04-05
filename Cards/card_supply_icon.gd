@@ -38,7 +38,5 @@ func spend_cost() -> void:
 	supply.use_supply(count)
 
 func use_effect() -> void:
-	print(1)
 	if visual_only: return
 	supply.add_supply(count)
-	print(2)

@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://fpanfqc8xxjo"
-path="res://.godot/imported/Handwriting-Regular.otf-a8ed65f1c443813aa5a5e92830ef3123.fontdata"
+uid="uid://bimkr1kp51yeh"
+path="res://.godot/imported/Vividly-Regular.otf-eb30bf9132fbd9144eb500d93b551940.fontdata"
 
 [deps]
 
-source_file="res://UI/Fonts/Handwriting-Regular.otf"
-dest_files=["res://.godot/imported/Handwriting-Regular.otf-a8ed65f1c443813aa5a5e92830ef3123.fontdata"]
+source_file="res://UI/Fonts/Vividly-Regular.otf"
+dest_files=["res://.godot/imported/Vividly-Regular.otf-eb30bf9132fbd9144eb500d93b551940.fontdata"]
 
 [params]
 
@@ -22,17 +22,12 @@ allow_system_fallback=true
 force_autohinter=false
 hinting=1
 subpixel_positioning=1
-oversampling=5.0
+oversampling=3.0
 Fallbacks=null
 fallbacks=[]
 Compress=null
 compress=true
-preload=[{
-"chars": [],
-"glyphs": [],
-"name": "New Configuration",
-"size": Vector2i(16, 0)
-}]
+preload=[]
 language_support={}
 script_support={}
 opentype_features={}
