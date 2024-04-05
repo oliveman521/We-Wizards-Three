@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="Supply" load_steps=3 format=3 uid="uid://bb24w4yw0g0k"]
 
-[ext_resource type="Texture2D" uid="uid://c08m73sb8von0" path="res://Sprites/crystal.png" id="1_es08p"]
+[ext_resource type="Texture2D" uid="uid://bt3jkls33uu3k" path="res://Sprites/SVG Icons/lightning gem.svg" id="1_0ka3p"]
 [ext_resource type="Script" path="res://Supplies/Supply.gd" id="2_e61jj"]
 
 [resource]
 script = ExtResource("2_e61jj")
 supply_name = "Lightning Gem"
-icon = ExtResource("1_es08p")
+icon = ExtResource("1_0ka3p")
 starting_count = 0
-color = Color(1, 0.65098, 0, 1)
+color = Color(1, 1, 1, 1)
 pickup_spawn_rate = 1.0
 pickup_count_min = 1
 pickup_count_max = 1

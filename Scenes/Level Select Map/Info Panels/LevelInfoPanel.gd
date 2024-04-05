@@ -8,6 +8,8 @@ const ICON_UI_PREFAB = preload("uid://b6l8omowp6g0m")
 @onready var supply_icons_container: HBoxContainer = %"Supply Icons Container"
 @onready var enemy_icons_container: HBoxContainer = %"Enemy Icons Container"
 @onready var start_button: Button = %"Confirm Button"
+@onready var confirm_button_label: Label = %"Confirm Button Label"
+
 @onready var back_button: Button = %"Back Button"
 
 @onready var level_select_menu: LevelSelectMenu = get_tree().get_first_node_in_group("Level Select Menu")
@@ -42,7 +44,7 @@ func populate(level_prefab: PackedScene) -> void:
 	start_button.button_down.connect(func()-> void:
 		if not deck_building_menu.is_open:
 			deck_building_menu.open_deck_builder_menu()
-			start_button.text = "Confirm Deck?"
+			confirm_button_label.text = "Confirm Deck?"
 			return
 		var x: int =  GameManager.DECK_MAX_SIZE - GameManager.current_save.cards_in_deck.size()
 		if x > 0:
@@ -59,7 +61,7 @@ func populate(level_prefab: PackedScene) -> void:
 				if warned_about_unplayable_cards != GameManager.current_save.cards_in_deck: #if they haven't changed their deck
 					warned_about_unplayable_cards = GameManager.current_save.cards_in_deck
 					GameManager.spawn_popup(get_global_mouse_position(), "Warning: Your deck has costs that do not spawn in this level", Color.ORANGE,6,self)
-					start_button.text = "Play anyway?"
+					confirm_button_label.text = "Play anyway?"
 					return
 			card.queue_free()
 		

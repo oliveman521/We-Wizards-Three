@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://Storeroom/Grid.gd" id="3_jg26i"]
 [ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="4_hrod8"]
 [ext_resource type="TileSet" uid="uid://cynof41cb1hco" path="res://Levels/StoreroomTiles.tres" id="5_5j6hp"]
-[ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Blank_Scroll.tres" id="5_m6hne"]
+[ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Empty_Orbs.tres" id="5_m6hne"]
 [ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Tablet.tres" id="6_ay8j8"]
 
 [node name="template_level" type="Node2D"]

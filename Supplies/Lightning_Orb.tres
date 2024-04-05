@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Ammo_Type" load_steps=4 format=3 uid="uid://0wqn3ujbcm2j"]
+
+[ext_resource type="Texture2D" uid="uid://dyy3p8nwmds0m" path="res://Sprites/SVG Icons/lightning_orb.svg" id="1_m6uej"]
+[ext_resource type="PackedScene" uid="uid://chokjmvo87ktx" path="res://Projectiles/lightning_bolt_projectile.tscn" id="2_rt1ic"]
+[ext_resource type="Script" path="res://Supplies/ammo_type.gd" id="3_eb6n7"]
+
+[resource]
+script = ExtResource("3_eb6n7")
+fire_cooldown = 0.25
+full_auto = false
+damage_type = 2
+projectile_prefab = ExtResource("2_rt1ic")
+supply_name = "Lightning Orb"
+icon = ExtResource("1_m6uej")
+starting_count = 0
+color = Color(1, 1, 1, 1)
+pickup_spawn_rate = 1.0
+pickup_count_min = 1
+pickup_count_max = 1
+supply_count = 0

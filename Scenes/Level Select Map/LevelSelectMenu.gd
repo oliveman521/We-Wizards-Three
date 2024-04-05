@@ -19,6 +19,10 @@ var offscreen_right_point: Vector2:
 		var right_edge_of_screen: float = get_viewport_rect().size.x
 		return Vector2(right_edge_of_screen, screen_margin)
 
+func _process(delta: float) -> void:
+	if Input.is_key_pressed(KEY_ESCAPE):
+		get_tree().change_scene_to_packed(GameManager.main_menu) 
+
 func open_card_unlock_panel(cards: Array[PackedScene]) -> void:
 	await close_current_info_panel()
 	
@@ -41,20 +45,20 @@ func open_level_info_panel(level_prefab: PackedScene) -> void:
 	level_info_panel.global_position = offscreen_right_point
 	open_panel(level_info_panel)
 
-func open_misc_info_panel(title: String, text1: String, image: Texture, text2: String, button_text: String, color: Color) -> void:
+func open_misc_info_panel(title: String, text1: String, image: Texture, text2: String, button_text: String) -> void:
 	await close_current_info_panel()
 	
 	var misc_info_panel: MiscInfoPanel = MISC_INFO_PANEL.instantiate() as MiscInfoPanel
 	overlay_canvas.add_child(misc_info_panel)
 	current_info_panel = misc_info_panel
 	misc_info_panel.visible = true
-	misc_info_panel.populate(title, text1, image, text2, button_text, color)
+	misc_info_panel.populate(title, text1, image, text2, button_text)
 	misc_info_panel.global_position = offscreen_right_point
 	open_panel(misc_info_panel)
 
 func open_tutorial_panel(pages: Array[TutorialInfoPage]) -> void:
 	for page in pages:
-		await open_misc_info_panel(page.title, page.text1, page.image, page.text2, page.button_text, page.color)
+		await open_misc_info_panel(page.title, page.text1, page.image, page.text2, page.button_text)
 		await current_info_panel.tree_exited
 		#TODO this gets squirrelly if you don't finish it
 

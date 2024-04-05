@@ -67,7 +67,7 @@ func move(delta: float) -> void:
 
 func shoot_projectile() -> void:
 	var projectile: Projectile = projectile_prefab.instantiate() as Projectile
-	var warlock:WarlockCharacter = GameManager.warlock_character as WarlockCharacter
+	var warlock: Warlock = Warlock.instance
 	warlock.projectile_container.add_child(projectile)
 	projectile.global_position = projectile_spawner.global_position
 	projectile.direction = projectile_spawner.target_position.normalized()
@@ -137,7 +137,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if is_being_shoved: return
 	
 	#TODO this should continue as long as we're still overlapping
-	if body is WarlockCharacter:
+	if body is Warlock:
 		var shove_dist: float = 50
 		var shove_time: float = 0.3
 		

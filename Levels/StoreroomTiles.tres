@@ -6,7 +6,7 @@
 texture = ExtResource("1_cyvq2")
 texture_region_size = Vector2i(8, 8)
 0:0/0 = 0
-0:0/0/modulate = Color(0.643137, 0.568627, 1, 1)
+0:0/0/modulate = Color(0, 0.443137, 0.65098, 1)
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, -4, 4, -4, 4, 4, -4, 4)
