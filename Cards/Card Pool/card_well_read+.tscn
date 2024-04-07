@@ -27,7 +27,7 @@ text = "Well Read+"
 [node name="Card text" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("4_1qw54")]
 modulate = Color(0, 0.305882, 0.541176, 1)
 layout_mode = 2
-text = "Draw 2 Cards"
+text = "Draw 4 Cards"
 label_settings = SubResource("LabelSettings_l2tf4")
 preset = "Draw Blue"
 
