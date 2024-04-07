@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://SaveData/GameSave.gd" id="1_eigaw"]
 [ext_resource type="PackedScene" uid="uid://rfnlpy50ihlp" path="res://Cards/Card Pool/card_orb_press.tscn" id="4_3knku"]
-[ext_resource type="PackedScene" uid="uid://ca58a3ikji434" path="res://Cards/Card Pool/card_supply_cache.tscn" id="5_bl2xd"]
+[ext_resource type="PackedScene" uid="uid://ca58a3ikji434" path="res://Cards/Card Pool/card_bigger_pouch.tscn" id="5_bl2xd"]
 [ext_resource type="PackedScene" uid="uid://c3nxruvppvko5" path="res://Cards/Card Pool/card_well_read.tscn" id="10_l2haq"]
 [ext_resource type="PackedScene" uid="uid://shwywe7qw2jx" path="res://Cards/Card Pool/card_orb_reserves.tscn" id="11_g0ukq"]
 

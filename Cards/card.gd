@@ -35,7 +35,7 @@ const PREVIEW_MODE = "PREVIEW_MODE"
 #TODO mixed type cards would be kinda sick
 var card_type_color_dict: Dictionary = {
 	"Misc": Color("#58508d"), 
-	"Draw" : Color("#003f5c"), 
+	"Draw" : Color("#0096d3"), 
 	"Fire Damage": Color("#ff6361"),
 	"Lightning Damage": Color("#ffa600"),	
 	"Crafting": Color("#58508d"),
@@ -60,7 +60,7 @@ signal card_discarded()
 	set(new_val):
 		plus_version = new_val
 		if not Engine.is_editor_hint(): return
-		const plus_color: Color = Color("65ee71")
+		const plus_color: Color = Color("205a2c")
 		if new_val == true:
 			card_name_UI.modulate = plus_color
 		else:

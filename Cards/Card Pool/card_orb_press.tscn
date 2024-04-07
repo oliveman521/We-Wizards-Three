@@ -1,20 +1,20 @@
-[gd_scene load_steps=8 format=3 uid="uid://rfnlpy50ihlp"]
+[gd_scene load_steps=9 format=3 uid="uid://rfnlpy50ihlp"]
 
 [ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_igw8b"]
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_kr8b3"]
 [ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_16el8"]
-[ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="4_oi14k"]
+[ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Components/card_text.tscn" id="4_dsr08"]
 [ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Supplies/Mana_Orb.tres" id="5_vnun8"]
 [ext_resource type="Script" path="res://Cards/Card Components/CardEffect_OngoingAbility.gd" id="6_psdg3"]
 [ext_resource type="PackedScene" uid="uid://2a7skipqumtp" path="res://Cards/Ongoing Abilities/ongoing_ability_gain_orbs.tscn" id="7_0k6rj"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_20rcm"]
+resource_local_to_scene = true
+font_size = 26
+
 [node name="Orb Press" instance=ExtResource("1_igw8b")]
 card_type = "Crafting"
 card_name = "Orb Press"
-
-[node name="Card Face" parent="." index="2"]
-offset_right = 200.0
-offset_bottom = 280.0
 
 [node name="Essence x2" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_kr8b3")]
 layout_mode = 2
@@ -24,35 +24,22 @@ count = 2
 [node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer" index="0"]
 text = "Orb Press"
 
-[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0"]
+[node name="Card text2" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("4_dsr08")]
 layout_mode = 2
-text = "Gain 1 "
-label_settings = ExtResource("4_oi14k")
-horizontal_alignment = 1
-autowrap_mode = 2
+text = "Every 5 seconds, gain"
+label_settings = SubResource("LabelSettings_20rcm")
 
 [node name="Mana Orb x1" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1" instance=ExtResource("2_kr8b3")]
 layout_mode = 2
 supply = ExtResource("5_vnun8")
 visual_only = true
 
-[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label2" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2"]
-layout_mode = 2
-text = "every 5 seconds."
-label_settings = ExtResource("4_oi14k")
-horizontal_alignment = 1
-autowrap_mode = 2
-
-[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#CardEffect_OngoingAbility" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="3"]
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#CardEffect_OngoingAbility" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2"]
 script = ExtResource("6_psdg3")
 ongoing_ability_prefab = ExtResource("7_0k6rj")
 
 [node name="Top Nubs" parent="Top Roll" index="0"]
 modulate = Color(0.345098, 0.313726, 0.552941, 1)
-
-[node name="Bottom Roll" parent="." index="4"]
-offset_right = 203.0
-offset_bottom = 286.0
 
 [node name="Bottom Nubs" parent="Bottom Roll" index="0"]
 modulate = Color(0.345098, 0.313726, 0.552941, 1)

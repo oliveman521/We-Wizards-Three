@@ -1,13 +1,13 @@
 [gd_resource type="Theme" load_steps=4 format=3 uid="uid://bc5qy3dgbkg6c"]
 
 [ext_resource type="StyleBox" uid="uid://br10tcir22qb5" path="res://UI/Parchment Style Box.tres" id="1_un8c8"]
-[ext_resource type="FontFile" uid="uid://bimkr1kp51yeh" path="res://UI/Fonts/Vividly-Regular.otf" id="2_58uso"]
+[ext_resource type="FontFile" uid="uid://kh64ana4avdn" path="res://UI/Fonts/Handwritten Styles/Vividly-Regular-improved.otf" id="2_wixni"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_os4qo"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [resource]
-default_font = ExtResource("2_58uso")
+default_font = ExtResource("2_wixni")
 default_font_size = 12
 Button/styles/normal = SubResource("StyleBoxFlat_os4qo")
 Panel/styles/panel = ExtResource("1_un8c8")

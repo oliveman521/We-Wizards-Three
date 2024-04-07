@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://wfhbxbd421gx"
-path="res://.godot/imported/Mungil-Regular.ttf-ebec70054c32e5e72a99fc7811bd3ea2.fontdata"
+path="res://.godot/imported/Mungil-Regular.ttf-de369bef9415047ddbbc1e7b9c7abda9.fontdata"
 
 [deps]
 
-source_file="res://UI/Fonts/Mungil-Regular.ttf"
-dest_files=["res://.godot/imported/Mungil-Regular.ttf-ebec70054c32e5e72a99fc7811bd3ea2.fontdata"]
+source_file="res://UI/Fonts/Handwritten Styles/Mungil-Regular.ttf"
+dest_files=["res://.godot/imported/Mungil-Regular.ttf-de369bef9415047ddbbc1e7b9c7abda9.fontdata"]
 
 [params]
 

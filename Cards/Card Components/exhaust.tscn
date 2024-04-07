@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://dspow6wbdypge"]
+[gd_scene load_steps=3 format=3 uid="uid://cqnqwdyuqlusg"]
 
-[ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="1_rduu4"]
+[ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Components/card_text.tscn" id="1_y32ns"]
 
-[node name="Exhaust" type="Label" groups=["Exhaust"]]
-modulate = Color(1, 0.576471, 0.227451, 1)
+[sub_resource type="LabelSettings" id="LabelSettings_wsykr"]
+resource_local_to_scene = true
+font_size = 26
+
+[node name="Exhaust" groups=["Exhaust"] instance=ExtResource("1_y32ns")]
+modulate = Color(0.52549, 0, 0, 1)
 text = "Exhaust."
-label_settings = ExtResource("1_rduu4")
-horizontal_alignment = 1
-autowrap_mode = 2
+label_settings = SubResource("LabelSettings_wsykr")
+preset = "Negative Red"

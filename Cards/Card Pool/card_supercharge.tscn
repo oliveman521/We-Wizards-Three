@@ -1,19 +1,20 @@
-[gd_scene load_steps=8 format=3 uid="uid://ccqqvfnjhvb3t"]
+[gd_scene load_steps=9 format=3 uid="uid://ccqqvfnjhvb3t"]
 
 [ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_cmu8b"]
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_2hf8y"]
 [ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_trh0o"]
 [ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="4_lyhoa"]
-[ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="6_a4wjg"]
+[ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Components/card_text.tscn" id="5_620g4"]
 [ext_resource type="Script" path="res://Cards/Card Components/CardEffect_OngoingAbility.gd" id="6_d47is"]
 [ext_resource type="PackedScene" uid="uid://cprfumcfqrt3i" path="res://Cards/Ongoing Abilities/ongoing_ability_double_damage.tscn" id="7_5cdf6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_spnu7"]
+resource_local_to_scene = true
+font_size = 26
 
 [node name="Supercharge" instance=ExtResource("1_cmu8b")]
 card_type = "Buff"
 card_name = "Supercharge"
-
-[node name="Background Color" parent="Card Face" index="0"]
-color = Color(0.227451, 0.486275, 0.243137, 1)
 
 [node name="Essence x2" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_2hf8y")]
 layout_mode = 2
@@ -25,16 +26,20 @@ layout_mode = 2
 supply = ExtResource("4_lyhoa")
 count = 2
 
-[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer" index="0"]
 text = "Supercharge"
 
-[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0"]
+[node name="Card text" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("5_620g4")]
 layout_mode = 2
-text = "Deal double damage for 10 seconds"
-label_settings = ExtResource("6_a4wjg")
-horizontal_alignment = 1
-autowrap_mode = 2
+text = "Deal double damage for 10 seconds."
+label_settings = SubResource("LabelSettings_spnu7")
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#CardEffect_OngoingAbility" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1"]
 script = ExtResource("6_d47is")
 ongoing_ability_prefab = ExtResource("7_5cdf6")
+
+[node name="Top Nubs" parent="Top Roll" index="0"]
+modulate = Color(0.313726, 0.737255, 0.486275, 1)
+
+[node name="Bottom Nubs" parent="Bottom Roll" index="0"]
+modulate = Color(0.313726, 0.737255, 0.486275, 1)

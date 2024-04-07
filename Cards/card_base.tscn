@@ -2,10 +2,10 @@
 
 [ext_resource type="Theme" uid="uid://bc5qy3dgbkg6c" path="res://UI/Partchment.tres" id="1_73hnv"]
 [ext_resource type="Script" path="res://Cards/card.gd" id="1_k85f2"]
-[ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="3_408xq"]
 [ext_resource type="Texture2D" uid="uid://dnoi8xpbgtrq5" path="res://Cards/Card Sprites/card_Card Face.svg" id="3_dbhyy"]
 [ext_resource type="Texture2D" uid="uid://dli1c6hif1xfd" path="res://Cards/Card Sprites/card_Text Box.svg" id="4_xufv8"]
 [ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="5_d15rv"]
+[ext_resource type="LabelSettings" uid="uid://d1bng130bqbd4" path="res://Cards/card_titles.tres" id="5_yjg7y"]
 [ext_resource type="AudioStream" uid="uid://cluutx7eq6nwh" path="res://Cards/Card Sounds/card_sliding.wav" id="6_gtkcw"]
 [ext_resource type="Texture2D" uid="uid://b6mu74bdr7sgh" path="res://Cards/Card Sprites/card_Top.svg" id="6_xsm3h"]
 [ext_resource type="AudioStream" uid="uid://j663hxy28dxc" path="res://Cards/Card Sounds/cannot_play_sound.wav" id="7_dru8e"]
@@ -247,9 +247,10 @@ theme_override_constants/margin_bottom = 3
 
 [node name="CardName" type="Label" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer"]
 unique_name_in_owner = true
+modulate = Color(0, 0, 0, 1)
 layout_mode = 2
 text = "Base"
-label_settings = ExtResource("3_408xq")
+label_settings = ExtResource("5_yjg7y")
 horizontal_alignment = 1
 autowrap_mode = 2
 

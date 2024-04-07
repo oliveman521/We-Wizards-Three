@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bimkr1kp51yeh"
-path="res://.godot/imported/Vividly-Regular.otf-eb30bf9132fbd9144eb500d93b551940.fontdata"
+path="res://.godot/imported/Vividly-Regular.otf-02adc17395ba518d4fa049ffa4113b7b.fontdata"
 
 [deps]
 
-source_file="res://UI/Fonts/Vividly-Regular.otf"
-dest_files=["res://.godot/imported/Vividly-Regular.otf-eb30bf9132fbd9144eb500d93b551940.fontdata"]
+source_file="res://UI/Fonts/Handwritten Styles/Vividly-Regular.otf"
+dest_files=["res://.godot/imported/Vividly-Regular.otf-02adc17395ba518d4fa049ffa4113b7b.fontdata"]
 
 [params]
 

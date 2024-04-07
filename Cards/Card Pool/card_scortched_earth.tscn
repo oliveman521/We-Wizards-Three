@@ -1,21 +1,25 @@
-[gd_scene load_steps=9 format=3 uid="uid://bhq4tuy1yifyy"]
+[gd_scene load_steps=11 format=3 uid="uid://bhq4tuy1yifyy"]
 
 [ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_qye5f"]
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_b6ewd"]
 [ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_8ue2b"]
 [ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="4_o5x1x"]
-[ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="5_3a47r"]
 [ext_resource type="Script" path="res://Cards/Card Components/CardEffect_Damage.gd" id="5_dhvvf"]
-[ext_resource type="PackedScene" uid="uid://dspow6wbdypge" path="res://Cards/Card Components/exhaust.tscn" id="7_bcgrt"]
+[ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Components/card_text.tscn" id="6_a61x4"]
+[ext_resource type="PackedScene" uid="uid://cqnqwdyuqlusg" path="res://Cards/Card Components/Exhaust.tscn" id="7_bcgrt"]
 [ext_resource type="Script" path="res://Cards/Card Components/CardEffect_ScreenShake.gd" id="8_milk5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1ifrj"]
+resource_local_to_scene = true
+font_size = 26
+
+[sub_resource type="LabelSettings" id="LabelSettings_05lvy"]
+resource_local_to_scene = true
+font_size = 26
 
 [node name="Scortched Earth" instance=ExtResource("1_qye5f")]
 card_type = "Fire Damage"
 card_name = "Scortched Earth"
-
-[node name="Card Face" parent="." index="2"]
-offset_right = 200.0
-offset_bottom = 280.0
 
 [node name="Essence x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_b6ewd")]
 layout_mode = 2
@@ -34,15 +38,15 @@ script = ExtResource("5_dhvvf")
 dmg_type = 1
 amnt = 10
 
-[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1"]
+[node name="Card text" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1" instance=ExtResource("6_a61x4")]
 layout_mode = 2
-text = "Deal 10 damage to all Enemies."
-label_settings = ExtResource("5_3a47r")
-horizontal_alignment = 1
-autowrap_mode = 2
+text = "Deal 10 damage to all enemies."
+label_settings = SubResource("LabelSettings_1ifrj")
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Exhaust" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2" instance=ExtResource("7_bcgrt")]
+modulate = Color(0.670588, 0.121569, 0, 1)
 layout_mode = 2
+label_settings = SubResource("LabelSettings_05lvy")
 
 [node name="CardEffect_ScreenShake" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="3"]
 script = ExtResource("8_milk5")
@@ -50,10 +54,6 @@ shake_amnt = 0.6
 
 [node name="Top Nubs" parent="Top Roll" index="0"]
 modulate = Color(1, 0.388235, 0.380392, 1)
-
-[node name="Bottom Roll" parent="." index="4"]
-offset_right = 203.0
-offset_bottom = 286.0
 
 [node name="Bottom Nubs" parent="Bottom Roll" index="0"]
 modulate = Color(1, 0.388235, 0.380392, 1)
