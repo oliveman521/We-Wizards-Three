@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6dh3axxlxnej"
-path="res://.godot/imported/jester.png-9d1b0d31afcf38ef7eb1e13340f9ad7d.ctex"
+uid="uid://ns4kc8g4i5ct"
+path="res://.godot/imported/Boomlin.png-0da1369a5b88c3d46e14b7138f391a28.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Enemy Sprites/jester.png"
-dest_files=["res://.godot/imported/jester.png-9d1b0d31afcf38ef7eb1e13340f9ad7d.ctex"]
+source_file="res://Enemies/Enemy Sprites/Retired/Boomlin.png"
+dest_files=["res://.godot/imported/Boomlin.png-0da1369a5b88c3d46e14b7138f391a28.ctex"]
 
 [params]
 

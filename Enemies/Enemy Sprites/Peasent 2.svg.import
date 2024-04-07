@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmv2hlf6ahjim"
-path="res://.godot/imported/Horse.png-916e2b5ff95a7a2a5533e33b60b88644.ctex"
+uid="uid://ba8xn5e3v8kn0"
+path="res://.godot/imported/Peasent 2.svg-04da5752894ac20e81302a5ad8309a74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Enemy Sprites/Horse.png"
-dest_files=["res://.godot/imported/Horse.png-916e2b5ff95a7a2a5533e33b60b88644.ctex"]
+source_file="res://Enemies/Enemy Sprites/Peasent 2.svg"
+dest_files=["res://.godot/imported/Peasent 2.svg-04da5752894ac20e81302a5ad8309a74.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

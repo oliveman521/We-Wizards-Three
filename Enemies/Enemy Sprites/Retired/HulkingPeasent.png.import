@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1o4747o6apvp"
-path="res://.godot/imported/Seige Engine.png-3f9e7228c4a7e04f4e9127f6b83fdb00.ctex"
+uid="uid://d2va2o6ut61eg"
+path="res://.godot/imported/HulkingPeasent.png-3957f973ab6a64da531ab97d88e3dc4f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Enemy Sprites/Seige Engine.png"
-dest_files=["res://.godot/imported/Seige Engine.png-3f9e7228c4a7e04f4e9127f6b83fdb00.ctex"]
+source_file="res://Enemies/Enemy Sprites/Retired/HulkingPeasent.png"
+dest_files=["res://.godot/imported/HulkingPeasent.png-3957f973ab6a64da531ab97d88e3dc4f.ctex"]
 
 [params]
 

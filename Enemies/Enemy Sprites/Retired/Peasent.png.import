@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmfnvhpd45csc"
-path="res://.godot/imported/Knight.png-899c29f520238e2629fd9a877db68936.ctex"
+uid="uid://d2hhnfr53jfug"
+path="res://.godot/imported/Peasent.png-f8718b2218a0a118e4c817198ad338a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Enemy Sprites/Knight.png"
-dest_files=["res://.godot/imported/Knight.png-899c29f520238e2629fd9a877db68936.ctex"]
+source_file="res://Enemies/Enemy Sprites/Retired/Peasent.png"
+dest_files=["res://.godot/imported/Peasent.png-f8718b2218a0a118e4c817198ad338a4.ctex"]
 
 [params]
 

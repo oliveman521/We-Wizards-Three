@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2hhnfr53jfug"
-path="res://.godot/imported/Peasent.png-f1e9f9fc11114b0983ec0d42b3f9d84c.ctex"
+uid="uid://con2a4ghqqnek"
+path="res://.godot/imported/Archer.svg-e6fa436221c672905fcdc8be5bd3df50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Enemy Sprites/Peasent.png"
-dest_files=["res://.godot/imported/Peasent.png-f1e9f9fc11114b0983ec0d42b3f9d84c.ctex"]
+source_file="res://Enemies/Enemy Sprites/Archer.svg"
+dest_files=["res://.godot/imported/Archer.svg-e6fa436221c672905fcdc8be5bd3df50.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

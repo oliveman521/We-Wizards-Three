@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2va2o6ut61eg"
-path="res://.godot/imported/HulkingPeasent.png-908480771f16f588c0496963b037e671.ctex"
+uid="uid://cmv2hlf6ahjim"
+path="res://.godot/imported/Horse.png-569552f0ded064632ea3234cf41335b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Enemy Sprites/HulkingPeasent.png"
-dest_files=["res://.godot/imported/HulkingPeasent.png-908480771f16f588c0496963b037e671.ctex"]
+source_file="res://Enemies/Enemy Sprites/Retired/Horse.png"
+dest_files=["res://.godot/imported/Horse.png-569552f0ded064632ea3234cf41335b0.ctex"]
 
 [params]
 

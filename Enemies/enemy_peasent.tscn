@@ -1,11 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://b5t5chbh5x6vr"]
 
 [ext_resource type="PackedScene" uid="uid://dxstlyven322l" path="res://Enemies/enemy_base.tscn" id="1_oe4n6"]
-[ext_resource type="Texture2D" uid="uid://d2hhnfr53jfug" path="res://Enemies/Enemy Sprites/Peasent.png" id="2_eslhg"]
+[ext_resource type="Texture2D" uid="uid://ba8xn5e3v8kn0" path="res://Enemies/Enemy Sprites/Peasent 2.svg" id="2_prka2"]
 
 [node name="Peasent" instance=ExtResource("1_oe4n6")]
 health = 2.0
 play_bounce_walk_animation = true
 
 [node name="Sprite" parent="GFX" index="0"]
-texture = ExtResource("2_eslhg")
+position = Vector2(-6, -7)
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("2_prka2")
+
+[node name="Hit Box" parent="." index="2"]
+position = Vector2(-5, -7)

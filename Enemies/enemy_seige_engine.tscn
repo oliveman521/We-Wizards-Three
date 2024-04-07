@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://c67dhecvk3b28"]
 
 [ext_resource type="PackedScene" uid="uid://dxstlyven322l" path="res://Enemies/enemy_base.tscn" id="1_qbjvi"]
-[ext_resource type="Texture2D" uid="uid://1o4747o6apvp" path="res://Enemies/Enemy Sprites/Seige Engine.png" id="2_w238u"]
+[ext_resource type="Texture2D" uid="uid://1o4747o6apvp" path="res://Enemies/Enemy Sprites/Retired/Seige Engine.png" id="2_w238u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4m3x5"]
 atlas = ExtResource("2_w238u")

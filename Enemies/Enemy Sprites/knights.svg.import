@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ns4kc8g4i5ct"
-path="res://.godot/imported/Boomlin.png-b1e6feba1f62c0938472eadedad45e51.ctex"
+uid="uid://jxfi4iq3cc3u"
+path="res://.godot/imported/knights.svg-fa35de8dc7b61ade6e2ab3beec4a248b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemies/Enemy Sprites/Boomlin.png"
-dest_files=["res://.godot/imported/Boomlin.png-b1e6feba1f62c0938472eadedad45e51.ctex"]
+source_file="res://Enemies/Enemy Sprites/knights.svg"
+dest_files=["res://.godot/imported/knights.svg-fa35de8dc7b61ade6e2ab3beec4a248b.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

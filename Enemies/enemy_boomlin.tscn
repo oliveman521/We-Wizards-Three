@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://fcfai4qbfgtb"]
 
 [ext_resource type="PackedScene" uid="uid://dxstlyven322l" path="res://Enemies/enemy_base.tscn" id="1_ld0dc"]
-[ext_resource type="Texture2D" uid="uid://ns4kc8g4i5ct" path="res://Enemies/Enemy Sprites/Boomlin.png" id="2_bldgn"]
+[ext_resource type="Texture2D" uid="uid://ns4kc8g4i5ct" path="res://Enemies/Enemy Sprites/Retired/Boomlin.png" id="2_bldgn"]
 [ext_resource type="PackedScene" uid="uid://dqgaio16e7poi" path="res://Projectiles/explosion.tscn" id="2_u4f04"]
 
 [node name="Boomlin" instance=ExtResource("1_ld0dc")]

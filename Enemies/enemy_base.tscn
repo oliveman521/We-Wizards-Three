@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dxstlyven322l"]
 
 [ext_resource type="Script" path="res://Enemies/Enemy.gd" id="1_kdqp5"]
-[ext_resource type="Texture2D" uid="uid://dmfnvhpd45csc" path="res://Enemies/Enemy Sprites/Knight.png" id="2_2irau"]
+[ext_resource type="Texture2D" uid="uid://dmfnvhpd45csc" path="res://Enemies/Enemy Sprites/Retired/Knight.png" id="2_2irau"]
 [ext_resource type="AudioStream" uid="uid://dqosky0tpk8r8" path="res://Life Lost Sound.wav" id="3_vofas"]
 
 [sub_resource type="Animation" id="Animation_bmmnn"]
