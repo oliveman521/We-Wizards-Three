@@ -10,9 +10,9 @@ script = ExtResource("2_45bwe")
 amplitude = 150.0
 period = 500.0
 randomize_phase = true
-enemy_name = "Jester"
 health = 3.0
+play_bounce_walk_animation = true
+knockback_multiplier = 3.0
 
-[node name="Sprite" parent="." index="0"]
-scale = Vector2(2, 2)
+[node name="Sprite" parent="GFX" index="0"]
 texture = ExtResource("2_5l61o")

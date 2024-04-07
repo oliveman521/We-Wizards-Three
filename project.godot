@@ -30,7 +30,6 @@ gdscript/warnings/untyped_declaration=1
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=3
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"
@@ -39,6 +38,7 @@ window/stretch/mode="viewport"
 
 folder_colors={
 "res://Cards/": "blue",
+"res://Cards/Card Sprites/": "yellow",
 "res://Enemies/": "red",
 "res://Enemies/Enemy Sprites/": "yellow",
 "res://Levels/": "pink",
@@ -127,6 +127,11 @@ map_zoom_in={
 map_zoom_out={
 "deadzone": 0.5,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":16,"position":Vector2(162, 25),"global_position":Vector2(166, 66),"factor":1.0,"button_index":5,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+full_screen={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194342,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
 }
 

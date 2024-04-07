@@ -10,14 +10,15 @@
 card_type = "Draw"
 card_name = "Well Read"
 
-[node name="Background Color" parent="Card Face" index="0"]
-color = Color(0.0352941, 0.0666667, 0.486275, 1)
+[node name="Card Face" parent="." index="2"]
+offset_right = 200.0
+offset_bottom = 280.0
 
 [node name="Essence x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_uwsje")]
 layout_mode = 2
 supply = ExtResource("3_m7qd8")
 
-[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer" index="0"]
 text = "Well Read"
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0"]
@@ -30,3 +31,13 @@ autowrap_mode = 2
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#CardEffect_Draw" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1"]
 script = ExtResource("5_knf5d")
 count = 2
+
+[node name="Top Nubs" parent="Top Roll" index="0"]
+modulate = Color(0, 0.247059, 0.360784, 1)
+
+[node name="Bottom Roll" parent="." index="4"]
+offset_right = 203.0
+offset_bottom = 286.0
+
+[node name="Bottom Nubs" parent="Bottom Roll" index="0"]
+modulate = Color(0, 0.247059, 0.360784, 1)

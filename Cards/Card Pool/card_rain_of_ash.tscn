@@ -19,15 +19,16 @@ scale = Vector2(1, 0.990783)
 card_type = "Fire Damage"
 card_name = "Rain Of Ash"
 
-[node name="Background Color" parent="Card Face" index="0"]
-color = Color(0.486275, 0.105882, 0.0352941, 1)
+[node name="Card Face" parent="." index="2"]
+offset_right = 200.0
+offset_bottom = 280.0
 
 [node name="Fire Gem x2" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_ojt02")]
 layout_mode = 2
 supply = ExtResource("3_5jod2")
 count = 2
 
-[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer" index="0"]
 text = "Rain Of Ash"
 
 [node name="Damage" type="Node" parent="Card Face/Internal Margin/VBoxContainer" index="2"]
@@ -49,5 +50,15 @@ label_settings = SubResource("LabelSettings_iwok5")
 script = ExtResource("6_da4o5")
 count = 50
 effect_type = "Discard"
+
+[node name="Top Nubs" parent="Top Roll" index="0"]
+modulate = Color(1, 0.388235, 0.380392, 1)
+
+[node name="Bottom Roll" parent="." index="4"]
+offset_right = 203.0
+offset_bottom = 286.0
+
+[node name="Bottom Nubs" parent="Bottom Roll" index="0"]
+modulate = Color(1, 0.388235, 0.380392, 1)
 
 [connection signal="x_callback" from="Card Face/Internal Margin/VBoxContainer/Effects/CardEffect_Draw" to="Card Face/Internal Margin/VBoxContainer/Damage" method="damage_x_targets"]

@@ -12,6 +12,10 @@
 card_type = "Crafting"
 card_name = "Orb Press"
 
+[node name="Card Face" parent="." index="2"]
+offset_right = 200.0
+offset_bottom = 280.0
+
 [node name="Essence x2" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_kr8b3")]
 layout_mode = 2
 supply = ExtResource("3_16el8")
@@ -42,3 +46,13 @@ autowrap_mode = 2
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#CardEffect_OngoingAbility" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="3"]
 script = ExtResource("6_psdg3")
 ongoing_ability_prefab = ExtResource("7_0k6rj")
+
+[node name="Top Nubs" parent="Top Roll" index="0"]
+modulate = Color(0.345098, 0.313726, 0.552941, 1)
+
+[node name="Bottom Roll" parent="." index="4"]
+offset_right = 203.0
+offset_bottom = 286.0
+
+[node name="Bottom Nubs" parent="Bottom Roll" index="0"]
+modulate = Color(0.345098, 0.313726, 0.552941, 1)

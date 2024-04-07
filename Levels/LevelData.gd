@@ -20,7 +20,7 @@ var remaining_level_length_seconds: float:
 	get:
 		var last_en: Enemy = last_enemy as Enemy
 		var time_to_activate: float = -last_en.global_position.x / 50
-		var time_to_get_on_screen: float = time_to_activate + 100/last_en.move_speed
+		var time_to_get_on_screen: float = time_to_activate + 100/last_en.max_speed
 		return time_to_get_on_screen
 
 var last_enemy: Enemy:

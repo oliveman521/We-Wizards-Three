@@ -113,6 +113,7 @@ func get_supply_costs() -> Array[Supply]:
 func _ready() -> void:
 	card_type = card_type
 	card_name
+	roll_animation_player.play("RESET")
 
 
 func _process(_delta: float) -> void:

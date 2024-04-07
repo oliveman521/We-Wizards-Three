@@ -10,11 +10,13 @@ var enemy_name: String:
 		name = file_name
 		return file_name
 
-@export var move_speed: float= 50
+@export var max_speed: float= 60
 @export var health: float = 5
+@export var play_bounce_walk_animation: bool = true
 
-@export var shovable: bool = true
-var is_being_shoved: bool
+@export_range(0,1) var knockback_multiplier: float = 1
+var knockback_tween: Tween
+var is_being_knocked_back: bool = false
 
 
 @export_group("Damage Types")
@@ -48,12 +50,18 @@ var icon: Texture:
 				return child.texture
 		return null
 
+
+
 func _process(delta: float) -> void:
 	if Engine.is_editor_hint(): return
 	if !active: return
-	if is_being_shoved: return
-
+	if is_being_knocked_back: return
+	
+	bounce_walk_animation_player.speed_scale = max_speed / 50 #adjust our animation speed to match out speed
 	move(delta)
+
+@onready var bounce_walk_animation_player: AnimationPlayer = $BounceWalkAnimationPlayer
+
 
 func _ready() -> void:
 	enemy_name = enemy_name
@@ -63,7 +71,8 @@ func _ready() -> void:
 			activate()
 
 func move(delta: float) -> void:
-	position.x += move_speed * delta
+	
+	position.x += delta * max_speed
 
 func shoot_projectile() -> void:
 	var projectile: Projectile = projectile_prefab.instantiate() as Projectile
@@ -74,7 +83,8 @@ func shoot_projectile() -> void:
 	projectile.target = "Player"
 	fire_rate_timer.wait_time = fire_interval * randf_range(0.8,1.2)
 
-func take_damage(damage_type: GameManager.Damage_Type, amnt: float) -> void:
+var damage_flash_tween
+func take_damage(damage_type: GameManager.Damage_Type, amnt: float, knock_back: float = 0) -> void:
 	if !active: return
 	
 	if damage_type == GameManager.Damage_Type.MANA:
@@ -99,8 +109,11 @@ func take_damage(damage_type: GameManager.Damage_Type, amnt: float) -> void:
 	var popup_text: String = "- " + str(amnt)
 	GameManager.spawn_popup(position, popup_text, DAMAGE_COLOR, 1)
 	
+	knockback(knock_back)
+	
 	if health <= 0:
 		die()
+
 
 func die() -> void:
 	for item: PackedScene in spawn_on_death:
@@ -126,6 +139,8 @@ func _on_screen_enter() -> void:
 func activate() -> void:
 	active = true
 	self.reparent(GameManager.enemy_manager)
+	if play_bounce_walk_animation:
+		bounce_walk_animation_player.play("Walk")
 	if projectile_prefab:
 		fire_rate_timer.wait_time = fire_interval
 		fire_rate_timer.start()
@@ -133,19 +148,37 @@ func activate() -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if !shovable: return
-	if is_being_shoved: return
-	
-	#TODO this should continue as long as we're still overlapping
+	#TODO this should repeat as long as we're still overlapping
 	if body is Warlock:
-		var shove_dist: float = 50
-		var shove_time: float = 0.3
-		
-		is_being_shoved = true
-		var tween: Tween = get_tree().create_tween()
-		tween.set_ease(Tween.EASE_OUT)
-		tween.set_trans(Tween.TRANS_SINE)
-		tween.tween_property(self,"position", position - Vector2(shove_dist,0), shove_time)
-		await tween.finished
-		
-		is_being_shoved = false
+		knockback(50)
+
+var current_knockback_point: Vector2 = Vector2.ZERO
+func knockback(dist: float) -> void:
+	dist = dist * knockback_multiplier
+	const knockback_speed: float = 150
+	var knockback_time: float = dist / knockback_speed
+	var new_knockback_point: Vector2 = position - Vector2(dist,0)
+	
+	print(position, " to ", new_knockback_point)
+	if is_being_knocked_back:#if we're still being knocked back
+		if new_knockback_point.x < current_knockback_point.x: #if the new knockback will take us back further
+			if knockback_tween:
+				knockback_tween.kill() # kill the old one
+		else:
+			return #ignore the new knockback if it aint enough
+	
+	bounce_walk_animation_player.pause()
+	current_knockback_point = new_knockback_point
+	is_being_knocked_back = true
+	knockback_tween = create_tween()
+	knockback_tween.set_ease(Tween.EASE_OUT)
+	knockback_tween.set_trans(Tween.TRANS_SINE)
+	knockback_tween.set_trans(Tween.TRANS_SINE)
+	knockback_tween.tween_property(self,"position", new_knockback_point, knockback_time)
+	
+	await knockback_tween.finished
+	if play_bounce_walk_animation:
+		bounce_walk_animation_player.play()
+	print("KB 2")
+	is_being_knocked_back = false
+

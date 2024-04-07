@@ -74,6 +74,7 @@ func open_panel(panel: Control) -> void:
 	await move_info_panel_to(Vector2(right_edge_of_screen - width_of_panel, screen_margin))
 
 func move_info_panel_to(destination: Vector2) -> void:
+	#TODO do gettree check
 	var tween: Tween = get_tree().create_tween()
 	tween.tween_property(current_info_panel, "global_position", destination,PANEL_MOVE_TIME)
 	await tween.finished

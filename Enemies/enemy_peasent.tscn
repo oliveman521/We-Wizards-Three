@@ -4,9 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://d2hhnfr53jfug" path="res://Enemies/Enemy Sprites/Peasent.png" id="2_eslhg"]
 
 [node name="Peasent" instance=ExtResource("1_oe4n6")]
-enemy_name = "Peasent"
 health = 2.0
+play_bounce_walk_animation = true
 
-[node name="Sprite" parent="." index="0"]
-scale = Vector2(2.5, 2.5)
+[node name="Sprite" parent="GFX" index="0"]
 texture = ExtResource("2_eslhg")

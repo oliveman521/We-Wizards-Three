@@ -12,6 +12,10 @@
 card_type = "Crafting"
 card_name = "Supply Cache"
 
+[node name="Card Face" parent="." index="2"]
+offset_right = 200.0
+offset_bottom = 280.0
+
 [node name="Essence x2" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_7naf4")]
 layout_mode = 2
 supply = ExtResource("3_0br8a")
@@ -34,3 +38,13 @@ label_settings = ExtResource("5_dl7ds")
 script = ExtResource("6_p7wuy")
 ongoing_ability_prefab = ExtResource("6_rg0ek")
 amnt = 5.0
+
+[node name="Top Nubs" parent="Top Roll" index="0"]
+modulate = Color(0.345098, 0.313726, 0.552941, 1)
+
+[node name="Bottom Roll" parent="." index="4"]
+offset_right = 203.0
+offset_bottom = 286.0
+
+[node name="Bottom Nubs" parent="Bottom Roll" index="0"]
+modulate = Color(0.345098, 0.313726, 0.552941, 1)

@@ -98,6 +98,11 @@ func _process(_delta: float) -> void:
 		debug_mode = !debug_mode
 	if Input.is_key_pressed(KEY_O):
 		GameManager.level_won()
+	if Input.is_action_just_pressed("full_screen"):
+		if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		else:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 func spawn_popup(location: Vector2, message: String, color: Color = Color(1,1,1), lifetime:float = 1, parent: Node = self) -> void:
 	const popup_prefab: Resource = preload("res://UI/popup_text.tscn")

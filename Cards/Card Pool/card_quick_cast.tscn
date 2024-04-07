@@ -9,12 +9,13 @@
 [ext_resource type="PackedScene" uid="uid://c7dw3bs2deeos" path="res://Cards/Ongoing Abilities/ongoing_ability_firerate.tscn" id="7_34dfu"]
 [ext_resource type="PackedScene" uid="uid://dspow6wbdypge" path="res://Cards/Card Components/exhaust.tscn" id="8_af6hp"]
 
-[node name="Card" instance=ExtResource("1_rnr8d")]
+[node name="Quick Cast" instance=ExtResource("1_rnr8d")]
 card_type = "Buff"
-card_name = "Aura of Quick Cast"
+card_name = "Quick Cast"
 
-[node name="Background Color" parent="Card Face" index="0"]
-color = Color(0.227451, 0.486275, 0.243137, 1)
+[node name="Card Face" parent="." index="2"]
+offset_right = 200.0
+offset_bottom = 280.0
 
 [node name="Essence x3" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_4m1m2")]
 layout_mode = 2
@@ -25,8 +26,8 @@ count = 3
 layout_mode = 2
 supply = ExtResource("4_ssy8d")
 
-[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
-text = "Aura of Quick Cast"
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer" index="0"]
+text = "Quick Cast"
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0"]
 layout_mode = 2
@@ -42,3 +43,13 @@ amnt = 1.5
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Exhaust" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2" instance=ExtResource("8_af6hp")]
 layout_mode = 2
+
+[node name="Top Nubs" parent="Top Roll" index="0"]
+modulate = Color(0.313726, 0.737255, 0.486275, 1)
+
+[node name="Bottom Roll" parent="." index="4"]
+offset_right = 203.0
+offset_bottom = 286.0
+
+[node name="Bottom Nubs" parent="Bottom Roll" index="0"]
+modulate = Color(0.313726, 0.737255, 0.486275, 1)

@@ -8,19 +8,20 @@
 [ext_resource type="Script" path="res://Cards/Card Components/CardEffect_GainSupplies.gd" id="6_k084k"]
 [ext_resource type="PackedScene" uid="uid://dspow6wbdypge" path="res://Cards/Card Components/exhaust.tscn" id="7_wnskr"]
 
-[node name="Card" instance=ExtResource("1_x1har")]
+[node name="Stockpile" instance=ExtResource("1_x1har")]
 card_type = "Crafting"
 card_name = "Stockpile"
 
-[node name="Background Color" parent="Card Face" index="0"]
-color = Color(0.780392, 0.588235, 0.313726, 1)
+[node name="Card Face" parent="." index="2"]
+offset_right = 200.0
+offset_bottom = 280.0
 
 [node name="Essence x4" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_kfohc")]
 layout_mode = 2
 supply = ExtResource("3_u3jbm")
 count = 4
 
-[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer" index="0"]
 text = "Stockpile"
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0"]
@@ -30,7 +31,7 @@ label_settings = ExtResource("5_12kla")
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Mana Scroll x1" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1" instance=ExtResource("2_kfohc")]
+[node name="Mana Orb x1" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1" instance=ExtResource("2_kfohc")]
 layout_mode = 2
 supply = ExtResource("5_53qm7")
 visual_only = true
@@ -43,3 +44,13 @@ gain_amnt = 2
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Exhaust" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="3" instance=ExtResource("7_wnskr")]
 layout_mode = 2
+
+[node name="Top Nubs" parent="Top Roll" index="0"]
+modulate = Color(0.345098, 0.313726, 0.552941, 1)
+
+[node name="Bottom Roll" parent="." index="4"]
+offset_right = 203.0
+offset_bottom = 286.0
+
+[node name="Bottom Nubs" parent="Bottom Roll" index="0"]
+modulate = Color(0.345098, 0.313726, 0.552941, 1)

@@ -13,8 +13,9 @@
 card_type = "Fire Damage"
 card_name = "Scortched Earth"
 
-[node name="Background Color" parent="Card Face" index="0"]
-color = Color(0.486275, 0.105882, 0.0352941, 1)
+[node name="Card Face" parent="." index="2"]
+offset_right = 200.0
+offset_bottom = 280.0
 
 [node name="Essence x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_b6ewd")]
 layout_mode = 2
@@ -25,7 +26,7 @@ layout_mode = 2
 supply = ExtResource("4_o5x1x")
 count = 4
 
-[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer" index="0"]
 text = "Scortched Earth"
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#CardEffect_Damage" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0"]
@@ -46,3 +47,13 @@ layout_mode = 2
 [node name="CardEffect_ScreenShake" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="3"]
 script = ExtResource("8_milk5")
 shake_amnt = 0.6
+
+[node name="Top Nubs" parent="Top Roll" index="0"]
+modulate = Color(1, 0.388235, 0.380392, 1)
+
+[node name="Bottom Roll" parent="." index="4"]
+offset_right = 203.0
+offset_bottom = 286.0
+
+[node name="Bottom Nubs" parent="Bottom Roll" index="0"]
+modulate = Color(1, 0.388235, 0.380392, 1)

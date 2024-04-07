@@ -3,7 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://dxstlyven322l" path="res://Enemies/enemy_base.tscn" id="1_v4rgc"]
 
 [node name="Knight" instance=ExtResource("1_v4rgc")]
-enemy_name = "Knight"
-move_speed = 35.0
+max_speed = 40.0
 health = 10.0
+play_bounce_walk_animation = true
+knockback_multiplier = 0.6
 resistances = Array[int]([1])

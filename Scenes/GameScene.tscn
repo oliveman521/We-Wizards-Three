@@ -546,15 +546,19 @@ script = ExtResource("4_l8m8i")
 
 [node name="Peasent" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_fixi5")]
 position = Vector2(-377, 494)
+max_speed = 60.0
 
 [node name="Peasent2" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_fixi5")]
 position = Vector2(-637, 604)
+max_speed = 60.0
 
 [node name="Peasent3" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_fixi5")]
 position = Vector2(-751, 305)
+max_speed = 60.0
 
 [node name="Knight" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("6_cjgit")]
 position = Vector2(-453, 292)
+max_speed = 60.0
 
 [node name="Projectile Container" type="Node2D" parent="Warlock Game"]
 unique_name_in_owner = true
