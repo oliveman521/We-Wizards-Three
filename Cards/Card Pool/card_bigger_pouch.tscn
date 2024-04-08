@@ -24,15 +24,15 @@ count = 2
 [node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer" index="0"]
 text = "Bigger Pouch"
 
-[node name="Card Art" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("4_eiskn")]
-layout_mode = 2
-
-[node name="Card text" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1" instance=ExtResource("4_f421j")]
+[node name="Card text" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("4_f421j")]
 layout_mode = 2
 text = "The next supply the librarian picks up yields 5."
 label_settings = SubResource("LabelSettings_ij26r")
 
-[node name="Ongoing Ability Spawner" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2"]
+[node name="Ongoing Ability Spawner" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1"]
 script = ExtResource("5_my2b5")
 ongoing_ability_prefab = ExtResource("6_713yt")
 amnt = 5.0
+
+[node name="Card Art" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2" instance=ExtResource("4_eiskn")]
+layout_mode = 2
