@@ -42,7 +42,7 @@ const DAMAGE_COLOR = Color(1,0,0)
 
 var icon: Texture:
 	get:
-		for child: Node in get_children():
+		for child: Node in $GFX.get_children():
 			if child is AnimatedSprite2D:
 				child = child as AnimatedSprite2D
 				return child.sprite_frames.get_frame_texture("default",0)
@@ -159,7 +159,6 @@ func knockback(dist: float) -> void:
 	var knockback_time: float = dist / knockback_speed
 	var new_knockback_point: Vector2 = position - Vector2(dist,0)
 	
-	print(position, " to ", new_knockback_point)
 	if is_being_knocked_back:#if we're still being knocked back
 		if new_knockback_point.x < current_knockback_point.x: #if the new knockback will take us back further
 			if knockback_tween:

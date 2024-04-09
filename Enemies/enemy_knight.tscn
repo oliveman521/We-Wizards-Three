@@ -6,15 +6,14 @@
 [node name="Knight" instance=ExtResource("1_v4rgc")]
 max_speed = 40.0
 health = 10.0
-play_bounce_walk_animation = true
 knockback_multiplier = 0.6
 resistances = Array[int]([1])
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="0"]
+position = Vector2(11, -9.5)
+scale = Vector2(6, 5.05)
 
 [node name="Sprite" parent="GFX" index="0"]
 position = Vector2(14, -6)
 scale = Vector2(0.09, 0.09)
 texture = ExtResource("2_l86b4")
-
-[node name="VisibleOnScreenNotifier2D" parent="." index="5"]
-position = Vector2(11, -12.5)
-scale = Vector2(6, 5.35)

@@ -849,7 +849,7 @@ script = ExtResource("29_618n4")
 
 [node name="Enchanter Character" type="Node2D" parent="."]
 z_index = 100
-position = Vector2(1516, 453)
+position = Vector2(1527, 455)
 scale = Vector2(0.147355, 0.147355)
 script = ExtResource("34_lmgov")
 

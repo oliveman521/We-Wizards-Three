@@ -36,3 +36,9 @@ amnt = 5.0
 
 [node name="Card Art" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2" instance=ExtResource("4_eiskn")]
 layout_mode = 2
+
+[node name="Top Nubs" parent="Top Roll" index="0"]
+modulate = Color(0.345098, 0.313726, 0.552941, 1)
+
+[node name="Bottom Nubs" parent="Bottom Roll" index="0"]
+modulate = Color(0.345098, 0.313726, 0.552941, 1)
