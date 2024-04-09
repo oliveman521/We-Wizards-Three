@@ -716,23 +716,23 @@ color = Color(0.257207, 0.2337, 0.41, 1)
 [node name="Hand Anchors" type="Node2D" parent="Card Manager/Hand"]
 
 [node name="Hand Anchor 1" type="Marker2D" parent="Card Manager/Hand/Hand Anchors"]
-position = Vector2(102, 167)
+position = Vector2(102, 135)
 
 [node name="Hand Anchor 2" type="Marker2D" parent="Card Manager/Hand/Hand Anchors"]
-position = Vector2(315, 141)
+position = Vector2(315, 173)
 
 [node name="Hand Anchor 3" type="Marker2D" parent="Card Manager/Hand/Hand Anchors"]
-position = Vector2(532, 174)
+position = Vector2(532, 142)
 
 [node name="Hand Anchor 4" type="Marker2D" parent="Card Manager/Hand/Hand Anchors"]
-position = Vector2(746, 140)
+position = Vector2(746, 172)
 
 [node name="Queue" type="Marker2D" parent="Card Manager"]
 unique_name_in_owner = true
 position = Vector2(972, 246)
 
 [node name="Card Spawn Point" type="Marker2D" parent="Card Manager"]
-position = Vector2(1120, 547)
+position = Vector2(1183, 474)
 
 [node name="Card Draw Sound" type="AudioStreamPlayer2D" parent="Card Manager"]
 stream = ExtResource("20_tsk7n")
