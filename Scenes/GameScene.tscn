@@ -1,6 +1,7 @@
-[gd_scene load_steps=59 format=3 uid="uid://c4qnaj4cqxgny"]
+[gd_scene load_steps=60 format=3 uid="uid://c4qnaj4cqxgny"]
 
 [ext_resource type="Script" path="res://Scenes/GameCamera.gd" id="1_s2bat"]
+[ext_resource type="Texture2D" uid="uid://bn43ka1kdc2cn" path="res://Sprites/grass.svg" id="2_sgm25"]
 [ext_resource type="Script" path="res://Scripts/Warlock.gd" id="2_uo0op"]
 [ext_resource type="Texture2D" uid="uid://uahkyy7pck2d" path="res://Sprites/SVG Characters/Warlock/Warlock.svg" id="3_2dsv6"]
 [ext_resource type="Script" path="res://Enemies/Enemy Manager.gd" id="3_yxut5"]
@@ -13,9 +14,9 @@
 [ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="10_5v06q"]
 [ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="11_v5w0f"]
 [ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Supplies/Mana_Orb.tres" id="13_068ed"]
-[ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Tablet.tres" id="13_ynu4b"]
 [ext_resource type="Script" path="res://Levels/storeroom_size_constrainer.gd" id="14_7s006"]
 [ext_resource type="Script" path="res://Storeroom/Grid.gd" id="15_y83i1"]
+[ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Card_Pickup.tres" id="15_yy6cu"]
 [ext_resource type="TileSet" uid="uid://cynof41cb1hco" path="res://Levels/StoreroomTiles.tres" id="16_i7p3x"]
 [ext_resource type="Script" path="res://Scripts/Apprentice_Character_Controller.gd" id="17_866m0"]
 [ext_resource type="Texture2D" uid="uid://cjckq2ynl8fur" path="res://Sprites/SVG Characters/Librarian/Librarian_Body.svg" id="19_j2csh"]
@@ -29,7 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://btsj4ae1ih5n1" path="res://UI/supply_ui.tscn" id="22_orqwg"]
 [ext_resource type="Script" path="res://UI/Health_UI.gd" id="25_kiqjr"]
 [ext_resource type="PackedScene" uid="uid://2jby5kudglct" path="res://UI/heart_UI.tscn" id="26_fl5xy"]
-[ext_resource type="Texture2D" uid="uid://bj6e14qigcant" path="res://Sprites/Retired/Essence.png" id="27_fy6kv"]
+[ext_resource type="Texture2D" uid="uid://bcurj21u5xa7n" path="res://Sprites/SVG Icons/essence.svg" id="28_5xy45"]
 [ext_resource type="Resource" uid="uid://bow64ukpfnomj" path="res://Supplies/Fire_Orb.tres" id="29_0cds8"]
 [ext_resource type="Script" path="res://Scenes/LevelProgress.gd" id="29_618n4"]
 [ext_resource type="Resource" uid="uid://0wqn3ujbcm2j" path="res://Supplies/Lightning_Orb.tres" id="30_8qded"]
@@ -509,6 +510,84 @@ offset_right = 982.0
 offset_bottom = 1073.0
 color = Color(0.257207, 0.2337, 0.41, 1)
 
+[node name="Grass Sprites" type="Node2D" parent="Warlock Game"]
+modulate = Color(0.294847, 0.2679, 0.47, 1)
+
+[node name="Grass" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(147, 439)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass14" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(614, 314)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass15" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(384, 86)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass2" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(224, 355)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass3" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(278, 636)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass4" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(81, 800)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass5" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(337, 930)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass6" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(485, 732)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass7" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(421, 395)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass8" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(132, 197)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass9" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(583, 183)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass10" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(533, 962)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass11" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(109, 964)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass12" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(537, 597)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass13" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(106, 597)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
 [node name="Warlock" type="CharacterBody2D" parent="Warlock Game" groups=["Player"]]
 position = Vector2(901, 528)
 motion_mode = 1
@@ -573,7 +652,7 @@ shape = SubResource("RectangleShape2D_c5j76")
 unique_name_in_owner = true
 position = Vector2(995, 548)
 script = ExtResource("7_1og6d")
-available_supplies = Array[Resource("res://Supplies/Supply.gd")]([ExtResource("9_ok0ds"), ExtResource("9_dc2ld"), ExtResource("10_5v06q"), ExtResource("11_v5w0f"), ExtResource("13_068ed"), ExtResource("13_ynu4b")])
+available_supplies = Array[Resource("res://Supplies/Supply.gd")]([ExtResource("9_ok0ds"), ExtResource("9_dc2ld"), ExtResource("10_5v06q"), ExtResource("11_v5w0f"), ExtResource("13_068ed"), ExtResource("15_yy6cu")])
 repeat_spawn_curve = SubResource("Curve_o25to")
 
 [node name="Background" type="ColorRect" parent="Storeroom Manager"]
@@ -772,7 +851,8 @@ label_settings = ExtResource("21_5p0wj")
 unique_name_in_owner = true
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
-texture = ExtResource("27_fy6kv")
+texture = ExtResource("28_5xy45")
+expand_mode = 1
 stretch_mode = 5
 
 [node name="Enchanter Supplies" type="HBoxContainer" parent="."]
