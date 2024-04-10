@@ -11,11 +11,12 @@ config_version=5
 [application]
 
 config/name="We Wizards 3"
+config/description="A co-op game where you play a team of wizards fighting off evil invaders (the tax colllector)"
 run/main_scene="res://Scenes/Menus/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/bg_color=Color(0.133333, 0.121569, 0.211765, 1)
-boot_splash/image="res://Sprites/SVG Icons/first_pancake_standin.png"
-config/icon="res://Sprites/Retired/warlock.png"
+boot_splash/image="res://Sprites/first_pancake_standin.png"
+config/icon="res://Sprites/Characters/Warlock/Warlock.svg"
 
 [autoload]
 
@@ -45,7 +46,8 @@ folder_colors={
 "res://Levels/": "pink",
 "res://Projectiles/Projectile Sounds/": "green",
 "res://SaveData/": "blue",
-"res://Sprites/": "yellow"
+"res://Sprites/": "yellow",
+"res://Storeroom/Footstep Sounds/": "green"
 }
 
 [input]

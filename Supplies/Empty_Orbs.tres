@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Supply" load_steps=3 format=3 uid="uid://dgsybemasha7i"]
 
-[ext_resource type="Texture2D" uid="uid://y442weww01xm" path="res://Sprites/SVG Icons/orb.svg" id="1_52y2m"]
+[ext_resource type="Texture2D" uid="uid://y442weww01xm" path="res://Sprites/orb.svg" id="1_52y2m"]
 [ext_resource type="Script" path="res://Supplies/Supply.gd" id="2_uovyo"]
 
 [resource]

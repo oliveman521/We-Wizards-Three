@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Supply" load_steps=3 format=3 uid="uid://bb24w4yw0g0k"]
 
-[ext_resource type="Texture2D" uid="uid://bt3jkls33uu3k" path="res://Sprites/SVG Icons/lightning gem.svg" id="1_0ka3p"]
+[ext_resource type="Texture2D" uid="uid://bt3jkls33uu3k" path="res://Sprites/lightning gem.svg" id="1_0ka3p"]
 [ext_resource type="Script" path="res://Supplies/Supply.gd" id="2_e61jj"]
 
 [resource]

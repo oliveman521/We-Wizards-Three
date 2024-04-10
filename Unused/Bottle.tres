@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="Supply" load_steps=2 format=3 uid="uid://cpsldeejjhcm0"]
-
-[ext_resource type="Script" path="res://Supplies/Supply.gd" id="1_661k1"]
-
-[resource]
-script = ExtResource("1_661k1")
-supply_count = 10
-color = Color(1, 1, 1, 1)
-spawn_rate = 1.0

@@ -1,0 +1,98 @@
+[gd_scene load_steps=6 format=3 uid="uid://de756ivob0cql"]
+
+[ext_resource type="Script" path="res://Scenes/Level Select Menu/Map Nodes/MapNode.gd" id="1_yufi2"]
+[ext_resource type="Texture2D" uid="uid://dewtu4s3ndkgn" path="res://Sprites/check.svg" id="2_f2x51"]
+[ext_resource type="Theme" uid="uid://bc5qy3dgbkg6c" path="res://UI/Partchment.tres" id="2_pyj5k"]
+[ext_resource type="Texture2D" uid="uid://c3ytrwi2qobyq" path="res://Sprites/lock.svg" id="3_8gfu3"]
+[ext_resource type="LabelSettings" uid="uid://cl1d12rlbl27o" path="res://UI/Fonts/Map Node Font.tres" id="5_16bec"]
+
+[node name="Map Node" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 133.0
+offset_bottom = 48.0
+mouse_filter = 2
+theme = ExtResource("2_pyj5k")
+script = ExtResource("1_yufi2")
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 0.705882, 0.160784, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 0.686275, 0.101961, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test the best"
+label_settings = ExtResource("5_16bec")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Explored Icon" type="TextureRect" parent="."]
+unique_name_in_owner = true
+modulate = Color(0, 0.5535, 0.81, 1)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -22.0
+offset_top = -37.0
+offset_right = 29.0
+offset_bottom = 14.0
+grow_horizontal = 0
+mouse_filter = 2
+texture = ExtResource("2_f2x51")
+expand_mode = 1
+
+[node name="Locked Icon" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 0.388235, 0.380392, 1)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -22.0
+offset_top = -37.0
+offset_right = 29.0
+offset_bottom = 14.0
+grow_horizontal = 0
+mouse_filter = 2
+texture = ExtResource("3_8gfu3")
+expand_mode = 1
+
+[connection signal="button_down" from="Button" to="." method="_on_button_down"]

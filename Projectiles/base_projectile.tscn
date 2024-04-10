@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://c5hptnef0j41i"]
 
 [ext_resource type="Script" path="res://Projectiles/Projectile.gd" id="1_crw26"]
-[ext_resource type="Texture2D" uid="uid://0foiqbcwyum0" path="res://Sprites/Bullet.png" id="2_56jjv"]
+[ext_resource type="Texture2D" uid="uid://0foiqbcwyum0" path="res://Sprites/Needs Replacement/Bullet.png" id="2_56jjv"]
 [ext_resource type="AudioStream" uid="uid://cjstqnfwlhhu5" path="res://Projectiles/Projectile Sounds/base_shot.wav" id="3_q2rqx"]
 [ext_resource type="AudioStream" uid="uid://bwk678sl2ck7e" path="res://Projectiles/Projectile Sounds/Hit Sound.wav" id="4_dguvx"]
 

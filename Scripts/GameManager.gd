@@ -12,7 +12,6 @@ const FIRE: Ammo_Type = preload("uid://bow64ukpfnomj")
 const LIGHTNING: Ammo_Type = preload("uid://0wqn3ujbcm2j")
 
 var storeroom_Manager: StoreroomManager
-var apprentice_character: ApprenticeCharacter
 var enemy_manager: EnemyManager
 
 signal debug_mode_changed()
@@ -29,13 +28,13 @@ var lives: int = 0:
 
 var all_supplies: Array[Supply] = [
 	preload("uid://dgsybemasha7i"),
-	preload("res://Supplies/essence.tres"),
-	preload("res://Supplies/Fire_Gem.tres"),
+	preload("uid://dun667tokfc1l"),
+	preload("uid://br1k5yssu1q83"),
 	preload("uid://bow64ukpfnomj"),
-	preload("res://Supplies/Lightning_Gem.tres"),
+	preload("uid://bb24w4yw0g0k"),
 	preload("uid://0wqn3ujbcm2j"),
 	preload("uid://dfoqxs41hjlrc"),
-	preload("res://Supplies/Tablet.tres"),
+	preload("uid://bjgnfhrpwmh30"),
 ]
 
 const DECK_MAX_SIZE: int = 15

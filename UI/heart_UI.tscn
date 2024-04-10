@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://2jby5kudglct"]
 
-[ext_resource type="Texture2D" uid="uid://do4nmmkjlohpt" path="res://Sprites/SVG Icons/heart.svg" id="1_mluan"]
+[ext_resource type="Texture2D" uid="uid://do4nmmkjlohpt" path="res://Sprites/heart.svg" id="1_mluan"]
 
 [node name="TextureRect" type="TextureRect"]
 modulate = Color(1, 0.388235, 0.380392, 1)

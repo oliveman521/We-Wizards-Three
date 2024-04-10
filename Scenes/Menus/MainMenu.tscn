@@ -2,12 +2,12 @@
 
 [ext_resource type="Script" path="res://Scenes/Menus/basic_menu_behaviors.gd" id="1_6kucs"]
 [ext_resource type="Theme" uid="uid://bc5qy3dgbkg6c" path="res://UI/Partchment.tres" id="1_knrb3"]
-[ext_resource type="Texture2D" uid="uid://xpv4l51vknn1" path="res://Sprites/Full Art Characters/Logo.png" id="2_5u8bt"]
+[ext_resource type="Texture2D" uid="uid://xpv4l51vknn1" path="res://Sprites/Characters/Cover Page/Logo.png" id="2_5u8bt"]
 [ext_resource type="Script" path="res://Scenes/Menus/slide_in_and_bob.gd" id="3_rnfgn"]
-[ext_resource type="Texture2D" uid="uid://djhnxxx8ohfly" path="res://Sprites/Full Art Characters/Enchanter_Full_art.png" id="4_repax"]
-[ext_resource type="Texture2D" uid="uid://bj2t0eu3jo3e7" path="res://Sprites/Full Art Characters/enchanter arm (for layering).png" id="5_ic7ft"]
-[ext_resource type="Texture2D" uid="uid://l0ln5ifa7tf" path="res://Sprites/Full Art Characters/Librarian_full_photo.png" id="6_dshrp"]
-[ext_resource type="Texture2D" uid="uid://c3hauy1txd3ms" path="res://Sprites/Full Art Characters/Warlock_Full_Photo.png" id="7_fj31c"]
+[ext_resource type="Texture2D" uid="uid://djhnxxx8ohfly" path="res://Sprites/Characters/Cover Page/Enchanter_Full_art.png" id="4_repax"]
+[ext_resource type="Texture2D" uid="uid://bj2t0eu3jo3e7" path="res://Sprites/Characters/Cover Page/enchanter arm (for layering).png" id="5_ic7ft"]
+[ext_resource type="Texture2D" uid="uid://l0ln5ifa7tf" path="res://Sprites/Characters/Cover Page/Librarian_full_photo.png" id="6_dshrp"]
+[ext_resource type="Texture2D" uid="uid://c3hauy1txd3ms" path="res://Sprites/Characters/Cover Page/Warlock_Full_Photo.png" id="7_fj31c"]
 [ext_resource type="LabelSettings" uid="uid://cpmxmv1dxwx7s" path="res://UI/Fonts/medium_text.tres" id="8_nyogq"]
 
 [node name="MainMenu" type="Control"]

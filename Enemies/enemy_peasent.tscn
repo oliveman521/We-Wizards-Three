@@ -5,12 +5,15 @@
 
 [node name="Peasent" instance=ExtResource("1_oe4n6")]
 health = 2.0
-play_bounce_walk_animation = true
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="0"]
+position = Vector2(-5.5, -8)
+scale = Vector2(3.05, 4.5)
+
+[node name="Hit Box" parent="." index="1"]
+position = Vector2(-5.5, -7.5)
 
 [node name="Sprite" parent="GFX" index="0"]
-position = Vector2(-6, -7)
+position = Vector2(-14, -7)
 scale = Vector2(0.09, 0.09)
 texture = ExtResource("2_prka2")
-
-[node name="Hit Box" parent="." index="2"]
-position = Vector2(-5, -7)

@@ -3,41 +3,41 @@
 [ext_resource type="Script" path="res://Scenes/GameCamera.gd" id="1_s2bat"]
 [ext_resource type="Texture2D" uid="uid://bn43ka1kdc2cn" path="res://Sprites/grass.svg" id="2_sgm25"]
 [ext_resource type="Script" path="res://Scripts/Warlock.gd" id="2_uo0op"]
-[ext_resource type="Texture2D" uid="uid://uahkyy7pck2d" path="res://Sprites/SVG Characters/Warlock/Warlock.svg" id="3_2dsv6"]
+[ext_resource type="Texture2D" uid="uid://uahkyy7pck2d" path="res://Sprites/Characters/Warlock/Warlock.svg" id="3_2dsv6"]
 [ext_resource type="Script" path="res://Enemies/Enemy Manager.gd" id="3_yxut5"]
 [ext_resource type="Script" path="res://Levels/feed_tape_debug_graphic.gd" id="4_l8m8i"]
 [ext_resource type="PackedScene" uid="uid://b5t5chbh5x6vr" path="res://Enemies/enemy_peasent.tscn" id="5_fixi5"]
 [ext_resource type="PackedScene" uid="uid://dbc3v7h72rrl8" path="res://Enemies/enemy_knight.tscn" id="6_cjgit"]
 [ext_resource type="Script" path="res://Storeroom/StoreroomManager.gd" id="7_1og6d"]
-[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="9_dc2ld"]
 [ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Empty_Orbs.tres" id="9_ok0ds"]
 [ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="10_5v06q"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/Essence.tres" id="11_7g0tg"]
 [ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="11_v5w0f"]
 [ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Supplies/Mana_Orb.tres" id="13_068ed"]
 [ext_resource type="Script" path="res://Levels/storeroom_size_constrainer.gd" id="14_7s006"]
 [ext_resource type="Script" path="res://Storeroom/Grid.gd" id="15_y83i1"]
 [ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Card_Pickup.tres" id="15_yy6cu"]
 [ext_resource type="TileSet" uid="uid://cynof41cb1hco" path="res://Levels/StoreroomTiles.tres" id="16_i7p3x"]
-[ext_resource type="Script" path="res://Scripts/Apprentice_Character_Controller.gd" id="17_866m0"]
-[ext_resource type="Texture2D" uid="uid://cjckq2ynl8fur" path="res://Sprites/SVG Characters/Librarian/Librarian_Body.svg" id="19_j2csh"]
+[ext_resource type="Texture2D" uid="uid://cjckq2ynl8fur" path="res://Sprites/Characters/Librarian/Librarian_Body.svg" id="19_j2csh"]
 [ext_resource type="Script" path="res://Cards/CardManager.gd" id="19_pbgl2"]
+[ext_resource type="Script" path="res://Scripts/Librarian.gd" id="19_piww8"]
 [ext_resource type="LabelSettings" uid="uid://cpmxmv1dxwx7s" path="res://UI/Fonts/medium_text.tres" id="20_cob0w"]
-[ext_resource type="Texture2D" uid="uid://b3fhrgudsqqg4" path="res://Sprites/SVG Characters/Librarian/Librarian_Left Foot.svg" id="20_fbkrd"]
+[ext_resource type="Texture2D" uid="uid://b3fhrgudsqqg4" path="res://Sprites/Characters/Librarian/Librarian_Left Foot.svg" id="20_fbkrd"]
 [ext_resource type="AudioStream" uid="uid://cluutx7eq6nwh" path="res://Cards/Card Sounds/card_sliding.wav" id="20_tsk7n"]
-[ext_resource type="Texture2D" uid="uid://bi1fguhvvw11t" path="res://Sprites/SVG Characters/Librarian/Librarian_Right Foot.svg" id="21_4tv0r"]
+[ext_resource type="Texture2D" uid="uid://bi1fguhvvw11t" path="res://Sprites/Characters/Librarian/Librarian_Right Foot.svg" id="21_4tv0r"]
 [ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="21_5p0wj"]
-[ext_resource type="Texture2D" uid="uid://bib82puqqynfm" path="res://Sprites/SVG Characters/Librarian/Librarian_Arm.svg" id="22_hhkpc"]
+[ext_resource type="Texture2D" uid="uid://bib82puqqynfm" path="res://Sprites/Characters/Librarian/Librarian_Arm.svg" id="22_hhkpc"]
 [ext_resource type="PackedScene" uid="uid://btsj4ae1ih5n1" path="res://UI/supply_ui.tscn" id="22_orqwg"]
 [ext_resource type="Script" path="res://UI/Health_UI.gd" id="25_kiqjr"]
 [ext_resource type="PackedScene" uid="uid://2jby5kudglct" path="res://UI/heart_UI.tscn" id="26_fl5xy"]
-[ext_resource type="Texture2D" uid="uid://bcurj21u5xa7n" path="res://Sprites/SVG Icons/essence.svg" id="28_5xy45"]
+[ext_resource type="Texture2D" uid="uid://bcurj21u5xa7n" path="res://Sprites/essence.svg" id="28_4xl6y"]
 [ext_resource type="Resource" uid="uid://bow64ukpfnomj" path="res://Supplies/Fire_Orb.tres" id="29_0cds8"]
 [ext_resource type="Script" path="res://Scenes/LevelProgress.gd" id="29_618n4"]
 [ext_resource type="Resource" uid="uid://0wqn3ujbcm2j" path="res://Supplies/Lightning_Orb.tres" id="30_8qded"]
-[ext_resource type="Texture2D" uid="uid://lcn1fwdogghp" path="res://Sprites/SVG Characters/Enchanter/Enchanter_Layer 1.svg" id="31_p3e2w"]
+[ext_resource type="Texture2D" uid="uid://lcn1fwdogghp" path="res://Sprites/Characters/Enchanter/Enchanter_Layer 1.svg" id="31_p3e2w"]
 [ext_resource type="Script" path="res://Scenes/EnchanterCharacterGUI.gd" id="34_lmgov"]
-[ext_resource type="Texture2D" uid="uid://defxpy8jpba8q" path="res://Sprites/SVG Characters/Enchanter/Enchanter_Left Arm.svg" id="34_qpmps"]
-[ext_resource type="Texture2D" uid="uid://fl2dvarbghgx" path="res://Sprites/SVG Characters/Enchanter/Enchanter_right arm.svg" id="35_p5mh7"]
+[ext_resource type="Texture2D" uid="uid://defxpy8jpba8q" path="res://Sprites/Characters/Enchanter/Enchanter_Left Arm.svg" id="34_qpmps"]
+[ext_resource type="Texture2D" uid="uid://fl2dvarbghgx" path="res://Sprites/Characters/Enchanter/Enchanter_right arm.svg" id="35_p5mh7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ckvp"]
 size = Vector2(1019, 1119)
@@ -652,7 +652,7 @@ shape = SubResource("RectangleShape2D_c5j76")
 unique_name_in_owner = true
 position = Vector2(995, 548)
 script = ExtResource("7_1og6d")
-available_supplies = Array[Resource("res://Supplies/Supply.gd")]([ExtResource("9_ok0ds"), ExtResource("9_dc2ld"), ExtResource("10_5v06q"), ExtResource("11_v5w0f"), ExtResource("13_068ed"), ExtResource("15_yy6cu")])
+available_supplies = Array[Resource("res://Supplies/Supply.gd")]([ExtResource("9_ok0ds"), ExtResource("11_7g0tg"), ExtResource("10_5v06q"), ExtResource("11_v5w0f"), ExtResource("13_068ed"), ExtResource("15_yy6cu")])
 repeat_spawn_curve = SubResource("Curve_o25to")
 
 [node name="Background" type="ColorRect" parent="Storeroom Manager"]
@@ -693,7 +693,7 @@ position = Vector2(497, 198)
 scale = Vector2(0.25, 0.25)
 floor_stop_on_slope = false
 floor_block_on_wall = false
-script = ExtResource("17_866m0")
+script = ExtResource("19_piww8")
 
 [node name="Hit Box" type="CollisionShape2D" parent="Storeroom Manager/Apprentice Character"]
 shape = SubResource("CircleShape2D_ohmts")
@@ -851,7 +851,7 @@ label_settings = ExtResource("21_5p0wj")
 unique_name_in_owner = true
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
-texture = ExtResource("28_5xy45")
+texture = ExtResource("28_4xl6y")
 expand_mode = 1
 stretch_mode = 5
 
@@ -864,7 +864,7 @@ theme_override_constants/separation = 20
 
 [node name="Supply UI2" parent="Enchanter Supplies" instance=ExtResource("22_orqwg")]
 layout_mode = 2
-supply = ExtResource("9_dc2ld")
+supply = ExtResource("11_7g0tg")
 
 [node name="Supply UI" parent="Enchanter Supplies" instance=ExtResource("22_orqwg")]
 layout_mode = 2

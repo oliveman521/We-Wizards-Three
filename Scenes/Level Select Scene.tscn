@@ -1,24 +1,24 @@
 [gd_scene load_steps=75 format=3 uid="uid://bpfb1n271ove4"]
 
-[ext_resource type="Script" path="res://Scenes/Level Select Map/LevelSelectMenu.gd" id="1_xcx1n"]
-[ext_resource type="Script" path="res://Scenes/Level Select Map/MapManager.gd" id="2_6iwrn"]
-[ext_resource type="PackedScene" uid="uid://bhr4pv0d0tl4m" path="res://Scenes/Level Select Map/Map Nodes/MapNode_Level.tscn" id="3_qvwta"]
+[ext_resource type="Script" path="res://Scenes/Level Select Menu/LevelSelectMenu.gd" id="1_xcx1n"]
+[ext_resource type="Script" path="res://Scenes/Level Select Menu/MapManager.gd" id="2_6iwrn"]
+[ext_resource type="PackedScene" uid="uid://bhr4pv0d0tl4m" path="res://Scenes/Level Select Menu/Map Nodes/MapNode_Level.tscn" id="3_qvwta"]
 [ext_resource type="Texture2D" uid="uid://cm7a3qxas4otc" path="res://Sprites/Map Doodles/Start Here.png" id="3_s64fk"]
 [ext_resource type="Texture2D" uid="uid://4b7li4hxaxkh" path="res://Sprites/Comic Panels/Knock at the door.png" id="4_ayamc"]
-[ext_resource type="Script" path="res://Scenes/Level Select Map/Info Panels/TutorialInfoPage.gd" id="5_2m5ee"]
-[ext_resource type="PackedScene" uid="uid://cklv7m4x0ijqb" path="res://Scenes/Level Select Map/Map Nodes/MapNode_New_Card.tscn" id="5_64jv8"]
+[ext_resource type="Script" path="res://Scenes/Level Select Menu/Info Panels/TutorialInfoPage.gd" id="5_2m5ee"]
+[ext_resource type="PackedScene" uid="uid://cklv7m4x0ijqb" path="res://Scenes/Level Select Menu/Map Nodes/MapNode_New_Card.tscn" id="5_64jv8"]
 [ext_resource type="Texture2D" uid="uid://8qsug5qhwpbr" path="res://Sprites/Comic Panels/Door open.png" id="6_flkku"]
 [ext_resource type="Texture2D" uid="uid://rr1b2njt6joa" path="res://Sprites/Comic Panels/KRS.png" id="7_nypcm"]
 [ext_resource type="Texture2D" uid="uid://830fliunjvdu" path="res://Sprites/Comic Panels/door slam.png" id="8_7wuin"]
 [ext_resource type="Texture2D" uid="uid://cxme5dqwjo81m" path="res://Sprites/Comic Panels/Telling the gang.png" id="9_dk514"]
-[ext_resource type="Texture2D" uid="uid://c3hauy1txd3ms" path="res://Sprites/Full Art Characters/Warlock_Full_Photo.png" id="11_j1nec"]
+[ext_resource type="Texture2D" uid="uid://c3hauy1txd3ms" path="res://Sprites/Characters/Cover Page/Warlock_Full_Photo.png" id="11_t6ldu"]
 [ext_resource type="Script" path="res://Scenes/Menus/deck_builder_menu.gd" id="11_t8gd0"]
 [ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="12_fdwhl"]
+[ext_resource type="Texture2D" uid="uid://l0ln5ifa7tf" path="res://Sprites/Characters/Cover Page/Librarian_full_photo.png" id="12_k3l5s"]
 [ext_resource type="PackedScene" uid="uid://nr4hlan2e2hj" path="res://Levels/Level 1 - It Begins.tscn" id="12_k3ykg"]
-[ext_resource type="Texture2D" uid="uid://l0ln5ifa7tf" path="res://Sprites/Full Art Characters/Librarian_full_photo.png" id="12_smoli"]
-[ext_resource type="Texture2D" uid="uid://djhnxxx8ohfly" path="res://Sprites/Full Art Characters/Enchanter_Full_art.png" id="13_3raak"]
-[ext_resource type="PackedScene" uid="uid://b585ymf1lip61" path="res://Scenes/Level Select Map/Map Nodes/MapNode_Tutorial.tscn" id="13_7kiee"]
-[ext_resource type="PackedScene" uid="uid://cde83i8rqdtlj" path="res://Scenes/Level Select Map/Map Nodes/MapNode_New_Ability.tscn" id="15_oso2k"]
+[ext_resource type="PackedScene" uid="uid://b585ymf1lip61" path="res://Scenes/Level Select Menu/Map Nodes/MapNode_Tutorial.tscn" id="13_7kiee"]
+[ext_resource type="Texture2D" uid="uid://djhnxxx8ohfly" path="res://Sprites/Characters/Cover Page/Enchanter_Full_art.png" id="13_h433h"]
+[ext_resource type="PackedScene" uid="uid://cde83i8rqdtlj" path="res://Scenes/Level Select Menu/Map Nodes/MapNode_New_Ability.tscn" id="15_oso2k"]
 [ext_resource type="PackedScene" uid="uid://dt27624gh16cs" path="res://Cards/Card Pool/card_singe.tscn" id="15_wpld2"]
 [ext_resource type="PackedScene" uid="uid://c02po6bbp7nbt" path="res://Levels/Level 2.tscn" id="16_okn0a"]
 [ext_resource type="PackedScene" uid="uid://cjep3dbwag4tw" path="res://Cards/Card Pool/card_stockpile.tscn" id="17_xsr76"]
@@ -55,7 +55,7 @@
 [ext_resource type="Texture2D" uid="uid://c5da5jr0p5j5o" path="res://Sprites/Map Doodles/devil horns.png" id="37_xackh"]
 [ext_resource type="PackedScene" uid="uid://cp55jow1os444" path="res://Levels/Bonus Level - Off to the Races.tscn" id="38_ky64n"]
 [ext_resource type="Script" path="res://Scenes/LevelSelectCamera.gd" id="49_fpw7x"]
-[ext_resource type="Script" path="res://Scenes/Level Select Map/MapControlsLabel.gd" id="50_3tvjl"]
+[ext_resource type="Script" path="res://Scenes/Level Select Menu/MapControlsLabel.gd" id="50_3tvjl"]
 [ext_resource type="LabelSettings" uid="uid://cpmxmv1dxwx7s" path="res://UI/Fonts/medium_text.tres" id="50_23ce2"]
 [ext_resource type="PackedScene" uid="uid://dfuh7fif3lr3e" path="res://Cards/Card Pool/card_lightning_bolt_recipe.tscn" id="50_xc304"]
 [ext_resource type="Theme" uid="uid://bc5qy3dgbkg6c" path="res://UI/Partchment.tres" id="58_8vtbi"]
@@ -114,7 +114,7 @@ script = ExtResource("5_2m5ee")
 title = "The Warlock"
 text1 = "The First player is the Warlock.
 They will fight off waves of incoming KRS agents."
-image = ExtResource("11_j1nec")
+image = ExtResource("11_t6ldu")
 text2 = "The Warlock uses WASD to move and
 F, G, and H to fire"
 button_text = "Right on"
@@ -124,7 +124,7 @@ script = ExtResource("5_2m5ee")
 title = "The Librarian"
 text1 = "The Second player is The Librarian.
 They run around the storeroom to collect resources to supply the other players."
-image = ExtResource("12_smoli")
+image = ExtResource("12_k3l5s")
 text2 = "The Librarian uses the arrow keys to move"
 button_text = "Sounds good!"
 
@@ -133,7 +133,7 @@ script = ExtResource("5_2m5ee")
 title = "The Enchanter"
 text1 = "The Third player is the Enchanter.
 They will cast spell cards from a deck to help aid their teammates."
-image = ExtResource("13_3raak")
+image = ExtResource("13_h433h")
 text2 = "The Enchanter uses the mouse to play spell cards. 
 Left click to cast the spell, Right click to discard it"
 button_text = "You got it"

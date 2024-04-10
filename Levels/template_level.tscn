@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Levels/LevelData.gd" id="1_85615"]
 [ext_resource type="Script" path="res://Levels/feed_tape_debug_graphic.gd" id="2_dexwh"]
-[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="2_yhil6"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/Essence.tres" id="2_yhil6"]
 [ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="3_65252"]
 [ext_resource type="Script" path="res://Levels/storeroom_size_constrainer.gd" id="3_fgxky"]
 [ext_resource type="Script" path="res://Storeroom/Grid.gd" id="3_jg26i"]

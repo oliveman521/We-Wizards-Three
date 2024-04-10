@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b585ymf1lip61"]
+
+[ext_resource type="PackedScene" uid="uid://de756ivob0cql" path="res://Scenes/Level Select Menu/Map Nodes/MapNode.tscn" id="1_65y3i"]
+[ext_resource type="Script" path="res://Scenes/Level Select Menu/Map Nodes/MapNode_Tutorial.gd" id="2_gsb8x"]
+[ext_resource type="Texture2D" uid="uid://dmdqs4opsomjo" path="res://Sprites/info.svg" id="3_5p6g8"]
+
+[node name="Insert Name" instance=ExtResource("1_65y3i")]
+offset_right = 48.0
+offset_bottom = 49.0
+script = ExtResource("2_gsb8x")
+pages = Array[Resource("res://Scenes/Level Select Map/Info Panels/TutorialInfoPage.gd")]([])
+
+[node name="Button" parent="." index="0"]
+theme_override_font_sizes/font_size = 36
+icon_alignment = 1
+expand_icon = true
+
+[node name="Icon" parent="." index="1"]
+texture = ExtResource("3_5p6g8")
+
+[node name="Label" parent="." index="2"]
+visible = false

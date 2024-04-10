@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Supply" load_steps=3 format=3 uid="uid://dun667tokfc1l"]
 
 [ext_resource type="Script" path="res://Supplies/Supply.gd" id="1_amhtf"]
-[ext_resource type="Texture2D" uid="uid://bcurj21u5xa7n" path="res://Sprites/SVG Icons/essence.svg" id="1_kmikv"]
+[ext_resource type="Texture2D" uid="uid://bcurj21u5xa7n" path="res://Sprites/essence.svg" id="1_kmikv"]
 
 [resource]
 script = ExtResource("1_amhtf")

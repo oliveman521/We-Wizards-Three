@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://bc5qy3dgbkg6c" path="res://UI/Partchment.tres" id="1_2iaa2"]
 [ext_resource type="Script" path="res://Cards/card_supply_icon.gd" id="1_8pbka"]
-[ext_resource type="Texture2D" uid="uid://bh5r23nqrfhf3" path="res://Sprites/SVG Icons/question_mark.svg" id="3_ho5hp"]
+[ext_resource type="Texture2D" uid="uid://bh5r23nqrfhf3" path="res://Sprites/question_mark.svg" id="3_ho5hp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1as26"]
 font_size = 20
