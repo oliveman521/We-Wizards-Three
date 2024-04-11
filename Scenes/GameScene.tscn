@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://Storeroom/StoreroomManager.gd" id="7_1og6d"]
 [ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Empty_Orbs.tres" id="9_ok0ds"]
 [ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="10_5v06q"]
-[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/Essence.tres" id="11_7g0tg"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="11_7g0tg"]
 [ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="11_v5w0f"]
 [ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Supplies/Mana_Orb.tres" id="13_068ed"]
 [ext_resource type="Script" path="res://Levels/storeroom_size_constrainer.gd" id="14_7s006"]

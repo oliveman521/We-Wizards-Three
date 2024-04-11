@@ -8,15 +8,15 @@
 offset_right = 48.0
 offset_bottom = 49.0
 script = ExtResource("2_gsb8x")
-pages = Array[Resource("res://Scenes/Level Select Map/Info Panels/TutorialInfoPage.gd")]([])
+pages = Array[Resource("res://Scenes/Level Select Menu/Info Panels/TutorialInfoPage.gd")]([])
 
-[node name="Button" parent="." index="0"]
+[node name="Button" parent="." index="1"]
 theme_override_font_sizes/font_size = 36
 icon_alignment = 1
 expand_icon = true
 
-[node name="Icon" parent="." index="1"]
+[node name="Icon" parent="." index="2"]
 texture = ExtResource("3_5p6g8")
 
-[node name="Label" parent="." index="2"]
+[node name="Label" parent="." index="3"]
 visible = false
