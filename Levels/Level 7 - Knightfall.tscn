@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://o3tq5x43hvo7"]
 
 [ext_resource type="PackedScene" uid="uid://ddavd71iwja5g" path="res://Levels/template_level.tscn" id="1_yeceb"]
-[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="2_iti4d"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/Essence.tres" id="2_iti4d"]
 [ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="3_tp7sn"]
-[ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Tablet.tres" id="4_tqobg"]
-[ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Blank_Scroll.tres" id="5_jembk"]
+[ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Card_Pickup.tres" id="4_tqobg"]
+[ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Empty_Orbs.tres" id="5_jembk"]
 [ext_resource type="PackedScene" uid="uid://dbc3v7h72rrl8" path="res://Enemies/enemy_knight.tscn" id="9_rck7t"]
 
 [node name="level 7 - Knightfall" instance=ExtResource("1_yeceb")]

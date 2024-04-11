@@ -12,10 +12,7 @@ const FIRE: Ammo_Type = preload("uid://bow64ukpfnomj")
 const LIGHTNING: Ammo_Type = preload("uid://0wqn3ujbcm2j")
 
 var storeroom_Manager: StoreroomManager
-var apprentice_character: ApprenticeCharacter
-var warlock_character: WarlockCharacter
 var enemy_manager: EnemyManager
-var card_manager: CardManager
 
 signal debug_mode_changed()
 var debug_mode: bool = false:
@@ -30,14 +27,14 @@ var lives: int = 0:
 			game_over()
 
 var all_supplies: Array[Supply] = [
-	preload("res://Supplies/Blank_Scroll.tres"),
-	preload("res://Supplies/essence.tres"),
-	preload("res://Supplies/Fire_Gem.tres"),
-	preload("res://Supplies/Fire_Scroll.tres"),
-	preload("res://Supplies/Lightning_Gem.tres"),
-	preload("res://Supplies/Lightning_Scroll.tres"),
-	preload("res://Supplies/Mana_Scroll.tres"),
-	preload("res://Supplies/Tablet.tres"),
+	preload("uid://dgsybemasha7i"),
+	preload("uid://dun667tokfc1l"),
+	preload("uid://br1k5yssu1q83"),
+	preload("uid://bow64ukpfnomj"),
+	preload("uid://bb24w4yw0g0k"),
+	preload("uid://0wqn3ujbcm2j"),
+	preload("uid://dfoqxs41hjlrc"),
+	preload("uid://bjgnfhrpwmh30"),
 ]
 
 const DECK_MAX_SIZE: int = 15
@@ -100,6 +97,11 @@ func _process(_delta: float) -> void:
 		debug_mode = !debug_mode
 	if Input.is_key_pressed(KEY_O):
 		GameManager.level_won()
+	if Input.is_action_just_pressed("full_screen"):
+		if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		else:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 func spawn_popup(location: Vector2, message: String, color: Color = Color(1,1,1), lifetime:float = 1, parent: Node = self) -> void:
 	const popup_prefab: Resource = preload("res://UI/popup_text.tscn")
@@ -157,7 +159,7 @@ func level_won() -> void:
 
 func get_passive_ability_count(ability_tag: String) -> float:
 	var count: float = 0
-	for node: Node in card_manager.ongoing_abilities_region.get_children():
+	for node: Node in CardManager.instance.ongoing_abilities_region.get_children():
 		if node is OngoingAbility:
 			var ability: OngoingAbility = node as OngoingAbility
 			if ability.passive_ability_tag == ability_tag:

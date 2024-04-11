@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dt01ewj1i0hjl"]
 
 [ext_resource type="PackedScene" uid="uid://bj3xl0y5gxddn" path="res://Cards/Ongoing Abilities/ongoing_ability_base.tscn" id="1_nt8ep"]
-[ext_resource type="Texture2D" uid="uid://cfxfds5d3kl38" path="res://Sprites/UI Icons/general_pickup.svg" id="2_elsx5"]
+[ext_resource type="Texture2D" uid="uid://cfxfds5d3kl38" path="res://Sprites/Needs Replacement/general_pickup.svg" id="2_elsx5"]
 
 [node name="Ongoing Ability" instance=ExtResource("1_nt8ep")]
 passive_ability_tag = "Next Pickup Multiplier"

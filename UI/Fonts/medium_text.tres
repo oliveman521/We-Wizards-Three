@@ -1,9 +1,9 @@
 [gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cpmxmv1dxwx7s"]
 
-[ext_resource type="FontFile" uid="uid://t4iceb2drwa2" path="res://UI/Fonts/Franklin Gothic Medium Regular.ttf" id="1_pjmhp"]
+[ext_resource type="FontFile" uid="uid://dlt608jfryhnw" path="res://UI/Fonts/Handwritten Styles/Info Story.ttf" id="1_rj4in"]
 
 [resource]
-font = ExtResource("1_pjmhp")
+font = ExtResource("1_rj4in")
 font_size = 32
-outline_size = 6
+outline_size = 8
 outline_color = Color(0, 0, 0, 1)

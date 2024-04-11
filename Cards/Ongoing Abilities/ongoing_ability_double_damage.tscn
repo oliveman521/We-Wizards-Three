@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cprfumcfqrt3i"]
 
 [ext_resource type="PackedScene" uid="uid://bj3xl0y5gxddn" path="res://Cards/Ongoing Abilities/ongoing_ability_base.tscn" id="1_eea0j"]
-[ext_resource type="Texture2D" uid="uid://bssuavk67hdke" path="res://Sprites/damage icon.png" id="2_ne7b5"]
+[ext_resource type="Texture2D" uid="uid://bssuavk67hdke" path="res://Sprites/Needs Replacement/damage icon.png" id="2_ne7b5"]
 [ext_resource type="LabelSettings" uid="uid://cpmxmv1dxwx7s" path="res://UI/Fonts/medium_text.tres" id="3_h54a3"]
 
 [node name="Ongoing Ability" instance=ExtResource("1_eea0j")]

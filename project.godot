@@ -11,11 +11,12 @@ config_version=5
 [application]
 
 config/name="We Wizards 3"
+config/description="A co-op game where you play a team of wizards fighting off evil invaders (the tax colllector)"
 run/main_scene="res://Scenes/Menus/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/bg_color=Color(0.133333, 0.121569, 0.211765, 1)
-boot_splash/image="res://Sprites/UI Icons/first_pancake_standin.png"
-config/icon="res://Sprites/warlock.png"
+boot_splash/image="res://Sprites/first_pancake_standin.png"
+config/icon="res://Sprites/Characters/Warlock/Warlock.svg"
 
 [autoload]
 
@@ -30,6 +31,7 @@ gdscript/warnings/untyped_declaration=1
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=3
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"
@@ -38,12 +40,14 @@ window/stretch/mode="viewport"
 
 folder_colors={
 "res://Cards/": "blue",
+"res://Cards/Card Sprites/": "yellow",
 "res://Enemies/": "red",
 "res://Enemies/Enemy Sprites/": "yellow",
 "res://Levels/": "pink",
 "res://Projectiles/Projectile Sounds/": "green",
 "res://SaveData/": "blue",
-"res://Sprites/": "yellow"
+"res://Sprites/": "yellow",
+"res://Storeroom/Footstep Sounds/": "green"
 }
 
 [input]
@@ -126,6 +130,11 @@ map_zoom_in={
 map_zoom_out={
 "deadzone": 0.5,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":16,"position":Vector2(162, 25),"global_position":Vector2(166, 66),"factor":1.0,"button_index":5,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+full_screen={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194342,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
 }
 

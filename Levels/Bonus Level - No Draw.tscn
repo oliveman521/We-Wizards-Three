@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ddavd71iwja5g" path="res://Levels/template_level.tscn" id="1_krl6u"]
 [ext_resource type="PackedScene" uid="uid://b5t5chbh5x6vr" path="res://Enemies/enemy_peasent.tscn" id="2_mjl4r"]
-[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="2_v8ukj"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/Essence.tres" id="2_v8ukj"]
 [ext_resource type="PackedScene" uid="uid://d02ehopagg68u" path="res://Enemies/enemy_hulking_peasent.tscn" id="3_e5bso"]
 [ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="3_rp4hm"]
 [ext_resource type="PackedScene" uid="uid://cn7apof2y3wfd" path="res://Enemies/enemy_archer.tscn" id="4_5dj55"]

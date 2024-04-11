@@ -16,7 +16,7 @@ func _ready() -> void:
 	#plus adapting it to what seems like the new version of Godot's noise engine: https://docs.godotengine.org/en/stable/classes/class_fastnoiselite.html
 	
 	perlin_noise.noise_type = FastNoiseLite.TYPE_PERLIN 
-	perlin_noise.frequency = 0.0025
+	perlin_noise.frequency = 0.0045 #Higher number means faster shakes
 	
 
 func _process(delta: float) -> void:
@@ -25,8 +25,8 @@ func _process(delta: float) -> void:
 	trauma -= delta / decay_time_seconds
 	trauma = clamp(trauma,0,1)
 	
-	const max_translation: Vector2 = Vector2(500,350)
-	const max_rotation: float = deg_to_rad(4)
+	const max_translation: Vector2 = Vector2(400,275)
+	const max_rotation: float = deg_to_rad(3)
 	var damping: float = trauma * trauma
 	
 	offset = Vector2(

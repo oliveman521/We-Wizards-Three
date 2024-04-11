@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Ammo_Type" load_steps=4 format=3 uid="uid://dfoqxs41hjlrc"]
+
+[ext_resource type="Texture2D" uid="uid://dqux2mp7y74er" path="res://Sprites/mana_orb.svg" id="1_pptmj"]
+[ext_resource type="PackedScene" uid="uid://w4wis64kyyew" path="res://Projectiles/projectile_mana_bullet.tscn" id="2_xnpxh"]
+[ext_resource type="Script" path="res://Supplies/ammo_type.gd" id="3_ol1lw"]
+
+[resource]
+script = ExtResource("3_ol1lw")
+fire_cooldown = 0.25
+full_auto = false
+damage_type = 0
+projectile_prefab = ExtResource("2_xnpxh")
+supply_name = "Mana Orb"
+icon = ExtResource("1_pptmj")
+starting_count = 20
+color = Color(1, 1, 1, 1)
+pickup_spawn_rate = 2.0
+pickup_count_min = 2
+pickup_count_max = 4
+supply_count = 0

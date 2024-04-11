@@ -3,33 +3,33 @@
 [ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_da2hk"]
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_0kypi"]
 [ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="3_ne2w8"]
-[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_Damage.gd" id="4_fr6mv"]
-[ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="5_ij75g"]
+[ext_resource type="Script" path="res://Cards/Card Components/CardEffect_Damage.gd" id="4_fr6mv"]
+[ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Components/card_text.tscn" id="4_hm8q3"]
 
-[node name="Card - Shock" instance=ExtResource("1_da2hk")]
+[node name="Shock" instance=ExtResource("1_da2hk")]
 scale = Vector2(1, 0.990783)
 card_type = "Lightning Damage"
 card_name = "Shock"
-
-[node name="Background Color" parent="Card Face" index="0"]
-color = Color(0.588235, 0.564706, 0.117647, 1)
 
 [node name="Lightning Gem x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_0kypi")]
 layout_mode = 2
 supply = ExtResource("3_ne2w8")
 
-[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer" index="0"]
 text = "Shock"
 
-[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#CardEffect_Damage" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0"]
+[node name="Card text" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("4_hm8q3")]
+layout_mode = 2
+text = "Deal 5 damage to the closest enemy"
+
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#CardEffect_Damage" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1"]
 script = ExtResource("4_fr6mv")
 dmg_type = 2
 amnt = 5
 targets = "First"
 
-[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1"]
-layout_mode = 2
-text = "Deal 5 damage to the closest enemy"
-label_settings = ExtResource("5_ij75g")
-horizontal_alignment = 1
-autowrap_mode = 2
+[node name="Top Nubs" parent="Top Roll" index="0"]
+modulate = Color(1, 0.65098, 0, 1)
+
+[node name="Bottom Nubs" parent="Bottom Roll" index="0"]
+modulate = Color(1, 0.65098, 0, 1)

@@ -3,7 +3,7 @@ extends HBoxContainer
 
 @export var supply: Supply
 @export var always_on: bool = false
-@onready var label: Label = $Count
+@onready var label: Label = %Count
 @onready var icon: TextureRect = $Icon
 
 

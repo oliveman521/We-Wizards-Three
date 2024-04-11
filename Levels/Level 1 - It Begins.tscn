@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://nr4hlan2e2hj"]
 
 [ext_resource type="PackedScene" uid="uid://ddavd71iwja5g" path="res://Levels/template_level.tscn" id="1_gs41d"]
-[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="2_4ktkr"]
-[ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Tablet.tres" id="3_mgyqv"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/Essence.tres" id="2_4ktkr"]
+[ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Card_Pickup.tres" id="3_mgyqv"]
 [ext_resource type="PackedScene" uid="uid://b5t5chbh5x6vr" path="res://Enemies/enemy_peasent.tscn" id="4_m3mer"]
 
 [node name="Level 1 - It Begins" instance=ExtResource("1_gs41d")]

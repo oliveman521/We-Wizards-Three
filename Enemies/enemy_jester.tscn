@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://c6afi4js5waro"]
 
 [ext_resource type="PackedScene" uid="uid://dxstlyven322l" path="res://Enemies/enemy_base.tscn" id="1_6ene5"]
-[ext_resource type="Texture2D" uid="uid://6dh3axxlxnej" path="res://Enemies/Enemy Sprites/jester.png" id="2_5l61o"]
 [ext_resource type="Script" path="res://Enemies/Enemy_SineMovement.gd" id="2_45bwe"]
+[ext_resource type="Texture2D" uid="uid://csuous4yl3vtr" path="res://Enemies/Enemy Sprites/Jester.svg" id="3_5024q"]
 
 [node name="Jester" instance=ExtResource("1_6ene5")]
 position = Vector2(-1, 0)
@@ -10,9 +10,10 @@ script = ExtResource("2_45bwe")
 amplitude = 150.0
 period = 500.0
 randomize_phase = true
-enemy_name = "Jester"
 health = 3.0
+play_bounce_walk_animation = true
+knockback_multiplier = 3.0
 
-[node name="Sprite" parent="." index="0"]
-scale = Vector2(2, 2)
-texture = ExtResource("2_5l61o")
+[node name="Sprite" parent="GFX" index="0"]
+scale = Vector2(0.09, 0.09)
+texture = ExtResource("3_5024q")

@@ -1,32 +1,31 @@
-[gd_scene load_steps=71 format=3 uid="uid://bpfb1n271ove4"]
+[gd_scene load_steps=75 format=3 uid="uid://bpfb1n271ove4"]
 
-[ext_resource type="Script" path="res://Scenes/Level Select Map/LevelSelectMenu.gd" id="1_xcx1n"]
-[ext_resource type="Script" path="res://Scenes/Level Select Map/MapManager.gd" id="2_6iwrn"]
-[ext_resource type="PackedScene" uid="uid://bhr4pv0d0tl4m" path="res://Scenes/Level Select Map/Map Nodes/MapNode_Level.tscn" id="3_qvwta"]
+[ext_resource type="Script" path="res://Scenes/Level Select Menu/LevelSelectMenu.gd" id="1_xcx1n"]
+[ext_resource type="Script" path="res://Scenes/Level Select Menu/MapManager.gd" id="2_6iwrn"]
+[ext_resource type="PackedScene" uid="uid://bhr4pv0d0tl4m" path="res://Scenes/Level Select Menu/Map Nodes/MapNode_Level.tscn" id="3_qvwta"]
 [ext_resource type="Texture2D" uid="uid://cm7a3qxas4otc" path="res://Sprites/Map Doodles/Start Here.png" id="3_s64fk"]
 [ext_resource type="Texture2D" uid="uid://4b7li4hxaxkh" path="res://Sprites/Comic Panels/Knock at the door.png" id="4_ayamc"]
-[ext_resource type="Script" path="res://Scenes/Level Select Map/Info Panels/TutorialInfoPage.gd" id="5_2m5ee"]
-[ext_resource type="PackedScene" uid="uid://cklv7m4x0ijqb" path="res://Scenes/Level Select Map/Map Nodes/MapNode_New_Card.tscn" id="5_64jv8"]
+[ext_resource type="Script" path="res://Scenes/Level Select Menu/Info Panels/TutorialInfoPage.gd" id="5_2m5ee"]
+[ext_resource type="PackedScene" uid="uid://cklv7m4x0ijqb" path="res://Scenes/Level Select Menu/Map Nodes/MapNode_New_Card.tscn" id="5_64jv8"]
 [ext_resource type="Texture2D" uid="uid://8qsug5qhwpbr" path="res://Sprites/Comic Panels/Door open.png" id="6_flkku"]
 [ext_resource type="Texture2D" uid="uid://rr1b2njt6joa" path="res://Sprites/Comic Panels/KRS.png" id="7_nypcm"]
 [ext_resource type="Texture2D" uid="uid://830fliunjvdu" path="res://Sprites/Comic Panels/door slam.png" id="8_7wuin"]
 [ext_resource type="Texture2D" uid="uid://cxme5dqwjo81m" path="res://Sprites/Comic Panels/Telling the gang.png" id="9_dk514"]
-[ext_resource type="Theme" uid="uid://btsp3ifn1m5n3" path="res://Scenes/Menus/Menus.tres" id="10_2ecuw"]
-[ext_resource type="Texture2D" uid="uid://c3hauy1txd3ms" path="res://Sprites/Full Art Characters/Warlock_Full_Photo.png" id="11_j1nec"]
+[ext_resource type="Texture2D" uid="uid://c3hauy1txd3ms" path="res://Sprites/Characters/Cover Page/Warlock_Full_Photo.png" id="11_t6ldu"]
 [ext_resource type="Script" path="res://Scenes/Menus/deck_builder_menu.gd" id="11_t8gd0"]
 [ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="12_fdwhl"]
+[ext_resource type="Texture2D" uid="uid://l0ln5ifa7tf" path="res://Sprites/Characters/Cover Page/Librarian_full_photo.png" id="12_k3l5s"]
 [ext_resource type="PackedScene" uid="uid://nr4hlan2e2hj" path="res://Levels/Level 1 - It Begins.tscn" id="12_k3ykg"]
-[ext_resource type="Texture2D" uid="uid://l0ln5ifa7tf" path="res://Sprites/Full Art Characters/Librarian_full_photo.png" id="12_smoli"]
-[ext_resource type="Texture2D" uid="uid://djhnxxx8ohfly" path="res://Sprites/Full Art Characters/Enchanter_Full_art.png" id="13_3raak"]
-[ext_resource type="PackedScene" uid="uid://b585ymf1lip61" path="res://Scenes/Level Select Map/Map Nodes/MapNode_Tutorial.tscn" id="13_7kiee"]
-[ext_resource type="PackedScene" uid="uid://rfnlpy50ihlp" path="res://Cards/Card Pool/card_printing_press.tscn" id="14_3vtqq"]
-[ext_resource type="PackedScene" uid="uid://cde83i8rqdtlj" path="res://Scenes/Level Select Map/Map Nodes/MapNode_New_Ability.tscn" id="15_oso2k"]
+[ext_resource type="PackedScene" uid="uid://b585ymf1lip61" path="res://Scenes/Level Select Menu/Map Nodes/MapNode_Tutorial.tscn" id="13_7kiee"]
+[ext_resource type="Texture2D" uid="uid://djhnxxx8ohfly" path="res://Sprites/Characters/Cover Page/Enchanter_Full_art.png" id="13_h433h"]
+[ext_resource type="PackedScene" uid="uid://cde83i8rqdtlj" path="res://Scenes/Level Select Menu/Map Nodes/MapNode_New_Ability.tscn" id="15_oso2k"]
 [ext_resource type="PackedScene" uid="uid://dt27624gh16cs" path="res://Cards/Card Pool/card_singe.tscn" id="15_wpld2"]
 [ext_resource type="PackedScene" uid="uid://c02po6bbp7nbt" path="res://Levels/Level 2.tscn" id="16_okn0a"]
 [ext_resource type="PackedScene" uid="uid://cjep3dbwag4tw" path="res://Cards/Card Pool/card_stockpile.tscn" id="17_xsr76"]
 [ext_resource type="PackedScene" uid="uid://4l40ype480h" path="res://Levels/Bonus Level - Seige Engine.tscn" id="18_7emhd"]
+[ext_resource type="PackedScene" uid="uid://rfnlpy50ihlp" path="res://Cards/Card Pool/card_orb_press.tscn" id="18_ofx21"]
 [ext_resource type="PackedScene" uid="uid://ccqqvfnjhvb3t" path="res://Cards/Card Pool/card_supercharge.tscn" id="19_0o358"]
-[ext_resource type="PackedScene" uid="uid://shwywe7qw2jx" path="res://Cards/Card Pool/card_scroll_reserves.tscn" id="19_1v8j7"]
+[ext_resource type="PackedScene" uid="uid://shwywe7qw2jx" path="res://Cards/Card Pool/card_orb_reserves.tscn" id="19_g6nc3"]
 [ext_resource type="PackedScene" uid="uid://b2wt5v3t3gjkc" path="res://Cards/Card Pool/card_rain_of_ash.tscn" id="20_712ye"]
 [ext_resource type="PackedScene" uid="uid://dmdss2aqbb1lg" path="res://Levels/Level 3.tscn" id="20_qv78i"]
 [ext_resource type="PackedScene" uid="uid://bhq4tuy1yifyy" path="res://Cards/Card Pool/card_scortched_earth.tscn" id="20_tkhon"]
@@ -38,27 +37,30 @@
 [ext_resource type="PackedScene" uid="uid://50477ao4osxc" path="res://Levels/Level 3b - Super Silly.tscn" id="24_0bg83"]
 [ext_resource type="PackedScene" uid="uid://ddmofotpnip81" path="res://Levels/Level 3A - (s)Laughter.tscn" id="24_j8tib"]
 [ext_resource type="PackedScene" uid="uid://6685qupifd8s" path="res://Cards/Card Pool/card_fire_ball_recipe.tscn" id="24_rjnis"]
-[ext_resource type="PackedScene" uid="uid://cf2tx5dypsmoq" path="res://Cards/Card Pool/card_scroll_mountain.tscn" id="25_1n2im"]
 [ext_resource type="PackedScene" uid="uid://dio6uti0xbamv" path="res://Levels/Level 4 - Knights.tscn" id="25_q6lle"]
 [ext_resource type="PackedScene" uid="uid://don0td5sje72h" path="res://Levels/Level 5a - Silly Arrows.tscn" id="26_a0t0h"]
 [ext_resource type="PackedScene" uid="uid://cgklhf7q88enf" path="res://Cards/Card Pool/card_shock.tscn" id="26_cxv1b"]
 [ext_resource type="PackedScene" uid="uid://bt6cb8kc2x7u4" path="res://Cards/Card Pool/card_quick_cast.tscn" id="27_48o8d"]
 [ext_resource type="PackedScene" uid="uid://qiwvts513giv" path="res://Levels/Level 5b - Big Boys.tscn" id="27_ggwvo"]
+[ext_resource type="PackedScene" uid="uid://cf2tx5dypsmoq" path="res://Cards/Card Pool/card_orb_mountain.tscn" id="27_jvj3k"]
 [ext_resource type="PackedScene" uid="uid://5wdcju2fxgnc" path="res://Cards/Card Pool/card_singe+.tscn" id="28_olfey"]
 [ext_resource type="PackedScene" uid="uid://d1lawaxsvcjjm" path="res://Cards/Card Pool/card_boomlins.tscn" id="29_il0pa"]
 [ext_resource type="PackedScene" uid="uid://bajlv8q00iyvv" path="res://Levels/Bonus Level - No Essence.tscn" id="29_v2ygy"]
 [ext_resource type="PackedScene" uid="uid://ddysngdfm7vje" path="res://Levels/Bonus Level - No Draw.tscn" id="30_knvvg"]
 [ext_resource type="PackedScene" uid="uid://b3sgly2pkxavh" path="res://Levels/Bonus Level - Boomlins.tscn" id="31_3vpdt"]
 [ext_resource type="PackedScene" uid="uid://cthet27f7cioc" path="res://Levels/Level 6.tscn" id="33_fxcku"]
-[ext_resource type="PackedScene" uid="uid://dfuh7fif3lr3e" path="res://Cards/Card Pool/card_lightning_scroll_recipe.tscn" id="33_kctbv"]
 [ext_resource type="PackedScene" uid="uid://ddx0lb70hxnsq" path="res://Cards/Card Pool/card_well_read+.tscn" id="34_ttysr"]
 [ext_resource type="PackedScene" uid="uid://o3tq5x43hvo7" path="res://Levels/Level 7 - Knightfall.tscn" id="35_f7wne"]
 [ext_resource type="PackedScene" uid="uid://djyq018lrnfov" path="res://Levels/Level 666.tscn" id="36_gc4ss"]
 [ext_resource type="Texture2D" uid="uid://c5da5jr0p5j5o" path="res://Sprites/Map Doodles/devil horns.png" id="37_xackh"]
 [ext_resource type="PackedScene" uid="uid://cp55jow1os444" path="res://Levels/Bonus Level - Off to the Races.tscn" id="38_ky64n"]
 [ext_resource type="Script" path="res://Scenes/LevelSelectCamera.gd" id="49_fpw7x"]
-[ext_resource type="Script" path="res://Scenes/Level Select Map/MapControlsLabel.gd" id="50_3tvjl"]
+[ext_resource type="Script" path="res://Scenes/Level Select Menu/MapControlsLabel.gd" id="50_3tvjl"]
 [ext_resource type="LabelSettings" uid="uid://cpmxmv1dxwx7s" path="res://UI/Fonts/medium_text.tres" id="50_23ce2"]
+[ext_resource type="PackedScene" uid="uid://dfuh7fif3lr3e" path="res://Cards/Card Pool/card_lightning_bolt_recipe.tscn" id="50_xc304"]
+[ext_resource type="Theme" uid="uid://bc5qy3dgbkg6c" path="res://UI/Partchment.tres" id="58_8vtbi"]
+[ext_resource type="FontFile" uid="uid://cqvtfhjurrg7t" path="res://UI/Fonts/Sepura-K7z9A.ttf" id="58_t0rev"]
+[ext_resource type="PackedScene" uid="uid://cag28l2br5hpp" path="res://Scenes/Menus/close_button.tscn" id="61_r60pi"]
 
 [sub_resource type="Resource" id="Resource_fwqn5"]
 script = ExtResource("5_2m5ee")
@@ -104,7 +106,7 @@ button_text = "We will do what we must..."
 script = ExtResource("5_2m5ee")
 title = "Welcome!"
 text1 = "Welcome to We Wizards Three!"
-text2 = "This is an asymetric co-op game where youm ust defend your wizard tower from the infernal KRS (king's Revenue Service)"
+text2 = "This is an asymetric co-op game where you must defend your wizard tower from the infernal KRS (king's Revenue Service)"
 button_text = "Cool!"
 
 [sub_resource type="Resource" id="Resource_yrjke"]
@@ -112,7 +114,7 @@ script = ExtResource("5_2m5ee")
 title = "The Warlock"
 text1 = "The First player is the Warlock.
 They will fight off waves of incoming KRS agents."
-image = ExtResource("11_j1nec")
+image = ExtResource("11_t6ldu")
 text2 = "The Warlock uses WASD to move and
 F, G, and H to fire"
 button_text = "Right on"
@@ -122,7 +124,7 @@ script = ExtResource("5_2m5ee")
 title = "The Librarian"
 text1 = "The Second player is The Librarian.
 They run around the storeroom to collect resources to supply the other players."
-image = ExtResource("12_smoli")
+image = ExtResource("12_k3l5s")
 text2 = "The Librarian uses the arrow keys to move"
 button_text = "Sounds good!"
 
@@ -131,7 +133,7 @@ script = ExtResource("5_2m5ee")
 title = "The Enchanter"
 text1 = "The Third player is the Enchanter.
 They will cast spell cards from a deck to help aid their teammates."
-image = ExtResource("13_3raak")
+image = ExtResource("13_h433h")
 text2 = "The Enchanter uses the mouse to play spell cards. 
 Left click to cast the spell, Right click to discard it"
 button_text = "You got it"
@@ -150,6 +152,14 @@ text1 = "Some cards will say Exhaust on them. These cards do not go back into yo
 text2 = "This means they can only be played once per seige"
 button_text = "Cool!"
 
+[sub_resource type="LabelSettings" id="LabelSettings_6rf3s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rl52f"]
+font = ExtResource("58_t0rev")
+font_size = 70
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Level Select Menu" type="Control" groups=["Level Select Menu"]]
 layout_mode = 3
 anchors_preset = 15
@@ -157,6 +167,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1, 1.00095)
 mouse_filter = 2
 script = ExtResource("1_xcx1n")
 
@@ -169,17 +180,28 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("2_6iwrn")
+line_color = Color(0.384314, 0.34902, 0.611765, 1)
 
-[node name="Map Bounds" type="Control" parent="Map Manager"]
-anchors_preset = 0
-offset_left = -281.0
-offset_top = -379.0
+[node name="Background" type="ColorRect" parent="Map Manager"]
+layout_mode = 0
+offset_left = -562.0
+offset_top = -532.0
+offset_right = 4242.0
+offset_bottom = 1588.0
+color = Color(0.219608, 0.203922, 0.34902, 1)
+
+[node name="Map Bounds" type="ColorRect" parent="Map Manager"]
+layout_mode = 0
+offset_left = -275.0
+offset_top = -306.0
 offset_right = 3808.0
-offset_bottom = 1270.0
+offset_bottom = 1327.0
+color = Color(0.188235, 0.172549, 0.301961, 1)
 
 [node name="StartHere" type="Sprite2D" parent="Map Manager"]
-position = Vector2(162, 187)
-scale = Vector2(0.553061, 0.553061)
+modulate = Color(0.384314, 0.34902, 0.611765, 1)
+position = Vector2(171, 232.779)
+scale = Vector2(0.26301, 0.26301)
 texture = ExtResource("3_s64fk")
 
 [node name="info - Intro (5 pages)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("13_7kiee")]
@@ -202,21 +224,21 @@ pages = Array[ExtResource("5_2m5ee")]([SubResource("Resource_bsbt5"), SubResourc
 connected_map_nodes = [NodePath("../info - Intro (5 pages)"), NodePath("../Level 1 - It Begins")]
 
 [node name="Level 1 - It Begins" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
-offset_left = 376.0
-offset_top = 442.0
-offset_right = 509.0
-offset_bottom = 490.0
+offset_left = 384.0
+offset_top = 426.595
+offset_right = 517.0
+offset_bottom = 474.595
 mouse_filter = 0
 level = ExtResource("12_k3ykg")
-connected_map_nodes = [NodePath("../info - Welcome! (5 pages)"), NodePath("../Cards - Stockpile (+6 others)")]
+connected_map_nodes = [NodePath("../info - Welcome! (5 pages)"), NodePath("../Cards - Stockpile (+4 others)")]
 
-[node name="Cards - Stockpile (+6 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+[node name="Cards - Stockpile (+4 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 545.0
 offset_top = 497.0
 offset_right = 597.0
 offset_bottom = 545.0
 mouse_filter = 0
-cards = Array[PackedScene]([ExtResource("17_xsr76"), ExtResource("17_xsr76"), ExtResource("17_xsr76"), ExtResource("14_3vtqq"), ExtResource("19_1v8j7")])
+cards = Array[PackedScene]([ExtResource("17_xsr76"), ExtResource("17_xsr76"), ExtResource("17_xsr76"), ExtResource("18_ofx21"), ExtResource("19_g6nc3")])
 connected_map_nodes = [NodePath("../Level 1 - It Begins"), NodePath("../info - Exhaust")]
 
 [node name="info - Exhaust" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("13_7kiee")]
@@ -226,7 +248,7 @@ offset_right = 690.0
 offset_bottom = 591.0
 mouse_filter = 0
 pages = Array[ExtResource("5_2m5ee")]([SubResource("Resource_ptob5")])
-connected_map_nodes = [NodePath("../Cards - Stockpile (+6 others)"), NodePath("../Ability - Max Combo")]
+connected_map_nodes = [NodePath("../Cards - Stockpile (+4 others)"), NodePath("../Ability - Max Combo")]
 
 [node name="Level 2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 884.0
@@ -274,7 +296,25 @@ offset_right = 1041.0
 offset_bottom = 480.0
 mouse_filter = 0
 level = ExtResource("18_7emhd")
-connected_map_nodes = [NodePath("../Cards - Scroll Mountain (+1 others)"), NodePath("../Level 2"), NodePath("../Cards - Scroll Mountain (+1 others)2")]
+connected_map_nodes = [NodePath("../Cards - Orb Mountain (+1 others)"), NodePath("../Level 2"), NodePath("../Cards - Rain Of Ash")]
+
+[node name="Cards - Rain Of Ash" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+offset_left = 1174.0
+offset_top = 173.0
+offset_right = 1226.0
+offset_bottom = 221.0
+mouse_filter = 0
+cards = Array[PackedScene]([ExtResource("20_712ye")])
+connected_map_nodes = [NodePath("../Bonus Level - Seige Engine")]
+
+[node name="Cards - Orb Mountain (+1 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+offset_left = 949.0
+offset_top = 267.0
+offset_right = 1001.0
+offset_bottom = 315.0
+mouse_filter = 0
+cards = Array[PackedScene]([ExtResource("27_jvj3k"), ExtResource("27_jvj3k")])
+connected_map_nodes = [NodePath("../Bonus Level - Seige Engine")]
 
 [node name="Cards - Marutha\'s Deal (+2 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 1621.0
@@ -300,7 +340,7 @@ offset_top = 809.0
 offset_right = 1702.0
 offset_bottom = 857.0
 mouse_filter = 0
-cards = Array[PackedScene]([ExtResource("21_lx1sb"), ExtResource("21_lwsqc"), ExtResource("14_3vtqq"), ExtResource("21_bj66l")])
+cards = Array[PackedScene]([ExtResource("21_lx1sb"), ExtResource("21_lwsqc"), ExtResource("18_ofx21"), ExtResource("21_bj66l")])
 connected_map_nodes = [NodePath("../Level 3A - (s)Laughter"), NodePath("../Bonus Level - Boomlins")]
 
 [node name="Cards - Boomlins (+1 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
@@ -309,26 +349,8 @@ offset_top = 1093.0
 offset_right = 1783.0
 offset_bottom = 1141.0
 mouse_filter = 0
-cards = Array[PackedScene]([ExtResource("29_il0pa"), null])
+cards = Array[PackedScene]([ExtResource("29_il0pa"), ExtResource("29_il0pa")])
 connected_map_nodes = [NodePath("../Bonus Level - Boomlins")]
-
-[node name="Cards - Scroll Mountain (+1 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
-offset_left = 949.0
-offset_top = 267.0
-offset_right = 1001.0
-offset_bottom = 315.0
-mouse_filter = 0
-cards = Array[PackedScene]([ExtResource("25_1n2im"), ExtResource("25_1n2im")])
-connected_map_nodes = [NodePath("../Bonus Level - Seige Engine")]
-
-[node name="Cards - Scroll Mountain (+1 others)2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
-offset_left = 1174.0
-offset_top = 173.0
-offset_right = 1226.0
-offset_bottom = 221.0
-mouse_filter = 0
-cards = Array[PackedScene]([ExtResource("20_712ye")])
-connected_map_nodes = [NodePath("../Bonus Level - Seige Engine")]
 
 [node name="Level 3A - (s)Laughter" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 1577.0
@@ -383,15 +405,6 @@ offset_bottom = 669.0
 mouse_filter = 0
 level = ExtResource("26_a0t0h")
 connected_map_nodes = [NodePath("../Level 4 - Knights"), NodePath("../Cards - Shock (+4 others)"), NodePath("../Ability - Librarian Boost")]
-
-[node name="Bonus Level - Off to the Races" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
-offset_left = 2688.0
-offset_top = 624.0
-offset_right = 2821.0
-offset_bottom = 672.0
-mouse_filter = 0
-level = ExtResource("38_ky64n")
-connected_map_nodes = [NodePath("../Level 6"), NodePath("../Cards - Lightning Scroll Recipe (+3 others)2")]
 
 [node name="Bonus Level - No Essence" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 1908.0
@@ -476,24 +489,33 @@ offset_right = 2779.0
 offset_bottom = 522.0
 mouse_filter = 0
 level = ExtResource("33_fxcku")
-connected_map_nodes = [NodePath("../Cards - Shock (+4 others)"), NodePath("../Cards - Lightning Scroll Recipe (+3 others)"), NodePath("../Bonus Level - Off to the Races")]
+connected_map_nodes = [NodePath("../Cards - Shock (+4 others)"), NodePath("../Cards - Lightning Bolt Recipe (+3 others)"), NodePath("../Bonus Level - Off to the Races")]
 
-[node name="Cards - Lightning Scroll Recipe (+3 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+[node name="Bonus Level - Off to the Races" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
+offset_left = 2688.0
+offset_top = 624.0
+offset_right = 2821.0
+offset_bottom = 672.0
+mouse_filter = 0
+level = ExtResource("38_ky64n")
+connected_map_nodes = [NodePath("../Level 6"), NodePath("../Cards - Lightning Bolt Recipe (+3 others)2")]
+
+[node name="Cards - Lightning Bolt Recipe (+3 others)" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 2886.0
 offset_top = 458.0
 offset_right = 2938.0
 offset_bottom = 506.0
 mouse_filter = 0
-cards = Array[PackedScene]([ExtResource("33_kctbv"), ExtResource("33_kctbv"), ExtResource("33_kctbv"), ExtResource("33_kctbv")])
+cards = Array[PackedScene]([ExtResource("50_xc304"), ExtResource("50_xc304"), ExtResource("50_xc304"), ExtResource("50_xc304")])
 connected_map_nodes = [NodePath("../Level 6"), NodePath("../Level 7 - Knightfall")]
 
-[node name="Cards - Lightning Scroll Recipe (+3 others)2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
+[node name="Cards - Lightning Bolt Recipe (+3 others)2" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("5_64jv8")]
 offset_left = 2734.0
 offset_top = 765.0
 offset_right = 2786.0
 offset_bottom = 813.0
 mouse_filter = 0
-cards = Array[PackedScene]([ExtResource("33_kctbv"), ExtResource("33_kctbv"), ExtResource("33_kctbv"), ExtResource("33_kctbv")])
+cards = Array[PackedScene]([ExtResource("50_xc304"), ExtResource("50_xc304"), ExtResource("50_xc304"), ExtResource("50_xc304")])
 connected_map_nodes = [NodePath("../Bonus Level - Off to the Races")]
 
 [node name="Level 7 - Knightfall" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
@@ -503,7 +525,7 @@ offset_right = 3129.0
 offset_bottom = 507.0
 mouse_filter = 0
 level = ExtResource("35_f7wne")
-connected_map_nodes = [NodePath("../Cards - Lightning Scroll Recipe (+3 others)"), NodePath("../Level 666")]
+connected_map_nodes = [NodePath("../Cards - Lightning Bolt Recipe (+3 others)"), NodePath("../Level 666")]
 
 [node name="Level 666" parent="Map Manager" node_paths=PackedStringArray("connected_map_nodes") instance=ExtResource("3_qvwta")]
 offset_left = 3268.0
@@ -511,6 +533,7 @@ offset_top = 464.0
 offset_right = 3401.0
 offset_bottom = 512.0
 mouse_filter = 0
+theme = null
 level = ExtResource("36_gc4ss")
 connected_map_nodes = [NodePath("../Level 7 - Knightfall")]
 
@@ -523,12 +546,14 @@ texture = ExtResource("37_xackh")
 layout_mode = 0
 offset_left = 1756.0
 offset_top = 68.0
-offset_right = 1992.0
-offset_bottom = 169.0
+offset_right = 1951.0
+offset_bottom = 150.0
+theme = ExtResource("58_8vtbi")
 text = "Cheats:
 Press K to toggle Debug mode.
-Press O after level starts
-to auto-complete level"
+Press O after level starts to auto-complete level"
+label_settings = SubResource("LabelSettings_6rf3s")
+autowrap_mode = 3
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(223, 297)
@@ -540,13 +565,14 @@ script = ExtResource("49_fpw7x")
 unique_name_in_owner = true
 
 [node name="Map Controls Label" type="Label" parent="Overlay Canvas"]
-offset_left = 19.0
-offset_top = 951.0
-offset_right = 267.0
-offset_bottom = 1068.0
+offset_left = 15.0
+offset_top = 930.0
+offset_right = 417.0
+offset_bottom = 1071.0
 text = "Map Controls:
 Right Click To Pan
-Scroll to zoom"
+Scroll to zoom
+Escape to return to main menu"
 label_settings = ExtResource("50_23ce2")
 vertical_alignment = 2
 script = ExtResource("50_3tvjl")
@@ -556,6 +582,7 @@ one_shot = true
 
 [node name="Edit Deck Button" type="Button" parent="Overlay Canvas"]
 unique_name_in_owner = true
+self_modulate = Color(0.262745, 0.239216, 0.419608, 1)
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
@@ -565,23 +592,55 @@ offset_right = 411.0
 offset_bottom = -85.0
 grow_vertical = 2
 rotation = 1.5708
-theme = ExtResource("10_2ecuw")
+theme = ExtResource("58_8vtbi")
 text = "Edit Deck"
+
+[node name="Panel" type="Panel" parent="Overlay Canvas/Edit Deck Button"]
+self_modulate = Color(0.401493, 0.3648, 0.64, 0.717647)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 75.0
+offset_right = -252.0
+offset_bottom = 318.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Overlay Canvas/Edit Deck Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Edit Deck"
+label_settings = SubResource("LabelSettings_rl52f")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Deck Building Menu" type="MarginContainer" parent="Overlay Canvas" groups=["Deck Building Menu"]]
 unique_name_in_owner = true
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_left = -1403.0
-offset_top = 23.0
+offset_top = 18.0
 offset_right = -1.0
-offset_bottom = 11.0
+offset_bottom = -21.0
 grow_vertical = 2
+theme = ExtResource("58_8vtbi")
 script = ExtResource("11_t8gd0")
 
-[node name="ColorRect" type="ColorRect" parent="Overlay Canvas/Deck Building Menu"]
+[node name="Backdrop Panel" type="Panel" parent="Overlay Canvas/Deck Building Menu"]
+modulate = Color(0.227451, 0.203922, 0.360784, 0.639216)
 layout_mode = 2
-color = Color(0, 0, 0, 0.137255)
 
 [node name="Screen Margin" type="MarginContainer" parent="Overlay Canvas/Deck Building Menu"]
 layout_mode = 2
@@ -618,11 +677,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ColorRect" type="ColorRect" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container"]
+[node name="Panel" type="Panel" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container"]
+modulate = Color(0.105882, 0.0980392, 0.168627, 0.329412)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0.145098, 0.141176, 0.152941, 0.427451)
 
 [node name="MarginContainer" type="MarginContainer" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container"]
 layout_mode = 2
@@ -640,15 +699,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/h_separation = 15
 theme_override_constants/v_separation = 15
-
-[node name="Fire Ball Recipe" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("24_rjnis")]
-layout_mode = 2
-
-[node name="Fire Ball Recipe2" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("24_rjnis")]
-layout_mode = 2
-
-[node name="Fire Ball Recipe3" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer/ScrollContainer/Container/MarginContainer/Card Pool Container" instance=ExtResource("24_rjnis")]
-layout_mode = 2
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer"]
 layout_mode = 2
@@ -673,11 +723,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ColorRect" type="ColorRect" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container"]
+[node name="ColorRect2" type="Panel" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container"]
+modulate = Color(0.105882, 0.0980392, 0.168627, 0.329412)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0.145098, 0.141176, 0.152941, 0.427451)
 
 [node name="MarginContainer" type="MarginContainer" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container"]
 layout_mode = 2
@@ -696,19 +746,8 @@ size_flags_vertical = 3
 theme_override_constants/h_separation = 15
 theme_override_constants/v_separation = 15
 
-[node name="Fire Ball Recipe" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("24_rjnis")]
+[node name="Back Button" parent="Overlay Canvas/Deck Building Menu/Screen Margin" instance=ExtResource("61_r60pi")]
 layout_mode = 2
-
-[node name="Fire Ball Recipe2" parent="Overlay Canvas/Deck Building Menu/Screen Margin/HBoxContainer/VBoxContainer2/ScrollContainer/Container/MarginContainer/Deck Contents Container" instance=ExtResource("24_rjnis")]
-layout_mode = 2
-
-[node name="Back Button" type="Button" parent="Overlay Canvas/Deck Building Menu/Screen Margin"]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 0
-theme = ExtResource("10_2ecuw")
-theme_override_font_sizes/font_size = 28
-text = " X "
 
 [connection signal="gui_input" from="Map Manager/Map Bounds" to="Camera2D" method="map_bound_input"]
 [connection signal="button_down" from="Overlay Canvas/Edit Deck Button" to="Overlay Canvas/Deck Building Menu" method="open_deck_builder_menu"]

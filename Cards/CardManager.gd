@@ -15,6 +15,7 @@ var card_pool: Array[Card] = []
 
 
 
+
 var max_hand_size: int:
 	get: return hand_card_anchors.size()
 
@@ -23,13 +24,19 @@ var cards_in_hand : Array[Card]:
 
 var cards_in_deck: Array[Card]
 
+signal card_played(card:Card)
+signal card_discarded(card:Card)
+
+
+static var instance: CardManager
+
 func _ready() -> void:
-	GameManager.card_manager = self as CardManager
-	
+	instance = self
 	for scene: PackedScene in GameManager.current_save.cards_in_deck:
 		cards_in_deck.append(scene.instantiate() as Card)
 	
 	for i in range(starting_cards_count):
+		await get_tree().create_timer(0.2).timeout
 		draw_random_card()
 
 
@@ -51,6 +58,7 @@ func add_ongoing_ability(ongoing_ability_prefab: PackedScene, amnt: float) -> vo
 	
 	if new_ability.stack_behavior == "Independent":
 		ongoing_abilities_region.add_child(new_ability)
+		new_ability.count = amnt
 	else:
 		existing_ability.another_one(amnt)
 
@@ -88,7 +96,7 @@ func arrange_cards_in_playspace() -> void:
 	if !is_inside_tree(): return #this function normally triggers when nodes are rearranged. Since this happens whenever the scene is unloaded, this fires when the scene is unloading, so we should skip it if we're currently unloading
 	
 	var queue_pos: Vector2 = queue_of_cards.global_position
-	const queue_span:= Vector2(100,100)
+	const queue_span:= Vector2(25,300)
 	
 	for i in range(cards_in_hand.size()):
 		var card: Card = cards_in_hand[i]

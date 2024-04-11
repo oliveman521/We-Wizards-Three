@@ -1,35 +1,44 @@
-[gd_scene load_steps=44 format=3 uid="uid://c4qnaj4cqxgny"]
+[gd_scene load_steps=62 format=3 uid="uid://c4qnaj4cqxgny"]
 
-[ext_resource type="Script" path="res://Scripts/warlock_controller.gd" id="1_6dk5y"]
 [ext_resource type="Script" path="res://Scenes/GameCamera.gd" id="1_s2bat"]
-[ext_resource type="Texture2D" uid="uid://b8boy6md2mbll" path="res://Sprites/warlock.png" id="2_bsyth"]
+[ext_resource type="Texture2D" uid="uid://bn43ka1kdc2cn" path="res://Sprites/grass.svg" id="2_sgm25"]
+[ext_resource type="Script" path="res://Scripts/Warlock.gd" id="2_uo0op"]
+[ext_resource type="Texture2D" uid="uid://uahkyy7pck2d" path="res://Sprites/Characters/Warlock/Warlock.svg" id="3_2dsv6"]
 [ext_resource type="Script" path="res://Enemies/Enemy Manager.gd" id="3_yxut5"]
 [ext_resource type="Script" path="res://Levels/feed_tape_debug_graphic.gd" id="4_l8m8i"]
 [ext_resource type="PackedScene" uid="uid://b5t5chbh5x6vr" path="res://Enemies/enemy_peasent.tscn" id="5_fixi5"]
 [ext_resource type="PackedScene" uid="uid://dbc3v7h72rrl8" path="res://Enemies/enemy_knight.tscn" id="6_cjgit"]
 [ext_resource type="Script" path="res://Storeroom/StoreroomManager.gd" id="7_1og6d"]
-[ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Blank_Scroll.tres" id="8_clxw8"]
-[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="9_dc2ld"]
+[ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Empty_Orbs.tres" id="9_ok0ds"]
 [ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="10_5v06q"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="11_7g0tg"]
 [ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="11_v5w0f"]
-[ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Supplies/Mana_Scroll.tres" id="12_eknce"]
-[ext_resource type="Texture2D" uid="uid://bnf1qbyi4gps" path="res://Sprites/apprentice.png" id="13_5iwmc"]
-[ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Tablet.tres" id="13_ynu4b"]
+[ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Supplies/Mana_Orb.tres" id="13_068ed"]
 [ext_resource type="Script" path="res://Levels/storeroom_size_constrainer.gd" id="14_7s006"]
 [ext_resource type="Script" path="res://Storeroom/Grid.gd" id="15_y83i1"]
+[ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Card_Pickup.tres" id="15_yy6cu"]
 [ext_resource type="TileSet" uid="uid://cynof41cb1hco" path="res://Levels/StoreroomTiles.tres" id="16_i7p3x"]
-[ext_resource type="Script" path="res://Scripts/Apprentice_Character_Controller.gd" id="17_866m0"]
+[ext_resource type="Texture2D" uid="uid://cjckq2ynl8fur" path="res://Sprites/Characters/Librarian/Librarian_Body.svg" id="19_j2csh"]
 [ext_resource type="Script" path="res://Cards/CardManager.gd" id="19_pbgl2"]
+[ext_resource type="Script" path="res://Scripts/Librarian.gd" id="19_piww8"]
 [ext_resource type="LabelSettings" uid="uid://cpmxmv1dxwx7s" path="res://UI/Fonts/medium_text.tres" id="20_cob0w"]
+[ext_resource type="Texture2D" uid="uid://b3fhrgudsqqg4" path="res://Sprites/Characters/Librarian/Librarian_Left Foot.svg" id="20_fbkrd"]
 [ext_resource type="AudioStream" uid="uid://cluutx7eq6nwh" path="res://Cards/Card Sounds/card_sliding.wav" id="20_tsk7n"]
-[ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="21_5p0wj"]
+[ext_resource type="Texture2D" uid="uid://bi1fguhvvw11t" path="res://Sprites/Characters/Librarian/Librarian_Right Foot.svg" id="21_4tv0r"]
+[ext_resource type="Texture2D" uid="uid://bib82puqqynfm" path="res://Sprites/Characters/Librarian/Librarian_Arm.svg" id="22_hhkpc"]
 [ext_resource type="PackedScene" uid="uid://btsj4ae1ih5n1" path="res://UI/supply_ui.tscn" id="22_orqwg"]
-[ext_resource type="Texture2D" uid="uid://bj6e14qigcant" path="res://Sprites/Essence.png" id="23_8aelf"]
-[ext_resource type="Resource" uid="uid://bow64ukpfnomj" path="res://Supplies/Fire_Scroll.tres" id="23_ncq1s"]
-[ext_resource type="Resource" uid="uid://0wqn3ujbcm2j" path="res://Supplies/Lightning_Scroll.tres" id="24_0jap5"]
 [ext_resource type="Script" path="res://UI/Health_UI.gd" id="25_kiqjr"]
 [ext_resource type="PackedScene" uid="uid://2jby5kudglct" path="res://UI/heart_UI.tscn" id="26_fl5xy"]
+[ext_resource type="Theme" uid="uid://bc5qy3dgbkg6c" path="res://UI/Partchment.tres" id="26_n4ujd"]
+[ext_resource type="Texture2D" uid="uid://bcurj21u5xa7n" path="res://Sprites/essence.svg" id="28_4xl6y"]
+[ext_resource type="FontFile" uid="uid://dlt608jfryhnw" path="res://UI/Fonts/Handwritten Styles/Info Story.ttf" id="28_e3gpn"]
+[ext_resource type="Resource" uid="uid://bow64ukpfnomj" path="res://Supplies/Fire_Orb.tres" id="29_0cds8"]
 [ext_resource type="Script" path="res://Scenes/LevelProgress.gd" id="29_618n4"]
+[ext_resource type="Resource" uid="uid://0wqn3ujbcm2j" path="res://Supplies/Lightning_Orb.tres" id="30_8qded"]
+[ext_resource type="Texture2D" uid="uid://lcn1fwdogghp" path="res://Sprites/Characters/Enchanter/Enchanter_Layer 1.svg" id="31_p3e2w"]
+[ext_resource type="Script" path="res://Scenes/EnchanterCharacterGUI.gd" id="34_lmgov"]
+[ext_resource type="Texture2D" uid="uid://defxpy8jpba8q" path="res://Sprites/Characters/Enchanter/Enchanter_Left Arm.svg" id="34_qpmps"]
+[ext_resource type="Texture2D" uid="uid://fl2dvarbghgx" path="res://Sprites/Characters/Enchanter/Enchanter_right arm.svg" id="35_p5mh7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ckvp"]
 size = Vector2(1019, 1119)
@@ -48,60 +57,433 @@ size = Vector2(19.5, 1101)
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.0900621, 0.0554187), 0.0, 0.0, 0, 0, Vector2(0.192547, 0.0554187), -0.0660918, -0.0660918, 0, 0, Vector2(0.991837, 0), 0.0, 0.0, 0, 0]
 point_count = 4
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f2dgt"]
-atlas = ExtResource("13_5iwmc")
-region = Rect2(0, 0, 32, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_8u3bd"]
-atlas = ExtResource("13_5iwmc")
-region = Rect2(32, 0, 32, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xoi1x"]
-atlas = ExtResource("13_5iwmc")
-region = Rect2(64, 0, 32, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a1dbr"]
-atlas = ExtResource("13_5iwmc")
-region = Rect2(96, 0, 32, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i7xf5"]
-atlas = ExtResource("13_5iwmc")
-region = Rect2(128, 0, 32, 34)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_5ep5n"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f2dgt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8u3bd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xoi1x")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a1dbr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i7xf5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8u3bd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f2dgt")
-}],
-"loop": true,
-"name": &"default",
-"speed": 25.0
-}]
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_ohmts"]
 radius = 77.666
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2uhtv"]
 size = Vector2(202, 193)
+
+[sub_resource type="Animation" id="Animation_fd2ow"]
+resource_name = "Idle"
+length = 1.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LibrarianBody:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 1.4),
+"transitions": PackedFloat32Array(1.86607, 1.62451),
+"update": 0,
+"values": [0.0, 0.0174533]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LibrarianBody:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 1.3),
+"transitions": PackedFloat32Array(1, 0.5),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -20)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LibrarianLeftFoot:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-60.0003, 370)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LibrarianLeftFoot:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.462512]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LibrarianRightFoot:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(130, 370)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("LibrarianRightFoot:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.74002]
+}
+
+[sub_resource type="Animation" id="Animation_8lc07"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LibrarianBody:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LibrarianBody:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-10, 5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LibrarianLeftFoot:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-60.0003, 370)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LibrarianLeftFoot:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.462512]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LibrarianRightFoot:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(130, 370)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("LibrarianRightFoot:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.74002]
+}
+
+[sub_resource type="Animation" id="Animation_ve6a6"]
+resource_name = "Walk"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LibrarianBody:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-25, 20), Vector2(0, -80), Vector2(35, -5), Vector2(0, -80)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LibrarianBody:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.174533, -0.23911, -0.280998, -0.0802851]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LibrarianLeftFoot:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.7, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(340, 230), Vector2(-160, 250), Vector2(-59.9999, 340), Vector2(130, 360)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LibrarianLeftFoot:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.7, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-3.52906, -0.113446, -0.699877, -2.42077]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LibrarianRightFoot:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-110, 370), Vector2(50, 340), Vector2(300, 370), Vector2(59.9998, 280)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("LibrarianRightFoot:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [1.10305, 0.1309, -0.284489, 1.11701]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_c3o5b"]
+_data = {
+"Idle": SubResource("Animation_fd2ow"),
+"RESET": SubResource("Animation_8lc07"),
+"Walk": SubResource("Animation_ve6a6")
+}
+
+[sub_resource type="Animation" id="Animation_hql61"]
+resource_name = "Idle"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LibrarianBody/LibrarianArm:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.3, 0.8, 1.1),
+"transitions": PackedFloat32Array(1, 1.68179, 2.54912, 1.46409),
+"update": 0,
+"values": [-0.869174, -0.869174, -0.837758, -0.837758]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LibrarianBody/LibrarianArm:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.3, 0.8, 1.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-217.143, 55), Vector2(-217.143, 55), Vector2(-217.143, 50), Vector2(-217.143, 50)]
+}
+
+[sub_resource type="Animation" id="Animation_lql6v"]
+resource_name = "Pickup"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LibrarianBody/LibrarianArm:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.136136, -2.35969, -1.24791]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LibrarianBody/LibrarianArm:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-217.143, 57.1429), Vector2(-159.114, 34.286), Vector2(-188.129, 45.7145)]
+}
+
+[sub_resource type="Animation" id="Animation_1br2w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LibrarianBody/LibrarianArm:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.869174]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LibrarianBody/LibrarianArm:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-194.286, 34.2858)]
+}
+
+[sub_resource type="Animation" id="Animation_ys6ik"]
+resource_name = "Walk"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LibrarianBody/LibrarianArm:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j67lp"]
+_data = {
+"Idle": SubResource("Animation_hql61"),
+"Pickup": SubResource("Animation_lql6v"),
+"RESET": SubResource("Animation_1br2w"),
+"Walk": SubResource("Animation_ys6ik")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ydsa"]
+font = ExtResource("28_e3gpn")
+font_size = 48
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_c425b"]
+resource_name = "Cast"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6),
+"transitions": PackedFloat32Array(1, 0.34151, 1),
+"update": 0,
+"values": [0.493928, -1.29503, 0.493928]
+}
+
+[sub_resource type="Animation" id="Animation_ajjpy"]
+resource_name = "Discard"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0542979, 0.2, 0.6),
+"transitions": PackedFloat32Array(1.18921, 0.406126, 1.46409, 0.965939),
+"update": 0,
+"values": [0.510112, 0.314159, 2.10487, 0.510112]
+}
+
+[sub_resource type="Animation" id="Animation_a8l75"]
+resource_name = "Idle"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.1, 1.8, 2.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.493928, 0.523599, 0.523599, 0.493928]
+}
+
+[sub_resource type="Animation" id="Animation_v5j3q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.493928]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_su1b8"]
+_data = {
+"Cast": SubResource("Animation_c425b"),
+"Discard": SubResource("Animation_ajjpy"),
+"Idle": SubResource("Animation_a8l75"),
+"RESET": SubResource("Animation_v5j3q")
+}
 
 [node name="Game" type="Node2D"]
 position = Vector2(0, -5)
@@ -122,39 +504,120 @@ shape = SubResource("RectangleShape2D_2ckvp")
 debug_color = Color(0, 0.6, 0.701961, 0)
 
 [node name="BackGround" type="ColorRect" parent="Warlock Game"]
-offset_left = 1.0
-offset_top = 1.0
-offset_right = 938.0
-offset_bottom = 1106.0
-color = Color(0, 0.462745, 0.0666667, 0.298039)
+offset_left = -6.0
+offset_top = -17.0
+offset_right = 1924.0
+offset_bottom = 1088.0
+color = Color(0.1882, 0.171, 0.3, 1)
 
 [node name="Warlock Move Area" type="ColorRect" parent="Warlock Game"]
 offset_left = 677.0
 offset_top = 16.0
-offset_right = 941.0
+offset_right = 982.0
 offset_bottom = 1073.0
-color = Color(0.388235, 0.301961, 0.133333, 0.537255)
+color = Color(0.257207, 0.2337, 0.41, 1)
+
+[node name="Grass Sprites" type="Node2D" parent="Warlock Game"]
+modulate = Color(0.294847, 0.2679, 0.47, 1)
+
+[node name="Grass" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(147, 439)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass14" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(614, 314)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass15" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(384, 86)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass2" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(224, 355)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass3" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(278, 636)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass4" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(81, 800)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass5" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(337, 930)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass6" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(485, 732)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass7" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(421, 395)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass8" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(132, 197)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass9" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(583, 183)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass10" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(533, 962)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass11" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(109, 964)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass12" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(537, 597)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass13" type="Sprite2D" parent="Warlock Game/Grass Sprites"]
+position = Vector2(106, 597)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
 
 [node name="Warlock" type="CharacterBody2D" parent="Warlock Game" groups=["Player"]]
-position = Vector2(901, 529)
-script = ExtResource("1_6dk5y")
+position = Vector2(901, 528)
+motion_mode = 1
+script = ExtResource("2_uo0op")
 
 [node name="Sprite2D" type="Sprite2D" parent="Warlock Game/Warlock"]
-position = Vector2(-2, -3)
-scale = Vector2(2, 2)
-texture = ExtResource("2_bsyth")
+position = Vector2(-4.00002, 3.99997)
+scale = Vector2(0.102494, 0.102494)
+texture = ExtResource("3_2dsv6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Warlock Game/Warlock"]
 shape = SubResource("CapsuleShape2D_ek7uc")
 
 [node name="Projectile Spawn Point" type="Node2D" parent="Warlock Game/Warlock"]
-position = Vector2(-32, 2)
+position = Vector2(-32, -1)
 
 [node name="FireCooldownTimer" type="Timer" parent="Warlock Game/Warlock"]
 one_shot = true
 
 [node name="Stun Timer" type="Timer" parent="Warlock Game/Warlock"]
 one_shot = true
+
+[node name="Ammo Orbs" type="Node2D" parent="Warlock Game/Warlock"]
 
 [node name="Enemy Manager" type="Node2D" parent="Warlock Game" groups=["EnemyManager"]]
 script = ExtResource("3_yxut5")
@@ -169,15 +632,19 @@ script = ExtResource("4_l8m8i")
 
 [node name="Peasent" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_fixi5")]
 position = Vector2(-377, 494)
+max_speed = 60.0
 
 [node name="Peasent2" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_fixi5")]
 position = Vector2(-637, 604)
+max_speed = 60.0
 
 [node name="Peasent3" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("5_fixi5")]
 position = Vector2(-751, 305)
+max_speed = 60.0
 
 [node name="Knight" parent="Warlock Game/Enemy Manager/Test Feed Tape" instance=ExtResource("6_cjgit")]
 position = Vector2(-453, 292)
+max_speed = 60.0
 
 [node name="Projectile Container" type="Node2D" parent="Warlock Game"]
 unique_name_in_owner = true
@@ -192,13 +659,13 @@ shape = SubResource("RectangleShape2D_c5j76")
 unique_name_in_owner = true
 position = Vector2(995, 548)
 script = ExtResource("7_1og6d")
-available_supplies = Array[Resource("res://Supplies/Supply.gd")]([ExtResource("8_clxw8"), ExtResource("9_dc2ld"), ExtResource("10_5v06q"), ExtResource("11_v5w0f"), ExtResource("12_eknce"), ExtResource("13_ynu4b")])
+available_supplies = Array[Resource("res://Supplies/Supply.gd")]([ExtResource("9_ok0ds"), ExtResource("11_7g0tg"), ExtResource("10_5v06q"), ExtResource("11_v5w0f"), ExtResource("13_068ed"), ExtResource("15_yy6cu")])
 repeat_spawn_curve = SubResource("Curve_o25to")
 
 [node name="Background" type="ColorRect" parent="Storeroom Manager"]
 offset_right = 896.0
 offset_bottom = 512.0
-color = Color(0.176471, 0.25098, 0.345098, 1)
+color = Color(0.164706, 0.14902, 0.258824, 0.584314)
 script = ExtResource("14_7s006")
 
 [node name="Boundry Reference" type="ReferenceRect" parent="Storeroom Manager/Background"]
@@ -233,13 +700,7 @@ position = Vector2(497, 198)
 scale = Vector2(0.25, 0.25)
 floor_stop_on_slope = false
 floor_block_on_wall = false
-script = ExtResource("17_866m0")
-
-[node name="GFX" type="AnimatedSprite2D" parent="Storeroom Manager/Apprentice Character"]
-unique_name_in_owner = true
-scale = Vector2(8, 8)
-sprite_frames = SubResource("SpriteFrames_5ep5n")
-frame_progress = 0.356408
+script = ExtResource("19_piww8")
 
 [node name="Hit Box" type="CollisionShape2D" parent="Storeroom Manager/Apprentice Character"]
 shape = SubResource("CircleShape2D_ohmts")
@@ -261,20 +722,57 @@ one_shot = true
 
 [node name="Footstep Timer" type="Timer" parent="Storeroom Manager/Apprentice Character"]
 
+[node name="Librarian GFX" type="Node2D" parent="Storeroom Manager/Apprentice Character"]
+unique_name_in_owner = true
+position = Vector2(-20, -16)
+scale = Vector2(0.375, 0.375)
+
+[node name="MovementAnimationPlayer" type="AnimationPlayer" parent="Storeroom Manager/Apprentice Character/Librarian GFX"]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_c3o5b")
+}
+playback_default_blend_time = 0.25
+
+[node name="LibrarianLeftFoot" type="Sprite2D" parent="Storeroom Manager/Apprentice Character/Librarian GFX"]
+position = Vector2(-60.0003, 370)
+rotation = -0.462512
+texture = ExtResource("20_fbkrd")
+
+[node name="LibrarianBody" type="Sprite2D" parent="Storeroom Manager/Apprentice Character/Librarian GFX"]
+position = Vector2(-10, 5)
+texture = ExtResource("19_j2csh")
+offset = Vector2(57.09, 0)
+
+[node name="ArmAnimationPlayer" type="AnimationPlayer" parent="Storeroom Manager/Apprentice Character/Librarian GFX/LibrarianBody"]
+unique_name_in_owner = true
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_j67lp")
+}
+playback_default_blend_time = 0.2
+
+[node name="LibrarianArm" type="Sprite2D" parent="Storeroom Manager/Apprentice Character/Librarian GFX/LibrarianBody"]
+z_as_relative = false
+position = Vector2(-194.286, 34.2858)
+rotation = -0.869174
+texture = ExtResource("22_hhkpc")
+offset = Vector2(-124.353, 51.245)
+
+[node name="LibrarianRightFoot" type="Sprite2D" parent="Storeroom Manager/Apprentice Character/Librarian GFX"]
+position = Vector2(130, 370)
+rotation = 0.74002
+texture = ExtResource("21_4tv0r")
+
 [node name="Card Manager" type="Node2D" parent="." groups=["CardManager"]]
 position = Vector2(986, 8)
 script = ExtResource("19_pbgl2")
 
-[node name="ColorRect" type="ColorRect" parent="Card Manager"]
-offset_right = 931.0
-offset_bottom = 526.0
-color = Color(0.47451, 0.0352941, 0.32549, 0.356863)
-
 [node name="Ongoing Abilities Area" type="MarginContainer" parent="Card Manager"]
-offset_left = 20.0
-offset_top = 13.0
-offset_right = 681.0
-offset_bottom = 93.0
+offset_left = 7.0
+offset_top = 10.0
+offset_right = 885.0
+offset_bottom = 95.0
 
 [node name="ColorRect" type="ColorRect" parent="Card Manager/Ongoing Abilities Area"]
 layout_mode = 2
@@ -295,27 +793,32 @@ layout_mode = 2
 position = Vector2(17, 108)
 
 [node name="ColorRect2" type="ColorRect" parent="Card Manager/Hand"]
-offset_right = 665.0
-offset_bottom = 299.0
-color = Color(0.282353, 0.282353, 0.282353, 1)
+offset_left = -11.0
+offset_top = -5.0
+offset_right = 868.0
+offset_bottom = 313.0
+color = Color(0.257207, 0.2337, 0.41, 1)
 
 [node name="Hand Anchors" type="Node2D" parent="Card Manager/Hand"]
 
 [node name="Hand Anchor 1" type="Marker2D" parent="Card Manager/Hand/Hand Anchors"]
-position = Vector2(120, 152)
+position = Vector2(102, 135)
 
 [node name="Hand Anchor 2" type="Marker2D" parent="Card Manager/Hand/Hand Anchors"]
-position = Vector2(328, 151)
+position = Vector2(315, 173)
 
 [node name="Hand Anchor 3" type="Marker2D" parent="Card Manager/Hand/Hand Anchors"]
-position = Vector2(533, 151)
+position = Vector2(532, 142)
+
+[node name="Hand Anchor 4" type="Marker2D" parent="Card Manager/Hand/Hand Anchors"]
+position = Vector2(746, 172)
 
 [node name="Queue" type="Marker2D" parent="Card Manager"]
 unique_name_in_owner = true
-position = Vector2(798, 255)
+position = Vector2(972, 246)
 
 [node name="Card Spawn Point" type="Marker2D" parent="Card Manager"]
-position = Vector2(1071, 507)
+position = Vector2(1183, 474)
 
 [node name="Card Draw Sound" type="AudioStreamPlayer2D" parent="Card Manager"]
 stream = ExtResource("20_tsk7n")
@@ -323,13 +826,14 @@ stream = ExtResource("20_tsk7n")
 [node name="Combo Display" type="MarginContainer" parent="."]
 unique_name_in_owner = true
 offset_left = 1694.0
-offset_top = 998.0
+offset_top = 1000.0
 offset_right = 1897.0
-offset_bottom = 1053.0
+offset_bottom = 1055.0
+theme = ExtResource("26_n4ujd")
 
 [node name="Combo Background" type="ColorRect" parent="Combo Display"]
 layout_mode = 2
-color = Color(0.52549, 0.403922, 0.25098, 1)
+color = Color(0, 0.443137, 0.65098, 1)
 
 [node name="Control" type="MarginContainer" parent="Combo Display"]
 layout_mode = 2
@@ -345,32 +849,39 @@ layout_mode = 2
 text = "Combo: "
 label_settings = ExtResource("20_cob0w")
 
-[node name="Combo Num Label" type="Label" parent="Combo Display/Control/H Box Container"]
+[node name="MarginContainer" type="MarginContainer" parent="Combo Display/Control/H Box Container"]
+layout_mode = 2
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = -12
+
+[node name="Combo Num Label" type="Label" parent="Combo Display/Control/H Box Container/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "0"
-label_settings = ExtResource("21_5p0wj")
+label_settings = SubResource("LabelSettings_0ydsa")
 
 [node name="Combo Type Icon" type="TextureRect" parent="Combo Display/Control/H Box Container"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
-texture = ExtResource("23_8aelf")
+texture = ExtResource("28_4xl6y")
+expand_mode = 1
 stretch_mode = 5
 
 [node name="Enchanter Supplies" type="HBoxContainer" parent="."]
-offset_left = 991.0
-offset_top = 423.0
-offset_right = 1967.0
-offset_bottom = 523.0
+offset_left = 995.0
+offset_top = 438.0
+offset_right = 1596.0
+offset_bottom = 528.0
+theme_override_constants/separation = 20
 
 [node name="Supply UI2" parent="Enchanter Supplies" instance=ExtResource("22_orqwg")]
 layout_mode = 2
-supply = ExtResource("9_dc2ld")
+supply = ExtResource("11_7g0tg")
 
 [node name="Supply UI" parent="Enchanter Supplies" instance=ExtResource("22_orqwg")]
 layout_mode = 2
-supply = ExtResource("8_clxw8")
+supply = ExtResource("9_ok0ds")
 
 [node name="Supply UI3" parent="Enchanter Supplies" instance=ExtResource("22_orqwg")]
 layout_mode = 2
@@ -385,20 +896,21 @@ offset_left = 440.0
 offset_top = 28.0
 offset_right = 946.0
 offset_bottom = 128.0
+theme_override_constants/separation = 20
 alignment = 2
 
 [node name="Supply UI5" parent="Ammo Counters" instance=ExtResource("22_orqwg")]
 layout_mode = 2
-supply = ExtResource("12_eknce")
+supply = ExtResource("13_068ed")
 always_on = true
 
 [node name="Supply UI6" parent="Ammo Counters" instance=ExtResource("22_orqwg")]
 layout_mode = 2
-supply = ExtResource("23_ncq1s")
+supply = ExtResource("29_0cds8")
 
 [node name="Supply UI7" parent="Ammo Counters" instance=ExtResource("22_orqwg")]
 layout_mode = 2
-supply = ExtResource("24_0jap5")
+supply = ExtResource("30_8qded")
 
 [node name="Lives UI" type="HBoxContainer" parent="."]
 anchors_preset = 5
@@ -427,6 +939,37 @@ offset_right = 937.0
 offset_bottom = 1071.0
 show_percentage = false
 script = ExtResource("29_618n4")
+
+[node name="Enchanter Character" type="Node2D" parent="."]
+z_index = 100
+position = Vector2(1527, 455)
+scale = Vector2(0.147355, 0.147355)
+script = ExtResource("34_lmgov")
+
+[node name="Body" type="Sprite2D" parent="Enchanter Character"]
+position = Vector2(0.00082841, 0.000207102)
+texture = ExtResource("31_p3e2w")
+offset = Vector2(80.19, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Enchanter Character"]
+root_node = NodePath("../LeftArm")
+libraries = {
+"": SubResource("AnimationLibrary_su1b8")
+}
+
+[node name="RightArm" type="Sprite2D" parent="Enchanter Character"]
+position = Vector2(-67.8632, -149.299)
+rotation = -0.495674
+scale = Vector2(1.05575, 1.05575)
+texture = ExtResource("35_p5mh7")
+offset = Vector2(-21.37, -152.57)
+
+[node name="LeftArm" type="Sprite2D" parent="Enchanter Character"]
+position = Vector2(52.591, -135.727)
+rotation = 0.493928
+scale = Vector2(0.982605, 0.982606)
+texture = ExtResource("34_qpmps")
+offset = Vector2(31.2, -173.89)
 
 [connection signal="area_entered" from="Storeroom Manager/Apprentice Character/Collection Hitbox" to="Storeroom Manager/Apprentice Character" method="_on_collection_hitbox_area_entered"]
 [connection signal="child_order_changed" from="Card Manager/Hand" to="Card Manager" method="arrange_cards_in_playspace"]

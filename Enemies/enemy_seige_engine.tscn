@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://c67dhecvk3b28"]
 
 [ext_resource type="PackedScene" uid="uid://dxstlyven322l" path="res://Enemies/enemy_base.tscn" id="1_qbjvi"]
-[ext_resource type="Texture2D" uid="uid://1o4747o6apvp" path="res://Enemies/Enemy Sprites/Seige Engine.png" id="2_w238u"]
+[ext_resource type="Texture2D" uid="uid://1o4747o6apvp" path="res://Enemies/Enemy Sprites/Retired/Seige Engine.png" id="2_w238u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4m3x5"]
 atlas = ExtResource("2_w238u")
@@ -43,10 +43,11 @@ animations = [{
 size = Vector2(288, 232)
 
 [node name="Seige Engine" instance=ExtResource("1_qbjvi")]
-enemy_name = "Seige Engine"
-move_speed = 8.0
+position = Vector2(0, -1)
+max_speed = 10.0
 health = 150.0
-shovable = false
+play_bounce_walk_animation = false
+knockback_multiplier = 0.0
 vulnerabilities = Array[int]([1])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="0"]
@@ -55,14 +56,14 @@ sprite_frames = SubResource("SpriteFrames_16jxc")
 frame = 2
 frame_progress = 0.821051
 
-[node name="Sprite" parent="." index="1"]
+[node name="GFX" parent="." index="1"]
 visible = false
 
-[node name="Hit Box" parent="." index="2"]
+[node name="Hit Box" parent="." index="3"]
 position = Vector2(-15, -2)
 shape = SubResource("RectangleShape2D_vxenc")
 
-[node name="VisibleOnScreenNotifier2D" parent="." index="5"]
+[node name="VisibleOnScreenNotifier2D" parent="." index="6"]
 modulate = Color(1, 1, 1, 0.196078)
 position = Vector2(-8.49999, 0.5)
 scale = Vector2(15.25, 12.25)

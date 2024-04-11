@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cvs4hhfup5qgy"
+path="res://.godot/imported/walking-on-a-wooden-floor-32056.mp3-b95623c7dd12c3b4125551a2146c0985.mp3str"
+
+[deps]
+
+source_file="res://Storeroom/Footstep Sounds/walking-on-a-wooden-floor-32056.mp3"
+dest_files=["res://.godot/imported/walking-on-a-wooden-floor-32056.mp3-b95623c7dd12c3b4125551a2146c0985.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

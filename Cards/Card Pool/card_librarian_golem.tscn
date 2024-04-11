@@ -1,20 +1,25 @@
-[gd_scene load_steps=9 format=3 uid="uid://tth5yw0eirm6"]
+[gd_scene load_steps=11 format=3 uid="uid://tth5yw0eirm6"]
 
 [ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_joby5"]
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_6aw5q"]
-[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_crww2"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/Essence.tres" id="3_crww2"]
 [ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="4_i6c6m"]
-[ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Effects/card_text.tscn" id="5_lrmod"]
-[ext_resource type="PackedScene" uid="uid://dspow6wbdypge" path="res://Cards/Card Effects/exhaust.tscn" id="6_t3y3o"]
-[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_OngoingAbility.gd" id="7_hvlsp"]
+[ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Components/card_text.tscn" id="5_lrmod"]
+[ext_resource type="Script" path="res://Cards/Card Components/CardEffect_OngoingAbility.gd" id="7_hvlsp"]
+[ext_resource type="PackedScene" uid="uid://cqnqwdyuqlusg" path="res://Cards/Card Components/Exhaust.tscn" id="8_37tsb"]
 [ext_resource type="PackedScene" uid="uid://5p2uuetniwn6" path="res://Cards/Ongoing Abilities/ongoing_ability_draw.tscn" id="8_c7ti2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_h84cl"]
+resource_local_to_scene = true
+font_size = 26
+
+[sub_resource type="LabelSettings" id="LabelSettings_wh87p"]
+resource_local_to_scene = true
+font_size = 26
 
 [node name="Librarian Golem" instance=ExtResource("1_joby5")]
 card_type = "Draw"
 card_name = "Librarian Golem"
-
-[node name="Background Color" parent="Card Face" index="0"]
-color = Color(0.0352941, 0.0666667, 0.486275, 1)
 
 [node name="Essence x4" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_6aw5q")]
 layout_mode = 2
@@ -25,16 +30,24 @@ count = 4
 layout_mode = 2
 supply = ExtResource("4_i6c6m")
 
-[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer" index="0"]
 text = "Librarian Golem"
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("5_lrmod")]
 layout_mode = 2
 text = "Every 5 seconds, draw a card"
+label_settings = SubResource("LabelSettings_h84cl")
 
-[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Exhaust" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1" instance=ExtResource("6_t3y3o")]
-layout_mode = 2
-
-[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#CardEffect_OngoingAbility" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2"]
+[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#CardEffect_OngoingAbility" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1"]
 script = ExtResource("7_hvlsp")
 ongoing_ability_prefab = ExtResource("8_c7ti2")
+
+[node name="Exhaust" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2" instance=ExtResource("8_37tsb")]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_wh87p")
+
+[node name="Top Nubs" parent="Top Roll" index="0"]
+modulate = Color(0, 0.247059, 0.360784, 1)
+
+[node name="Bottom Nubs" parent="Bottom Roll" index="0"]
+modulate = Color(0, 0.247059, 0.360784, 1)

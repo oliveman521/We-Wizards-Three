@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Tablet" load_steps=3 format=3 uid="uid://bjgnfhrpwmh30"]
+
+[ext_resource type="Script" path="res://Supplies/Tablet.gd" id="1_1vkuh"]
+[ext_resource type="Texture2D" uid="uid://hsv4ge3p87k3" path="res://Cards/Card Sprites/card_icon.svg" id="1_fxni3"]
+
+[resource]
+script = ExtResource("1_1vkuh")
+supply_name = "Tablet"
+icon = ExtResource("1_fxni3")
+starting_count = 0
+color = Color(1, 1, 1, 1)
+pickup_spawn_rate = 1.0
+pickup_count_min = 1
+pickup_count_max = 1
+supply_count = 0

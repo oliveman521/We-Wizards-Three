@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dkn1p6g0q7pqb"]
 
 [ext_resource type="PackedScene" uid="uid://c5hptnef0j41i" path="res://Projectiles/base_projectile.tscn" id="1_xnejf"]
-[ext_resource type="Texture2D" uid="uid://cujvg6d285xgm" path="res://Sprites/arrow.png" id="2_ppe5v"]
+[ext_resource type="Texture2D" uid="uid://cujvg6d285xgm" path="res://Sprites/Needs Replacement/arrow.png" id="2_ppe5v"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_toyxl"]
 radius = 3.2

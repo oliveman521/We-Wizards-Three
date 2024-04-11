@@ -4,12 +4,14 @@ class_name Projectile
 @export var speed: float = 750
 @export var damage: float = 1
 @export var damage_type: GameManager.Damage_Type
+@export var knockback: float = 10
 @export var spawn_on_hit: Array[PackedScene]
 
 @onready var sprite: Sprite2D = $Sprite
 
 @export_range(0,0.5) var screen_shake_on_shot: float = 0.01
 @export_range(0,0.5) var screen_shake_on_hit: float = 0.01
+
 
 @export var shoot_sound_pitch_variance: float = 0.2
 @onready var shoot_sound: AudioStreamPlayer2D = $"Shoot Sound"
@@ -23,7 +25,6 @@ var direction: Vector2 = Vector2(-1,0)
 func _ready() -> void:
 	SoundManager.play_sound(shoot_sound, shoot_sound_pitch_variance)
 	GameCamera.instance.shake(screen_shake_on_shot)
-	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -54,5 +55,5 @@ func _on_body_entered(body: Node2D) -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Enemies") and target == "Enemy":
-		area.take_damage(damage_type, damage)
+		area.take_damage(damage_type, damage, knockback)
 		impact_effect()

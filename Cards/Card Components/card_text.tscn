@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://vbnhq8fvb12k"]
+
+[ext_resource type="Theme" uid="uid://bc5qy3dgbkg6c" path="res://UI/Partchment.tres" id="1_dmokm"]
+[ext_resource type="LabelSettings" uid="uid://bejclfut5msaj" path="res://Cards/Card Body Font.tres" id="2_huqor"]
+[ext_resource type="Script" path="res://Cards/Card Components/card_text.gd" id="3_tpr07"]
+
+[node name="Card text" type="Label"]
+modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(5, 5)
+offset_right = 124.0
+offset_bottom = 44.0
+theme = ExtResource("1_dmokm")
+text = "Card Text Here"
+label_settings = ExtResource("2_huqor")
+horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("3_tpr07")

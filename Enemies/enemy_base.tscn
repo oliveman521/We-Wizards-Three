@@ -1,25 +1,92 @@
-[gd_scene load_steps=5 format=3 uid="uid://dxstlyven322l"]
+[gd_scene load_steps=8 format=3 uid="uid://dxstlyven322l"]
 
 [ext_resource type="Script" path="res://Enemies/Enemy.gd" id="1_kdqp5"]
-[ext_resource type="Texture2D" uid="uid://dmfnvhpd45csc" path="res://Enemies/Enemy Sprites/Knight.png" id="2_2irau"]
+[ext_resource type="Texture2D" uid="uid://dmfnvhpd45csc" path="res://Enemies/Enemy Sprites/Retired/Knight.png" id="2_2irau"]
 [ext_resource type="AudioStream" uid="uid://dqosky0tpk8r8" path="res://Life Lost Sound.wav" id="3_vofas"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uokdr"]
 size = Vector2(54, 92)
 
+[sub_resource type="Animation" id="Animation_8r8n1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GFX:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GFX:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bmmnn"]
+resource_name = "Walk"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GFX:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.10472, 0.0174533, -0.0872665, 0.0174533]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GFX:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 2.37843, 1, 2.37843),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -7), Vector2(0, 0), Vector2(0, -7)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f0vt4"]
+_data = {
+"RESET": SubResource("Animation_8r8n1"),
+"Walk": SubResource("Animation_bmmnn")
+}
+
 [node name="Base" type="Area2D" groups=["Enemies"]]
 script = ExtResource("1_kdqp5")
+max_speed = 50.0
 
-[node name="Sprite" type="Sprite2D" parent="."]
-y_sort_enabled = true
-position = Vector2(0, -6)
-scale = Vector2(3, 3)
-texture = ExtResource("2_2irau")
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+modulate = Color(1, 1, 1, 0.329412)
+position = Vector2(-5, -12.5)
+scale = Vector2(3.1, 5.35)
 
 [node name="Hit Box" type="CollisionShape2D" parent="."]
 modulate = Color(1, 1, 1, 0.215686)
 position = Vector2(-5, -8)
 shape = SubResource("RectangleShape2D_uokdr")
+
+[node name="BounceWalkAnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_f0vt4")
+}
 
 [node name="Fire Rate Timer" type="Timer" parent="."]
 
@@ -28,10 +95,13 @@ visible = false
 position = Vector2(25, -11)
 target_position = Vector2(54, 0)
 
-[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-modulate = Color(1, 1, 1, 0.0392157)
-position = Vector2(-8, -8)
-scale = Vector2(3.7, 5.1)
+[node name="GFX" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite2D" parent="GFX"]
+y_sort_enabled = true
+position = Vector2(0, -6)
+scale = Vector2(3, 3)
+texture = ExtResource("2_2irau")
 
 [node name="Damaged Base Sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_vofas")

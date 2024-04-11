@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://4l40ype480h"]
 
 [ext_resource type="PackedScene" uid="uid://ddavd71iwja5g" path="res://Levels/template_level.tscn" id="1_7e435"]
-[ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Tablet.tres" id="2_ieovm"]
-[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_a6262"]
+[ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Card_Pickup.tres" id="2_ieovm"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/Essence.tres" id="3_a6262"]
 [ext_resource type="PackedScene" uid="uid://cn7apof2y3wfd" path="res://Enemies/enemy_archer.tscn" id="4_x1ut7"]
 [ext_resource type="PackedScene" uid="uid://c67dhecvk3b28" path="res://Enemies/enemy_seige_engine.tscn" id="5_kwnhh"]
 [ext_resource type="PackedScene" uid="uid://b5t5chbh5x6vr" path="res://Enemies/enemy_peasent.tscn" id="6_q7etq"]

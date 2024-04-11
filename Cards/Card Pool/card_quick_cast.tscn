@@ -1,20 +1,25 @@
-[gd_scene load_steps=9 format=3 uid="uid://bt6cb8kc2x7u4"]
+[gd_scene load_steps=11 format=3 uid="uid://bt6cb8kc2x7u4"]
 
 [ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_rnr8d"]
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_4m1m2"]
-[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_t2fp0"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/Essence.tres" id="3_t2fp0"]
 [ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="4_ssy8d"]
-[ext_resource type="LabelSettings" uid="uid://buqi3tt5804u0" path="res://UI/Fonts/small_text.tres" id="5_5ed16"]
-[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_OngoingAbility.gd" id="6_u18rv"]
+[ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Components/card_text.tscn" id="5_fqsj4"]
+[ext_resource type="Script" path="res://Cards/Card Components/CardEffect_OngoingAbility.gd" id="6_u18rv"]
 [ext_resource type="PackedScene" uid="uid://c7dw3bs2deeos" path="res://Cards/Ongoing Abilities/ongoing_ability_firerate.tscn" id="7_34dfu"]
-[ext_resource type="PackedScene" uid="uid://dspow6wbdypge" path="res://Cards/Card Effects/exhaust.tscn" id="8_af6hp"]
+[ext_resource type="PackedScene" uid="uid://cqnqwdyuqlusg" path="res://Cards/Card Components/Exhaust.tscn" id="8_af6hp"]
 
-[node name="Card" instance=ExtResource("1_rnr8d")]
+[sub_resource type="LabelSettings" id="LabelSettings_v5rl1"]
+resource_local_to_scene = true
+font_size = 26
+
+[sub_resource type="LabelSettings" id="LabelSettings_ulpjv"]
+resource_local_to_scene = true
+font_size = 26
+
+[node name="Quick Cast" instance=ExtResource("1_rnr8d")]
 card_type = "Buff"
-card_name = "Aura of Quick Cast"
-
-[node name="Background Color" parent="Card Face" index="0"]
-color = Color(0.227451, 0.486275, 0.243137, 1)
+card_name = "Quick Cast"
 
 [node name="Essence x3" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_4m1m2")]
 layout_mode = 2
@@ -25,15 +30,13 @@ count = 3
 layout_mode = 2
 supply = ExtResource("4_ssy8d")
 
-[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
-text = "Aura of Quick Cast"
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer" index="0"]
+text = "Quick Cast"
 
-[node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" type="Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0"]
+[node name="Card text" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("5_fqsj4")]
 layout_mode = 2
-text = "Increase Warlock Rate of Fire by 50%."
-label_settings = ExtResource("5_5ed16")
-horizontal_alignment = 1
-autowrap_mode = 2
+text = "Increase the warlock's Fire Rate by 50%"
+label_settings = SubResource("LabelSettings_v5rl1")
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#CardEffect_OngoingAbility" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1"]
 script = ExtResource("6_u18rv")
@@ -41,4 +44,12 @@ ongoing_ability_prefab = ExtResource("7_34dfu")
 amnt = 1.5
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Exhaust" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2" instance=ExtResource("8_af6hp")]
+modulate = Color(0.670588, 0.121569, 0, 1)
 layout_mode = 2
+label_settings = SubResource("LabelSettings_ulpjv")
+
+[node name="Top Nubs" parent="Top Roll" index="0"]
+modulate = Color(0.313726, 0.737255, 0.486275, 1)
+
+[node name="Bottom Nubs" parent="Bottom Roll" index="0"]
+modulate = Color(0.313726, 0.737255, 0.486275, 1)

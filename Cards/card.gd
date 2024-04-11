@@ -3,19 +3,20 @@ extends Control
 class_name Card
 
 @onready var button: Button = %Button
-@onready var card_back: Control = %"Card Back"
 
 @onready var card_name_UI: Label = %CardName
 @onready var costs_UI_section: Control = %Costs
 @onready var effects_UI_section: Control = %Effects
-@onready var background_color_UI: ColorRect =  %"Background Color"
 
 @onready var play_sound: AudioStreamPlayer2D = %"Play Sound"
 @onready var discard_sound: AudioStreamPlayer2D = %"Discard Sound"
 @onready var cannot_be_played_sound: AudioStreamPlayer2D = %"Cannot Be Played Sound"
+@onready var roll_animation_player: AnimationPlayer = $RollAnimationPlayer
+const UNROLL_ANIMATION: String = "Unroll"
+const ROLL_ANIMATION: String = "Roll Up"
 
-@onready var highlight_ui: ColorRect = $Highlight
-@onready var warning_ui: TextureRect = $Warning
+
+@onready var highlight_ui: Control = $Highlight
 
 var card_mode: String = "none"
 const DECK_BUILDING_MODE = "DECK_BUILDING_MODE"
@@ -27,18 +28,18 @@ const PREVIEW_MODE = "PREVIEW_MODE"
 @export_enum("Misc", "Draw", "Fire Damage", "Lightning Damage", "Crafting", "Buff") var card_type: String = "Misc":
 	set(new_val):
 		card_type = new_val
-		if background_color_UI:
-			background_color_UI.color = card_type_color_dict[card_type]
+		%"Top Nubs".modulate = card_type_color_dict[card_type]
+		%"Bottom Nubs".modulate = card_type_color_dict[card_type]		
 		queue_redraw()
 
 #TODO mixed type cards would be kinda sick
 var card_type_color_dict: Dictionary = {
-	"Misc": Color("#3b097c"), 
-	"Draw" : Color("#09117c"), 
-	"Fire Damage": Color("#7c1b09"),
-	"Lightning Damage": Color("#96901e"),	
-	"Crafting": Color("#c79650"),
-	"Buff": Color("#3a7c3e"),
+	"Misc": Color("#58508d"), 
+	"Draw" : Color("#0096d3"), 
+	"Fire Damage": Color("#ff6361"),
+	"Lightning Damage": Color("#ffa600"),	
+	"Crafting": Color("#58508d"),
+	"Buff": Color("#50bc7c"),
 }
 
 
@@ -59,7 +60,7 @@ signal card_discarded()
 	set(new_val):
 		plus_version = new_val
 		if not Engine.is_editor_hint(): return
-		const plus_color: Color = Color("65ee71")
+		const plus_color: Color = Color("205a2c")
 		if new_val == true:
 			card_name_UI.modulate = plus_color
 		else:
@@ -76,7 +77,7 @@ var supplies_interacted_with: Array[Supply]:
 		return []
 
 var card_manager: CardManager:
-	get: return GameManager.card_manager as CardManager
+	get: return CardManager.instance
 
 
 signal card_pressed
@@ -110,12 +111,16 @@ func get_supply_costs() -> Array[Supply]:
 	return costs
 
 func _ready() -> void:
-	background_color_UI.color = card_type_color_dict[card_type]
+	card_type = card_type
+	card_name
+	roll_animation_player.play("RESET")
 
 
 func _process(_delta: float) -> void:
 	if card_mode == HAND_MODE:
-		if check_costs():
+		if roll_animation_player.is_playing():
+			highlight_ui.visible = false
+		elif check_costs():
 			highlight(Color.FOREST_GREEN)
 		else:
 			highlight_ui.visible = false
@@ -145,7 +150,8 @@ func play() -> void:
 	if not check_costs(): #TODO currently this is a double check and shouldn't be necessary
 		print("!!!You can't play that card because it costs too much! This should never fire")
 		return
-	card_played.emit() 
+	card_played.emit()
+	card_manager.instance.card_played.emit(self)
 	
 	SoundManager.play_sound(play_sound)
 	
@@ -158,30 +164,35 @@ func play() -> void:
 		if node.has_method("use_effect"):
 			await node.use_effect()
 	
-	await slide_card_away(Vector2.UP, Color(0,1,0,0))
-	#animate it flying away
+	await slide_card_away(Vector2.LEFT, Color(0,1,0,0)) #animate it flying away
 	
 	if exhausts_on_play: #return card to our deck as long as we aren't supposed to exhaust
+		print("card exhausted")
 		pass #TODO exhaust visual
 	else:
 		card_manager.cards_in_deck.append(self.duplicate()) #NOTE this duplicate is transparent cuz dumb reasons. This should be be fixed, but I'll add a quick note to make it full visible on arrangeing the playspace
 	queue_free()
 
 func enter_queue_mode() -> void:
-	card_mode = HAND_QUEUE_MODE
-	button.mouse_filter = Control.MOUSE_FILTER_STOP
-	card_back.visible = true
-	highlight_ui.visible = false
+	const rotation_noise: float = 15
+	if card_mode != HAND_QUEUE_MODE:
+		card_mode = HAND_QUEUE_MODE
+		rotation_degrees += randf_range(-rotation_noise, rotation_noise)
+		button.mouse_filter = Control.MOUSE_FILTER_STOP
+		highlight_ui.visible = false
+		roll_animation_player.play(ROLL_ANIMATION)
 
 func enter_hand_mode() -> void:
-	card_mode = HAND_MODE
-	button.mouse_filter = Control.MOUSE_FILTER_STOP
-	card_back.visible = false
+	if card_mode != HAND_MODE:
+		card_mode = HAND_MODE
+		rotation_degrees = 0
+		button.mouse_filter = Control.MOUSE_FILTER_STOP
+		roll_animation_player.play(UNROLL_ANIMATION)
 
 func enter_preview_mode() -> void:
 	card_mode = PREVIEW_MODE
 	button.mouse_filter = Control.MOUSE_FILTER_IGNORE
-
+	roll_animation_player.play(UNROLL_ANIMATION)
 	if num_in_collection == 0:
 		highlight(Color.YELLOW)
 
@@ -222,6 +233,8 @@ func _on_button_gui_input(event: InputEvent) -> void:
 
 func discard() -> void:
 	card_discarded.emit()
+	roll_animation_player.play(ROLL_ANIMATION)
+	card_manager.instance.card_discarded.emit(self)
 	SoundManager.play_sound(discard_sound)
 	await slide_card_away(Vector2.DOWN, Color(1,0,0,0))
 	card_manager.cards_in_deck.append(self.duplicate()) #TODO. This should somehow go back to the deck. Right now it's doing some christopher nolan's the prestige type shit

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqnqwdyuqlusg"]
+
+[ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Components/card_text.tscn" id="1_y32ns"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wsykr"]
+resource_local_to_scene = true
+font_size = 26
+
+[node name="Exhaust" groups=["Exhaust"] instance=ExtResource("1_y32ns")]
+modulate = Color(0.52549, 0, 0, 1)
+text = "Exhaust."
+label_settings = SubResource("LabelSettings_wsykr")
+preset = "Negative Red"

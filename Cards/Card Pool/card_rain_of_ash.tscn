@@ -3,31 +3,29 @@
 [ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_ft74s"]
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_ojt02"]
 [ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="3_5jod2"]
-[ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Effects/card_text.tscn" id="4_0hbfb"]
-[ext_resource type="FontFile" uid="uid://t4iceb2drwa2" path="res://UI/Fonts/Franklin Gothic Medium Regular.ttf" id="5_0qy5n"]
-[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_DrawDiscard.gd" id="6_da4o5"]
-[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_Damage.gd" id="7_chi1p"]
+[ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Components/card_text.tscn" id="4_0hbfb"]
+[ext_resource type="Script" path="res://Cards/Card Components/CardEffect_DrawDiscard.gd" id="6_da4o5"]
+[ext_resource type="Script" path="res://Cards/Card Components/CardEffect_Damage.gd" id="7_chi1p"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_iwok5"]
-font = ExtResource("5_0qy5n")
-font_size = 20
-outline_size = 8
-outline_color = Color(0, 0, 0, 1)
+[sub_resource type="LabelSettings" id="LabelSettings_4n0v3"]
+resource_local_to_scene = true
+font_size = 26
+
+[sub_resource type="LabelSettings" id="LabelSettings_g6euk"]
+resource_local_to_scene = true
+font_size = 26
 
 [node name="Rain Of Ash" instance=ExtResource("1_ft74s")]
 scale = Vector2(1, 0.990783)
 card_type = "Fire Damage"
 card_name = "Rain Of Ash"
 
-[node name="Background Color" parent="Card Face" index="0"]
-color = Color(0.486275, 0.105882, 0.0352941, 1)
-
 [node name="Fire Gem x2" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_ojt02")]
 layout_mode = 2
 supply = ExtResource("3_5jod2")
 count = 2
 
-[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer" index="0"]
 text = "Rain Of Ash"
 
 [node name="Damage" type="Node" parent="Card Face/Internal Margin/VBoxContainer" index="2"]
@@ -37,17 +35,26 @@ amnt = 3
 targets = "Random"
 
 [node name="Card text" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("4_0hbfb")]
+modulate = Color(0.670588, 0.121569, 0, 1)
 layout_mode = 2
 text = "Discard All Cards."
+label_settings = SubResource("LabelSettings_4n0v3")
+preset = "Negative Red"
 
-[node name="Card text2" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1" instance=ExtResource("4_0hbfb")]
-layout_mode = 2
-text = "Deal 3 Damage to X random enemies where X is the number of cards discarded."
-label_settings = SubResource("LabelSettings_iwok5")
-
-[node name="CardEffect_Draw" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2"]
+[node name="CardEffect_Draw" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1"]
 script = ExtResource("6_da4o5")
 count = 50
 effect_type = "Discard"
+
+[node name="Card text2" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2" instance=ExtResource("4_0hbfb")]
+layout_mode = 2
+text = "Deal 3 damage to X random enemies where X is the number of cards discarded"
+label_settings = SubResource("LabelSettings_g6euk")
+
+[node name="Top Nubs" parent="Top Roll" index="0"]
+modulate = Color(1, 0.388235, 0.380392, 1)
+
+[node name="Bottom Nubs" parent="Bottom Roll" index="0"]
+modulate = Color(1, 0.388235, 0.380392, 1)
 
 [connection signal="x_callback" from="Card Face/Internal Margin/VBoxContainer/Effects/CardEffect_Draw" to="Card Face/Internal Margin/VBoxContainer/Damage" method="damage_x_targets"]

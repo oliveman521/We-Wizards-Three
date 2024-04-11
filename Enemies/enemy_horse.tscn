@@ -1,18 +1,23 @@
 [gd_scene load_steps=4 format=3 uid="uid://js3hynbdo0ls"]
 
 [ext_resource type="PackedScene" uid="uid://dxstlyven322l" path="res://Enemies/enemy_base.tscn" id="1_koesm"]
-[ext_resource type="Texture2D" uid="uid://cmv2hlf6ahjim" path="res://Enemies/Enemy Sprites/Horse.png" id="2_6c3u2"]
+[ext_resource type="Texture2D" uid="uid://cmv2hlf6ahjim" path="res://Enemies/Enemy Sprites/Retired/Horse.png" id="2_6c3u2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ftoj"]
 size = Vector2(143, 87)
 
 [node name="Horse" instance=ExtResource("1_koesm")]
-move_speed = 150.0
+max_speed = 100.0
 health = 2.0
+play_bounce_walk_animation = true
 
-[node name="Sprite" parent="." index="0"]
+[node name="Sprite" parent="GFX" index="0"]
 texture = ExtResource("2_6c3u2")
 
-[node name="Hit Box" parent="." index="1"]
+[node name="Hit Box" parent="." index="2"]
 position = Vector2(-9.5, -7.5)
 shape = SubResource("RectangleShape2D_4ftoj")
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="5"]
+position = Vector2(-9.5, -9)
+scale = Vector2(7.85, 5)

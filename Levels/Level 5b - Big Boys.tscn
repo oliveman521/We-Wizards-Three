@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://qiwvts513giv"]
 
 [ext_resource type="PackedScene" uid="uid://ddavd71iwja5g" path="res://Levels/template_level.tscn" id="1_ndt22"]
-[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="2_2wm0a"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/Essence.tres" id="2_2wm0a"]
 [ext_resource type="PackedScene" uid="uid://b5t5chbh5x6vr" path="res://Enemies/enemy_peasent.tscn" id="2_xa13r"]
 [ext_resource type="PackedScene" uid="uid://d02ehopagg68u" path="res://Enemies/enemy_hulking_peasent.tscn" id="3_ab7e0"]
 [ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="3_nmxyt"]
-[ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Blank_Scroll.tres" id="4_kmud1"]
-[ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Tablet.tres" id="5_jq41f"]
+[ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Empty_Orbs.tres" id="4_kmud1"]
+[ext_resource type="Resource" uid="uid://bjgnfhrpwmh30" path="res://Supplies/Card_Pickup.tres" id="5_jq41f"]
 
 [node name="Level 5b" instance=ExtResource("1_ndt22")]
 level_name = "Level 5b"

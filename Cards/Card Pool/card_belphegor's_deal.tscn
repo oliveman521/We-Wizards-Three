@@ -3,41 +3,41 @@
 [ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_deers"]
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_j4y7n"]
 [ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="3_rlwtj"]
-[ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Effects/card_text.tscn" id="4_jl8oo"]
-[ext_resource type="FontFile" uid="uid://t4iceb2drwa2" path="res://UI/Fonts/Franklin Gothic Medium Regular.ttf" id="5_hgbx0"]
-[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_StoreroomEffects.gd" id="6_grji5"]
+[ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Components/card_text.tscn" id="4_jl8oo"]
+[ext_resource type="Script" path="res://Cards/Card Components/CardEffect_StoreroomEffects.gd" id="6_grji5"]
 [ext_resource type="PackedScene" uid="uid://b02qbm1dc1ap3" path="res://Storeroom/snare.tscn" id="7_jujw2"]
-[ext_resource type="Script" path="res://Cards/Card Effects/CardEffect_Damage.gd" id="8_uegu8"]
+[ext_resource type="Script" path="res://Cards/Card Components/CardEffect_Damage.gd" id="8_uegu8"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_n4mn2"]
-font = ExtResource("5_hgbx0")
-font_size = 21
-font_color = Color(0.996078, 0.321569, 0.309804, 1)
-outline_size = 8
-outline_color = Color(0, 0, 0, 1)
+[sub_resource type="LabelSettings" id="LabelSettings_eh6ic"]
+resource_local_to_scene = true
+font_size = 26
+
+[sub_resource type="LabelSettings" id="LabelSettings_u7wr3"]
+resource_local_to_scene = true
+font_size = 26
 
 [node name="Belphegor\'s Deal" instance=ExtResource("1_deers")]
 card_type = "Fire Damage"
 card_name = "Belphegor's Deal"
 
-[node name="Background Color" parent="Card Face" index="0"]
-color = Color(0.486275, 0.105882, 0.0352941, 1)
-
 [node name="Fire Gem x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_j4y7n")]
 layout_mode = 2
 supply = ExtResource("3_rlwtj")
 
-[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer" index="0"]
 text = "Belphegor's Deal"
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("4_jl8oo")]
+modulate = Color(0.670588, 0.121569, 0, 1)
 layout_mode = 2
-text = "Spawn 3 snares in the Storeroom"
-label_settings = SubResource("LabelSettings_n4mn2")
+text = "Spawn 3 snares in the Storeroom."
+label_settings = SubResource("LabelSettings_eh6ic")
+preset = "Negative Red"
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label2" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1" instance=ExtResource("4_jl8oo")]
 layout_mode = 2
-text = "Then, deal 2 damage to every enemy"
+text = "Deal 2 damage to every enemy."
+label_settings = SubResource("LabelSettings_u7wr3")
 
 [node name="CardEffect_StoreroomEffects" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2"]
 script = ExtResource("6_grji5")
@@ -48,3 +48,9 @@ count = 3
 script = ExtResource("8_uegu8")
 dmg_type = 1
 amnt = 2
+
+[node name="Top Nubs" parent="Top Roll" index="0"]
+modulate = Color(1, 0.388235, 0.380392, 1)
+
+[node name="Bottom Nubs" parent="Bottom Roll" index="0"]
+modulate = Color(1, 0.388235, 0.380392, 1)

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://lgw6v4tq6skb"]
+
+[ext_resource type="Texture2D" uid="uid://dfug8tu5mwsi3" path="res://Cards/Card Sprites/Card Art/Librarian pickup.svg" id="1_yvuhm"]
+
+[node name="Card Art" type="TextureRect"]
+modulate = Color(1, 1, 1, 0.490196)
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 86.0
+offset_bottom = 68.0
+size_flags_vertical = 3
+texture = ExtResource("1_yvuhm")
+expand_mode = 1
+stretch_mode = 5

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxjug8dnpnau1"]
+
+[ext_resource type="PackedScene" uid="uid://c5hptnef0j41i" path="res://Projectiles/base_projectile.tscn" id="1_kgwri"]
+[ext_resource type="PackedScene" uid="uid://dxfxfbn22qco0" path="res://Projectiles/fireball_explosion.tscn" id="2_puxkt"]
+[ext_resource type="AudioStream" uid="uid://bq2035sk6n424" path="res://Projectiles/Projectile Sounds/fireball_shot.wav" id="3_euygn"]
+
+[node name="Bullet" instance=ExtResource("1_kgwri")]
+speed = 500.0
+damage = 2.0
+damage_type = 1
+knockback = 50.0
+spawn_on_hit = Array[PackedScene]([ExtResource("2_puxkt")])
+
+[node name="Sprite" parent="." index="1"]
+modulate = Color(0.882353, 0.333333, 0, 1)
+scale = Vector2(2, 2)
+
+[node name="Shoot Sound" parent="." index="3"]
+stream = ExtResource("3_euygn")

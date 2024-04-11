@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://2a7skipqumtp"]
+
+[ext_resource type="PackedScene" uid="uid://bj3xl0y5gxddn" path="res://Cards/Ongoing Abilities/ongoing_ability_base.tscn" id="1_6h7rb"]
+[ext_resource type="Script" path="res://Cards/Card Components/CardEffect_GainSupplies.gd" id="2_dkqtu"]
+[ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Supplies/Mana_Orb.tres" id="3_j1r82"]
+[ext_resource type="Texture2D" uid="uid://dqux2mp7y74er" path="res://Sprites/mana_orb.svg" id="4_eictp"]
+
+[node name="Ongoing Ability" instance=ExtResource("1_6h7rb")]
+timed = true
+time = 5.0
+
+[node name="CardEffect_GainSupplies" type="Node" parent="Timeout Effects" index="0"]
+script = ExtResource("2_dkqtu")
+type = ExtResource("3_j1r82")
+
+[node name="Icon" parent="Icon Margin" index="0"]
+texture = ExtResource("4_eictp")
