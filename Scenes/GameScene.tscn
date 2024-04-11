@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://c4qnaj4cqxgny"]
+[gd_scene load_steps=62 format=3 uid="uid://c4qnaj4cqxgny"]
 
 [ext_resource type="Script" path="res://Scenes/GameCamera.gd" id="1_s2bat"]
 [ext_resource type="Texture2D" uid="uid://bn43ka1kdc2cn" path="res://Sprites/grass.svg" id="2_sgm25"]
@@ -25,12 +25,13 @@
 [ext_resource type="Texture2D" uid="uid://b3fhrgudsqqg4" path="res://Sprites/Characters/Librarian/Librarian_Left Foot.svg" id="20_fbkrd"]
 [ext_resource type="AudioStream" uid="uid://cluutx7eq6nwh" path="res://Cards/Card Sounds/card_sliding.wav" id="20_tsk7n"]
 [ext_resource type="Texture2D" uid="uid://bi1fguhvvw11t" path="res://Sprites/Characters/Librarian/Librarian_Right Foot.svg" id="21_4tv0r"]
-[ext_resource type="LabelSettings" uid="uid://csj8lqpyqucr2" path="res://UI/Fonts/large_text.tres" id="21_5p0wj"]
 [ext_resource type="Texture2D" uid="uid://bib82puqqynfm" path="res://Sprites/Characters/Librarian/Librarian_Arm.svg" id="22_hhkpc"]
 [ext_resource type="PackedScene" uid="uid://btsj4ae1ih5n1" path="res://UI/supply_ui.tscn" id="22_orqwg"]
 [ext_resource type="Script" path="res://UI/Health_UI.gd" id="25_kiqjr"]
 [ext_resource type="PackedScene" uid="uid://2jby5kudglct" path="res://UI/heart_UI.tscn" id="26_fl5xy"]
+[ext_resource type="Theme" uid="uid://bc5qy3dgbkg6c" path="res://UI/Partchment.tres" id="26_n4ujd"]
 [ext_resource type="Texture2D" uid="uid://bcurj21u5xa7n" path="res://Sprites/essence.svg" id="28_4xl6y"]
+[ext_resource type="FontFile" uid="uid://dlt608jfryhnw" path="res://UI/Fonts/Handwritten Styles/Info Story.ttf" id="28_e3gpn"]
 [ext_resource type="Resource" uid="uid://bow64ukpfnomj" path="res://Supplies/Fire_Orb.tres" id="29_0cds8"]
 [ext_resource type="Script" path="res://Scenes/LevelProgress.gd" id="29_618n4"]
 [ext_resource type="Resource" uid="uid://0wqn3ujbcm2j" path="res://Supplies/Lightning_Orb.tres" id="30_8qded"]
@@ -405,6 +406,12 @@ _data = {
 "RESET": SubResource("Animation_1br2w"),
 "Walk": SubResource("Animation_ys6ik")
 }
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ydsa"]
+font = ExtResource("28_e3gpn")
+font_size = 48
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_c425b"]
 resource_name = "Cast"
@@ -822,6 +829,7 @@ offset_left = 1694.0
 offset_top = 1000.0
 offset_right = 1897.0
 offset_bottom = 1055.0
+theme = ExtResource("26_n4ujd")
 
 [node name="Combo Background" type="ColorRect" parent="Combo Display"]
 layout_mode = 2
@@ -841,11 +849,16 @@ layout_mode = 2
 text = "Combo: "
 label_settings = ExtResource("20_cob0w")
 
-[node name="Combo Num Label" type="Label" parent="Combo Display/Control/H Box Container"]
+[node name="MarginContainer" type="MarginContainer" parent="Combo Display/Control/H Box Container"]
+layout_mode = 2
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = -12
+
+[node name="Combo Num Label" type="Label" parent="Combo Display/Control/H Box Container/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "0"
-label_settings = ExtResource("21_5p0wj")
+label_settings = SubResource("LabelSettings_0ydsa")
 
 [node name="Combo Type Icon" type="TextureRect" parent="Combo Display/Control/H Box Container"]
 unique_name_in_owner = true
