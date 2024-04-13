@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="79mm"
+   height="29.61986mm"
+   viewBox="0 0 79 29.61986"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="lightning bolt line part.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#7c7c7c"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#2c2c2c"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:lockguides="false"
+     inkscape:zoom="1.4912879"
+     inkscape:cx="81.137922"
+     inkscape:cy="86.502413"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1272"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <inkscape:path-effect
+       effect="fill_between_many"
+       method="originald"
+       linkedpaths="#path239,0,1|#path462,0,1"
+       id="path-effect1018"
+       is_visible="true"
+       lpeversion="0"
+       join="true"
+       close="true"
+       autoreverse="true" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-73,-72.380141)">
+    <path
+       inkscape:original-d="M 0,0"
+       inkscape:path-effect="#path-effect1018"
+       d="m 75,75 c 4.49538,-0.0032 21.267615,0.711167 38.84326,-0.249423 C 127.74883,73.990574 142.32757,74.634402 150,74.663707 V 100 c -7.67243,-0.0293 -18.7324,-1.005122 -36.33416,-0.942972 C 96.064075,99.119153 79.49538,99.997 75,100 Z"
+       id="path1020"
+       class="UnoptimicedTransforms"
+       style="fill:#ffffff;fill-opacity:1;stroke-width:2;stroke-dasharray:none" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       d="m 75,75 c 4.49538,-0.0032 21.267615,0.711167 38.84326,-0.249423 13.90557,-0.760003 28.48431,-0.116175 36.15674,-0.08687"
+       id="path239"
+       sodipodi:nodetypes="csc"
+       class="UnoptimicedTransforms" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+       d="M 75,100 C 79.49538,99.997 96.064075,99.119153 113.66584,99.057028 131.2676,98.994878 142.32757,99.970695 150,100"
+       id="path462"
+       sodipodi:nodetypes="csc"
+       class="UnoptimicedTransforms" />
+  </g>
+</svg>
