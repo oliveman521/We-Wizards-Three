@@ -16,7 +16,7 @@ outline_size = 25
 outline_color = Color(0, 0, 0, 1)
 
 [node name="Level Info Panel" instance=ExtResource("1_4vybv")]
-offset_left = 1330.0
+offset_left = 1356.0
 script = ExtResource("1_8bh1w")
 
 [node name="Background" parent="." index="0"]

@@ -31,6 +31,5 @@ func update(diff: int = 0) -> void:
 		GameManager.spawn_popup(centerPoint, "+"+str(diff), Color.LIGHT_GREEN)
 	elif diff < 0:
 		GameManager.spawn_popup(centerPoint, "-"+str(abs(diff)), Color.CRIMSON)
-	icon.modulate = supply.color
 	label.text = str(supply.supply_count)
 	icon.texture = supply.icon

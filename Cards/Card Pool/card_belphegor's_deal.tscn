@@ -16,16 +16,15 @@ font_size = 26
 resource_local_to_scene = true
 font_size = 26
 
-[node name="Belphegor\'s Deal" instance=ExtResource("1_deers")]
+[node name="card_belphegor\'s_deal" instance=ExtResource("1_deers")]
 card_type = "Fire Damage"
-card_name = "Belphegor's Deal"
 
 [node name="Fire Gem x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_j4y7n")]
 layout_mode = 2
 supply = ExtResource("3_rlwtj")
 
 [node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer" index="0"]
-text = "Belphegor's Deal"
+text = "card_belphegor's_deal"
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Label" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("4_jl8oo")]
 modulate = Color(0.670588, 0.121569, 0, 1)

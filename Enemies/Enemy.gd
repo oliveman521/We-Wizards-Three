@@ -76,14 +76,12 @@ func move(delta: float) -> void:
 
 func shoot_projectile() -> void:
 	var projectile: Projectile = projectile_prefab.instantiate() as Projectile
-	var warlock: Warlock = Warlock.instance
-	warlock.projectile_container.add_child(projectile)
-	projectile.global_position = projectile_spawner.global_position
-	projectile.direction = projectile_spawner.target_position.normalized()
-	projectile.target = "Player"
+	var dir: Vector2 = projectile_spawner.target_position.normalized()
+	var pos: Vector2 = projectile_spawner.global_position
+	projectile.initialize(pos, dir, true)
+	
 	fire_rate_timer.wait_time = fire_interval * randf_range(0.8,1.2)
 
-var damage_flash_tween
 func take_damage(damage_type: GameManager.Damage_Type, amnt: float, knock_back: float = 0) -> void:
 	if !active: return
 	

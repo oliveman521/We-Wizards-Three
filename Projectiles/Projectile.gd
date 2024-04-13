@@ -5,9 +5,9 @@ class_name Projectile
 @export var damage: float = 1
 @export var damage_type: GameManager.Damage_Type
 @export var knockback: float = 10
+#Used for effects like the explosion
 @export var spawn_on_hit: Array[PackedScene]
 
-@onready var sprite: Sprite2D = $Sprite
 
 @export_range(0,0.5) var screen_shake_on_shot: float = 0.01
 @export_range(0,0.5) var screen_shake_on_hit: float = 0.01
@@ -17,15 +17,34 @@ class_name Projectile
 @onready var shoot_sound: AudioStreamPlayer2D = $"Shoot Sound"
 @onready var hit_sound: AudioStreamPlayer2D = $"Hit Sound"
 
+@onready var sprite: Sprite2D = $Sprite
+
+
+@onready var shoot_particles: GPUParticles2D = $"Shoot Particles"
 
 var direction: Vector2 = Vector2(-1,0)
 
-@export_enum("Enemy", "Player") var target: String = "Enemy"
+var targets_player: bool = false
 
-func _ready() -> void:
+
+func initialize(pos: Vector2, dir: Vector2, _targets_player: bool) -> void:
+	Warlock.instance.projectile_container.add_child(self)
+	
+	#TODO add angle noise here
+	targets_player = _targets_player
+	direction = dir
+	global_position = pos
+	rotation = direction.angle()
+	
 	SoundManager.play_sound(shoot_sound, shoot_sound_pitch_variance)
 	GameCamera.instance.shake(screen_shake_on_shot)
-
+	
+	Warlock.instance.projectile_container.add_child(shoot_particles)
+	shoot_particles.emitting = true
+	shoot_particles.finished.connect(func() -> void:
+		shoot_particles.queue_free()
+		)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -48,12 +67,12 @@ func impact_effect() -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Player") and target == "Player": #TODO make the player take damage
+	if body.is_in_group("Player") and targets_player: #TODO make the player take damage
 		body.take_damage(damage)
 		impact_effect()
 
 
 func _on_area_entered(area: Area2D) -> void:
-	if area.is_in_group("Enemies") and target == "Enemy":
+	if area.is_in_group("Enemies") and not targets_player:
 		area.take_damage(damage_type, damage, knockback)
 		impact_effect()

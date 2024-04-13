@@ -62,10 +62,9 @@ volume_db = -3.134
 
 [node name="Shoot Particles" type="GPUParticles2D" parent="."]
 emitting = false
-amount = 10
 process_material = SubResource("ParticleProcessMaterial_8f3gk")
 texture = ExtResource("5_00hir")
-lifetime = 0.25
+lifetime = 0.5
 one_shot = true
 explosiveness = 0.75
 

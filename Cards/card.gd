@@ -46,15 +46,7 @@ var card_type_color_dict: Dictionary = {
 signal card_played()
 signal card_discarded()
 
-@export var card_name: String:
-	get:
-		var file_name: String = scene_file_path.get_basename().split("/")[-1]
-		file_name = file_name.replace("card_","")
-		file_name = file_name.capitalize()
-		name = file_name
-		if card_name_UI:
-			card_name_UI.text = file_name
-		return file_name
+var card_name: String
 
 @export var plus_version: bool = false:
 	set(new_val):
@@ -111,8 +103,16 @@ func get_supply_costs() -> Array[Supply]:
 	return costs
 
 func _ready() -> void:
+	#Update card name from file name
+	var file_name: String = scene_file_path.get_basename().split("/")[-1]
+	file_name = file_name.replace("card_","")
+	card_name = file_name.capitalize()
+	name = card_name
+	if card_name_UI:
+		card_name_UI.text = card_name
+	
 	card_type = card_type
-	card_name
+	
 	roll_animation_player.play("RESET")
 
 

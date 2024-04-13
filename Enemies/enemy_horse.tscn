@@ -7,17 +7,16 @@
 size = Vector2(143, 87)
 
 [node name="Horse" instance=ExtResource("1_koesm")]
-max_speed = 100.0
-health = 2.0
-play_bounce_walk_animation = true
+max_speed = 150.0
+health = 4.0
 
-[node name="Sprite" parent="GFX" index="0"]
-texture = ExtResource("2_6c3u2")
+[node name="VisibleOnScreenNotifier2D" parent="." index="0"]
+position = Vector2(-9.5, -9)
+scale = Vector2(7.85, 5)
 
-[node name="Hit Box" parent="." index="2"]
+[node name="Hit Box" parent="." index="1"]
 position = Vector2(-9.5, -7.5)
 shape = SubResource("RectangleShape2D_4ftoj")
 
-[node name="VisibleOnScreenNotifier2D" parent="." index="5"]
-position = Vector2(-9.5, -9)
-scale = Vector2(7.85, 5)
+[node name="Sprite" parent="GFX" index="0"]
+texture = ExtResource("2_6c3u2")

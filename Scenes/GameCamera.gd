@@ -9,6 +9,7 @@ static var instance: GameCamera = null
 var trauma: float = 0
 @onready var start_rotation: float = rotation
 
+
 func _ready() -> void:
 	instance = self
 	#Camera shake is a blend of this tutoprial: https://www.youtube.com/watch?v=AobjNjzZhmo

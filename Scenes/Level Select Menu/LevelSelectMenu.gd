@@ -19,7 +19,7 @@ var offscreen_right_point: Vector2:
 		var right_edge_of_screen: float = get_viewport_rect().size.x
 		return Vector2(right_edge_of_screen, screen_margin)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_key_pressed(KEY_ESCAPE):
 		get_tree().change_scene_to_packed(GameManager.main_menu) 
 

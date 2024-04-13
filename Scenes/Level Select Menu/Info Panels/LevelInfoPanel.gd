@@ -30,7 +30,6 @@ func populate(level_prefab: PackedScene) -> void:
 	for supply: Supply in level_data.supplies_present:
 		var icon_UI: Node = ICON_UI_PREFAB.instantiate() as TextureRect
 		icon_UI.texture = supply.icon
-		icon_UI.modulate = supply.color
 		supply_icons_container.add_child(icon_UI)
 	
 	for c: Node in enemy_icons_container.get_children():

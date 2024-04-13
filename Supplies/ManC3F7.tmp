@@ -8,9 +8,11 @@
 script = ExtResource("3_ol1lw")
 fire_cooldown = 0.25
 full_auto = true
+damage_type = 0
 projectile_prefab = ExtResource("2_xnpxh")
 supply_name = "Mana Orb"
 icon = ExtResource("1_pptmj")
+starting_count = 20
 color = Color(1, 1, 1, 1)
 pickup_spawn_rate = 2.0
 pickup_count_min = 2

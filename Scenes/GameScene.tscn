@@ -1,12 +1,14 @@
-[gd_scene load_steps=62 format=3 uid="uid://c4qnaj4cqxgny"]
+[gd_scene load_steps=77 format=3 uid="uid://c4qnaj4cqxgny"]
 
 [ext_resource type="Script" path="res://Scenes/GameCamera.gd" id="1_s2bat"]
 [ext_resource type="Texture2D" uid="uid://bn43ka1kdc2cn" path="res://Sprites/grass.svg" id="2_sgm25"]
 [ext_resource type="Script" path="res://Scripts/Warlock.gd" id="2_uo0op"]
-[ext_resource type="Texture2D" uid="uid://uahkyy7pck2d" path="res://Sprites/Characters/Warlock/Warlock.svg" id="3_2dsv6"]
 [ext_resource type="Script" path="res://Enemies/Enemy Manager.gd" id="3_yxut5"]
+[ext_resource type="Texture2D" uid="uid://d8s0ju2nra4j" path="res://Sprites/Characters/Warlock/Warlock_Body.svg" id="4_i1qf7"]
 [ext_resource type="Script" path="res://Levels/feed_tape_debug_graphic.gd" id="4_l8m8i"]
+[ext_resource type="Texture2D" uid="uid://dty8uqcctotam" path="res://Sprites/Characters/Warlock/Warlock_Arm.svg" id="5_0uisy"]
 [ext_resource type="PackedScene" uid="uid://b5t5chbh5x6vr" path="res://Enemies/enemy_peasent.tscn" id="5_fixi5"]
+[ext_resource type="Texture2D" uid="uid://b0v7wfdtqokve" path="res://Sprites/circle.svg" id="6_btteg"]
 [ext_resource type="PackedScene" uid="uid://dbc3v7h72rrl8" path="res://Enemies/enemy_knight.tscn" id="6_cjgit"]
 [ext_resource type="Script" path="res://Storeroom/StoreroomManager.gd" id="7_1og6d"]
 [ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Empty_Orbs.tres" id="9_ok0ds"]
@@ -43,9 +45,184 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2ckvp"]
 size = Vector2(1019, 1119)
 
+[sub_resource type="Animation" id="Animation_3anb0"]
+resource_name = "Idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jfn25"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_w7lwb"]
+resource_name = "Walk"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -3), Vector2(0, 0), Vector2(0, -3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Body:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.0698132, 0.0, 0.0698132, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cvtbh"]
+_data = {
+"Idle": SubResource("Animation_3anb0"),
+"RESET": SubResource("Animation_jfn25"),
+"Walk": SubResource("Animation_w7lwb")
+}
+
+[sub_resource type="Animation" id="Animation_vw5fh"]
+resource_name = "Down Cast"
+length = 0.2
+step = 0.025
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Body/Arm:rotation")
+tracks/0/interp = 3
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.025, 0.05, 0.15, 0.2),
+"transitions": PackedFloat32Array(1, 0.466516, 1, 4.28709, 4.28709),
+"update": 0,
+"values": [2.00713, 2.18166, 0.0, -1.0472, -0.785398]
+}
+
+[sub_resource type="Animation" id="Animation_e62tb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Body/Arm:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ebofb"]
+resource_name = "Up Cast"
+length = 0.2
+step = 0.025
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Body/Arm:rotation")
+tracks/0/interp = 3
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.025, 0.05, 0.15, 0.2),
+"transitions": PackedFloat32Array(4.28709, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.785398, -1.0472, 0.0, 2.18166, 2.00713]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tuns1"]
+_data = {
+"Down Cast": SubResource("Animation_vw5fh"),
+"RESET": SubResource("Animation_e62tb"),
+"Up Cast": SubResource("Animation_ebofb")
+}
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ek7uc"]
 radius = 13.0
 height = 68.0
+
+[sub_resource type="Curve" id="Curve_4qliu"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.610224, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), -8.70968, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_qy0hu"]
+curve = SubResource("Curve_4qliu")
+
+[sub_resource type="Curve" id="Curve_usvgl"]
+_data = [Vector2(0.00958467, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_f8ojh"]
+curve = SubResource("Curve_usvgl")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_e653d"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 10.0
+angle_max = 360.0
+initial_velocity_min = 50.0
+initial_velocity_max = 200.0
+gravity = Vector3(0, 98, 0)
+scale_min = 0.1
+scale_max = 0.5
+color = Color(0.482353, 0.380392, 0.780392, 1)
+alpha_curve = SubResource("CurveTexture_qy0hu")
+emission_curve = SubResource("CurveTexture_f8ojh")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_odmoc"]
 size = Vector2(26, 880)
@@ -600,16 +777,43 @@ position = Vector2(901, 528)
 motion_mode = 1
 script = ExtResource("2_uo0op")
 
-[node name="Sprite2D" type="Sprite2D" parent="Warlock Game/Warlock"]
-position = Vector2(-4.00002, 3.99997)
+[node name="GFX" type="Node2D" parent="Warlock Game/Warlock"]
+
+[node name="Walk Animation Player" type="AnimationPlayer" parent="Warlock Game/Warlock/GFX"]
+libraries = {
+"": SubResource("AnimationLibrary_cvtbh")
+}
+
+[node name="Casting Animation Player" type="AnimationPlayer" parent="Warlock Game/Warlock/GFX"]
+root_node = NodePath("../Walk Animation Player")
+libraries = {
+"": SubResource("AnimationLibrary_tuns1")
+}
+
+[node name="Body" type="Sprite2D" parent="Warlock Game/Warlock/GFX"]
 scale = Vector2(0.102494, 0.102494)
-texture = ExtResource("3_2dsv6")
+texture = ExtResource("4_i1qf7")
+offset = Vector2(65, 0)
+
+[node name="Arm" type="Sprite2D" parent="Warlock Game/Warlock/GFX/Body"]
+position = Vector2(40, 9.99951)
+texture = ExtResource("5_0uisy")
+offset = Vector2(-180.4, 22.55)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Warlock Game/Warlock"]
 shape = SubResource("CapsuleShape2D_ek7uc")
 
-[node name="Projectile Spawn Point" type="Node2D" parent="Warlock Game/Warlock"]
-position = Vector2(-32, -1)
+[node name="Projectile Spawn Point" type="RayCast2D" parent="Warlock Game/Warlock"]
+position = Vector2(-29, 0)
+target_position = Vector2(-50, 0)
+
+[node name="Shoot Particles" type="GPUParticles2D" parent="Warlock Game/Warlock/Projectile Spawn Point"]
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_e653d")
+texture = ExtResource("6_btteg")
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.75
 
 [node name="FireCooldownTimer" type="Timer" parent="Warlock Game/Warlock"]
 one_shot = true
