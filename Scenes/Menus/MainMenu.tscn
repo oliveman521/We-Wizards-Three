@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dpdlppetxwu3m"]
+[gd_scene load_steps=11 format=3 uid="uid://dpdlppetxwu3m"]
 
 [ext_resource type="Script" path="res://Scenes/Menus/basic_menu_behaviors.gd" id="1_6kucs"]
 [ext_resource type="Theme" uid="uid://bc5qy3dgbkg6c" path="res://UI/Partchment.tres" id="1_knrb3"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://l0ln5ifa7tf" path="res://Sprites/Characters/Cover Page/Librarian_full_photo.png" id="6_dshrp"]
 [ext_resource type="Texture2D" uid="uid://c3hauy1txd3ms" path="res://Sprites/Characters/Cover Page/Warlock_Full_Photo.png" id="7_fj31c"]
 [ext_resource type="LabelSettings" uid="uid://cpmxmv1dxwx7s" path="res://UI/Fonts/medium_text.tres" id="8_nyogq"]
+[ext_resource type="Script" path="res://Scenes/Menus/Wipe Data Button.gd" id="9_0r6jf"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -73,10 +74,10 @@ anchor_bottom = 0.5
 offset_left = -397.0
 offset_top = 1.0
 offset_right = 398.0
-offset_bottom = 412.0
+offset_bottom = 406.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 13
+theme_override_constants/separation = 20
 alignment = 1
 script = ExtResource("3_rnfgn")
 bob_dist = 0
@@ -97,12 +98,35 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Quit" type="Button" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 150
+theme_override_constants/separation = 20
+
+[node name="Wipe Data" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 75
+text = "Reset Save"
+script = ExtResource("9_0r6jf")
+
+[node name="Panel" type="Panel" parent="VBoxContainer/HBoxContainer/Wipe Data"]
+modulate = Color(0.213293, 0.1938, 0.34, 0.780392)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Quit2" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 75
 text = "Quit"
 
-[node name="Panel" type="Panel" parent="VBoxContainer/Quit"]
+[node name="Panel" type="Panel" parent="VBoxContainer/HBoxContainer/Quit2"]
 modulate = Color(0.213293, 0.1938, 0.34, 0.780392)
 show_behind_parent = true
 layout_mode = 1
@@ -128,4 +152,5 @@ direction = Vector2(0, 1)
 bob_dist = 5
 
 [connection signal="button_down" from="VBoxContainer/Play" to="." method="load_level_select_menu"]
-[connection signal="button_down" from="VBoxContainer/Quit" to="." method="quit"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer/Wipe Data" to="VBoxContainer/HBoxContainer/Wipe Data" method="_on_button_down"]
+[connection signal="button_down" from="VBoxContainer/HBoxContainer/Quit2" to="." method="quit"]
