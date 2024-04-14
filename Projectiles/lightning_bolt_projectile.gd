@@ -19,7 +19,7 @@ func _ready() -> void:
 	for i in range(point_count):
 		var clean_x: float = point_interval * i
 		var x: float = clean_x + perlin_noise.get_noise_1d(clean_x + Time.get_ticks_msec()) * point_noise
-		var y: float = position.y + perlin_noise.get_noise_1d(clean_x +  Time.get_ticks_msec() + 1000) * point_noise
+		var y: float = position.y + randf_range(-1,1) * point_noise/2
 		line_renderer.add_point(Vector2(x,y))
 	
 

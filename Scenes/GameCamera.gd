@@ -36,7 +36,14 @@ func _process(delta: float) -> void:
 	)
 	
 	rotation = start_rotation + perlin_noise.get_noise_1d(Time.get_ticks_msec() + 2) * max_rotation * damping
-	
+
+var screen_flash_tween: Tween
+
+func flash(magnitude: float) -> void:
+	trauma += magnitude
+	if trauma > 1:
+		print("warning! Trauma was set too high: ", trauma)
+		trauma = 1
 
 func shake(magnitude: float) -> void:
 	trauma += magnitude

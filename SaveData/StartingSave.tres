@@ -10,3 +10,6 @@
 script = ExtResource("1_eigaw")
 misc_unlocks = Array[String]([])
 unlocked_cards = Array[PackedScene]([ExtResource("4_3knku"), ExtResource("4_3knku"), ExtResource("4_3knku"), ExtResource("4_3knku"), ExtResource("11_g0ukq"), ExtResource("11_g0ukq"), ExtResource("11_g0ukq"), ExtResource("11_g0ukq"), ExtResource("11_g0ukq"), ExtResource("11_g0ukq"), ExtResource("10_l2haq"), ExtResource("10_l2haq"), ExtResource("10_l2haq"), ExtResource("5_bl2xd"), ExtResource("5_bl2xd")])
+cards_in_deck = Array[PackedScene]([])
+completed_levels = Array[PackedScene]([])
+explored_map_nodes = Array[String]([])

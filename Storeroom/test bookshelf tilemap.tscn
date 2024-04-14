@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://btms4oj1x835v"]
+
+[ext_resource type="Texture2D" uid="uid://c2wwsdiopplcb" path="res://Sprites/Tilemap/Bookshelf Tilemap test.svg" id="1_pke2s"]
+[ext_resource type="Texture2D" uid="uid://celyx8y22ksxd" path="res://Sprites/Tilemap/Bookshelf Tilemap test 2.svg" id="2_cdjbo"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cnm1o"]
+texture = ExtResource("1_pke2s")
+texture_region_size = Vector2i(38, 38)
+0:0/size_in_atlas = Vector2i(3, 5)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2tf7r"]
+texture = ExtResource("2_cdjbo")
+texture_region_size = Vector2i(38, 38)
+0:0/size_in_atlas = Vector2i(3, 5)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_d06yq"]
+tile_size = Vector2i(38, 38)
+sources/0 = SubResource("TileSetAtlasSource_cnm1o")
+sources/1 = SubResource("TileSetAtlasSource_2tf7r")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_d06yq")
+format = 2
+layer_0/name = "Bookshelves"
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(393216, 0, 0, 458752, 0, 0, 524288, 0, 0, 589824, 0, 0, 655360, 0, 0, 786432, 0, 0, 720896, 0, 0, 851968, 0, 0, 917504, 0, 0, 983040, 0, 0, 1048576, 0, 0, 1114112, 0, 0, 1179648, 0, 0, 1179660, 0, 0, 1114124, 0, 0, 1048588, 0, 0, 983052, 0, 0, 917516, 0, 0, 851980, 0, 0, 786444, 0, 0, 720908, 0, 0, 655372, 0, 0, 589836, 0, 0, 524300, 0, 0, 458764, 0, 0, 393228, 0, 0, 655375, 1, 0, 393217, 1, 0, 393218, 1, 0, 393219, 1, 0, 393220, 1, 0, 393221, 1, 0, 393222, 1, 0, 393223, 1, 0, 393224, 1, 0, 393225, 1, 0, 393226, 1, 0, 393227, 1, 0, 1179659, 1, 0, 1179658, 1, 0, 1179657, 1, 0, 1179656, 1, 0, 1179655, 1, 0, 1179654, 1, 0, 1179653, 1, 0, 1179652, 1, 0, 1179651, 1, 0, 1179650, 1, 0, 1179649, 1, 0, 983053, 1, 0, 983054, 1, 0, 983055, 1, 0, 983056, 1, 0, 983057, 1, 0, 983058, 1, 0, 983059, 1, 0)

@@ -4,10 +4,10 @@ class_name GameSave
 @export var misc_unlocks: Array[String]
 @export var unlocked_cards: Array[PackedScene] = []
 
-var cards_in_deck: Array[PackedScene] = []
+@export var cards_in_deck: Array[PackedScene] = []
 
-var completed_levels: Array[PackedScene]
-var explored_map_nodes: Array[String]
+@export var completed_levels: Array[PackedScene]
+@export var explored_map_nodes: Array[String]
 
 func check_unlock(unlock_name: String) -> int:
 	var count: = 0

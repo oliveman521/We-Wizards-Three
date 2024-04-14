@@ -7,7 +7,7 @@ class_name Projectile
 @export var knockback: float = 10
 #Used for effects like the explosion
 @export var spawn_on_hit: Array[PackedScene]
-
+@export var piercing: bool = false
 
 @export_range(0,0.5) var screen_shake_on_shot: float = 0.01
 @export_range(0,0.5) var screen_shake_on_hit: float = 0.01
@@ -63,7 +63,8 @@ func impact_effect() -> void:
 		var new_node: Node2D = item.instantiate() as Node2D
 		new_node.global_position = global_position
 		add_sibling(new_node)
-	queue_free() #delete bullet
+	if not piercing:
+		queue_free() #delete bullet
 
 
 func _on_body_entered(body: Node2D) -> void:

@@ -31,4 +31,5 @@ func _on_button_down() -> void:
 	else:
 		GameManager.current_save.misc_unlocks.append(ability_name)
 		is_explored = true
+		GameManager.save_game()
 	

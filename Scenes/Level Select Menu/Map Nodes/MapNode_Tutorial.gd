@@ -19,3 +19,4 @@ func _on_button_down() -> void:
 	await level_select.open_tutorial_panel(pages)
 	
 	is_explored = true
+	GameManager.save_game()

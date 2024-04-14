@@ -38,9 +38,9 @@ var all_supplies: Array[Supply] = [
 ]
 
 const DECK_MAX_SIZE: int = 15
-var curr_save: Resource = preload("res://Cards/card_base.tscn")
 
-var current_save: Resource = load("uid://ds1jr58cmcm3j") #FOR SOME REASON THIS HAS TO BE LOAD AND NOT PRELOAD AND I DON"T NO WHY SO LONG 4 HOURS OF MY LIFE IT WAS NICE KNOWING YA
+
+var current_save: Resource  #FOR SOME REASON THIS HAS TO BE LOAD AND NOT PRELOAD AND I DON"T NO WHY SO LONG 4 HOURS OF MY LIFE IT WAS NICE KNOWING YA
 var card_pool: Array[PackedScene] = []
 
 
@@ -49,20 +49,33 @@ const level_select_scene: PackedScene = preload("uid://bpfb1n271ove4")
 const game_scene: PackedScene = preload("uid://c4qnaj4cqxgny")
 const deck_builder_scene: PackedScene = preload("res://Scenes/Menus/deck_builder_menu.tscn")
 
+const SAVE_PATH: String = "user://save.tres"
 
 func _ready() -> void:
+	if ResourceLoader.exists(SAVE_PATH):
+		current_save = ResourceLoader.load(SAVE_PATH)
+	else:
+		setup_new_save()
+	
 	#on game boot, fill out our deck if its missing any cards
 	for card_prefab: PackedScene in current_save.unlocked_cards:
 		if current_save.cards_in_deck.size() >= DECK_MAX_SIZE:
 			break
 		current_save.cards_in_deck.append(card_prefab)
 
+func setup_new_save() -> void:
+	print("Resetting Save")
+	current_save = load("uid://ds1jr58cmcm3j")
+	save_game()
+
+func save_game() -> void:
+	ResourceSaver.save(current_save, SAVE_PATH)
+
 
 var in_progress_level_prefab: PackedScene
 var in_progress_level: LevelData
 
 var level_about_to_begin: LevelData
-
 
 
 func start_level(level_prefab: PackedScene) -> void:
@@ -138,11 +151,15 @@ func game_over() -> void:
 func level_won() -> void:
 	if debug_mode == true: 
 		return
-	var level_complete_splash: PackedScene = preload("uid://bhn3n3xw2vfd2")
-	
 	if end_sequence: return
 	end_sequence = true
-	print("you win!")
+	
+	#save the game whenever we win
+	current_save.completed_levels.append(in_progress_level_prefab)
+	save_game()
+	
+	var level_complete_splash: PackedScene = preload("uid://bhn3n3xw2vfd2")
+	
 	var msg: Control = level_complete_splash.instantiate()
 	get_tree().current_scene.add_child(msg)
 	msg.modulate = Color(1,1,1,0)
@@ -152,7 +169,7 @@ func level_won() -> void:
 	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_packed(level_select_scene)
 	
-	current_save.completed_levels.append(in_progress_level_prefab)
+	
 	in_progress_level_prefab = null
 	
 	end_sequence = false

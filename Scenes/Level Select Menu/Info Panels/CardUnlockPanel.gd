@@ -9,7 +9,7 @@ class_name CardUnlockPanel
 
 
 func populate(card_prefabs: Array[PackedScene]) -> void:
-
+	#clear out card_containter
 	for c: Node in card_container.get_children():
 		c.queue_free()
 	
@@ -17,6 +17,7 @@ func populate(card_prefabs: Array[PackedScene]) -> void:
 		var card: Card = card_prefab.instantiate() as Card
 		card_container.add_child(card)
 		card.enter_preview_mode()
+	
 	
 	confirm_button.button_down.connect(func()-> void:
 		level_select_menu.close_current_info_panel()

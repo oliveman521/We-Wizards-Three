@@ -27,7 +27,7 @@ func _on_button_down() -> void:
 	level_select.open_card_unlock_panel(cards)
 	
 	#add all the cards to the unlocked selection
-
 	GameManager.current_save.unlocked_cards.append_array(cards)
-
+	
 	is_explored = true
+	GameManager.save_game()
