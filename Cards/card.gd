@@ -211,24 +211,25 @@ func _on_button_gui_input(event: InputEvent) -> void:
 	if !(event is InputEventMouseButton): return
 	if not event.pressed: return
 	
-	#Don't do shit if we scrolling
+	#Don't do shit if we're just scrolling
 	if event.button_index == MOUSE_BUTTON_WHEEL_DOWN or event.button_index == MOUSE_BUTTON_WHEEL_UP:
 		return
 	
 	card_pressed.emit()
-	
 	if card_mode == DECK_BUILDING_MODE:
 		return
 	
 	if event.button_index == MOUSE_BUTTON_LEFT:
-		if check_costs(): #CARD IS BEING PLAYED
-			play()
-		else:
-			GameManager.spawn_popup(center_position,"Not Enough Resources!",Color(1,0.8,.1))
-			SoundManager.play_sound(cannot_be_played_sound)
+		attempt_to_play()
 	elif event.button_index == MOUSE_BUTTON_RIGHT:
 		discard()
 
+func attempt_to_play() -> void:
+	if check_costs(): #CARD IS BEING PLAYED
+		play()
+	else:
+		GameManager.spawn_popup(center_position,"Not Enough Resources!",Color(1,0.8,.1))
+		SoundManager.play_sound(cannot_be_played_sound)
 
 func discard() -> void:
 	card_discarded.emit()

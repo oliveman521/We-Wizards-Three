@@ -39,6 +39,22 @@ func _ready() -> void:
 		await get_tree().create_timer(0.2).timeout
 		draw_random_card()
 
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("debug_mode"):
+		draw_random_card()
+	
+	if Input.is_action_just_pressed("cast_hotkey1"):
+		if(cards_in_hand.size() > 0):
+			cards_in_hand[0].attempt_to_play()
+	elif Input.is_action_just_pressed("cast_hotkey2"):
+		if(cards_in_hand.size() > 1):
+			cards_in_hand[1].attempt_to_play()
+	elif Input.is_action_just_pressed("cast_hotkey3"):
+		if(cards_in_hand.size() > 2):
+			cards_in_hand[2].attempt_to_play()
+	elif Input.is_action_just_pressed("cast_hotkey4"):
+		if(cards_in_hand.size() > 3):
+			cards_in_hand[3].attempt_to_play()
 
 func add_ongoing_ability(ongoing_ability_prefab: PackedScene, amnt: float) -> void:
 	var new_ability: OngoingAbility = ongoing_ability_prefab.instantiate() as OngoingAbility
@@ -112,6 +128,4 @@ func arrange_cards_in_playspace() -> void:
 			queue_pos += card_step
 		card.move_center_to(target_pos)
 
-func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("debug_mode"):
-		draw_random_card()
+

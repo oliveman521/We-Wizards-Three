@@ -63,11 +63,11 @@ func _process(_delta: float) -> void:
 		walk_animation_player.play(WALK_ANIM)
 	
 	#Bullets
-	if Input.is_action_pressed("ship_shoot1"):
+	if Input.is_action_pressed("warlock_shoot1"):
 		shoot(MANA_ORB)
-	if Input.is_action_just_pressed("ship_shoot2"):
+	if Input.is_action_just_pressed("warlock_shoot2"):
 		shoot(FIRE_ORB)
-	if Input.is_action_just_pressed("ship_shoot3"):
+	if Input.is_action_just_pressed("warlock_shoot3"):
 		shoot(LIGHTNING_ORB)
 	
 	move_and_slide()

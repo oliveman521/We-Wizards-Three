@@ -79,7 +79,7 @@ func _process(_delta: float) -> void:
 	if is_stunned: return
 	
 	if not boosting: #we can only update our movement direction if we aren;'t boosting
-		input_dir = Input.get_vector("labyrinth_left","labyrinth_right","labyrinth_up","labyrinth_down")
+		input_dir = Input.get_vector("librarian_left","librarian_right","librarian_up","librarian_down")
 	
 	input_dir = input_dir.normalized()
 	velocity = input_dir * move_speed
@@ -87,7 +87,7 @@ func _process(_delta: float) -> void:
 	var boost_unlocked: bool = GameManager.current_save.check_unlock("Librarian Boost") > 0
 	var can_boost: bool = (not boosting) and boost_unlocked
 	
-	if Input.is_action_just_pressed("labyrinth_boost") and can_boost:
+	if Input.is_action_just_pressed("librarian_boost") and can_boost:
 		boost_timer.wait_time = boost_durration
 		boost_timer.start()
 	

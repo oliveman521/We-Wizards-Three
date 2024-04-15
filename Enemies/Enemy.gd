@@ -176,6 +176,6 @@ func knockback(dist: float) -> void:
 	await knockback_tween.finished
 	if play_bounce_walk_animation:
 		bounce_walk_animation_player.play()
-	print("KB 2")
+
 	is_being_knocked_back = false
 
