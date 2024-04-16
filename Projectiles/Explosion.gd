@@ -45,8 +45,9 @@ func _ready() -> void:
 			area.take_damage(damage_type, damage)
 	
 	await visial.animation_finished
-	
+	visial.z_index = GameManager.LAYER_BACKGROUND
 	await get_tree().create_timer(post_animation_hold_time).timeout
+	
 	
 	var tween:= get_tree().create_tween()
 	tween.set_ease(Tween.EASE_IN)

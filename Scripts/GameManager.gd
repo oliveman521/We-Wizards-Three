@@ -6,13 +6,15 @@ enum Damage_Type{
 	LIGHTNING
 }
 
-#TODO delete these
-const MANA: Ammo_Type = preload("uid://dfoqxs41hjlrc")
-const FIRE: Ammo_Type = preload("uid://bow64ukpfnomj")
-const LIGHTNING: Ammo_Type = preload("uid://0wqn3ujbcm2j")
+##TODO delete these
+#const MANA: Ammo_Type = preload("uid://dfoqxs41hjlrc")
+#const FIRE: Ammo_Type = preload("uid://bow64ukpfnomj")
+#const LIGHTNING: Ammo_Type = preload("uid://0wqn3ujbcm2j")
 
 var storeroom_Manager: StoreroomManager
 var enemy_manager: EnemyManager
+
+const LAYER_BACKGROUND = -1000
 
 signal debug_mode_changed()
 var debug_mode: bool = false:
