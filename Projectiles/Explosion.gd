@@ -11,6 +11,7 @@ class_name Explosion
 @export var screen_shake: float = 0.25
 @export var damage_type: GameManager.Damage_Type = GameManager.Damage_Type.FIRE
 @export var post_animation_hold_time: float = 5
+@export var fuse_time: float = 0.1
 
 var visual_size_multiplier: float = 1.2
 @onready var visial: AnimatedSprite2D = $"Explosion Visual"
@@ -32,6 +33,7 @@ func _ready() -> void:
 	
 	visial.play()
 	
+	await get_tree().create_timer(fuse_time).timeout
 	#screen_shake 
 	GameCamera.instance.shake(screen_shake)
 	

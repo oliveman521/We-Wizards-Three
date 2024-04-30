@@ -6,7 +6,6 @@
 
 [node name="Archer" instance=ExtResource("1_ru7do")]
 max_speed = 30.0
-play_bounce_walk_animation = true
 vulnerabilities = Array[int]([1])
 projectile_prefab = ExtResource("2_a75xx")
 fire_interval = 5.0

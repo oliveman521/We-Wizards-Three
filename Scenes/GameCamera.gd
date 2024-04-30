@@ -46,7 +46,8 @@ func flash(magnitude: float) -> void:
 		trauma = 1
 
 func shake(magnitude: float) -> void:
-	trauma += magnitude
+	trauma += (1 - trauma) * magnitude #this makes added trauma work on percentages. I.E a .5 will always take us another 50% of the way to max.
+	# Eg. A .5 trauma, followed by antoher .5 trauma, puts us at .75 trauma
 	if trauma > 1:
 		print("warning! Trauma was set too high: ", trauma)
 		trauma = 1

@@ -145,10 +145,17 @@ func highlight(color: Color) -> void:
 	highlight_ui.visible = true
 	highlight_ui.modulate = color
 
+var is_being_played: bool = false
+
 func play() -> void:
 	if not check_costs(): #TODO currently this is a double check and shouldn't be necessary
 		print("!!!You can't play that card because it costs too much! This should never fire")
 		return
+	
+	if is_being_played:
+		return
+	is_being_played = true
+	
 	card_played.emit()
 	card_manager.instance.card_played.emit(self)
 	

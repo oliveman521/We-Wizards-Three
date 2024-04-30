@@ -9,6 +9,17 @@ var phase_shift: float = 0
 var x: float = 0
 func activate() -> void:
 	super.activate()
+	
+	#print("max",EnemyManager.max_y,"min",EnemyManager.min_y)
+	#print("Upper",position.y + amplitude/2,"Lower",position.y - amplitude/2)
+	
+	if position.y + amplitude/2 > EnemyManager.max_y:
+		position.y = EnemyManager.max_y - amplitude/2
+		#print("Clamping" + name + "down")
+	if position.y - amplitude/2 < EnemyManager.min_y:
+		position.y = EnemyManager.min_y + amplitude/2
+		#print("Clamping" + name + "up")
+		
 	starting_pos = global_position
 	if randomize_phase:
 		phase_shift += randf_range(0,period)

@@ -65,7 +65,7 @@ func populate(level_prefab: PackedScene) -> void:
 			card.queue_free()
 		
 		
-		
+		GameManager.save_game()
 		GameManager.start_level(level_prefab)
 	)
 	

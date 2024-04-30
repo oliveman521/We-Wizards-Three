@@ -42,7 +42,7 @@ var all_supplies: Array[Supply] = [
 const DECK_MAX_SIZE: int = 15
 
 
-var current_save: Resource  #FOR SOME REASON THIS HAS TO BE LOAD AND NOT PRELOAD AND I DON"T NO WHY SO LONG 4 HOURS OF MY LIFE IT WAS NICE KNOWING YA
+var current_save: GameSave  # old note: FOR SOME REASON THIS HAS TO BE LOAD AND NOT PRELOAD AND I DON"T NO WHY SO LONG 4 HOURS OF MY LIFE IT WAS NICE KNOWING YA
 var card_pool: Array[PackedScene] = []
 
 
@@ -55,7 +55,7 @@ const SAVE_PATH: String = "user://save.tres"
 
 func _ready() -> void:
 	if ResourceLoader.exists(SAVE_PATH):
-		current_save = ResourceLoader.load(SAVE_PATH)
+		current_save = ResourceLoader.load(SAVE_PATH) as GameSave
 	else:
 		setup_new_save()
 	
@@ -90,7 +90,7 @@ func start_level(level_prefab: PackedScene) -> void:
 	level_about_to_begin = null
 	
 	#reset some values
-	lives = 3
+	lives = 3 + current_save.check_unlock("Bonus Max Life")
 	for supply: Supply in all_supplies:
 		supply.supply_count = 0
 	
@@ -183,9 +183,9 @@ func get_passive_ability_count(ability_tag: String) -> float:
 			var ability: OngoingAbility = node as OngoingAbility
 			if ability.passive_ability_tag == ability_tag:
 				count+=ability.count
-			if ability.consume == true:
-				ability.queue_free()
-				return count
+				if ability.consume == true:
+					ability.queue_free()
+					return count
 	return count
 
 

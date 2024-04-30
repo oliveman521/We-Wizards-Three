@@ -2,12 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_rnr8d"]
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_4m1m2"]
-[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/Essence.tres" id="3_t2fp0"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_t2fp0"]
 [ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="4_ssy8d"]
 [ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Components/card_text.tscn" id="5_fqsj4"]
 [ext_resource type="Script" path="res://Cards/Card Components/CardEffect_OngoingAbility.gd" id="6_u18rv"]
 [ext_resource type="PackedScene" uid="uid://c7dw3bs2deeos" path="res://Cards/Ongoing Abilities/ongoing_ability_firerate.tscn" id="7_34dfu"]
-[ext_resource type="PackedScene" uid="uid://cqnqwdyuqlusg" path="res://Cards/Card Components/Exhaust.tscn" id="8_af6hp"]
+[ext_resource type="PackedScene" uid="uid://cqnqwdyuqlusg" path="res://Cards/Card Components/exhaust.tscn" id="8_af6hp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_v5rl1"]
 resource_local_to_scene = true
@@ -19,16 +19,20 @@ font_size = 26
 
 [node name="Quick Cast" instance=ExtResource("1_rnr8d")]
 card_type = "Buff"
-card_name = "Quick Cast"
+
+[node name="Card Face" parent="." index="2"]
+offset_right = 200.0
+offset_bottom = 280.0
 
 [node name="Essence x3" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_4m1m2")]
 layout_mode = 2
 supply = ExtResource("3_t2fp0")
 count = 3
 
-[node name="Lightning Gem x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="1" instance=ExtResource("2_4m1m2")]
+[node name="Lightning Gem x3" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="1" instance=ExtResource("2_4m1m2")]
 layout_mode = 2
 supply = ExtResource("4_ssy8d")
+count = 3
 
 [node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer" index="0"]
 text = "Quick Cast"
@@ -50,6 +54,10 @@ label_settings = SubResource("LabelSettings_ulpjv")
 
 [node name="Top Nubs" parent="Top Roll" index="0"]
 modulate = Color(0.313726, 0.737255, 0.486275, 1)
+
+[node name="Bottom Roll" parent="." index="4"]
+offset_right = 203.0
+offset_bottom = 286.0
 
 [node name="Bottom Nubs" parent="Bottom Roll" index="0"]
 modulate = Color(0.313726, 0.737255, 0.486275, 1)

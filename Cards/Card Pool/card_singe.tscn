@@ -13,7 +13,10 @@ font_size = 26
 [node name="Singe" instance=ExtResource("1_ym4ts")]
 scale = Vector2(1, 0.990783)
 card_type = "Fire Damage"
-card_name = "Singe"
+
+[node name="Card Face" parent="." index="2"]
+offset_right = 200.0
+offset_bottom = 280.0
 
 [node name="Fire Gem x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_7okd8")]
 layout_mode = 2
@@ -36,6 +39,10 @@ target_count = 3
 
 [node name="Top Nubs" parent="Top Roll" index="0"]
 modulate = Color(1, 0.388235, 0.380392, 1)
+
+[node name="Bottom Roll" parent="." index="4"]
+offset_right = 203.0
+offset_bottom = 286.0
 
 [node name="Bottom Nubs" parent="Bottom Roll" index="0"]
 modulate = Color(1, 0.388235, 0.380392, 1)

@@ -131,6 +131,7 @@ func _process(_delta: float) -> void:
 
 func _on_collection_hitbox_area_entered(area: Area2D) -> void:
 	if area is Pickup:
+		
 		var pickup: Pickup= area as Pickup
 		if pickup.supply_to_be_gained == last_pickup_type:
 			combo += 1
@@ -155,9 +156,9 @@ func _on_collection_hitbox_area_entered(area: Area2D) -> void:
 		
 		#Math!
 		var gain_count: int = (combo * pickup.count_to_be_gained)
-		var passive_multiplier: int =  int(GameManager.get_passive_ability_count("Next Pickup Multiplier"))
-		if passive_multiplier > 0:
-			gain_count += passive_multiplier
+		var pickup_bonus: int =  int(GameManager.get_passive_ability_count("Next Pickup Multiplier"))
+		if pickup_bonus > 0:
+			gain_count += pickup_bonus - 1
 		
 		pickup.supply_to_be_gained.on_pickup(gain_count)
 		pickup.queue_free()

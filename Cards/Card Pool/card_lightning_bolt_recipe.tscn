@@ -6,14 +6,14 @@
 [ext_resource type="Resource" uid="uid://bb24w4yw0g0k" path="res://Supplies/Lightning_Gem.tres" id="4_i3b8k"]
 [ext_resource type="Resource" uid="uid://0wqn3ujbcm2j" path="res://Supplies/Lightning_Orb.tres" id="5_6n3gn"]
 
-[node name="Lightning Scroll Recipe" instance=ExtResource("1_kf2lo")]
+[node name="Lightning Bolt Recipe" instance=ExtResource("1_kf2lo")]
 card_type = "Crafting"
-card_name = "Lightning Scroll Recipe"
 
-[node name="Background Color" parent="Card Face" index="0"]
-color = Color(0.780392, 0.588235, 0.313726, 1)
+[node name="Card Face" parent="." index="2"]
+offset_right = 200.0
+offset_bottom = 280.0
 
-[node name="Blank Scroll x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_xlur8")]
+[node name="Empty Orb x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_xlur8")]
 layout_mode = 2
 supply = ExtResource("3_yspcd")
 
@@ -21,9 +21,19 @@ supply = ExtResource("3_yspcd")
 layout_mode = 2
 supply = ExtResource("4_i3b8k")
 
-[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer" index="1"]
-text = "Lightning Scroll Recipe"
+[node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer" index="0"]
+text = "Lightning Bolt Recipe"
 
-[node name="Lightning Scroll x1" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("2_xlur8")]
+[node name="Lightning Orb x1" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("2_xlur8")]
 layout_mode = 2
 supply = ExtResource("5_6n3gn")
+
+[node name="Top Nubs" parent="Top Roll" index="0"]
+modulate = Color(0.345098, 0.313726, 0.552941, 1)
+
+[node name="Bottom Roll" parent="." index="4"]
+offset_right = 203.0
+offset_bottom = 286.0
+
+[node name="Bottom Nubs" parent="Bottom Roll" index="0"]
+modulate = Color(0.345098, 0.313726, 0.552941, 1)

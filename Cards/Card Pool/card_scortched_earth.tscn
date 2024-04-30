@@ -1,12 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bhq4tuy1yifyy"]
+[gd_scene load_steps=10 format=3 uid="uid://bhq4tuy1yifyy"]
 
 [ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_qye5f"]
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_b6ewd"]
-[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/Essence.tres" id="3_8ue2b"]
 [ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="4_o5x1x"]
 [ext_resource type="Script" path="res://Cards/Card Components/CardEffect_Damage.gd" id="5_dhvvf"]
 [ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Components/card_text.tscn" id="6_a61x4"]
-[ext_resource type="PackedScene" uid="uid://cqnqwdyuqlusg" path="res://Cards/Card Components/Exhaust.tscn" id="7_bcgrt"]
+[ext_resource type="PackedScene" uid="uid://cqnqwdyuqlusg" path="res://Cards/Card Components/exhaust.tscn" id="7_bcgrt"]
 [ext_resource type="Script" path="res://Cards/Card Components/CardEffect_ScreenShake.gd" id="8_milk5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1ifrj"]
@@ -19,16 +18,11 @@ font_size = 26
 
 [node name="Scortched Earth" instance=ExtResource("1_qye5f")]
 card_type = "Fire Damage"
-card_name = "Scortched Earth"
 
-[node name="Essence x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_b6ewd")]
-layout_mode = 2
-supply = ExtResource("3_8ue2b")
-
-[node name="Fire Gem x4" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="1" instance=ExtResource("2_b6ewd")]
+[node name="Fire Gem x8" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_b6ewd")]
 layout_mode = 2
 supply = ExtResource("4_o5x1x")
-count = 4
+count = 8
 
 [node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer" index="0"]
 text = "Scortched Earth"
@@ -36,11 +30,11 @@ text = "Scortched Earth"
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#CardEffect_Damage" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0"]
 script = ExtResource("5_dhvvf")
 dmg_type = 1
-amnt = 10
+amnt = 15
 
 [node name="Card text" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1" instance=ExtResource("6_a61x4")]
 layout_mode = 2
-text = "Deal 10 damage to all enemies."
+text = "Deal 15 damage to all enemies."
 label_settings = SubResource("LabelSettings_1ifrj")
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#Exhaust" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="2" instance=ExtResource("7_bcgrt")]

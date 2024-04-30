@@ -11,6 +11,9 @@ const FEED_RATE: float = 50
 
 var rng := RandomNumberGenerator.new()
 
+static var max_y: float
+static var min_y: float
+
 
 var active_enemies: Array[Enemy]:
 	get:
@@ -51,6 +54,9 @@ var inactive_enemies: Array[Enemy]:
 
 
 func _ready() -> void:
+	max_y = enemy_spawn_area.get_global_position().y + enemy_spawn_area.shape.get_rect().size.y/2
+	min_y = enemy_spawn_area.get_global_position().y - enemy_spawn_area.shape.get_rect().size.y/2
+	
 	GameManager.enemy_manager = self as EnemyManager
 	
 

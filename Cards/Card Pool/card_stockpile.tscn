@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_x1har"]
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_kfohc"]
-[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/Essence.tres" id="3_u3jbm"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_u3jbm"]
 [ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Components/card_text.tscn" id="4_tqb4h"]
 [ext_resource type="Resource" uid="uid://dfoqxs41hjlrc" path="res://Supplies/Mana_Orb.tres" id="5_53qm7"]
 [ext_resource type="Script" path="res://Cards/Card Components/CardEffect_GainSupplies.gd" id="6_k084k"]
-[ext_resource type="PackedScene" uid="uid://cqnqwdyuqlusg" path="res://Cards/Card Components/Exhaust.tscn" id="7_wnskr"]
+[ext_resource type="PackedScene" uid="uid://cqnqwdyuqlusg" path="res://Cards/Card Components/exhaust.tscn" id="7_wnskr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_py2gu"]
 resource_local_to_scene = true
@@ -18,7 +18,10 @@ font_size = 26
 
 [node name="Stockpile" instance=ExtResource("1_x1har")]
 card_type = "Crafting"
-card_name = "Stockpile"
+
+[node name="Card Face" parent="." index="2"]
+offset_right = 200.0
+offset_bottom = 280.0
 
 [node name="Essence x4" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_kfohc")]
 layout_mode = 2
@@ -48,3 +51,13 @@ gain_amnt = 2
 modulate = Color(0.670588, 0.121569, 0, 1)
 layout_mode = 2
 label_settings = SubResource("LabelSettings_8nwkn")
+
+[node name="Top Nubs" parent="Top Roll" index="0"]
+modulate = Color(0.345098, 0.313726, 0.552941, 1)
+
+[node name="Bottom Roll" parent="." index="4"]
+offset_right = 203.0
+offset_bottom = 286.0
+
+[node name="Bottom Nubs" parent="Bottom Roll" index="0"]
+modulate = Color(0.345098, 0.313726, 0.552941, 1)

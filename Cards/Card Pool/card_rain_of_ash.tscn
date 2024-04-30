@@ -18,7 +18,10 @@ font_size = 26
 [node name="Rain Of Ash" instance=ExtResource("1_ft74s")]
 scale = Vector2(1, 0.990783)
 card_type = "Fire Damage"
-card_name = "Rain Of Ash"
+
+[node name="Card Face" parent="." index="2"]
+offset_right = 200.0
+offset_bottom = 280.0
 
 [node name="Fire Gem x2" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_ojt02")]
 layout_mode = 2
@@ -53,6 +56,10 @@ label_settings = SubResource("LabelSettings_g6euk")
 
 [node name="Top Nubs" parent="Top Roll" index="0"]
 modulate = Color(1, 0.388235, 0.380392, 1)
+
+[node name="Bottom Roll" parent="." index="4"]
+offset_right = 203.0
+offset_bottom = 286.0
 
 [node name="Bottom Nubs" parent="Bottom Roll" index="0"]
 modulate = Color(1, 0.388235, 0.380392, 1)

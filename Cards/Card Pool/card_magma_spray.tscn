@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_mfa5x"]
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_557sh"]
-[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/Essence.tres" id="3_4qsnt"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_4qsnt"]
 [ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="3_x8h0f"]
 [ext_resource type="Script" path="res://Cards/Card Components/CardEffect_Damage.gd" id="4_fqa6u"]
 [ext_resource type="Script" path="res://Cards/Card Components/CardEffect_DrawDiscard.gd" id="7_27ydv"]
@@ -19,16 +19,15 @@ font_size = 26
 
 [node name="Magma Spray" instance=ExtResource("1_mfa5x")]
 card_type = "Fire Damage"
-card_name = "Magma Spray"
 
 [node name="Essence x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_557sh")]
 layout_mode = 2
 supply = ExtResource("3_4qsnt")
 
-[node name="Fire Gem x2" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="1" instance=ExtResource("2_557sh")]
+[node name="Fire Gem x3" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="1" instance=ExtResource("2_557sh")]
 layout_mode = 2
 supply = ExtResource("3_x8h0f")
-count = 2
+count = 3
 
 [node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer" index="0"]
 text = "Magma Spray"

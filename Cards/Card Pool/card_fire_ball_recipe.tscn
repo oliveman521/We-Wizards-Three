@@ -1,34 +1,34 @@
-[gd_scene load_steps=7 format=3 uid="uid://6685qupifd8s"]
+[gd_scene load_steps=6 format=3 uid="uid://6685qupifd8s"]
 
 [ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_u53ie"]
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_5wrxn"]
 [ext_resource type="Resource" uid="uid://dgsybemasha7i" path="res://Supplies/Empty_Orbs.tres" id="3_coce5"]
 [ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="4_ptmc0"]
 [ext_resource type="Resource" uid="uid://bow64ukpfnomj" path="res://Supplies/Fire_Orb.tres" id="5_jp836"]
-[ext_resource type="Script" path="res://Cards/Card Components/CardEffect_GainSupplies.gd" id="6_hsiyy"]
 
 [node name="Fire Ball Recipe" instance=ExtResource("1_u53ie")]
 card_type = "Crafting"
-card_name = "Fire Ball Recipe"
 
-[node name="Blank Scroll x2" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_5wrxn")]
+[node name="Empty Orb x2" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_5wrxn")]
 layout_mode = 2
 supply = ExtResource("3_coce5")
 count = 2
 
-[node name="Fire Gem x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="1" instance=ExtResource("2_5wrxn")]
+[node name="Fire Gem x2" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="1" instance=ExtResource("2_5wrxn")]
 layout_mode = 2
 supply = ExtResource("4_ptmc0")
+count = 2
 
 [node name="CardName" parent="Card Face/Internal Margin/VBoxContainer/MarginContainer/MarginContainer" index="0"]
 text = "Fire Ball Recipe"
 
-[node name="Fire Scroll x2" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("2_5wrxn")]
+[node name="Fire Orb x2" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("2_5wrxn")]
 layout_mode = 2
 supply = ExtResource("5_jp836")
 count = 2
 
-[node name="CardEffect_GainSupplies" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1"]
-script = ExtResource("6_hsiyy")
-type = ExtResource("5_jp836")
-gain_amnt = 2
+[node name="Top Nubs" parent="Top Roll" index="0"]
+modulate = Color(0.345098, 0.313726, 0.552941, 1)
+
+[node name="Bottom Nubs" parent="Bottom Roll" index="0"]
+modulate = Color(0.345098, 0.313726, 0.552941, 1)

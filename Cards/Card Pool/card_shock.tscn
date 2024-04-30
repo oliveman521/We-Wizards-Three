@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cgklhf7q88enf"]
+[gd_scene load_steps=7 format=3 uid="uid://cgklhf7q88enf"]
 
 [ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_da2hk"]
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_0kypi"]
@@ -6,10 +6,17 @@
 [ext_resource type="Script" path="res://Cards/Card Components/CardEffect_Damage.gd" id="4_fr6mv"]
 [ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Components/card_text.tscn" id="4_hm8q3"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_2gdsk"]
+resource_local_to_scene = true
+font_size = 26
+
 [node name="Shock" instance=ExtResource("1_da2hk")]
 scale = Vector2(1, 0.990783)
 card_type = "Lightning Damage"
-card_name = "Shock"
+
+[node name="Card Face" parent="." index="2"]
+offset_right = 200.0
+offset_bottom = 280.0
 
 [node name="Lightning Gem x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_0kypi")]
 layout_mode = 2
@@ -21,6 +28,7 @@ text = "Shock"
 [node name="Card text" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("4_hm8q3")]
 layout_mode = 2
 text = "Deal 5 damage to the closest enemy"
+label_settings = SubResource("LabelSettings_2gdsk")
 
 [node name="Card Face Margin_VBoxContainer_Effects#MarginContainer_VBoxContainer_Effects#CardEffect_Damage" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1"]
 script = ExtResource("4_fr6mv")
@@ -30,6 +38,10 @@ targets = "First"
 
 [node name="Top Nubs" parent="Top Roll" index="0"]
 modulate = Color(1, 0.65098, 0, 1)
+
+[node name="Bottom Roll" parent="." index="4"]
+offset_right = 203.0
+offset_bottom = 286.0
 
 [node name="Bottom Nubs" parent="Bottom Roll" index="0"]
 modulate = Color(1, 0.65098, 0, 1)

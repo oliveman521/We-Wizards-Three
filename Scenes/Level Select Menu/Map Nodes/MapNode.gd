@@ -2,6 +2,7 @@
 extends Control
 class_name MapNode
 
+#memes :)
 @export var connected_map_nodes: Array[MapNode]:
 	set(new_connections):
 		var old_connections := connected_map_nodes.duplicate()

@@ -39,9 +39,11 @@ var active: bool = false
 
 const DAMAGE_COLOR = Color(1,0,0)
 
-
-var icon: Texture:
+@export var manual_icon: Texture2D
+var icon: Texture2D:
 	get:
+		if manual_icon:
+			return manual_icon
 		for child: Node in $GFX.get_children():
 			if child is AnimatedSprite2D:
 				child = child as AnimatedSprite2D

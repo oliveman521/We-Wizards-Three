@@ -738,7 +738,7 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_sgm25")
 
 [node name="Grass11" type="Sprite2D" parent="BackGround/Grass Sprites"]
-position = Vector2(109, 964)
+position = Vector2(163, 1011)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_sgm25")
 
@@ -748,7 +748,27 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_sgm25")
 
 [node name="Grass13" type="Sprite2D" parent="BackGround/Grass Sprites"]
-position = Vector2(106, 597)
+position = Vector2(240, 822)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass16" type="Sprite2D" parent="BackGround/Grass Sprites"]
+position = Vector2(117, 590)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass17" type="Sprite2D" parent="BackGround/Grass Sprites"]
+position = Vector2(356, 216)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass18" type="Sprite2D" parent="BackGround/Grass Sprites"]
+position = Vector2(34, 326)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_sgm25")
+
+[node name="Grass19" type="Sprite2D" parent="BackGround/Grass Sprites"]
+position = Vector2(655, 863)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_sgm25")
 
@@ -1152,10 +1172,10 @@ supply = ExtResource("30_8qded")
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 25.0
-offset_top = 21.0
-offset_right = 374.0
-offset_bottom = 124.0
+offset_left = 20.0
+offset_top = 934.0
+offset_right = 651.0
+offset_bottom = 1037.0
 grow_horizontal = 2
 script = ExtResource("25_kiqjr")
 

@@ -5,7 +5,6 @@ class_name DeckBuildingMenu
 @onready var cards_in_deck_container: HFlowContainer = %"Deck Contents Container"
 
 @onready var deck_label: Label = %"Deck Label"
-const card_multiples_indicator_prefab = preload("uid://dm5dny7e4dwb3")
 
 
 const PANEL_MOVE_TIME: float = 0.2
@@ -54,7 +53,6 @@ func arrange_UI() -> void:
 			var deck_is_full: bool = GameManager.current_save.cards_in_deck.size() >= GameManager.DECK_MAX_SIZE
 			if deck_is_full:
 				GameManager.spawn_popup(get_global_mouse_position(), "Deck is full!", Color.FIREBRICK, 1.5, get_parent())
-				#TODO this shows up in the wrong place. Needs to somehow interact with the canvas
 				SoundManager.play_sound(card.cannot_be_played_sound)
 				return
 			

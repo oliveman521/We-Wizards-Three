@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://disxs45wl3yv" path="res://Cards/card_base.tscn" id="1_cmu8b"]
 [ext_resource type="PackedScene" uid="uid://d335ngol841kr" path="res://Cards/card_supply_icon.tscn" id="2_2hf8y"]
-[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/Essence.tres" id="3_trh0o"]
+[ext_resource type="Resource" uid="uid://dun667tokfc1l" path="res://Supplies/essence.tres" id="3_trh0o"]
 [ext_resource type="Resource" uid="uid://br1k5yssu1q83" path="res://Supplies/Fire_Gem.tres" id="4_lyhoa"]
 [ext_resource type="PackedScene" uid="uid://vbnhq8fvb12k" path="res://Cards/Card Components/card_text.tscn" id="5_620g4"]
 [ext_resource type="Script" path="res://Cards/Card Components/CardEffect_OngoingAbility.gd" id="6_d47is"]
@@ -14,7 +14,10 @@ font_size = 26
 
 [node name="Supercharge" instance=ExtResource("1_cmu8b")]
 card_type = "Buff"
-card_name = "Supercharge"
+
+[node name="Card Face" parent="." index="2"]
+offset_right = 200.0
+offset_bottom = 280.0
 
 [node name="Essence x2" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_2hf8y")]
 layout_mode = 2
@@ -40,6 +43,10 @@ ongoing_ability_prefab = ExtResource("7_5cdf6")
 
 [node name="Top Nubs" parent="Top Roll" index="0"]
 modulate = Color(0.313726, 0.737255, 0.486275, 1)
+
+[node name="Bottom Roll" parent="." index="4"]
+offset_right = 203.0
+offset_bottom = 286.0
 
 [node name="Bottom Nubs" parent="Bottom Roll" index="0"]
 modulate = Color(0.313726, 0.737255, 0.486275, 1)

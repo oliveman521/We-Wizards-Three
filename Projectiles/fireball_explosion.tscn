@@ -3,6 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://dqgaio16e7poi" path="res://Projectiles/explosion.tscn" id="1_fesrw"]
 
 [node name="Explosion" instance=ExtResource("1_fesrw")]
+fuse_time = null
 
 [node name="Explosion Visual" parent="." index="1"]
 z_index = 10
+
+[node name="AudioStreamPlayer2D" parent="." index="2"]
+volume_db = -3.0

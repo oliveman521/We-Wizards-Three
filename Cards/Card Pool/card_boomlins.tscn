@@ -19,7 +19,10 @@ font_size = 26
 [node name="Boomlins" instance=ExtResource("1_nce1h")]
 scale = Vector2(1, 0.990783)
 card_type = "Fire Damage"
-card_name = "Boomlins"
+
+[node name="Card Face" parent="." index="2"]
+offset_right = 200.0
+offset_bottom = 280.0
 
 [node name="Fire Gem x1" parent="Card Face/Internal Margin/VBoxContainer/Costs" index="0" instance=ExtResource("2_afwdd")]
 layout_mode = 2
@@ -30,7 +33,7 @@ text = "Boomlins"
 
 [node name="Card text" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="0" instance=ExtResource("4_6788y")]
 layout_mode = 2
-text = "Spawn 3 Boomlins."
+text = "Spawn 2 Boomlins."
 label_settings = SubResource("LabelSettings_dwqs3")
 
 [node name="Card text2" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="1" instance=ExtResource("4_6788y")]
@@ -46,10 +49,14 @@ script = ExtResource("5_i1oqr")
 [node name="CardEffect_SpawnEnemies" type="Node" parent="Card Face/Internal Margin/VBoxContainer/Effects" index="3"]
 script = ExtResource("6_svfcy")
 enemy_prefab = ExtResource("7_3mkk0")
-count = 3
+count = 2
 
 [node name="Top Nubs" parent="Top Roll" index="0"]
 modulate = Color(1, 0.388235, 0.380392, 1)
+
+[node name="Bottom Roll" parent="." index="4"]
+offset_right = 203.0
+offset_bottom = 286.0
 
 [node name="Bottom Nubs" parent="Bottom Roll" index="0"]
 modulate = Color(1, 0.388235, 0.380392, 1)
